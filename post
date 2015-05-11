@@ -14,8 +14,12 @@ cat > "_posts/$filename"  << EOF
 layout: post
 title: "$title"
 date: `date +%Y-%m-%d\ %H:%M:%S`
+author: vjudge1
 categories: $*
 ---
+
+* content
+{:toc}
 EOF
 
 echo 'New blog posted.'
