@@ -2,7 +2,7 @@
 title: vjudge1
 email: vjudge404@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
- I am not Virtual Judge so my name isn't 关云长.
+ I am not 关云长.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://vjudge1.github.io" # the base hostname & protocol for your site
 twitter_username: vjudge404
