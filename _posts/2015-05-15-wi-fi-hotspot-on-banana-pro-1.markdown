@@ -103,7 +103,7 @@ Edit `/etc/udhcpd.conf` and do the following changes:
     option  subnet  255.255.255.0
     opt     router  192.168.100.1
     opt     wins    192.168.100.1
-    option  dns     192.168.100.1
+    option  dns     8.8.8.8
     option  domain  local
 
 Edit `/etc/default/udhcpd` and modify `DHCPD_ENABLED="no"` to `DHCPD_ENABLED="yes"`. Then `udhcpd` will start automatically after booting.
