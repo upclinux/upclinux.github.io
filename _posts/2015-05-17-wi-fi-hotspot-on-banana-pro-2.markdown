@@ -9,7 +9,7 @@ categories: Linux
 * content
 {:toc}
 
-Based on my [previous article](/linux/2015/05/16/wi-fi-hotspot-on-banana-pro-1.html), I continued to deploy portal authentication (Portal).
+All works are based on my [previous article](/linux/2015/05/15/wi-fi-hotspot-on-banana-pro-1.html). I continued to deploy `portal authentication`.
 
 Before reading, make sure that you succeed to create an AP (Access Point) on the board.
 
@@ -60,22 +60,21 @@ Edit `/etc/wifidog.conf` and do the following changes:
         AuthScriptPathFragment auth.php?
     }
 
-I just used the board as an auth server directly. If possible, please use EXTERNAL server to reduce the load and use HTTPS for security.
+I just used the board as an auth server directly. If possible, please use EXTERNAL servers to reduce load of the router and use HTTPS protocol for security.
 
 WifiDog provides lots of features such as IP blocking (may be like GFW?), trusted users. 
 
 ## Auth Server
 
-
 ### wifidog-auth
 
-You can use [wifidog-auth](https://github.com/wifidog/wifidog-auth) in production. Here is a [tutorial](http://dev.wifidog.org/wiki/doc/install/auth-server) about deploying.
+You can use [wifidog-auth](https://github.com/wifidog/wifidog-auth) in production environment. Here is a [tutorial](http://dev.wifidog.org/wiki/doc/install/auth-server) about deploying.
 
 It's sorry that I failed to deploy the existing repo on my Banana Pro and it's too HUGE for me and my board. So I use a simple one instead.
 
 ### Mini server on board
 
-I use lighttpd, PHP and MySQL for auth. I won't describe how to install them because there's lots of articles you can Google.
+I use lighttpd, PHP and MySQL for auth on the board. You can Google how to install them.
 
 The following codes are from [zhyaof](http://talk.withme.me/?p=267) with some changes and they're just prototypes. DO NOT use them in production environment!
 
@@ -95,8 +94,6 @@ Create a database firstly (MySQL) and add a user named test:
         PRIMARY KEY (`username`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
     INSERT INTO users (username, password) VALUES ('test', '123456');
-
-Names of the following files are from `wifidog.conf`.
 
 * `auth.php`: It must output `Auth: 1` or `Auth: 0` (other numbers are also OK if you read the docs). The former one means access to the Internet.
 
