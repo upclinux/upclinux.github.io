@@ -50,7 +50,6 @@ I used the newest hostapd (version 2.4) rather than the one in Debian (version 1
     tar -xvf hostapd-2.4.tar.gz
     cd hostapd-2.4/hostapd
     cp defconfig .config
-    ./autogen.sh
     make
     make install
 
