@@ -66,7 +66,8 @@ function fixFooter(footerHeight, footerMarginTop) {
         $('footer').removeClass('navbar-fixed-bottom');
     }
 
-    $('footer').show(400);
+    //$('footer').show(400);
+    $('footer').show();
 }
 
 /**
