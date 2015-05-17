@@ -1,7 +1,7 @@
 About
 ===
 
-[Click here](https://vjudge1.github.io) to visit the blog.
+[Click here](http://vjudge1.github.io) to visit the blog.
 
 This is Gao Haoyang's Jekyll theme.
 
