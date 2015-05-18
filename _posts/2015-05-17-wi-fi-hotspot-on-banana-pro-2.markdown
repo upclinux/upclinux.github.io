@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Wi-Fi Hotspot on Banana Pro (2)"
+title: "Wi-Fi Hotspot on Banana Pro (2) - Auth"
 date: 2015-05-17 18:22:23
 author: vjudge1
 categories: Linux

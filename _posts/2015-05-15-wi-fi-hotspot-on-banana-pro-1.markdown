@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Wi-Fi Hotspot on Banana Pro (1)"
+title: "Wi-Fi Hotspot on Banana Pro (1) - AP"
 date: 2015-05-15 16:35:04
 author: vjudge1
 categories: Linux
