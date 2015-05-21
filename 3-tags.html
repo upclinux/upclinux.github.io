@@ -1,0 +1,41 @@
+---
+title: Tags
+layout: default
+comments: false
+permalink: /tags/
+---
+<div class="row">
+  <div class="col-md-9" role="main">    
+    <h1 class="page-header">Tags</h1>
+    <div>
+      <ul class="labels-list">
+  	  {% for tag in site.tags %}
+        <li>
+  	  	<a href="#tag-{{ tag[0] }}">
+          {{ tag[0] }} 
+          <span class="count">{{ tag | last | size }}</span>
+        </a>
+        </li>
+  	  {% endfor %}
+      </ul>
+    </div>
+
+    {% for tag in site.tags %} 
+    <div class="page-header">
+      <h2 id="tag-{{ tag[0] }}">{{ tag[0] }}</h2>
+    </div>
+    <ul class="post-list" data-list-cate="All">
+      {% for post in tag[1] %}
+      <li>
+        <span class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+  
+  <div class="col-sm-3">    
+    {% include sidebar.html %}
+  </div>
+</div>

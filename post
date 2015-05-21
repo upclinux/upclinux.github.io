@@ -15,7 +15,8 @@ layout: post
 title: "$title"
 date: `date +%Y-%m-%d\ %H:%M:%S`
 author: vjudge1
-categories: $*
+categories: $2
+tags: $3
 ---
 
 * content

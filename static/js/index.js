@@ -1,86 +1,40 @@
-/**
- * 页面ready方法
+/*
+ Thanks for http://www.cnblogs.com/xufeiyang/articles/3247623.html for request
+ Thanks for Gaohaoyang, at https://github.com/Gaohaoyang/gaohaoyang.github.io
  */
-$(document).ready(function() {
 
+$.request = (function () { 
+    var apiMap = {}; 
+    function request(queryStr) { 
+        var api = {}; 
+        if (apiMap[queryStr]) { return apiMap[queryStr]; } 
+        api.queryString = (function () { 
+            var urlParams = {}; 
+            var e, 
+            d = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); }, 
+            q = queryStr.substring(queryStr.indexOf('?') + 1), 
+            r = /([^&=]+)=?([^&]*)/g; 
+            while (e = r.exec(q))     urlParams[d(e[1])] = d(e[2]);
+            return urlParams; 
+        })(); 
+        api.getUrl = function () { 
+            var url = queryStr.substring(0, queryStr.indexOf('?') + 1); 
+            for (var p in api.queryString) { url += p + '=' + api.queryString[p] + "&";        } 
+            if (url.lastIndexOf('&') == url.length - 1) { return url.substring(0, url.lastIndexOf('&')); } 
+            return url; 
+        } 
+        apiMap[queryStr] = api; 
+        return api; 
+    } 
+    $.extend(request, request(window.location.href)); 
+    return request; 
+})();
+
+$(document).ready(function() {
     categoryDisplay();
     generateContent();
     backToTop();
 });
-
-/**
- * load方法，页面的加载完成后触发
- * {fixFooterInit();} 固定Footer栏
- */
-$(window).load(function() {
-    fixFooterInit();
-});
-
-
-/**
- * 固定底栏的初始化方法
- * 在一开始载入页面时，使用fixFooter()方法固定底栏。
- * 在浏览器窗口改变大小是，依然固定底栏
- * @return {[type]} [description]
- */
-function fixFooterInit() {
-    var footerHeight = $('footer').outerHeight();
-    var footerMarginTop = getFooterMarginTop() - 0; //类型转换
-    // var footerMarginTop = 80;
-
-    fixFooter(footerHeight, footerMarginTop); //fix footer at the beginning
-
-    $(window).resize(function() { //when resize window, footer can auto get the postion
-        fixFooter(footerHeight, footerMarginTop);
-    });
-
-    /*    $('body').click(function() {
-        fixFooter(footerHeight, footerMarginTop);
-    });*/
-
-
-}
-
-/**
- * 固定底栏
- * @param  {number} footerHeight    底栏高度
- * @param  {number} footerMarginTop 底栏MarginTop
- * @return {[type]}                 [description]
- */
-function fixFooter(footerHeight, footerMarginTop) {
-    var windowHeight = $(window).height();
-    var contentHeight = $('body>.container').outerHeight() + $('body>.container').offset().top + footerHeight + footerMarginTop;
-    // console.log("window---"+windowHeight);
-    // console.log("$('body>.container').outerHeight()---"+$('body>.container').outerHeight() );
-    // console.log("$('body>.container').height()---"+$('body>.container').height() );
-    // console.log("$('#main').height()--------"+$('#main').height());
-    // console.log("$('body').height()--------"+$('body').height());
-    //console.log("$('#main').html()--------"+$('#main').html());
-    // console.log("$('body>.container').offset().top----"+$('body>.container').offset().top);
-    // console.log("footerHeight---"+footerHeight);
-    // console.log("footerMarginTop---"+footerMarginTop);
-    console.log(contentHeight);
-    if (contentHeight < windowHeight) {
-        $('footer').addClass('navbar-fixed-bottom');
-    } else {
-        $('footer').removeClass('navbar-fixed-bottom');
-    }
-
-    //$('footer').show(400);
-    $('footer').show();
-}
-
-/**
- * 使用正则表达式得到底栏的MarginTop
- * @return {string} 底栏的MarginTop
- */
-function getFooterMarginTop() {
-    var margintop = $('footer').css('marginTop');
-    var patt = new RegExp("[0-9]*");
-    var re = patt.exec(margintop);
-    // console.log(re[0]);
-    return re[0];
-}
 
 /**
  * 分类展示
@@ -90,21 +44,28 @@ function getFooterMarginTop() {
  */
 function categoryDisplay() {
     /*only show All*/
-    $('.post-list-body>div[post-cate!=All]').hide();
+    $('.post-list[data-list-cate!=All]').hide();
     /*show category when click categories list*/
     $('.categories-list-item').click(function() {
-        var cate = $(this).attr('cate'); //get category's name
+        var cate = $(this).data('cate'); //get category's name
 
-        $('.post-list-body>div[post-cate!=' + cate + ']').hide(250);
-        $('.post-list-body>div[post-cate=' + cate + ']').show(400);
+        $('.post-list[data-list-cate!=' + cate + ']').hide(250);
+        $('.post-list[data-list-cate=' + cate + ']').show(400);
+        
+        $('#categorization').text(cate);
     });
+    
+    var s=$.request.queryString['c'];
+    if (s) { 
+        $('.categories-list-item[data-cate='+s+']').click(); 
+    }
 }
 
 /**
  * 回到顶部
  */
 function backToTop() {
-    //滚页面才显示返回顶部
+    // 滚页面才显示返回顶部
     $(window).scroll(function() {
         if ($(window).scrollTop() > 100) {
             $("#top").fadeIn(500);
@@ -112,37 +73,48 @@ function backToTop() {
             $("#top").fadeOut(500);
         }
     });
-    //点击回到顶部
+    // 点击回到顶部
     $("#top").click(function() {
         $("body").animate({
             scrollTop: "0"
         }, 500);
     });
 
-    //初始化tip
+    // 初始化 tip
     $(function() {
         $('[data-toggle="tooltip"]').tooltip();
     });
 }
 
-
 /**
  * 侧边目录
  */
 function generateContent() {
-
-    // console.log($('#markdown-toc').html());
     if (typeof $('#markdown-toc').html() === 'undefined') {
-        // $('#content .content-text').html('<ul><li>文本较短，暂无目录</li></ul>');
         $('#content').hide();
-        $('#myArticle').removeClass('col-sm-9').addClass('col-sm-12');
     } else {
-        $('#content .content-text').html('<ul>' + $('#markdown-toc').html() + '</ul>');
-        /*   //数据加载完成后，加固定边栏
-        $('#myAffix').attr({
-            'data-spy': 'affix',
-            'data-offset': '50'
-        });*/
+        $('#content').html('<ul class="nav" id="myaffix">' + $('#markdown-toc').html() + '</ul>');
+        $('body').attr('data-spy', 'scroll');
+        $('body').attr('data-target', '#content');
+        $('#myaffix').affix({
+            offset: {
+                top: 250,
+                bottom: function () {
+                    return (this.bottom = $('footer').outerHeight(true) + $('#disqus_thread').outerHeight(true) + 150);
+                }
+            }
+        });
+        
+        /*
+        $('#dsq-2').ready(
+            $('#myaffix').affix({
+            offset: {
+                top: 250,
+                bottom: function () {
+                    return (this.bottom = $('footer').outerHeight(true) + $('#disqus_thread').outerHeight(true) + 150);
+                }
+            }
+        }));
+        */
     }
-    console.log("myAffix!!!");
 }

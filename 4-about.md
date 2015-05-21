@@ -1,7 +1,12 @@
-About
-===
+---
+layout: page
+title: About
+permalink: /about/
+---
 
-[Click here](http://vjudge1.github.io) to visit the blog.
+An amateur on computer. I'm using OS X now. Feeling good about OS X and Linux. But I'm not used to Windows now.
+
+The name "vjudge1" comes from Online Judges, which is a robot account using by [vjudge](http://vjudge.net). Of course, They don't know me. 
 
 This is my own theme with Bootstrap & jQuery.
 

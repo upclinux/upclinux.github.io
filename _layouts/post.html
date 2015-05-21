@@ -2,21 +2,38 @@
 layout: default
 ---
 <div class="row">
-  <div id="myArticle" class="col-sm-9">
-    <div class="post-area post">
-      <header>
-        <h1>{{ page.title }}</h1>
-        <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-      </header>
-      <hr>
-      <article>
-        {{content}}
-      </article>
-      <hr>
-      <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_twi" data-cmd="twi" title="Share to Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="Share to Facebook"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="Share to Weibo"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="Share to WeChat"></a><a href="#" class="bds_copy" data-cmd="copy" title="Copy URL"></a></div>
-      <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-    </div>
+  <div class="col-md-12">
+    <header class="page-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="post-meta">
+        {{ page.date | date: "%b %-d, %Y" }}
+        {% if page.author %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span> {{ page.author }}{% endif %}
+        {% if page.meta %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-bookmark"></span> {{ page.meta }}{% endif %}
+        {% if page.categories %}
+          &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-th-list"></span>
+          {% for c in page.categories %}
+            <a href="{{ "/categorites/?c=" | prepend: site.baseurl | append: c }}">{{ c }}</a>
+          {% endfor %}
+        {% endif %}
+        {% if page.tags[0] %}
+          &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-tags"></span>&nbsp;
+          {% for c in page.tags %}
+            <a href="{{ "/tags/#tag-" | prepend: site.baseurl | append: c }}">{{ c }}</a>
+          {% endfor %}
+        {% endif %}
+      </p>
+    </header>
+  </div>
+  <div class="col-md-8" role="main">
+    <article class="post-content">
+      {{ content }}
+    </article>
+  
+    <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_twi" data-cmd="twi" title="Share to Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="Share to Facebook"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="Share to Weibo"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="Share to WeChat"></a><a href="#" class="bds_copy" data-cmd="copy" title="Copy URL"></a></div>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
     
+    <br class="clear">
+      
     <div class="post-area post comment">
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -32,15 +49,8 @@ layout: default
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
     </div>
+    
+    <br class="clear">
   </div>
-
-  <div id="content" class="col-sm-3">
-    <!-- <div id="myAffix" class="shadow-bottom-center hidden-xs" data-spy="affix" data-offset-top="0" data-offset-bottom="-20"> -->
-    <div id="myAffix" class="shadow-bottom-center hidden-xs" >
-      <div class="categories-list-header">
-        Content
-      </div>
-      <div class="content-text"></div>
-    </div>
-  </div>
+  <div id="content" class="col-sm-3"></div>
 </div>

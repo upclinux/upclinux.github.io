@@ -4,6 +4,7 @@ title: "Wi-Fi Hotspot on Banana Pro (1) - AP"
 date: 2015-05-15 16:35:04
 author: vjudge1
 categories: Linux
+tags: Wireless hostapd
 ---
 
 * content
@@ -12,6 +13,10 @@ categories: Linux
 I am busy preparing exams these days, so I seldom touched my boards during these two weeks.
 
 Picking up my Banana Pro, I think out an idea -- A wireless router with authentication.
+
+
+
+
 
 ## Banana Pro
 

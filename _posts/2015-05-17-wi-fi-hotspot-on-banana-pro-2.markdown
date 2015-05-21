@@ -4,6 +4,7 @@ title: "Wi-Fi Hotspot on Banana Pro (2) - Auth"
 date: 2015-05-17 18:22:23
 author: vjudge1
 categories: Linux
+tags: Wireless hostapd
 ---
 
 * content
@@ -12,6 +13,10 @@ categories: Linux
 All works are based on my [previous article](/linux/2015/05/15/wi-fi-hotspot-on-banana-pro-1.html). I continued to deploy `portal authentication`.
 
 Before reading, make sure that you succeed to create an AP (Access Point) on the board.
+
+
+
+
 
 ## WifiDog
 

@@ -3,7 +3,8 @@ layout: post
 title: "A useful script for blog"
 date: 2015-05-11 01:06:01
 author: vjudge1
-categories: jekyll
+categories: GitHub
+tags: Scripting
 ---
 
 *Just a test for using jekyll.*
@@ -11,6 +12,10 @@ categories: jekyll
 How to post a new article in Jekyll? A simple way is just creating a new file and writing a header.
 
 It seems not to sound good. So it's time to write a simple script.
+
+
+
+
 
 	#!/bin/bash
 	if [ -z "$1" ]; then
@@ -29,7 +34,8 @@ It seems not to sound good. So it's time to write a simple script.
 	title: "$title"
 	date: `date +%Y-%m-%d\ %H:%M:%S`
 	author: vjudge1
-	categories: $*
+	categories: $2
+	tags: $3
 	---
 	
 	* content

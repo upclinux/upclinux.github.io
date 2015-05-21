@@ -3,8 +3,8 @@ layout: post
 title: "The 2048 Game on Arduino"
 date: 2015-05-11 13:01:20
 author: vjudge1
-meta: Arduino
 categories: Arduino fun
+tags: Arduino
 ---
 
 * content
@@ -13,6 +13,10 @@ categories: Arduino fun
 One day, I felt boring. Finding some electronic components nearby, I wrote a little game -- The 2048 Game on Arduino Uno.
 
 The function is really simple. You just need 4 buttons for moving. If GAME OVER, just press reset button and play again.
+
+
+
+
 
 ### Requirement
 
