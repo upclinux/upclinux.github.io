@@ -90,12 +90,12 @@ function backToTop() {
  * 侧边目录
  */
 function generateContent() {
+    $('#markdown-toc').addClass('hidden-md').addClass('hidden-lg');
     if (typeof $('#markdown-toc').html() === 'undefined') {
         $('#content').hide();
     } else {
         $('#content').html('<ul class="nav" id="myaffix">' + $('#markdown-toc').html() + '</ul>');
-        $('body').attr('data-spy', 'scroll');
-        $('body').attr('data-target', '#content');
+        $('body').scrollspy({ target: '#content' })
         $('#myaffix').affix({
             offset: {
                 top: 250,
@@ -104,17 +104,5 @@ function generateContent() {
                 }
             }
         });
-        
-        /*
-        $('#dsq-2').ready(
-            $('#myaffix').affix({
-            offset: {
-                top: 250,
-                bottom: function () {
-                    return (this.bottom = $('footer').outerHeight(true) + $('#disqus_thread').outerHeight(true) + 150);
-                }
-            }
-        }));
-        */
     }
 }
