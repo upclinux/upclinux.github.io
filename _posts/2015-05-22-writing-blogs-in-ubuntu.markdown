@@ -107,8 +107,16 @@ Add the following codes and save:
 	Icon=/opt/Code/resources/app/vso.png
 	
 OK. Enjoy coding! And all things can be done via Visual Studio Code.
-	
-## Access to Gists
+
+## Notes
+
+### Clone URL
+
+GitHub provides 3 kinds of URLs for cloning. It's recommended to use `SSH clone URL` because we configured SSH just now. 
+
+I tried to clone with HTTPS URL and find a trouble when pushing. So I clone again with SSH URL and succeed.
+
+### Access to Gists
 
 GitHub was blocked by Chinese *\[sensitive words\]* in Jan 2013. Thanks to [Kai-Fu Lee](http://weibo.com/kaifulee?stat_date=201301&page=4), we can access GitHub again.
 
