@@ -116,11 +116,23 @@ GitHub provides 3 kinds of URLs for cloning. It's recommended to use `SSH clone 
 
 I tried to clone with HTTPS URL and find a trouble when pushing. So I clone again with SSH URL and succeed.
 
-### Access to Gists
+### 中文输入的问题
 
-GitHub was blocked by Chinese *\[sensitive words\]* in Jan 2013. Thanks to [Kai-Fu Lee](http://weibo.com/kaifulee?stat_date=201301&page=4), we can access GitHub again.
+默认情况下，Visual Studio Code 不能正常显示汉字——中国字是方块字，结果中国字真变成“方块字”了。
 
-However, GitHub Gists is still blocked. So a little work should be done in `/etc/hosts`:
+可以这样解决问题：点击“File”、“Preferences”、“User Settings”，然后在右侧窗口加入一个属性：
+ 
+	editor.fontFamily: "Droid Sans Mono, Droid Sans Fallback"
+
+“Droid Sans Mono”可能不太好看，如果你电脑有字体的话，可以考虑`Consolas`或`Mocano`。
+
+此外还有一个问题，输入中文标点的时候可能需要按一下`空格`才能出现。至少用“搜狗拼音输入法”的时候是这样的。
+
+### Gists 被*敏感词*
+
+GitHub 曾被天朝*敏感词*给*敏感词*了。多亏了[李开复](http://weibo.com/kaifulee?stat_date=201301&page=4)大哥，自从他抗议之后，GitHub 再也没有被*敏感词*。
+
+不过唯独那个 GitHub Gists 还一直被*敏感词*。所以说，我们应该对我们的`/etc/hosts`做点小改动:
 
 	192.30.252.143	gist.github.com
 	23.235.43.133	gist-assets.github.com
