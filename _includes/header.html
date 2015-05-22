@@ -36,7 +36,13 @@
             {% endif %}
           {% endfor %}
         </ul>
-      </div><!--/.nav-collapse -->
+        
+        <form class="navbar-form navbar-right" method="get" action="{{ "/search/" | prepend: site.baseurl }}">
+          <div class="form-group">
+            <input type="text" placeholder="Regexp" class="form-control" name="s" id="keyword">            
+          </div>
+        </form>
+      </div>
     </div>
   </nav>
 </header>
