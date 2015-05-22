@@ -33,8 +33,8 @@ However, it's a bit tricky to do so in Linux, for example, Ubuntu. My Ubuntu is 
 	
 2. Configure your name and email:
 
-		git config --global --add user.name "Siyang Li"
-		git config --global --add user.email "vjudge404@gmail.com"
+		git config --global --add user.name "Your Name"
+		git config --global --add user.email "Your Email"
 	
 3. Avoid an error prompt:
 
