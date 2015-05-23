@@ -71,7 +71,7 @@ stcflash 需要 pySerial，所以：
 5. 接下来就可以 `./configure && make && make install` 了。
 6. 为了方便，可以把它复制到 /usr/local/bin 中：sudo cp gSTCISP /usr/local/bin
 
-很麻烦是吧？毕竟是支持图形界面的……下面这个程序更简单！
+很麻烦是吧？毕竟是支持图形界面的……还是命令行更简单！
 
 
 
