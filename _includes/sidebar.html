@@ -67,7 +67,7 @@
   {% else %}
     {% assign u = "#tag-" | append: tag[0] %}
   {% endif %}
-  <a href="{{ u }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
+  <a href="{{ u }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};" data-toggle="tooltip" data-placement="top" title="{{ tag[1].size }} articles">{{ tag[0] }}</a>&nbsp;
 {% endfor %}
 
 <h4 class="page-header">
