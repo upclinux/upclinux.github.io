@@ -347,7 +347,9 @@
     
     > li {
         font-size: 15px;
-        line-height: 25px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+        /* line-height: 25px; */
     }
 
     li a {
@@ -370,7 +372,7 @@
             display: block;
             li {
                 font-size: 13px;
-                line-height: 20px;
+                /* line-height: 20px; */
             }
         }
     }
@@ -392,15 +394,15 @@
         list-style: none;
         
         > li a {
-            padding: 0 40px;            
+            padding: .2em 40px;         
             &:hover {
-                padding: 0 39px;
+                padding: .2em 39px;
                 text-decoration: none;
             }
         }
         
         > li.active a {
-            padding: 0 38px;
+            padding: .2em 38px;
         }
     }
 }
