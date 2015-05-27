@@ -18,11 +18,11 @@ This article is written for my Hackintosh. But ideas in the text can be used for
 
 1. USE AT YOUR OWN RISK!
 2. TWO IMPORTANT THINGS:
-	1. Hackintosh is well working.
+	1. Hackintosh is working well.
 	2. Your computer supports UEFI. There's maybe no such options in BIOS Setup but the computer really supports EFI in fact, for example, my Lenovo V470.
 3. This article aims to the migration without reinstalling anything. It may be a bit tricky. So the easiest way to change is recreate the partition table and everything will begin in the new world.
 4. There is no Windows in my computer so anything on Windows is just my conjecture.
-5. You need to know Chinese unless you have a greater disk tool.
+5. I use a Chinese disk tool.
 
 ## Important Knowledges
 
@@ -42,7 +42,7 @@ Windows only supports UEFI+GPT and Legacy+MBR.
 
 ### Chameleon & Clover
 
-These two things are bootloaders for Hackintosh. Chameleon works in Legacy Mode. Clover supports both Legacy and UEFI mode.
+These two things are bootloaders for Hackintosh. `Chameleon` works in Legacy Mode. `Clover` supports both Legacy and UEFI mode.
 
 ### What GPT looks like
 
@@ -60,6 +60,27 @@ These two things are bootloaders for Hackintosh. Chameleon works in Legacy Mode.
 	* Bootloader: Clover
 	* Note: I use a USB flash disk with GRUB2 installed to boot Linux. I'll repair GRUB2 then.
 
+This is the profile of my laptop:
+
+* Laptop: Lenovo V470
+* CPU: Intel Core i5 2430M
+* Chipset: Intel HM65
+* Memory: 4GB 1600Mhz DDR3 x 2 (Kingston＋Hynix)
+* Hard drive: WD 750GB 5400r
+* Video cards: Intel HD 3000 (Works well. Video memory is 512MB. Brightness can be adjusted after modifying DSDT) ＋ Nvidia GT540M (Useless)
+* Audio card: ALC272 (using VoodooHDA)
+* Fignerprint: No drivers but can be used in virtual machines.
+* Card reader: RTS5139, no drivers. (can be used in virtual machines)
+* USB3.0: No
+* Wireless: BCM4322 (changed manually. BIOS flashing required because of restrictions of Lenovo). No need for extra drivers.
+* Ethernet: RTL8111E (use drivers from Realtek)
+* Camera: No need for extra drivers.
+* Touchpad: VoodooPS2Controller in the newest version. Multifinger is not well supported.
+* HDMI: Only video is OK. 
+* VGA Port: Useless
+* Battery: Battery drivers
+* AppleIntelCPUPowerManagement: Yes (Set `AsusAICPUPM=yes` in config.plist)
+
 ## Steps
 
 ### Make a bootable USB drive
@@ -76,36 +97,40 @@ Download and Install [Clover](http://sourceforge.net/projects/cloverefiboot/file
 
 Installer will copy files to /EFI only because no GPT drives here.
 
-You should search via Google to learn how to configure Clover. I'm afraid to make mistakes so I read lots of posts about Clover.
+You should learn how to configure Clover. I'm afraid to make mistakes so I read lots of posts about Clover. In fact, OS X should be able to start in default settings (without power management drivers and so on).
 
-You need a HFSPlus-64.efi rather than vboxhfs64.efi. HFSPlus-64.efi can be downloaded via Clover Configurator. Clover may fail to boot the system and get stucked with a row of '+' with VBoxHFS64.efi.
+You need a `HFSPlus-64.efi` rather than vboxhfs64.efi. HFSPlus-64.efi can be downloaded via `Clover Configurator`. Clover may fail to boot the system and get stucked with a row of '+' with VBoxHFS64.efi.
 
-Now, copy everything in EE (/Extra/Extensions) to /EFI/CLOVER/kexts/10.9/ and copy DSDT & SSDT to /EFI/CLOVER/ACPI/patched/.
+Now, 
 
-The following list is about files in driver64UEFI directory in my computer: DataHubDxe-64.efi, EmnVariableUefi-64.efi, FSInject-64.efi, HFSPlus-64.efi (Download by yourself), OsxAptioFixDrv-64.efi, OsxFatBinaryDrv-64.efi, PartitionDxe-64.efi
+1. Copy everything in `EE` (/Extra/Extensions) to `/EFI/CLOVER/kexts/10.9/`.
+2. Copy `DSDT` & `SSDT` to `/EFI/CLOVER/ACPI/patched/` and name them to `DSDT.aml` & `SSDT.aml`.
+3. Create a directory `/EFI/BOOT` and copy `/EFI/CLOVER/CLOVERX64.efi` to `/EFI/BOOT/BOOTX64.efi`.
 
-Copy the whole EFI directory to a USB flash drive. We'll move them to the new ESP partition.
+The following list is about files in `/EFI/CLOVER/drivers64UEFI` directory in my computer: DataHubDxe-64.efi, EmnVariableUefi-64.efi, FSInject-64.efi, HFSPlus-64.efi (Download by yourself), OsxAptioFixDrv-64.efi, OsxFatBinaryDrv-64.efi, PartitionDxe-64.efi. (Learn how to configure Clover and decide which to use.)
 
-### Create Partiitons
+Copy the whole /EFI directory to a USB flash drive. We'll move them to the new ESP partition.
 
-Boot in your WinPE. Use your partition tool to create a 200MB, FAT32 partition in the beginning of the drive. 
+### Create Partitions
+
+Boot to your WinPE. Use your partition tool to create a 200MB, `FAT32` partition in the beginning of the drive. 
 
 If you have a Windows, go on creating a 128-MB partition.
 
-Copy the EFI directory created just now to the first partition. 
+Copy the EFI directory created just now to the first FAT32 partition. 
 
 ### Convert!
 
-I only know DiskGenius. 
+I only know DiskGenius. In fact, there are several tools which can convert loselessly. 
 
 Open DiskGenius, click on "硬盘(D)" (Drive), "转换分区表类型为 GUID 格式" (Convert the partition table to GUID format), "确定" (OK). Then, click on "保存更改" (Save changes) on the toolbar. OK.
 
-It's better to reboot after converting to let the system detect GPT correctly.
+It's recommended to reboot after converting to let the system detect GPT correctly.
 
 
-### Repair ID
+### Repair Partition ID
 
-Open Command Prompt, enter `diskpart`, and then type: 
+Boot to the WinPE again. Open `Command Prompt`, enter `diskpart`, and then type: 
 
 	list disk
 	sel disk 0
@@ -121,9 +146,9 @@ Open Command Prompt, enter `diskpart`, and then type:
 * `C12A7328-F81F-11D2-BA4B-00A0C93EC93B` represents ESP.
 * `E3C9E316-0B5C-4DB8-817D-F92DF00215AE` represents MSP.
 
-### Repair Windows
+### Repair Windows Boot
 
-If you have a Windows. Please backup the bootx64.efi, and use bcdboot to repair the bootloader for Windows.
+If you have a Windows, use `bcdboot` to repair the bootloader of Windows.
 
 Just like this:
 
@@ -131,10 +156,14 @@ Just like this:
 	
 (Z: represents ESP.)
 
+`bcdboot` will replace EFI\\BOOT\\BOOTX64.efi. Backup it and replace it with `EFI\CLOVER\CLOVERX64.efi`.
+
 ### Check
+
+Reboot, enter the BIOS setup, and change `Boot Mode` to `UEFI`.
 
 Congratulations! (If OS X works well, ...)
 
-It's recommended to have an OS (software) which can modify files in HFS+ partition before upgrading.
+After booting, I configured Clover (`EFI/CLOVER/config.plist`) to make OS X work perfectly. Then I upgraded my OS X to 10.10 via App Store directly and no errors occured. 
 
-After converting, I upgraded my OS X to 10.10 via App Store directly and no errors occured. 
+Of course, I hope you have an OS (software) which can modify files in HFS+ partition before upgrading.
