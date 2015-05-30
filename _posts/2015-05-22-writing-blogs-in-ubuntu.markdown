@@ -128,11 +128,11 @@ I tried to clone with HTTPS URL and find a trouble when pushing. So I clone agai
 
 此外还有一个问题，输入中文标点的时候可能需要按一下`空格`才能出现。至少用“搜狗拼音输入法”的时候是这样的。
 
-### Gists 被*敏感词*
+### Gist 被*敏感词*
 
 GitHub 曾被天朝*敏感词*给*敏感词*了。多亏了[李开复](http://weibo.com/kaifulee?stat_date=201301&page=4)大哥，自从他抗议之后，GitHub 再也没有被*敏感词*。
 
-不过唯独那个 GitHub Gists 还一直被*敏感词*。所以说，我们应该对我们的`/etc/hosts`做点小改动:
+不过唯独那个 GitHub Gist 还一直被*敏感词*。所以说，我们应该对我们的`/etc/hosts`做点小改动:
 
 	192.30.252.143	gist.github.com
 	23.235.43.133	gist-assets.github.com
