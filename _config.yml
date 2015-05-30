@@ -17,5 +17,9 @@ github_username: vjudge1
 #weibo_username: 
 #weibo_userid: 
 
+# Gems
+gems:
+- jemoji
+
 # Build settings
 markdown: kramdown
