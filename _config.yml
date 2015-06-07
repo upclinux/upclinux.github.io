@@ -5,7 +5,7 @@ description: I'm not Virtual Judge or 关云长.
 footnote: > # this means to ignore newlines until "baseurl:"
   &copy; 2015 vjudge1<br>Powered by GitHub Pages & Jekyll
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://vjudge1.github.io" # the base hostname & protocol for your site
+url: "https://vjudge1.github.io" # the base hostname & protocol for your site
 permalink: /:year/:month/:day/:title
 paginate: 5
 excerpt_separator: "\n\n\n\n"
