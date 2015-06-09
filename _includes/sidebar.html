@@ -8,7 +8,7 @@
   {% else %}
     {% assign u = "javascript:;" %}
   {% endif %}
-  <a class="categories-list-item" href="{{ u }}" data-cate="All">
+  <a class="item" href="{{ u }}" data-cate="All">
     All
     <span class="badge">{{ site.posts | size }}</span>
   </a>
@@ -19,7 +19,7 @@
     {% else %}
       {% assign u = "javascript:;" %}
     {% endif %}
-    <a class="categories-list-item" href="{{ u }}" data-cate="{{ category | first }}">
+    <a class="item" href="{{ u }}" data-cate="{{ category | first }}">
       {{ category | first }}
       <span class="badge">{{ category | last | size }}</span>
     </a>

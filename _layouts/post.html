@@ -1,69 +1,71 @@
 ---
 layout: default
 ---
-<div class="row">
-  <div class="col-md-12">
-    <header class="page-header">
-      <h1 class="post-title">{{ page.title }}</h1>
-      <p class="post-meta">
-        <span class="glyphicon glyphicon-calendar"></span> {{ page.date | date: "%b %-d, %Y" }}
-        {% if page.author %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span> {{ page.author }}{% endif %}
-        {% if page.meta %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-bookmark"></span> {{ page.meta }}{% endif %}
-        {% if page.categories %}
-          &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-th-list"></span>
-          {% for c in page.categories %}
-            <a href="{{ "/categorites/?c=" | prepend: site.baseurl | append: c }}">{{ c }}</a>
-          {% endfor %}
-        {% endif %}
-        {% if page.tags[0] %}
-          &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-tags"></span>&nbsp;
-          {% for c in page.tags %}
-            <a href="{{ "/tags/#tag-" | prepend: site.baseurl | append: c }}">{{ c }}</a>
-          {% endfor %}
-        {% endif %}
-      </p>
-    </header>
+<div class="jumbotron">
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+    <p>
+      <span class="glyphicon glyphicon-calendar"></span> {{ page.date | date: "%b %-d, %Y" }}
+      {% if page.author %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span> {{ page.author }}{% endif %}
+      {% if page.meta %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-bookmark"></span> {{ page.meta }}{% endif %}
+      {% if page.categories %}
+        &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-th-list"></span>
+        {% for c in page.categories %}
+          <a href="{{ "/categorites/?c=" | prepend: site.baseurl | append: c }}">{{ c }}</a>
+        {% endfor %}
+      {% endif %}
+      {% if page.tags[0] %}
+        &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-tags"></span>&nbsp;
+        {% for c in page.tags %}
+          <a href="{{ "/tags/#tag-" | prepend: site.baseurl | append: c }}">{{ c }}</a>
+        {% endfor %}
+      {% endif %}
+    </p> 
   </div>
-  <div class="col-md-8" role="main">
-    <article class="post-content">
-      {{ content }}
-    </article>
-      
-    <div class="text-right">
-      <ul class="sharelist">
-        <li><a href="#" class="share" data-target="weibo" data-toggle="tooltip" title="Share on Weibo"><i class="fa fa-weibo"></i></a></li>
-        <li><a href="#" class="share" data-target="linkedin" data-toggle="tooltip" title="Share on LinkedIn"><i class="fa fa-linkedin-square"></i></a></li>
-        <li><a href="#" class="share" data-target="facebook" data-toggle="tooltip" title="Share on Facebook"><i class="fa fa-facebook-square"></i></a></li>
-        <li><a href="#" class="share" data-target="twitter" data-toggle="tooltip" title="Share on Twitter"><i class="fa fa-twitter-square"></i></a></li>
-        <li><span class="text-muted">Share this post:</span></li>
-      </ul>
-      <script src="{{ "/static/js/share.js" | prepend:site.baseurl }}"></script>
-    </div>
-  
-    {% comment %}
-    <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_twi" data-cmd="twi" title="Share to Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="Share to Facebook"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="Share to Weibo"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="Share to WeChat"></a><a href="#" class="bds_copy" data-cmd="copy" title="Copy URL"></a></div>
-    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-    {% endcomment %}
+</div>
+<div id="main" class="container main"> 
+  <div class="row">
+    <div class="col-md-8" role="main">
+      <article class="post-content">
+        {{ content }}
+      </article>
+        
+      <div class="text-right">
+        <ul class="sharelist">
+          <li><a href="#" class="share" data-target="weibo" data-toggle="tooltip" title="Share on Weibo"><i class="fa fa-weibo"></i></a></li>
+          <li><a href="#" class="share" data-target="linkedin" data-toggle="tooltip" title="Share on LinkedIn"><i class="fa fa-linkedin-square"></i></a></li>
+          <li><a href="#" class="share" data-target="facebook" data-toggle="tooltip" title="Share on Facebook"><i class="fa fa-facebook-square"></i></a></li>
+          <li><a href="#" class="share" data-target="twitter" data-toggle="tooltip" title="Share on Twitter"><i class="fa fa-twitter-square"></i></a></li>
+          <li><span class="text-muted">Share this post:</span></li>
+        </ul>
+        <script src="{{ "/static/js/share.js" | prepend:site.baseurl }}"></script>
+      </div>
     
-    <br class="clear">
+      {% comment %}
+      <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_twi" data-cmd="twi" title="Share to Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="Share to Facebook"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="Share to Weibo"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="Share to WeChat"></a><a href="#" class="bds_copy" data-cmd="copy" title="Copy URL"></a></div>
+      <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+      {% endcomment %}
       
-    <div class="post-area post comment">
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES * * */
-            var disqus_shortname = 'vjudge1';
-            
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      <br class="clear">
+        
+      <div class="post-area post comment">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+              /* * * CONFIGURATION VARIABLES * * */
+              var disqus_shortname = 'vjudge1';
+              
+              /* * * DON'T EDIT BELOW THIS LINE * * */
+              (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </div>
+      
+      <br class="clear">
     </div>
-    
-    <br class="clear">
+    <div id="content" class="col-sm-4 hidden-xs hidden-sm"></div>
   </div>
-  <div id="content" class="col-sm-3 hidden-xs hidden-sm"></div>
 </div>

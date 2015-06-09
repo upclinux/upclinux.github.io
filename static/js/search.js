@@ -6,9 +6,7 @@ var entries = null;
 var keyword = $.request.queryString['s'];
 
 $('#keyword').val(keyword);
-document.title = "Search";
-
-$('#searchlist').hide();
+$('#keywordlabel').text(keyword);
 
 function htmlEscape(s) {
 	return String(s).replace(/[&<>"'\/]/g, function(s) {
