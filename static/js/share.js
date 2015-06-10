@@ -1,6 +1,6 @@
 $(function() {
   var shareurl = encodeURIComponent(window.location.href);
-  var title = encodeURIComponent($('.post-title').text());
+  var title = encodeURIComponent($('#post-title').text());
   $('.share').tooltip({ container : 'body'});
   $('.share').each(function () {
     $(this).bind('click', $(this).data('target'), function(e) {

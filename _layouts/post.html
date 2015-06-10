@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="jumbotron">
   <div class="container">
-    <h1>{{ page.title }}</h1>
+    <h1 id="post-title">{{ page.title }}</h1>
     <p>
       <span class="glyphicon glyphicon-calendar"></span> {{ page.date | date: "%b %-d, %Y" }}
       {% if page.author %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span> {{ page.author }}{% endif %}
