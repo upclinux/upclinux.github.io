@@ -6,6 +6,7 @@ var entries = null;
 var keyword = $.request.queryString['s'];
 
 $('#keyword').val(keyword);
+$('#keyword2').val(keyword);
 $('#keywordlabel').text(keyword);
 
 function htmlEscape(s) {

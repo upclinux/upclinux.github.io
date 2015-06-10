@@ -44,6 +44,14 @@ $highlight-color:  #337ab7;
     }
 }
 
+@mixin transition($property, $duration, $timing-function, $delay) {
+    transition: $property $duration $timing-function $delay;
+    -webkit-transition: $property $duration $timing-function $delay;
+    -o-transition: $property $duration $timing-function $delay;
+    -moz-transition: $property $duration $timing-function $delay;
+}
+
+
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)

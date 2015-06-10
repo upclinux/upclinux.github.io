@@ -1,14 +1,17 @@
 ---
-layout: page
 title: About
+icon: file-o
+layout: page
 permalink: /about/
 ---
 
-An amateur on computer. I'm using OS X now. Feeling good about OS X and Linux. But I'm not used to Windows now.
+I'm an amateur in computer. 
 
-The name "vjudge1" comes from Online Judges, which is a robot account using by [vjudge](http://vjudge.net). Of course, They don't know me. 
+Feeling good about OS X and Linux, I'm not used to Windows now.
 
-This is my own theme with Bootstrap & jQuery.
+The name "vjudge1" comes from Online Judges, and it's a robot account using by [vjudge](http://vjudge.net). Of course, They don't know me. 
+
+This is my own theme using Bootstrap & jQuery.
 
 Thanks for these authors for some codes:
 
@@ -19,4 +22,6 @@ Thanks for:
 
 * [GitHub Pages](https://pages.github.com)
 * [Jekyll](http://jekyllrb.com)
+* [Bootstrap](http://getbootstrap.com)
+* [jQuery](http://jquery.com)
 * [Disqus](https://disqus.com)

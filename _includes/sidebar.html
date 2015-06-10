@@ -1,5 +1,15 @@
-<h4 class="page-header">
-  Categorites
+<h4 class="page-header text-muted">
+  <i class="fa fa-search"></i> Search
+</h4>
+
+<form method="get" action="{{ "/search/" | prepend: site.baseurl }}">
+  <div class="form-group">
+    <input type="text" placeholder="Regexp" class="form-control" name="s" id="keyword">
+  </div>
+</form>
+
+<h4 class="page-header text-muted">
+  <i class="fa fa-th-list"></i> Categorites
 </h4>
 
 <div class="categories-list">
@@ -26,8 +36,8 @@
   {% endfor %}
 </div>
 
-<h4 class="page-header">
-  Tags
+<h4 class="page-header text-muted">
+  <i class="fa fa-tags"></i> Tags
 </h4>
 
 {% assign first = site.tags.first %}
@@ -71,9 +81,11 @@
     data-toggle="tooltip" data-placement="top" title="{{ tag[1].size }} article{% if tag[1].size > 1 %}s{% endif %}">{{ tag[0] }}</a>&nbsp;
 {% endfor %}
 
-<h4 class="page-header">
-  Links
+<h4 class="page-header text-muted">
+  <i class="fa fa-external-link"></i> Links
 </h4>
-<small>
-<p><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></p>
-</small>
+<ul class="link-list fa-ul">
+{% for link in site.external_links %}
+  <li><i class="fa-li fa fa-link"></i><a href="{{ link.url }}" data-toggle="tooltip" data-placement="bottom" title="{{ link.url }}">{{ link.name }}</a></li>
+{% endfor %}
+</ul>

@@ -1,5 +1,5 @@
 <header>  
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default navbar-fixed-top-on-palm">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -8,12 +8,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{ site.baseurl }}/"><i class="fa fa-github-alt"></i> {{ site.title }}</a>
+        <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li {% if page.url == "/index.html" %} class="active" {% endif %}>
-            <a href="{{ site.baseurl }}/">Blogs</a>
+            <a href="{{ site.baseurl }}/"><i class="fa fa-home"></i> Blogs</a>
           </li>
           
           {% if page.url == "/categorites/" %}
@@ -21,35 +21,35 @@
           {% else %}
             <li class="dropdown">
           {% endif %}
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Categorites <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"><i class="fa fa-th-list"></i> Categorites <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="{{ "/categorites/?c=All" | prepend: site.baseurl }}">All<span class="badge" style="float:right;">{{ site.posts | size }}</span></a></li>
+              <li><a href="{{ "/categorites/?c=All" | prepend: site.baseurl }}"><span class="badge" style="float:right;">{{ site.posts | size }}</span>All</a></li>
               <li class="divider"></li>
               <li class="dropdown-header">Lists</li>
               {% for category in site.categories %}
                 {% assign cate = category | first %}
                 {% assign u = "/categorites/?c=" | prepend: site.baseurl | append: cate %}
-                <li><a href="{{ u }}">{{ category | first }}<span class="badge" style="float:right;">{{ category | last | size }}</span></a></li>
+                <li><a href="{{ u }}"><span class="badge" style="float:right;">{{ category | last | size }}</span>{{ category | first }}</a></li>
               {% endfor %}
             </ul>
           </li>
           
           {% for p in site.pages %}
             {% if p.externalurl %}
-            <li><a href="{{ p.externalurl }}">{{ p.title }}</a></li>
+            <li><a href="{{ p.externalurl }}">{% if p.icon %}<i class="fa fa-{{ p.icon }}"></i> {% endif %}{{ p.title }}</a></li>
             {% else %}
             {% if p.title and p.hidden != true %}
               <li {% if p.url == page.url %} class="active" {% endif %}>
-                <a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+                <a href="{{ p.url | prepend: site.baseurl }}">{% if p.icon %}<i class="fa fa-{{ p.icon }}"></i> {% endif %}{{ p.title }}</a>
               </li>
             {% endif %}
             {% endif %}
           {% endfor %}
         </ul>
         
-        <form class="navbar-form navbar-right" method="get" action="{{ "/search/" | prepend: site.baseurl }}">
+        <form class="navbar-form navbar-right hidden-sm hidden-md hidden-lg" method="get" action="{{ "/search/" | prepend: site.baseurl }}">
           <div class="form-group">
-            <input type="text" placeholder="Regexp" class="form-control" name="s" id="keyword">            
+            <input type="text" placeholder="Regexp" class="form-control" name="s" id="keyword">
           </div>
         </form>
       </div>

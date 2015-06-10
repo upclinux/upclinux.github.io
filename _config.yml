@@ -15,7 +15,10 @@ github_username: vjudge1
 #qqqun_name: "QQ 群"
 #qqqun_idkey: 
 #weibo_username: 
+#qq: 
 #weibo_userid: 
+
+host: 0.0.0.0
 
 # Gems
 gems:
@@ -23,3 +26,12 @@ gems:
 
 # Build settings
 markdown: kramdown
+
+# External links
+external_links:
+- 
+  name: UPC Linux
+  url: http://upclinux.github.io
+-
+  name: UPC Linux / Intro
+  url: http://upclinux.github.io/intro/

@@ -4,7 +4,7 @@ layout: default
 <div class="jumbotron">
   <div class="container">
     <div class="avatar">
-      <a href="https://github.com/{{ site.github_username }}"><img src="https://avatars.githubusercontent.com/u/9411795?v=3"></a>
+      <a href="https://github.com/{{ site.github_username }}"><img src="{{ "/images/avatar.png" | prepend: site.baseurl }}"></a>
     </div>
     <div class="title">
       <h1>{{ site.title }}</h1>
@@ -15,10 +15,11 @@ layout: default
 <div class="jumbotron-sub">
   <div class="container">
     <div class="title">
-      <a href="https://github.com/vjudge1/vjudge1.github.io">
-        <i class="fa fa-github icon"></i>
-        Source Code on GitHub
-      </a>
+      {% if site.github_username %}<a href="https://github.com/{{ site.github_username }}" data-toggle="tooltip" data-placement="bottom" title="GitHub"><i class="fa fa-github icon"></i></a>{% endif %}
+      {% if site.twitter_username %}<a href="https://twitter.com/{{ site.twitter_username }}" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter icon"></i></a>{% endif %}
+      {% if site.weibo_username %}<a href="http://weibo.com/{{ site.weibo_username }}" data-toggle="tooltip" data-placement="bottom" title="Weibo"><i class="fa fa-weibo icon"></i></a>{% endif %}
+      <a href="https://github.com/{{ site.github_username }}/{{ site.github_username }}.github.io" data-toggle="tooltip" data-placement="bottom" title="Source Code"><i class="fa fa-code icon"></i></a>
+      <a href="/feed.xml" data-toggle="tooltip" data-placement="bottom" title="RSS"><i class="fa fa-rss icon"></i></a>
     </div>
   </div>
 </div>

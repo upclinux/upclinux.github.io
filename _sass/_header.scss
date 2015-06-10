@@ -2,7 +2,7 @@
     background-color: #fff;
     border-radius: 0px;
     border-bottom: none;
-    box-shadow: 0px 1px 1px $highlight-color;
+//    box-shadow: 0px 1px 1px $highlight-color;
     
     .navbar-brand {
         font-size: 19px;
@@ -19,6 +19,7 @@
     .navbar-nav > li > a {
         font-size: 15px;
         padding: 15px 15px;
+        height: 50px;
         color: $highlight-color;
     }
   
@@ -38,10 +39,21 @@
         color: $highlight-color;
         padding-bottom: 11px;
         border-bottom: 4px solid $highlight-color;
-                transition: all 0.15s ease-in-out 0s;
-        -webkit-transition: all 0.15s ease-in-out 0s;
-           -moz-transition: all 0.15s ease-in-out 0s;
-             -o-transition: all 0.15s ease-in-out 0s;
+        @include transition(all, 0.15s, ease-in-out, 0s);
+    }
+}
+
+@include media-query($on-palm) {
+    .navbar-default {
+        border-bottom: 1px solid $grey-color-light;
+    }
+    
+    .navbar-fixed-top-on-palm {
+        /* position: fixed;
+        right: 0px;
+        left: 0px;
+        top: 0px;
+        z-index: 1030; */
     }
 }
 
@@ -83,11 +95,13 @@
             height: 170px;
             border-radius: 10px;
             border: 4px solid #fff;
+            background-color: $background-color;
             box-shadow: 0px 0px 5px $highlight-color;
         }
     }
     
     @include media-query($on-palm) {
+        /* margin-top: 50px; */
         margin-bottom: 20px;
         padding-top: 30px;
         
@@ -110,23 +124,28 @@
 .jumbotron-sub {
     margin-top: -50px; 
     margin-bottom: 30px;
-    height: 30px; 
     border-bottom: 1px solid #ccc;
     
     .title {
-        padding-left: 200px;
+        padding-left: 195px;
         padding-top: 5px;
         font-size: 12px;
+        
+        a {
+            padding: 3px 5px;
+            
+            .icon {
+                color: $grey-color;
+                font-size: 18px;
+            }
+        }
     }
-    .icon {
-        color: $grey-color;
-        font-size: 16px;
-    }
+
     @include media-query($on-palm) {        
         margin-top: -20px; 
         margin-bottom: 10px;
         .title {
-            padding-left: 15px;
+            padding-left: 10px;
         }
     }
 }

@@ -62,10 +62,7 @@
                 color: $highlight-color;
             }
             
-            transition: all .3s ease;
-            -webkit-transition: all .3s ease;
-            -moz-transition: all .3s ease;
-            -o-transition: all .3s ease;
+            @include transition(all, .3s, ease, 0s);
         }
     }
 }
@@ -117,6 +114,15 @@
             background-color: lighten($grey-color, 45%);
         }
     }
+}
+
+/**
+ * Links
+ */
+.link-list {
+    //list-style: none;
+    //margin-left: 0px;
+    font-size: $small-font-size;
 }
 
 /**
@@ -286,10 +292,7 @@
         
         &:hover {
             color: $highlight-color;
-            transition: color .3s ease;
-            -webkit-transition: color .3s ease;
-            -moz-transition: color .3s ease;
-            -o-transition: color .3s ease;
+            @include transition(color, .3s, ease, 0s);
        }
     } 
  }
