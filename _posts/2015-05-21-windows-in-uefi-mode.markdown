@@ -25,7 +25,7 @@ Differences between UEFI and traditional mode are great. While, both of them als
 
 ## UEFI vs. Legacy
 
-[BIOS](http://en.wikipedia.org/BIOS), which names "Basic Input/Output System", are used in old computers.
+[BIOS](https://en.wikipedia.org/wiki/BIOS), which names "Basic Input/Output System", are used in old computers.
 
 It will be loaded firstly after the computer powers on. Then, the computer will do self-check, load bootloader and boot the OS. 
 
@@ -33,7 +33,7 @@ BIOS is too old to meet the development of computer hardware. For example, addre
 
 So there is a substitution and a new standard called EFI. EFI was initially developed by Intel. It was transfered to UEFI Forum and renamed to UEFI.
 
-[UEFI](http://en.wikipedia.org/UEFI) (Unified Extensible Firmware Interface) works like a tiny operating system. Some computers have a built-in EFI Shell, so maintainance work can be done without any other tools.
+[UEFI](https://en.wikipedia.org/wiki/UEFI) (Unified Extensible Firmware Interface) works like a tiny operating system. Some computers have a built-in EFI Shell, so maintainance work can be done without any other tools.
 
 ### Booting via Legacy Mode
 

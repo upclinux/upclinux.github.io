@@ -1,7 +1,7 @@
 About
 ===
 
-[Click here](http://vjudge1.github.io) to visit the blog.
+[Click here](https://vjudge1.github.io) to visit the blog.
 
 This is my own theme with Bootstrap & jQuery.
 

@@ -13,7 +13,7 @@ $(function() {
           url='https://www.facebook.com/sharer/sharer.php?u=' + shareurl + '&t=' + title;
           break;
         case 'linkedin':
-          url='http://www.linkedin.com/shareArticle?source=&title=' + title + '&summary=&mini=true&url=' + shareurl;
+          url='https://www.linkedin.com/shareArticle?source=&title=' + title + '&summary=&mini=true&url=' + shareurl;
           break;
         case 'weibo':
           url='http://service.weibo.com/share/share.php?url=' + shareurl + '&title=' + title;

@@ -34,7 +34,7 @@ markdown: kramdown
 external_links:
 - 
   name: UPC Linux
-  url: http://upclinux.github.io
+  url: https://upclinux.github.io
 -
   name: UPC Linux / Intro
-  url: http://upclinux.github.io/intro/
+  url: https://upclinux.github.io/intro/

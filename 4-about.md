@@ -23,5 +23,5 @@ Thanks for:
 * [GitHub Pages](https://pages.github.com)
 * [Jekyll](http://jekyllrb.com)
 * [Bootstrap](http://getbootstrap.com)
-* [jQuery](http://jquery.com)
+* [jQuery](https://jquery.com)
 * [Disqus](https://disqus.com)
