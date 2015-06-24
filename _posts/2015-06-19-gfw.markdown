@@ -55,9 +55,12 @@ NOTE:
    As for Google, you need a program called [GoGoTester](https://github.com/azzvx/gogotester) (Windows Only).
 
 2. As for Youtube, it's better to use another method for accessing.
-3. It's useless to change hosts if IPs are GFWed like Falun Gong (65.49.2.152).
+3. It's useless to change hosts if IPs are GFWed like Dongtaiwang of Falun Gong (65.49.2.152).
 
-Moreover, you need to type "https://" manually for some websites or Mr. Fang will still laugh at you.
+<div class="callout callout-primary">
+<h4>HTTPS required</h4>
+Common websites use HTTPS now. With HTTPS, the GFW will not be able to reset the connection by filtering keywords. However, you need to type "https://" manually sometimes or Mr. Fang will still laugh at you.
+</div>
 
 ### Anti-pollution DNS Servers
 
@@ -69,9 +72,15 @@ There are many free and non-free VPNs. Non-free VPNs are recommended because of 
 
 ### Lazy Tools
 
-* 畅游无限浏览器 (Windows): A well-preconfigured GoAgent & Chrome.
-* Web freer (Windows): A modified chrome with a proxy client inside.
+* 畅游无限浏览器: A well-preconfigured GoAgent & Chrome. Of course, you can copy its configuration file to your own GoAgent client.
+* Web freer: A modified chrome with a proxy client inside.
 * Freegate, UltraSurf: Two lazy tools that developed by Falun Gong. They can work under wine.
+
+### IPv6
+
+If you can access to the Internet via IPv6, it will be easy for some large websites.
+
+The GFW isn't able to affect IPv6 sites by now. Thus, you can surf Google, Youtube and other websites as long as you find a `hosts` file or a non-polluted DNS server for IPv6.
 
 ## Set up your own proxy server
 
