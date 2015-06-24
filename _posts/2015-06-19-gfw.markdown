@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Things about browsing the Internet scientifically"
+title: "Things about surfing the Internet scientifically"
 date: 2015-06-19 14:34:00
 author: vjudge1
 categories: Web
@@ -8,7 +8,7 @@ categories: Web
 * content
 {:toc}
 
-Written for some countries which have some well-known errors about the Internet.
+Written for some countries which have some well-known issues about the Internet.
 
 
 
@@ -16,10 +16,10 @@ Written for some countries which have some well-known errors about the Internet.
 
 ## Notes about the GFW
 
-1. Do NOT teach the method of circumvention in public or you will have free meals every day.
+1. Do NOT teach the method of circumvention in public or you will have FREE meals every day.
 2. Try to use a safer transmission protocol like HTTPS, or the GFW may break the connection when detects the keyword.
-3. The wall may be heighten during important dates such as NPC & CPPCC or [May 35th](https://en.wikipedia.org/wiki/Tiananmen_Square_protests_of_1989).
-4. Compared with the North Korea, we are living in a happy life. :ghost: There is complelety no Internet so there is no way to "cross the wall" in DPRK.  
+3. The wall may heighten during important dates such as NPC & CPPCC or [May 35th](https://en.wikipedia.org/wiki/Tiananmen_Square_protests_of_1989).
+4. Compared with the North Korea, we are living in a happy life. :ghost: There is complelety no Internet so there is no way to "cross the wall" in DPRK.
 
 ## Some simple technologies
 
@@ -27,13 +27,13 @@ Written for some countries which have some well-known errors about the Internet.
 
 If you don't care about the quality and the censor, and you don't like to be in trouble, you can use substitutes.
 
-And you will find that Google, Wikipedia or so on are necessary on academic purpose.
+However, you will find that Google, Wikipedia or so on are necessary on academic purpose.
 
 [Gfsoso](http://www.gfsoso.net) is a "mover" for Google Search, Images and Academic. It's on record in China so it will not be GFWed (And you can't search sensitive things by it).
 
 ### Online Proxy
 
-Search "在线代理" in Baidu or other search engines.
+Search "Online Proxy" (please translate it into Chinese) in Baidu or other search engines.
 
 Disadvantages:
 
@@ -48,9 +48,16 @@ Some GFWed websites, like Wikipedia, Twitter, GitHub Gist, are not completely bl
 
 Therefore, you can search a suitable `hosts` file, replace the one in your computer (`C:\Windows\system32\drivers\etc\hosts` in Windows or `/etc/hosts` in Linux and OS X) with it.
 
-NOTE: Google is special -- You need to change the IP of Google regularly. For example, one IP was avaliable yesterday, but it's GFWed today. However, it may be opened again tomorrow.
+NOTE:
 
-As for Google, you need a program called [GoGoTester](https://github.com/azzvx/gogotester) (Windows Only). 
+1. Google is special -- You need to change the IP of Google regularly. For example, one IP was avaliable yesterday, but it's GFWed today. However, it may be opened again tomorrow.
+
+   As for Google, you need a program called [GoGoTester](https://github.com/azzvx/gogotester) (Windows Only).
+
+2. As for Youtube, it's better to use another method for accessing.
+3. It's useless to change hosts if IPs are GFWed like Falun Gong (65.49.2.152).
+
+Moreover, you need to type "https://" manually for some websites or Mr. Fang will still laugh at you.
 
 ### Anti-pollution DNS Servers
 
@@ -70,21 +77,21 @@ There are many free and non-free VPNs. Non-free VPNs are recommended because of 
 
 There are no Great Walls except that country. So you can enjoy a self sufficient life as long as you set up a non-GFWed server abroad.
 
-You don't need to develop proxy softwares yourself. You just need to know how to setup and how to use. 
+You don't need to develop proxy softwares yourself. You just need to know how to setup and how to use.
 
 ### GoAgent
 
 GoAgent is written in Python so it can be used in Windows, Linux, OS X. It uses Google App Engine server to provide users with a free proxy service to gain access to blocked information.
 
-Someone finds that GoAgent is disabled.
+Someone finds that GoAgent seems to be disabled.
 
-In fact, the truth is that GAE is GFWed and Google IPs are often blocked while GoAgent is OK, so you need to change IPs regularly.
+In fact, the truth is that GAE was GFWed and Google IPs are often blocked while GoAgent is OK, so you need to change IPs regularly.
 
 Use [GoGoTester](https://github.com/azzvx/gogotester) for alternative IPs.
 
 NOTES：
 
-1. Don't forget to import the certificate like 12306 or some browsers may refuse to show pages.
+1. Don't forget to import the certificate like 12306 or some browsers may refuse to load pages.
 2. Google IPs are unstable. You need to update proxy.ini regularly.
 3. You can't hide yourself because of the request header of GAE applications.
 4. There are traffic and speed limits on GAE. An app is 1GB/day. You can create at most 10 apps in an account and GoAgent can switch apps automatically.
@@ -95,4 +102,4 @@ Shadowsocks is another Server/Client kit. It also supports all kinds of platform
 
 If you can't find a server, you can pay some money for avaliable services -- [https://shadowsocks.com](https://shadowsocks.com).
 
-You can use a student email to register GitHub Education, and then you'll get a server of DigitalOcean with $100 charged. 
+You can use a student email to register GitHub Education, and then you'll get a server of DigitalOcean with $100 charged.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "sudo in Windows"
+title: "sudo for Windows"
 date: 2015-06-01 22:30:33
 author: vjudge1
 categories: Others

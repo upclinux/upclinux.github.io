@@ -43,13 +43,13 @@ There are no real development tools in Bananian. You have to install them manual
     apt-get install gcc make git libc-dev automake libtool
     apt-get install vim
 
-## Enable AP mode 
+## Enable AP mode
 
 ### hostapd
 
 I used the newest hostapd (version 2.4) rather than the one in Debian (version 1.0). Use these commands to compile and install it:
 
-    apt-get install libnl-dev libssl-dev 
+    apt-get install libnl-dev libssl-dev
     cd
     wget http://w1.fi/releases/hostapd-2.4.tar.gz
     tar -xvf hostapd-2.4.tar.gz
@@ -91,11 +91,16 @@ Edit `/etc/network/interfaces` and add the following lines:
     up hostapd -B /etc/hostapd/hostapd.conf
 
 ### Enable DHCP server
-There are two kind of DHCP servers: udhcpd and dnsmasq. Either is okay and I chose `udhcpd`.
+There are many kinds of DHCP servers. I chose `udhcpd`.
+
+<div class="callout callout-primary">
+<h4>IPv6</h4>
+udhcpd doesn't support IPv6. Use isc-dhcp-server instead if you need IPv6.  <a href="{{ site.baseurl }}/2015/06/23/wi-fi-hotspot-on-banana-pro-3/">Click here</a> for more information.
+</div>
 
 Install the DHCP server:
 
-   apt-get install udhcpd 
+    apt-get install udhcpd
 
 Edit `/etc/udhcpd.conf` and do the following changes:
 
