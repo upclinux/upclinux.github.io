@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="jumbotron">
   <div class="container">
-    <h1 id="post-title">{{ page.title }}</h1>
+    <h1 class="post-title" id="post-title"><a href="{{ site.baseurl }}/">{{ page.title }}</a></h1>
     <p>
       <span class="glyphicon glyphicon-calendar"></span> {{ page.date | date: "%b %-d, %Y" }}
       {% if page.author %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span> {{ page.author }}{% endif %}
@@ -20,16 +20,16 @@ layout: default
           <a href="{{ "/tags/#tag-" | prepend: site.baseurl | append: c }}">{{ c }}</a>
         {% endfor %}
       {% endif %}
-    </p> 
+    </p>
   </div>
 </div>
-<div id="main" class="container main"> 
+<div id="main" class="container main">
   <div class="row">
     <div class="col-md-8" role="main">
       <article class="post-content">
         {{ content }}
       </article>
-        
+
       <div class="text-right">
         <ul class="sharelist">
           <li><a href="#" class="share" data-target="weibo" data-toggle="tooltip" title="Share on Weibo"><i class="fa fa-weibo"></i></a></li>
@@ -40,20 +40,20 @@ layout: default
         </ul>
         <script src="{{ "/static/js/share.js" | prepend:site.baseurl }}"></script>
       </div>
-    
+
       {% comment %}
       <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_twi" data-cmd="twi" title="Share to Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="Share to Facebook"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="Share to Weibo"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="Share to WeChat"></a><a href="#" class="bds_copy" data-cmd="copy" title="Copy URL"></a></div>
       <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
       {% endcomment %}
-      
+
       <br class="clear">
-        
+
       <div class="post-area post comment">
           <div id="disqus_thread"></div>
           <script type="text/javascript">
               /* * * CONFIGURATION VARIABLES * * */
               var disqus_shortname = 'vjudge1';
-              
+
               /* * * DON'T EDIT BELOW THIS LINE * * */
               (function() {
                   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -63,7 +63,7 @@ layout: default
           </script>
           <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
       </div>
-      
+
       <br class="clear">
     </div>
     <div id="content" class="col-sm-4 hidden-xs hidden-sm"></div>

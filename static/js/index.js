@@ -3,36 +3,36 @@
  Thanks for Gaohaoyang, at https://github.com/Gaohaoyang/gaohaoyang.github.io
  */
 
-$.request = (function () { 
-    var apiMap = {}; 
-    function request(queryStr) { 
-        var api = {}; 
-        if (apiMap[queryStr]) { return apiMap[queryStr]; } 
-        api.queryString = (function () { 
-            var urlParams = {}; 
-            var e, 
-            d = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); }, 
-            q = queryStr.substring(queryStr.indexOf('?') + 1), 
-            r = /([^&=]+)=?([^&]*)/g; 
+$.request = (function () {
+    var apiMap = {};
+    function request(queryStr) {
+        var api = {};
+        if (apiMap[queryStr]) { return apiMap[queryStr]; }
+        api.queryString = (function () {
+            var urlParams = {};
+            var e,
+            d = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); },
+            q = queryStr.substring(queryStr.indexOf('?') + 1),
+            r = /([^&=]+)=?([^&]*)/g;
             while (e = r.exec(q))     urlParams[d(e[1])] = d(e[2]);
-            return urlParams; 
-        })(); 
-        api.getUrl = function () { 
-            var url = queryStr.substring(0, queryStr.indexOf('?') + 1); 
-            for (var p in api.queryString) { url += p + '=' + api.queryString[p] + "&";        } 
-            if (url.lastIndexOf('&') == url.length - 1) { return url.substring(0, url.lastIndexOf('&')); } 
-            return url; 
-        } 
-        apiMap[queryStr] = api; 
-        return api; 
-    } 
-    $.extend(request, request(window.location.href)); 
-    return request; 
+            return urlParams;
+        })();
+        api.getUrl = function () {
+            var url = queryStr.substring(0, queryStr.indexOf('?') + 1);
+            for (var p in api.queryString) { url += p + '=' + api.queryString[p] + "&";        }
+            if (url.lastIndexOf('&') == url.length - 1) { return url.substring(0, url.lastIndexOf('&')); }
+            return url;
+        }
+        apiMap[queryStr] = api;
+        return api;
+    }
+    $.extend(request, request(window.location.href));
+    return request;
 })();
 
 $(document).ready(function() {
-    categoryDisplay();
     generateContent();
+    categoryDisplay();
     backToTop();
     fixTables();
 }).bind('DOMNodeInserted', function() {
@@ -52,13 +52,13 @@ function categoryDisplay() {
 
         $('.post-list[data-list-cate!=' + cate + ']').hide(250);
         $('.post-list[data-list-cate=' + cate + ']').show(400);
-        
+
         $('#categorization').text(cate);
     });
-    
+
     var s=$.request.queryString['c'];
-    if (s) { 
-        $('.item[data-cate='+s+']').click(); 
+    if (s) {
+        $('.item[data-cate='+s+']').click();
     }
 }
 

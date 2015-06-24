@@ -21,14 +21,20 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-medium:lighten($grey-color, 30%);
 $grey-color-dark:  darken($grey-color, 25%);
 
+// Five basic colors for Bootstrap
+$primary-color:    #337ab7;
+$success-color:    #5cb85c;
+$warning-color:    #f0ad4e;
+$danger-color:     #d9534f;
+$info-color:       #5bc0de;
+
 // Width of the content area
 $on-palm:          768px;
 $on-laptop:        992px;
 $on-large-screen:  1200px;
 
 $navbar-back:      #f8f8f8;
-$highlight-color:  #337ab7;
-
+$highlight-color:  $primary-color;
 
 
 // Using media queries with like this:
