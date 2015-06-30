@@ -8,9 +8,17 @@
     color: $grey-color;
 }
 
-.contact-list, .social-media-list {
+.contact-list {
     list-style: none;
     margin-left: 0;
+
+    i {
+        color: $grey-color;
+    }
+}
+
+.social-media-list {
+    list-style: none;
 
     i {
         color: $grey-color;
