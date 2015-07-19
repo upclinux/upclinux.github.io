@@ -52,9 +52,9 @@ The OS in my banana is Fedora so I will take Fedora as example.
 
 ### Install VNC Server
 
-The answer to the first question is `VNC`. Install tightvncserver because it can start a new session:
+The answer to the first question is `VNC`. It can start a new session:
 
-	sudo yum install tightvncserver
+	sudo yum install tigervnc-server
 
 Then open `~/.vnc/xstartup`, modify the last line `twm &` to your own desktop environment (for example, `startxfce4 &` or `mate-session &`).
 
