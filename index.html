@@ -8,7 +8,7 @@ layout: default
     </div>
     <div class="title">
       <h1>{{ site.title }}</h1>
-      <p>{{ site.description }}</p> 
+      <p>{{ site.description }}</p>
     </div>
   </div>
 </div>
@@ -25,7 +25,7 @@ layout: default
     </div>
   </div>
 </div>
-<div id="main" class="container main"> 
+<div id="main" class="container main">
   <div class="row">
     <div class="col-md-9" role="main">
       <div>
@@ -56,104 +56,106 @@ layout: default
         </div>
         {% endfor %}
       </div>
-  
+
       <nav class="text-center">
-        {% comment %}
-        <ul class="pager">
-          {% if paginator.previous_page %}
-          <li class="previous">
-            <a href="{{ paginator.previous_page_path }}" title="previous page">
-              <span aria-hidden="true">&larr;</span> 
-              <small>Newer Posts</small>
-            </a>
-          </li>
-          {% endif %}
-  
-          {% if paginator.next_page %}
-          <li class="next">
-            <a href="{{ paginator.next_page_path }}">
-              <small>Older Posts</small> 
-              <span aria-hidden="true">&rarr;</span>
-            </a>
-          </li>
-          {% endif %}
-        </ul>
-        {% endcomment %}
-        <ul class="pagination">
-          {% assign show_first = paginator.page | minus: 2 %}
-          {% assign show_last = paginator.page | plus: 2 %}
-          {% assign right = paginator.total_pages | minus: 1 %}
-          {% assign right2 = paginator.total_pages | minus: 2 %}
-          {% if show_first < 2 %}{% assign show_first = 2 %}{% endif %}
-          {% if show_last >= paginator.total_pages %}{% assign show_last = paginator.total_pages | minus: 1 %}{% endif %}
-  
-          {% if paginator.previous_page %}
-          <li>
-            <a href="{{ paginator.previous_page_path }}" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-              <small>Previous</small>
-            </a>
-          </li>    
-          {% else %}
-          <li class="disabled">
-            <a href="javascript:;">
-              <span aria-hidden="true">&laquo;</span>
-              <small>Previous</small>
-            </a>
-          </li>
-          {% endif %}
-                
-          {% if paginator.page == 1 %}
-          <li class="active"><a href="javascript:;">1</a></li>
-          {% else %}
-          <li><a href="{{ '/index.html' | prepend: site.baseurl }}">1</a></li>
-          {% endif %}
-  
-          {% if show_first > 3 %}
-            <li class="disabled"><a href="javascript:;">...</a></li>
-          {% elsif show_first == 3 %}
-            <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', 2 }}">2</a></li>
-          {% endif %}
-          
-          {% for i in (show_first..show_last) %}
-            {% if paginator.page == i %}
-              <li class="active"><a href="javascript:;">{{ i }}</a></li>
-            {% else %}
-              <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', i }}">{{ i }}</a></li>
+        <div class="hidden-sm hidden-md hidden-lg">
+          <ul class="pager">
+            {% if paginator.previous_page %}
+            <li class="previous">
+              <a href="{{ paginator.previous_page_path }}" title="previous page">
+                <span aria-hidden="true">&larr;</span>
+                <small>Newer Posts</small>
+              </a>
+            </li>
             {% endif %}
-          {% endfor %}
-  
-          {% if show_last < right2 %}
-            <li class="disabled"><a href="javascript:;">...</a></li>
-          {% elsif show_last == right2 %}
-            <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', right }}">{{ right }}</a></li>
-          {% endif %}
-  
-          {% if paginator.page == paginator.total_pages %}
-          <li class="active"><a href="javascript:;">{{ paginator.total_pages }}</a></li>
-          {% else %}
-          <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages }}</a></li>
-          {% endif %}
-          
-          {% if paginator.next_page %}
-          <li>
-            <a href="{{ paginator.next_page_path }}" aria-label="Next">
-              <small>Next</small>
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-          {% else %}
-          <li class="disabled">
-            <a href="javascript:;" aria-label="Next">
-              <small>Next</small>
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-          {% endif %}
-        </ul>
+
+            {% if paginator.next_page %}
+            <li class="next">
+              <a href="{{ paginator.next_page_path }}">
+                <small>Older Posts</small>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+        <div class="hidden-xs">
+          <ul class="pagination">
+            {% assign show_first = paginator.page | minus: 2 %}
+            {% assign show_last = paginator.page | plus: 2 %}
+            {% assign right = paginator.total_pages | minus: 1 %}
+            {% assign right2 = paginator.total_pages | minus: 2 %}
+            {% if show_first < 2 %}{% assign show_first = 2 %}{% endif %}
+            {% if show_last >= paginator.total_pages %}{% assign show_last = paginator.total_pages | minus: 1 %}{% endif %}
+
+            {% if paginator.previous_page %}
+            <li>
+              <a href="{{ paginator.previous_page_path }}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <small>Previous</small>
+              </a>
+            </li>
+            {% else %}
+            <li class="disabled">
+              <a href="javascript:;">
+                <span aria-hidden="true">&laquo;</span>
+                <small>Previous</small>
+              </a>
+            </li>
+            {% endif %}
+
+            {% if paginator.page == 1 %}
+            <li class="active"><a href="javascript:;">1</a></li>
+            {% else %}
+            <li><a href="{{ '/index.html' | prepend: site.baseurl }}">1</a></li>
+            {% endif %}
+
+            {% if show_first > 3 %}
+              <li class="disabled"><a href="javascript:;">...</a></li>
+            {% elsif show_first == 3 %}
+              <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', 2 }}">2</a></li>
+            {% endif %}
+
+            {% for i in (show_first..show_last) %}
+              {% if paginator.page == i %}
+                <li class="active"><a href="javascript:;">{{ i }}</a></li>
+              {% else %}
+                <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', i }}">{{ i }}</a></li>
+              {% endif %}
+            {% endfor %}
+
+            {% if show_last < right2 %}
+              <li class="disabled"><a href="javascript:;">...</a></li>
+            {% elsif show_last == right2 %}
+              <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', right }}">{{ right }}</a></li>
+            {% endif %}
+
+            {% if paginator.page == paginator.total_pages %}
+            <li class="active"><a href="javascript:;">{{ paginator.total_pages }}</a></li>
+            {% else %}
+            <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages }}</a></li>
+            {% endif %}
+
+            {% if paginator.next_page %}
+            <li>
+              <a href="{{ paginator.next_page_path }}" aria-label="Next">
+                <small>Next</small>
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+            {% else %}
+            <li class="disabled">
+              <a href="javascript:;" aria-label="Next">
+                <small>Next</small>
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
       </nav>
     </div>
-    
+
     <div class="col-md-3">
       {% include sidebar.html %}
     </div>
