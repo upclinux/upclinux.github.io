@@ -6,7 +6,6 @@ author: vjudge1
 categories: web
 tags: Linux 教务系统
 ---
-
 * content
 {:toc}
 
@@ -75,7 +74,7 @@ Charles 是一个 HTTP 调试工具，可以抓包也可以代理。
 
 现在只有一些小的改动，所以改完之后并不是 100% 兼容，很多功能仍然用不了，但是至少能进去查成绩了。
 
-### core.js
+### /jwxt/js/core.js
 
 * 在代码最开始加入：
 
@@ -101,4 +100,27 @@ Charles 是一个 HTTP 调试工具，可以抓包也可以代理。
 
   找到 `if(window.XMLHttpRequest && 1==2 )`，把 `&& 1==2` 直接去掉。
 
-* 还是这个函数，从 `var topXml = ...` 开始，一直到函数结束，把所有 `.text` 全部换成 `.value`。
+* 还是这个函数，从 `var topXml = ...` 开始，一直到函数结束，把所有 `.text` 全部换成 `.value`。一共三组。
+
+### 全校课表查看（未解决）
+
+由于这部分代码是动态生成的，所以无法采用替换文件的方式来调试。经过粗略分析，大致是以下位置出现错误：/jwxt/jiaowu/tkgl/queryKbByXzbj1.jsp 以及同一目录中的其他类似文件（如 queryKbByTeacher 等）。
+
+这些文件中（由于 jsp 是动态语言，因此实际内容不一定正好在这个文件中。但是生成的结果就在这里体现）有一系列 document.getElementById，然而其中的 id 并不存在。在操作这些并不存在的 DOM 元素时发生了错误，后面代码不再执行，因此无法获取全校课表。
+
+一个有效的修改办法是加入防错处理，或者直接忽略错误。不过目前我还没有在语言层面上找到解决办法。
+
+### 选课（未解决）
+
+虽然选择界面中 js 脚本也是动态生成的（分别为 /jwxt/jiaowu/xkgl/xsxkjmxs_tree.jsp 和 xsxkjmxs_frame.jsp），无法直接更改。不过，因为错误是采用了一个已经过时的 window.showModalDialog()，所以可以从语言层面上打补丁。
+
+此外 /jwxt/js/jspublic.js 也多处用到了这个函数。
+
+事实上，这个函数并不一定导致错误。但是，因为 Chrome（Chrome 内核）和 Opera 浏览器不支持，而且没有替代品，所以此问题仍然很严重。
+
+有一个临时的解决方案：
+
+    if (!window.showModalDialog)
+      window.showModalDialog = function(a,b,c) { window.open(a);return null; };
+
+但是这样修改仅仅能保证正常“查看详情”，并不能解决对话框与主窗口的交互问题。对于 Chrome，必须采用其他技术来进行窗口之间的交互，因此需要很大的改动。

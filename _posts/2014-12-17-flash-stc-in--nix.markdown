@@ -22,7 +22,7 @@ tags: 单片机
 
 使用了开发板，支持在线下载，串口芯片为 PL2303HX。
 
-## 和 Windows 环境的区别
+# 和 Windows 环境的区别
 
 * Windows 下用的是 Keil 和 STC-ISP，前者是编程软件（带编译器），后者是官方的下载软件。所以只要找到这两个的替代品，剩下的就都 ok 了。
     * Keil 的替代品是 sdcc。不过二者语法有些不同，程序不能直接拿来编译。
@@ -30,7 +30,7 @@ tags: 单片机
     * STC-ISP 的替代品有 gSTCISP、stcflash，前者是图形界面程序。由于 STC 的烧录方法是不公开的，所以这两个软件并不支持所有种类的 STC。不过 89C5x 都是没问题的。
 * 代码可以用 Vim 写，然后写 Makefile 编译。当然，怎么搞都行。
 
-## Ubuntu 的配置
+# Ubuntu 的配置
 
 其他 Linux 发行版思路类似。
 
@@ -40,7 +40,7 @@ tags: 单片机
 
     sudo apt-get install sdcc
 
-### stcflash (推荐)
+## stcflash (推荐)
 
 stcflash 可以从 [GitHub](https://github.com/laborer/stcflash) 下载。我对这个程序稍微做了修改，所以现在可以直接烧录 .hex 格式的程序了。
 
@@ -57,7 +57,7 @@ stcflash 需要 pySerial，所以：
 
 我个人感觉 stcflash 用起来会舒服一些，因为是命令行工具，便于写 Makefile。
 
-### gSTCISP
+## gSTCISP
 
 1. 先执行下面这条命令，编译时要用
 
@@ -76,7 +76,7 @@ stcflash 需要 pySerial，所以：
 
 
 
-## OS X 的配置
+# OS X 的配置
 
 为了省事儿，还是用 [stcflash](https://github.com/laborer/stcflash) 吧。
 
@@ -99,31 +99,33 @@ stcflash 需要 pySerial，所以：
 
 我没试过 gSTCISP 和 kSTCISP，毕竟那是针对 Linux 的。我觉得在装了 X11 之后应该是能用的。
 
-## 烧录 blink
+# 烧录 blink
 
-### 源码
+## 源码
 
 建个文件夹，然后建立个文件，叫 led.c：
 
-    #include <8052.h>
-    __sbit __at 0x80 LED;
-    // or
-    // #define LED  P0_0
+{% highlight c %}
+#include <8052.h>
+__sbit __at 0x80 LED;
+// or
+// #define LED  P0_0
 
-    void main()
+void main()
+{
+    unsigned int i=0;
+
+    while (1)
     {
-        unsigned int i=0;
-
-        while (1)
-        {
-            for (i=0; i<10000; i++);
-            LED = 0;
-            for (i=0; i<10000; i++);
-            LED = 1;
-        }
+        for (i=0; i<10000; i++);
+        LED = 0;
+        for (i=0; i<10000; i++);
+        LED = 1;
     }
+}
+{% endhighlight %}
 
-### 获得 bin 格式
+## 获得 bin 格式
 
 如果要求 .bin 格式，那么就输入以下命令：
 
@@ -137,7 +139,7 @@ stcflash 需要 pySerial，所以：
 
 对于 OS X，需要利用 port 或什么装一个 binutil，然后把上面命令中的 objcopy 换成 gobjcopy。
 
-### stcflash
+## stcflash
 
 幸运的是，stcflash 已经支持 .hex 格式，所以用 stcflash 烧录更简单——
 

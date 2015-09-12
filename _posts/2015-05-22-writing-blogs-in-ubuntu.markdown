@@ -97,14 +97,16 @@ To make it easier in graphical environment, type (I use `vim` rather than gedit)
 
 Add the following codes and save:
 
-	[Desktop Entry]
-	Comment=
-	Terminal=false
-	Name=Visual Studio Code
-	Exec=/opt/Code/Code %F
-	Type=Application
-	Categories=Development;IDE;
-	Icon=/opt/Code/resources/app/vso.png
+{% highlight ini %}
+[Desktop Entry]
+Comment=
+Terminal=false
+Name=Visual Studio Code
+Exec=/opt/Code/Code %F
+Type=Application
+Categories=Development;IDE;
+Icon=/opt/Code/resources/app/vso.png
+{% endhighlight %}
 
 OK. Enjoy coding! And all things can be done via Visual Studio Code.
 

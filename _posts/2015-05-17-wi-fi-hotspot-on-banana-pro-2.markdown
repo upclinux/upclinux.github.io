@@ -18,18 +18,19 @@ Before reading, make sure that you succeed to create an AP (Access Point) on the
 
 
 
-## WifiDog
+# WifiDog
 
 [Wifidog](http://dev.wifidog.org) is a complete and embeddable captive portal solution for wireless. You can open a free hotspot with authentication, e.g. charge system, WeChat Wifi.
 
 *WeChat Wifi is a open Wi-Fi designed for marking. However, you can only use WeChat for subscribing the specific WeChat public account before surfing the Internet freely.*
 
-### How does WifiDog work
+## How does WifiDog work
+
 [See here](http://dev.wifidog.org/wiki/doc/developer/FlowDiagram)
 
-## WifiDog Gateway
+# WifiDog Gateway
 
-### Install WifiDog Gateway
+## Install WifiDog Gateway
 
 Wifidog consists of two parts: auth server and client daemon. I installed the client daemon firstly.
 
@@ -46,38 +47,40 @@ Then, `cd` to the directory, and type:
 
 Type `wifidog` and you may receive a error about `libhttpd.so.0`. Just run `ldconfig` to fix it.
 
-Now you can type `wifidog -c /etc/wifidog.conf -f -d 7` and watch what happening. 
+Now you can type `wifidog -c /etc/wifidog.conf -f -d 7` and watch what happening.
 
-### Configuration
+## Configuration
 
 Edit `/etc/wifidog.conf` and do the following changes:
 
-    GatewayInterface wlan0
-    AuthServer {
-        Hostname 192.168.100.1
-        SSLAvailable no
-        HTTPPort 80
-        Path /
-        LoginScriptPathFragment login.php?
-        PortalScriptPathFragment portal.php?
-        MsgScriptPathFragment gw_message.php?
-        PingScriptPathFragment ping.php?
-        AuthScriptPathFragment auth.php?
-    }
+{% highlight nginx %}
+GatewayInterface wlan0
+AuthServer {
+    Hostname 192.168.100.1
+    SSLAvailable no
+    HTTPPort 80
+    Path /
+    LoginScriptPathFragment login.php?
+    PortalScriptPathFragment portal.php?
+    MsgScriptPathFragment gw_message.php?
+    PingScriptPathFragment ping.php?
+    AuthScriptPathFragment auth.php?
+}
+{% endhighlight %}
 
 I just used the board as an auth server directly. If possible, please use EXTERNAL servers to reduce load of the router and use HTTPS protocol for security.
 
-WifiDog provides lots of features such as IP blocking (may be like GFW?), trusted users. 
+WifiDog provides lots of features such as IP blocking (may be like GFW?), trusted users.
 
-## Auth Server
+# Auth Server
 
-### wifidog-auth
+## wifidog-auth
 
 You can use [wifidog-auth](https://github.com/wifidog/wifidog-auth) in production environment. Here is a [tutorial](http://dev.wifidog.org/wiki/doc/install/auth-server) about deploying.
 
 It's sorry that I failed to deploy the existing repo on my Banana Pro and it's too HUGE for me and my board. So I use a simple one instead.
 
-### Mini server on board
+## Mini server on board
 
 I use lighttpd, PHP and MySQL for auth on the board. You can Google how to install them.
 
@@ -85,20 +88,22 @@ The following codes are from [zhyaof](http://talk.withme.me/?p=267) with some ch
 
 Create a database firstly (MySQL) and add a user named test:
 
-    CREATE DATABASE portal;
-    CREATE TABLE `users` (
-        `username` VARCHAR(255) NOT NULL,
-        `password` TEXT NOT NULL,
-        `token` TEXT,
-        `logintime` DATETIME DEFAULT NULL,
-        `gw_address` TEXT,
-        `gw_port` TEXT,
-        `gw_id` TEXT,
-        `mac` TEXT,
-        `url` TEXT,
-        PRIMARY KEY (`username`)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-    INSERT INTO users (username, password) VALUES ('test', '123456');
+{% highlight sql %}
+CREATE DATABASE portal;
+CREATE TABLE `users` (
+    `username` VARCHAR(255) NOT NULL,
+    `password` TEXT NOT NULL,
+    `token` TEXT,
+    `logintime` DATETIME DEFAULT NULL,
+    `gw_address` TEXT,
+    `gw_port` TEXT,
+    `gw_id` TEXT,
+    `mac` TEXT,
+    `url` TEXT,
+    PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO users (username, password) VALUES ('test', '123456');
+{% endhighlight %}
 
 * `auth.php`: It must output `Auth: 1` or `Auth: 0` (other numbers are also OK if you read the docs). The former one means access to the Internet.
 
@@ -112,7 +117,7 @@ Create a database firstly (MySQL) and add a user named test:
     $incoming = isset($_GET['incoming']) ? $_GET['incoming'] : null;
     $outgoing = isset($_GET['outgoing']) ? $_GET['outgoing'] : null;
     $gw_id = isset($_GET['gw_id']) ? $_GET['gw_id'] : null;
-    
+
     // mac & token are used for auth.
     if(!empty($mac) && !empty($token)) {
         // Connect to MySQL. Please change the the following code to your own.
@@ -121,7 +126,7 @@ Create a database firstly (MySQL) and add a user named test:
             echo 'Auth: 0';
         } else {
             mysql_select_db('portal', $con);
-            // After succeeding to login, IP, MAC and Token from the user will be recorded into the database (login.php). 
+            // After succeeding to login, IP, MAC and Token from the user will be recorded into the database (login.php).
             // MACs are to identify users. However, it can be bypassed by ARP spoofing.
             $result = mysql_query("SELECT * FROM users WHERE mac='$mac' AND token='$token'");
             if(!empty($result) && mysql_num_rows($result) != 0) {
@@ -247,7 +252,7 @@ Login successful.
 </body>
 {% endhighlight %}
 
-## Start wifidog
+# Start wifidog
 
 To have a test, please type:
 
@@ -258,6 +263,6 @@ If no error occurs, you can let it start automatially by adding a line in `/etc/
     /usr/local/bin/wifidog -c /etc/wifidog.conf
 
 
-## References
+# References
 * [Wifidog Documentation](http://dev.wifidog.org/wiki/doc/install/debian)
 * [zhyaof](http://talk.withme.me/?p=267)

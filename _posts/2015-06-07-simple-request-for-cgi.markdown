@@ -1,18 +1,18 @@
 ---
 layout: post
-title: "Request for CGI"
+title: "Request & Response for CGI"
 date: 2015-06-07 15:02:00
 author: vjudge1
 categories: Web
-tags: request C CGI
+tags: Request C CGI
 ---
 
 * content
 {:toc}
 
-I wrote a library about HTTP Request & Session due to a project with [boa server](https://github.com/vjudge1/boa) required. After making php-cgi work, I gave up this library eventually.
+I wrote a library about HTTP Request, Response and Session due to a project with [boa server](https://github.com/vjudge1/boa) required. After making php-cgi work, I gave up this library eventually.
 
-This article is about HTTP Request.
+This article is about HTTP Request & Response.
 
 These codes are not suitable in production environment. Use [cgic](http://www.boutell.com/cgic/) instead.
 
@@ -20,7 +20,7 @@ These codes are not suitable in production environment. Use [cgic](http://www.bo
 
 
 
-## CGI
+# CGI
 
 CGI is a standard for dynamic generation of web pages by a web server.
 
@@ -30,39 +30,39 @@ How do the web server and the program exchange datas with each other? Obey a spe
 
 ![cgi1](/images/2015-06-07-request/cgi1.gif)
 
-The CGI program can be written in any languages because CGI is just an interface, not a kind of language. 
+The CGI program can be written in any languages because CGI is just an interface, not a kind of language.
 
-### Exchange
+## Exchange
 
-CGI programs exchange information via standard input `stdin`, standard output `stdout` and `environment variables`. 
+CGI programs exchange information via standard input `stdin`, standard output `stdout` and `environment variables`.
 
 ![cgi2](/images/2015-06-07-request/cgi2.png)
 
-The web server will provide a number of variables. The CGI programs can fetch server infomation via these variables. Refer to [Wikipedia](https://en.wikipedia.org/wiki/Common_Gateway_Interface) for more information. This time I only use REQUEST_METHOD, QUERY_STRING and CONTENT_LENGTH. 
+The web server will provide a number of variables. The CGI programs can fetch server infomation via these variables. Refer to [Wikipedia](https://en.wikipedia.org/wiki/Common_Gateway_Interface) for more information. This time I only use REQUEST_METHOD, QUERY_STRING and CONTENT_LENGTH.
 
 The CGI programs should output the `HTTP Header` (Don't forget it!) and HTML codes to `stdout`. And, what the program outputs is exactly what the browser receives.
 
-## HTTP Request
+# HTTP Request
 
 There are two main kinds of request methods: HTTP `GET` and `POST`. After you submit a form, the browser will encode what you input as a special string. The form of the string is the same whether using GET or POST.
 
 The CGI program should detect the mode by the variable `REQUEST_METHOD`.
 
 * Requests from HTTP GET just follow the URL. It looks like `http://www.blahblah.com/cgi-bin/a?param1=value1&param2=value2`.
-  
+
   The data can be read from the variable `QUERY_STRING`.
-  
+
 * You can't see requests directly via POST (However you can see it when using a developer tool or opening developer mode of the browser). More data can be transfered in POST mode than GET.
 
   The data should be read from `stdin`. And the variable `CONTENT_LENGTH` means the length of data.
-  
-## Code
 
-### Request
+# Code
+
+## Request
 
 The `request` code contains two files: request.h and request.c.
 
-#### request.h
+### request.h
 
 {% highlight c %}
 // request.h : Header of HTTP GET & POST
@@ -111,7 +111,7 @@ char *getQuery(int *requestMode)
         *requestMode = 0;
         return NULL;
     }
-    else if (strcmp(method, "POST") == 0) 
+    else if (strcmp(method, "POST") == 0)
     {
         *requestMode = HTTP_POST;
         int len = atoi(getenv("CONTENT_LENGTH"));
@@ -254,7 +254,7 @@ char *encodeQuery(key_pair *data, int n)
                     (*ch2>='a'&&*ch2<='z') ||
                     (*ch2=='_'||*ch2=='*'||*ch2=='-'||*ch2=='.'))
                 {
-                    // Needn't be encoded 
+                    // Needn't be encoded
                     *(ch++)=*(ch2++);
                 }
                 else
@@ -279,13 +279,13 @@ char *encodeQuery(key_pair *data, int n)
 }
 {% endhighlight %}
 
-### Example
+## Example
 
 Compile the complete C code to the `cgi-bin` directory and name it to `request.cgi`. Execute permission is also required.
 
 Copy `test.html` to the document directory. For example, `/var/www/test.html`.
 
-#### test.html
+### test.html
 
 {% highlight html %}
 <h2>HTTP GET</h2>
@@ -300,9 +300,9 @@ Copy `test.html` to the document directory. For example, `/var/www/test.html`.
 </form>
 {% endhighlight %}
 
-#### test.c
+### test.c
 
-This program will detect type of the request, and output parameters in tabular form. 
+This program will detect type of the request, and output parameters in tabular form.
 
 {% highlight c %}
 #include <stdio.h>
@@ -350,14 +350,14 @@ int main(int argc, char *argv[])
 }
 {% endhighlight %}
 
-### Issues
+## Issues
 
 * It's hard to write a flexible dictionary structure so I just write a fixed-width one. Query keys and values mustn't exceed 64 bytes or they will be truncated.
 
   On the other hand, fixed-width structures are a waste of memory.
-  
+
 * Query strings must be in correct form or the program may get errors.
 
-## References
+# References
 
 * [我所了解的cgi by liuzhang](http://www.cnblogs.com/liuzhang/p/3929198.html)

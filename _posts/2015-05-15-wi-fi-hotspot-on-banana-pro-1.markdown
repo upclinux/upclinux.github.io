@@ -18,7 +18,7 @@ Picking up my Banana Pro, I think out an idea -- A wireless router with authenti
 
 
 
-## Banana Pro
+# Banana Pro
 
 Banana Pro is a development board designed by [lemaker](http://www.lemaker.org) and it's similiar to Raspberry Pi. The performance of Banana Pro is better than Raspberry Pi. **However, DO NOT get it unless you can solve problems by yourself because of lacking in documents.**
 
@@ -26,7 +26,8 @@ OpenWrt supports Banana Pro without its onboard wireless adapter. I tried making
 
 This time I will try Debian direcly.
 
-### Install Bananian
+## Install Bananian
+
 Download and flash [Bananian](http://www.bananian.org) to the micro SD card.
 
 Use `dd` in Linux or OS X and use `Win32ImageDisker` in Windows.
@@ -37,15 +38,16 @@ Before rebooting, edit `/etc/modules` file, and add the content below into it:
 
     ap6210 op_mode=2
 
-### Install development tools
+## Install development tools
+
 There are no real development tools in Bananian. You have to install them manually:
 
     apt-get install gcc make git libc-dev automake libtool
     apt-get install vim
 
-## Enable AP mode
+# Enable AP mode
 
-### hostapd
+## hostapd
 
 I used the newest hostapd (version 2.4) rather than the one in Debian (version 1.0). Use these commands to compile and install it:
 
@@ -60,19 +62,21 @@ I used the newest hostapd (version 2.4) rather than the one in Debian (version 1
 
 You need a create a configuation file `/etc/hostapd/hostapd.conf`, and add:
 
-    interface=wlan0
-    driver=nl80211
-    ssid=MySSID
-    channel=6
-    hw_mode=g
-    macaddr_acl=0
-    auth_algs=1
-    ignore_broadcast_ssid=0
-    wpa=2
-    wpa_passphrase=12345678
-    wpa_key_mgmt=WPA-PSK
-    wpa_pairwise=TKIP
-    rsn_pairwise=CCMP
+{% highlight ini %}
+interface=wlan0
+driver=nl80211
+ssid=MySSID
+channel=6
+hw_mode=g
+macaddr_acl=0
+auth_algs=1
+ignore_broadcast_ssid=0
+wpa=2
+wpa_passphrase=12345678
+wpa_key_mgmt=WPA-PSK
+wpa_pairwise=TKIP
+rsn_pairwise=CCMP
+{% endhighlight %}
 
 I tried `wpa=3` according to the document but both my phone and my Mac can't connect to the board. so I replaced it with `wpa=2`.
 
@@ -80,7 +84,7 @@ Now you can run the following command to test and you will see a hotspot named `
 
     hostapd -d /etc/hostapd/hostapd.conf
 
-### Static IP for wlan0
+## Static IP for wlan0
 Edit `/etc/network/interfaces` and add the following lines:
 
     allow-hotplug wlan0
@@ -90,7 +94,7 @@ Edit `/etc/network/interfaces` and add the following lines:
 
     up hostapd -B /etc/hostapd/hostapd.conf
 
-### Enable DHCP server
+## Enable DHCP server
 There are many kinds of DHCP servers. I chose `udhcpd`.
 
 <div class="callout callout-primary">
@@ -117,7 +121,7 @@ Edit `/etc/udhcpd.conf` and do the following changes:
 
 Edit `/etc/default/udhcpd` and modify `DHCPD_ENABLED="no"` to `DHCPD_ENABLED="yes"`. Then `udhcpd` will start automatically after booting.
 
-### Go to the Internet
+## Go to the Internet
 You can connect to the hotspot by now but you can't connect to the Internet.
 
 There are two ways to route flow - NAT and bridge.

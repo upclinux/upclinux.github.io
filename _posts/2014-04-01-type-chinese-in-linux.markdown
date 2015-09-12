@@ -85,16 +85,16 @@ Ubuntu 自带的是 iBus (*备注：而且还有无法全拼的 bug*)，UbuntuKy
 5. 切换到 root 用户（以免后面出现权限问题），将 data.tar.xz 解压，并手动安装文件：
 
     tar -xvf data.tar.xz
-		chmod +x ./usr/bin/* /usr/share/applications/*
+		chmod +x ./usr/bin/*
 		cp -R etc usr /
 
 6. 其中库文件并没有被放到正确的位置上面，所以
 
 		cp -R /usr/lib/x86_64-linux-gnu/* /usr/lib64
 
-7. 清理临时文件
+7. 清理刚才产生的临时文件
 
-		rm -r etc usr /usr/lib/x86_64-linux-gnu
+		rm -R etc usr /usr/lib/x86_64-linux-gnu
 
 8. 如果没有什么异常，那么搜狗拼音输入法就已经装好了。可以用 `sogou-qimpanel` 等命令测试一下是否能正确运行。
 

@@ -110,9 +110,9 @@ blockquote {
 pre,
 code {
     font-size: 14px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #f8f8f8;
+//    border: 1px solid $grey-color-light;
+//    border-radius: 3px;
+//    background-color: #f8f8f8;
 }
 
 code {
@@ -120,12 +120,9 @@ code {
 }
 
 pre > code {
-    border: 0;
-    padding-right: 0;
-    padding-left: 0;
-}
-
-.highlight pre code {
+//    border: 0;
+//    padding-right: 0;
+//    padding-left: 0;
     display: block;
     overflow-x: auto;
     padding: 0.5em;
@@ -133,6 +130,15 @@ pre > code {
     background: #f8f8f8;
 }
 
+/*
+.highlight pre code {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    color: #333;
+    background: #f8f8f8;
+}
+*/
 
 
 /**

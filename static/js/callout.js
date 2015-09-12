@@ -7,7 +7,7 @@
   var reg,reg2;
   // Callout start
   text = text.replace(/<p>\s*?\[%\s*?callout\s*?%\]\s*?<\/p>/g, '<div class="callout callout-primary">');
-  reg = /<p>\s*?\[%\s*?callout\s*?%\]\s*?(.*?)<\/p>/g;
+  reg = /<p>\s*?\[%\s*?callout\s*?%\]\s*?(.*?)<\/p>/;
   while (style=reg.exec(text)) {
     text=text.replace(reg, '<div class="callout callout-primary"><h4>'+style[1]+'</h4>');
   }

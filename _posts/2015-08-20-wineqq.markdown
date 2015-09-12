@@ -25,7 +25,7 @@ Linux 世界出现了三种解决方案：
 
 所以 WineQQ 是一个折中的方案——不稳定，功能够多，不让人觉得累赘。
 
-最初的 WineQQ 是有 longene 团队开发的，现在他们已经弃坑（毕竟 wineqq 是副业），而深度团队与腾讯和 CrossOver 合作，已经出了比较新的 WineQQ。
+最初的 WineQQ 是有 longene 团队开发的，现在他们已经弃坑（毕竟 wineqq 是副业），而深度团队和 CrossOver 合作（当然没有腾讯参与），已经出了比较新的 WineQQ。
 
 由于 wine 也支持 OS X 系统，所以苹果电脑同样可以用类似的方法使用 QQ。只不过，因为 QQ 有官方的苹果版，所以没有人会在乎这个。
 
@@ -50,3 +50,30 @@ Linux 世界出现了三种解决方案：
 最后，运行命令：`WINEPREFIX=~/Deepin-QQ wine "C:\Program Files\Tencent\QQ\Bin\QQ.exe"`，WineQQ 就弄好了。
 
 为了方便，可以将这条命令制作成脚本或启动器。
+
+## 启动器
+
+假如 Deepin-QQ 目录是 /home/ubuntu/Deepin-QQ。
+
+想办法弄一张 QQ 的图片，保存到 /home/ubuntu/Deepin-QQ/qq.png。这张图将作为启动器（以及应用程序菜单中）的图标。
+
+建立一个文件 ~/.local/share/applications/qq.desktop，用文本编辑器将其打开，并输入
+
+{% highlight ini %}
+[Desktop]
+Type=Application
+Categories=Network;InstantMessaging;
+Comment=
+Terminal=false
+Name=QQ
+Exec=/usr/bin/env WINEPREFIX=/home/ubuntu/Deepin-QQ wine "C:\Program Files\Tencent\QQ\Bin\QQ.exe"
+Icon=/home/ubuntu/Deepin-QQ/qq.png
+{% endhighlight %}
+
+保存之后就可以在应用程序菜单中找到 QQ 了。
+
+## QQ 卡死的处理
+
+毕竟是 wine，而且是腾讯不支持的项目，卡死崩溃都是正常现象。一旦卡死，可用以下命令结束所有 QQ 进程：
+
+    WINEPREFIX=/home/ubuntu/Deepin-QQ wineserver -k

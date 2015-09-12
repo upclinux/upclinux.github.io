@@ -23,21 +23,25 @@ The left screen is connected to the Banana Pro directly. The right screen is my 
 
 My keyboard and mouse are connected to the pi, but they can also control the desktop in the phone directly.
 
-<div class="callout callout-info">
-<h4>The TFT screen</h4>
-The TFT screen will NOT show things automatically. You need to load a kernel model called <code>fbtft</code> first.<br>
+[% callout style=info %]
+The TFT screen
+
+The TFT screen will NOT show things automatically. You need to load a kernel model called <code>fbtft</code> first.
+
 If you're using Raspberry Pi and you're rich, it's better to purchase a HDMI screen.
-</div>
+[% endcallout %]
 
-<div class="callout callout-info">
-<h4>Pi</h4>
+[% callout style=info %]
+Pi
+
 In fact, Raspberry Pi (Banana Pro is imitating the pi) is also a kind of computer. So you can also use your computers or laptops as the host.
-</div>
+[% endcallout %]
 
-<div class="callout callout-warning">
-<h4>Wireless required</h4>
+[% callout style=warning %]
+Wireless required
+
 I'm using VNC for remote desktop so wireless is required for connecting. And the phone and the host should be connected in the same LAN.
-</div>
+[% endcallout %]
 
 # Steps
 
@@ -86,10 +90,11 @@ If there is nothing on the screen, please check and modify `~/.vnc/xstartup`.
 
 By now you can't use keyboard and mouse directly, so `Synergy` is needed.
 
-<div class="callout callout-primary">
-<h4>Synergy</h4>
+[% callout %]
+Synergy
+
 Synergy is a tool for sharing keyboard and mouse to multiple computers. It supports Windows, Linux and Mac at the same time. It's free software under GNU GPL license.
-</div>
+[% endcallout %]
 
 ### Install & configure synergy
 
@@ -118,4 +123,3 @@ Make sure the desktop of the host and VNC server are started. Then type:
 	synergyc --name client --display :1 127.0.0.1
 
 Then the Android phone will work like a "real" screen. (However, the mouse pointer may be invisible.)
-
