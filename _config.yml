@@ -1,7 +1,7 @@
 # Site settings
 title: vjudge1
 email: vjudge404@gmail.com
-description: I'm not Virtual Judge or 关云长.
+description: Bot
 footnote: > # this means to ignore newlines until "baseurl:"
   &copy; 2015 vjudge1<br>Powered by GitHub Pages & Jekyll
 baseurl: "" # the subpath of your site, e.g. /blog/
@@ -11,12 +11,13 @@ paginate: 5
 excerpt_separator: "\n\n\n\n"
 timezone: Asia/Shanghai
 twitter_username: vjudge404
+facebook_username: vjudge404
 github_username: vjudge1
 #qqqun_name: "QQ 群"
-#qqqun_idkey: 
-#weibo_username: 
-#qq: 
-#weibo_userid: 
+#qqqun_idkey:
+#weibo_username:
+#qq:
+#weibo_userid:
 
 host: 0.0.0.0
 
@@ -32,9 +33,18 @@ markdown: kramdown
 
 # External links
 external_links:
-- 
+-
   name: UPC Linux
   url: https://upclinux.github.io
 -
   name: UPC Linux / Intro
   url: https://upclinux.github.io/intro/
+-
+  name: 环宇的博客
+  url: http://www.lihuanyu.com
+-
+  name: 微尘风景BBS
+  url: http://wangchenyu.net.cn
+-
+  name: Jerry Yuan
+  url: http://jerry.weighingproduct.com

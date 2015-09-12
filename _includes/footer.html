@@ -30,6 +30,13 @@
             </a>
           </li>
           {% endif %}
+          {% if site.facebook_username %}
+          <li>
+            <a href="https://www.facebook.com/{{ site.facebook_username }}">
+            <i class="fa-li fa fa-facebook"></i><span class="username">{{ site.facebook_username }}</span>
+            </a>
+          </li>
+          {% endif %}
           {% if site.weibo_userid %}
           <li>
             <a href="http://weibo.com/{{ site.weibo_userid }}">
