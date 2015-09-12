@@ -7,7 +7,7 @@
   <script type="text/javascript">
     var host = "{{ site.force_https }}";
     if ((host == window.location.host) && (window.location.protocol != "https:")) {
-        window.stop ? window.stop() : document.execCommand("Stop");
+        //window.stop ? window.stop() : document.execCommand("Stop");
         window.location.protocol = "https";
     }
   </script>

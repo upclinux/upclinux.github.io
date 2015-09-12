@@ -22,7 +22,7 @@ github_username: vjudge1
 host: 0.0.0.0
 
 # force https
-#force_https: vjudge1.github.io
+force_https: vjudge1.github.io
 
 # Gems
 gems:
