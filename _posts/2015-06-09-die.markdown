@@ -3,7 +3,7 @@ layout: post
 title: "作死记"
 date: 2015-06-09 22:59:00
 author: vjudge1
-categories: 中文文章
+categories: others
 ---
 * content
 {:toc}

@@ -164,23 +164,24 @@
     margin-bottom: $spacing-unit;
 
     h1, h2 {
-         padding-bottom: $spacing-unit / 4;
-     }
+        padding-bottom: $spacing-unit / 4;
+    }
 
     h3, h4, h5, h6 {
         padding-bottom: $spacing-unit / 8;
     }
 
+    h1 {
+        font-size: 30px;
+        border-bottom: 1px solid $grey-color-medium;
+    }
+
     h2 {
-        font-size: 28px;
+        font-size: 22px;
         border-bottom: 1px solid $grey-color-medium;
     }
 
     h3 {
-        font-size: 22px;
-    }
-
-    h4 {
         font-size: 18px;
     }
 }
@@ -370,8 +371,16 @@
     }
 }
 
+.anchorjs-link {
+    color: $grey-color;
+    &:hover {
+        color: $grey-color;
+        text-decoration: none;
+    }
+}
+
 .external-link {
     color: $grey-color;
-    padding-left: 0 .3em;
-    font-size: $small-font-size;
+    padding: 0 .3em;
+    font-size: $small-font-size * 0.75;
 }

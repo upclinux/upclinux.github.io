@@ -3,7 +3,8 @@ layout: post
 title: "Install Rails on my Mac"
 date: 2015-07-25 21:00:00
 author: vjudge1
-categories: Ruby
+categories: Ruby Mac
+tags: Rails
 ---
 * content
 {:toc}

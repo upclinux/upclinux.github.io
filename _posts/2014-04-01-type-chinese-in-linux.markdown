@@ -3,8 +3,8 @@ layout: post
 title: "解决 Ubuntu 和 Qt 的中文输入问题"
 date: 2014-04-01 22:15:06
 author: vjudge1
-categories: Linux 中文文章
-tags: Ubuntu 中文
+categories: Linux
+tags: 中文
 ---
 
 * content
@@ -20,7 +20,7 @@ Linux 是中文输入问题最多的系统了，幸运的是，问题是可以�
 本文最开始是 2014 年 4 月写的，当时搜狗官方并没正式发布 Linux 版输入法。后来有了 Linux 版，所以文章有些地方就需要改了。
 </div>
 
-## 输入法平台
+# 输入法平台
 
 在 Linux 系统中主要有三种输入法平台——SCIM、iBus、fcitx。当然也有别的输入法，比方说 fbterm 下的小小输入法。
 
@@ -36,7 +36,7 @@ Ubuntu 自带的是 iBus (*备注：而且还有无法全拼的 bug*)，UbuntuKy
 
 有了中国人日本人和韩国人，就有了 iBus。但是对于中国人来说毕竟不好用，所以就有人自己造车轮了。
 
-## 安装搜狗拼音输入法
+# 安装搜狗拼音输入法
 
 过去搜狗官方并没有支持 Linux 系统，所以装起来比较麻烦。现在就很轻松了。
 
@@ -61,9 +61,9 @@ Ubuntu 自带的是 iBus (*备注：而且还有无法全拼的 bug*)，UbuntuKy
 
 	* 还有一些输入法，比如 LaTeX 输入法 (输入数学符号)。可以自己到软件包管理器里找。
 
-## 解决 Qt 的中文输入问题
+# 解决 Qt 的中文输入问题
 
-### Qt 程序
+## Qt 程序
 
 对于旧版 Ubuntu (例如 Ubuntu 12.04)，打以下四行命令：
 
@@ -78,7 +78,7 @@ Ubuntu 自带的是 iBus (*备注：而且还有无法全拼的 bug*)，UbuntuKy
 
 现在中文输入法基本上就畅通无阻了。
 
-### Qt Creator
+## Qt Creator
 
 按照上面的配置，Qt4 的 Qt Creator 已经就可以正常敲汉字了，但是 Qt5 的 Qt Creator 还不行。
 

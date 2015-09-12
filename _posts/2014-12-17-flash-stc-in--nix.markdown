@@ -3,7 +3,7 @@ layout: post
 title:  "Linux/Mac 下烧录 STC 单片机"
 date:   2014-12-17 17:21:46
 author: vjudge1
-categories: Linux 中文文章
+categories: Linux
 tags: 单片机
 ---
 * content
@@ -26,6 +26,7 @@ tags: 单片机
 
 * Windows 下用的是 Keil 和 STC-ISP，前者是编程软件（带编译器），后者是官方的下载软件。所以只要找到这两个的替代品，剩下的就都 ok 了。
     * Keil 的替代品是 sdcc。不过二者语法有些不同，程序不能直接拿来编译。
+    * Keil 在 wine 中不能正常工作，但是编译器可以。
     * STC-ISP 的替代品有 gSTCISP、stcflash，前者是图形界面程序。由于 STC 的烧录方法是不公开的，所以这两个软件并不支持所有种类的 STC。不过 89C5x 都是没问题的。
 * 代码可以用 Vim 写，然后写 Makefile 编译。当然，怎么搞都行。
 
@@ -36,7 +37,7 @@ tags: 单片机
 一般下载器都是 PL2303 芯片，此芯片免驱，所以不用安装了。默认情况下串口可能是`/dev/ttyUSB0`。
 
 用以下命令安装编译器：
-    
+
     sudo apt-get install sdcc
 
 ### stcflash (推荐)
@@ -87,15 +88,15 @@ stcflash 需要 pySerial，所以：
 
 3. 需要安装 pySerial。首先要[下载代码](https://pypi.python.org/packages/source/p/pyserial/pyserial-2.7.tar.gz#md5=794506184df83ef2290de0d18803dd11)，解压。
    安装其实很简单，只要
-   
+
         sudo python setup.py install
-        
+
    就 OK 了。
 4. 下载 stcflash。为了方便，可以复制到 /usr/local/bin 中：
 
         sudo cp stcflash.py /usr/local/bin/stcflash
         sudo chmod +x /usr/local/bin/stcflash
-    
+
 我没试过 gSTCISP 和 kSTCISP，毕竟那是针对 Linux 的。我觉得在装了 X11 之后应该是能用的。
 
 ## 烧录 blink
@@ -108,11 +109,11 @@ stcflash 需要 pySerial，所以：
     __sbit __at 0x80 LED;
     // or
     // #define LED  P0_0
-    
+
     void main()
     {
         unsigned int i=0;
-    
+
         while (1)
         {
             for (i=0; i<10000; i++);
@@ -125,7 +126,7 @@ stcflash 需要 pySerial，所以：
 ### 获得 bin 格式
 
 如果要求 .bin 格式，那么就输入以下命令：
-    
+
     sdcc led.c
     packihx led.ihx > led.hex
     objcopy -I ihex -O binary led.hex led.bin

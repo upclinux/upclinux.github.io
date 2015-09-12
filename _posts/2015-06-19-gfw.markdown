@@ -18,7 +18,7 @@ Written for some countries which have some well-known issues about the Internet.
 
 1. Do NOT teach the method of circumvention in public or you will have FREE meals every day.
 2. Try to use a safer transmission protocol like HTTPS, or the GFW may break the connection when detects the keyword.
-3. The wall may heighten during important dates such as NPC & CPPCC or [May 35th](https://en.wikipedia.org/wiki/Tiananmen_Square_protests_of_1989).
+3. The wall may heighten during important dates such as NPC & CPPCC or May 35th.
 4. Compared with the North Korea, we are living in a happy life. :ghost: There is complelety no Internet so there is no way to "cross the wall" in DPRK.
 
 ## Some simple technologies
@@ -27,7 +27,7 @@ Written for some countries which have some well-known issues about the Internet.
 
 If you don't care about the quality and the censor, and you don't like to be in trouble, you can use substitutes.
 
-However, you will find that Google, Wikipedia or so on are necessary on academic purpose.
+However, you will find that Google, Wikipedia or so on are still necessary on academic purpose.
 
 [Gfsoso](http://www.gfsoso.net) is a "mover" for Google Search, Images and Academic. It's on record in China so it will not be GFWed (And you can't search sensitive things by it).
 
@@ -55,7 +55,7 @@ NOTE:
    As for Google, you need a program called [GoGoTester](https://github.com/azzvx/gogotester) (Windows Only).
 
 2. As for Youtube, it's better to use another method for accessing.
-3. It's useless to change hosts if IPs are GFWed like Dongtaiwang of Falun Gong (65.49.2.152).
+3. It's useless to change hosts if IPs are GFWed.
 
 <div class="callout callout-primary">
 <h4>HTTPS required</h4>

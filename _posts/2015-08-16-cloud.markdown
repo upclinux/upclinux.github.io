@@ -3,7 +3,7 @@ layout: post
 title: "常见的云服务器"
 date: 2015-08-16 12:00:00
 author: 课戴表王晨宇
-categories: Web 中文文章
+categories: Web
 ---
 * content
 {:toc}

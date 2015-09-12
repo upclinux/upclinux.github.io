@@ -3,7 +3,7 @@ layout: post
 title: "让“强智”教务系统支持 Linux/OS X"
 date: 2015-05-29 14:00:08
 author: vjudge1
-categories: 中文文章 web
+categories: web
 tags: Linux 教务系统
 ---
 
@@ -79,26 +79,26 @@ Charles 是一个 HTTP 调试工具，可以抓包也可以代理。
 
 * 在代码最开始加入：
 
-		if (!window.ActiveXObject) { 
-		    XMLDocument.prototype.selectNodes = Element.prototype.selectNodes = function (xpath) { 
-		        var xpe = new XPathEvaluator(); 
-		        var nsResolver = xpe.createNSResolver( this.ownerDocument == null?this.documentElement : this.ownerDocument.documentElement); 
-		        var result = xpe.evaluate(xpath, this , nsResolver, 0 , null ); 
-		        var found = []; 
-		        var res; 
-		        while (res = result.iterateNext()) 
-		            found.push(res); 
-		        return found; 
-		    } 
-		    XMLDocument.prototype.selectSingleNode = Element.prototype.selectSingleNode = function (xpath) { 
-		        var x = this.selectNodes(xpath) 
-		        if ( ! x || x.length < 1 ) return null ; 
-		        return x[ 0 ]; 
-		    } 
-		} 
+		if (!window.ActiveXObject) {
+		    XMLDocument.prototype.selectNodes = Element.prototype.selectNodes = function (xpath) {
+		        var xpe = new XPathEvaluator();
+		        var nsResolver = xpe.createNSResolver( this.ownerDocument == null?this.documentElement : this.ownerDocument.documentElement);
+		        var result = xpe.evaluate(xpath, this , nsResolver, 0 , null );
+		        var found = [];
+		        var res;
+		        while (res = result.iterateNext())
+		            found.push(res);
+		        return found;
+		    }
+		    XMLDocument.prototype.selectSingleNode = Element.prototype.selectSingleNode = function (xpath) {
+		        var x = this.selectNodes(xpath)
+		        if ( ! x || x.length < 1 ) return null ;
+		        return x[ 0 ];
+		    }
+		}
 
 * 往下找 send_request 函数。这里有一个笑点——`if (什么什么 && 1 == 2)`。那么，里面的代码就算等到中国足球夺冠之后也执行不了吧……
 
   找到 `if(window.XMLHttpRequest && 1==2 )`，把 `&& 1==2` 直接去掉。
-  
+
 * 还是这个函数，从 `var topXml = ...` 开始，一直到函数结束，把所有 `.text` 全部换成 `.value`。
