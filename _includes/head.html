@@ -16,15 +16,15 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/css/github.min.css">
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<!--  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/static/css/github.min.css"> -->
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
-  <script type="text/javascript" src="{{ site.baseurl }}/static/js/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="{{ site.baseurl }}/static/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="{{ "/static/js/index.js" | prepend:site.baseurl }}"></script>
 
 <!--
