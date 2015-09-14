@@ -371,6 +371,10 @@
     }
 }
 
+.blackout {
+    background-color: $text-color;
+}
+
 .anchorjs-link {
     color: $grey-color;
     &:hover {

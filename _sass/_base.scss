@@ -117,10 +117,13 @@ code {
 
 code {
     padding: 1px 5px;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: #f8f8f8;
 }
 
 pre > code {
-//    border: 0;
+    border: 0;
 //    padding-right: 0;
 //    padding-left: 0;
     display: block;
