@@ -209,7 +209,7 @@ VPN、G<span class="blackout">oAgen</span>t、S<span class="blackout">hadowsSoc<
 
 有了机器学习技术作为支撑，出口检测设备已经能够识别各种 VPN、Gt、Sks 等流量。至于会不会++那些流量，全凭设备的心情<span class="blackout">，可能是有一个阈值，只要流量足够大就切断</span>。
 
-<small>羊毛信送多了，鬼子当然知道羊是用来送信的了，只不过，想不想“三光”全凭心情。</small>
+<small>鸡毛信送多了，鬼子当然知道羊是用来送信的了，只不过，想不想“三光”全凭心情。</small>
 
 ## 探测
 
