@@ -11,7 +11,7 @@ layout: default
       {% if page.categories %}
         &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-th-list"></span>
         {% for c in page.categories %}
-          <a href="{{ "/categorites/?c=" | prepend: site.baseurl | append: c }}">{{ c }}</a>
+          <a href="{{ "/categories/?c=" | prepend: site.baseurl | append: c }}">{{ c }}</a>
         {% endfor %}
       {% endif %}
       {% if page.tags[0] %}

@@ -9,12 +9,12 @@
 </form>
 
 <h4 class="page-header text-muted">
-  <i class="fa fa-th-list"></i> Categorites
+  <i class="fa fa-th-list"></i> Categories
 </h4>
 
 <div class="categories-list">
-  {% if page.url != "/categorites/" %}
-    {% assign u = "/categorites/?c=All" | prepend: site.baseurl %}
+  {% if page.url != "/categories/" %}
+    {% assign u = "/categories/?c=All" | prepend: site.baseurl %}
   {% else %}
     {% assign u = "javascript:;" %}
   {% endif %}
@@ -23,9 +23,9 @@
     <span class="badge">{{ site.posts | size }}</span>
   </a>
   {% for category in site.categories %}
-    {% if page.url != "/categorites/" %}
+    {% if page.url != "/categories/" %}
       {% assign cate = category | first %}
-      {% assign u = "/categorites/?c=" | prepend: site.baseurl | append: cate %}
+      {% assign u = "/categories/?c=" | prepend: site.baseurl | append: cate %}
     {% else %}
       {% assign u = "javascript:;" %}
     {% endif %}
@@ -77,7 +77,7 @@
   {% else %}
     {% assign u = "#tag-" | append: tag[0] %}
   {% endif %}
-  <a href="{{ u }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};" 
+  <a href="{{ u }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};"
     data-toggle="tooltip" data-placement="top" title="{{ tag[1].size }} article{% if tag[1].size > 1 %}s{% endif %}">{{ tag[0] }}</a>&nbsp;
 {% endfor %}
 

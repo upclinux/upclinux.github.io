@@ -1,4 +1,4 @@
-<header>  
+<header>
   <nav class="navbar navbar-default navbar-fixed-top-on-palm">
     <div class="container">
       <div class="navbar-header">
@@ -15,25 +15,25 @@
           <li {% if page.url == "/index.html" %} class="active" {% endif %}>
             <a href="{{ site.baseurl }}/"><i class="fa fa-home"></i> Blogs</a>
           </li>
-          
-          {% if page.url == "/categorites/" %}
+
+          {% if page.url == "/categories/" %}
             <li class="active dropdown">
           {% else %}
             <li class="dropdown">
           {% endif %}
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"><i class="fa fa-th-list"></i> Categorites <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"><i class="fa fa-th-list"></i> Categories <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="{{ "/categorites/?c=All" | prepend: site.baseurl }}"><span class="badge" style="float:right;">{{ site.posts | size }}</span>All</a></li>
+              <li><a href="{{ "/categories/?c=All" | prepend: site.baseurl }}"><span class="badge" style="float:right;">{{ site.posts | size }}</span>All</a></li>
               <li class="divider"></li>
               <li class="dropdown-header">Lists</li>
               {% for category in site.categories %}
                 {% assign cate = category | first %}
-                {% assign u = "/categorites/?c=" | prepend: site.baseurl | append: cate %}
+                {% assign u = "/categories/?c=" | prepend: site.baseurl | append: cate %}
                 <li><a href="{{ u }}"><span class="badge" style="float:right;">{{ category | last | size }}</span>{{ category | first }}</a></li>
               {% endfor %}
             </ul>
           </li>
-          
+
           {% for p in site.pages %}
             {% if p.externalurl %}
             <li><a href="{{ p.externalurl }}">{% if p.icon %}<i class="fa fa-{{ p.icon }}"></i> {% endif %}{{ p.title }}</a></li>
@@ -46,7 +46,7 @@
             {% endif %}
           {% endfor %}
         </ul>
-        
+
         <form class="navbar-form navbar-right hidden-sm hidden-md hidden-lg" method="get" action="{{ "/search/" | prepend: site.baseurl }}">
           <div class="form-group">
             <input type="text" placeholder="Regexp" class="form-control" name="s" id="keyword">

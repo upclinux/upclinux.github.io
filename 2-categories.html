@@ -1,21 +1,21 @@
 ---
-title: Categorites
+title: Categories
 icon: th-list
 layout: default
 comments: false
-permalink: /categorites/
+permalink: /categories/
 hidden: true
 ---
 <div class="jumbotron">
   <div class="container">
-    <h1>Categorites</h1>
-    <p>Current: <span id="categorization">All</span></p> 
+    <h1>Categories</h1>
+    <p>Current: <span id="categorization">All</span></p>
   </div>
 </div>
 <div id="main" class="container main">
   <div class="row">
-    <div class="col-md-9" role="main">    
-      
+    <div class="col-md-9" role="main">
+
       <ul class="post-list" data-list-cate="All" style="display: none;">
         {% for post in site.posts %}
         <li>
@@ -24,7 +24,7 @@ hidden: true
         </li>
         {% endfor %}
       </ul>
-      
+
       {% for category in site.categories %}
       <ul class="post-list" data-list-cate="{{category | first}}" style="display: none;">
         {% for posts in category  %}
@@ -41,11 +41,11 @@ hidden: true
         {% endfor %}
       </ul>
       {% endfor %}
-    
-      
+
+
     </div>
-    
-    <div class="col-md-3">    
+
+    <div class="col-md-3">
       {% include sidebar.html %}
     </div>
   </div>
