@@ -2,11 +2,15 @@
   <nav class="navbar navbar-default navbar-fixed-top-on-palm">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <button type="button" class="navbar-toggle navbar-toggle-left collapsed" data-toggle="modal" data-target="#nav-sidebar">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
+        </button>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="fa fa-angle-double-right icon"></span>
         </button>
         <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
       </div>
@@ -56,3 +60,15 @@
     </div>
   </nav>
 </header>
+
+
+<div class="modal" id="nav-sidebar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog nav-sidebar">
+    <div class="title">
+      <a class="navbar-brand" href="/">{{ site.title }}</a>
+    </div>
+    <div class="content" id="nav-sidebar-content">
+      {% include sidebar.html %}
+    </div>
+  </div>
+</div>

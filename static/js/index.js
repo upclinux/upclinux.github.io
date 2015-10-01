@@ -32,10 +32,12 @@ $.request = (function () {
 
 $(document).ready(function() {
     generateContent();
-    categoryDisplay();
     backToTop();
     fixTables();
     fixLinks();
+    if (document.getElementById('sidebar'))
+        $('#nav-sidebar-content').html($('#sidebar').html());
+    categoryDisplay();
 //}).bind('DOMNodeInserted', function() {
 });
 
