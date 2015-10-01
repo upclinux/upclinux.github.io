@@ -80,6 +80,12 @@ VoodooHDA
 
 无线网卡：刷白名单，换成免驱的 BCM4322（详细参数：DEV 432B、VEN 14E4、SUBSYS 000D1028，刷机时用）。
 
+## DSDT
+
+在 Ubuntu 中，DSDT 被存在 /sys/firmware/acpi/tables 里。SSDT 也在。
+
+不过需要反编译一下才能进行修改。
+
 ## 屏幕亮度 DSDT
 
 (1) Device (GFX0) { Name (ADR, ….) 的下一行加入：
