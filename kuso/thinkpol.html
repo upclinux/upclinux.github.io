@@ -17,17 +17,32 @@
   </script>
   {% endif %}
 
-  <title>我不是叔叔</title>
+  <title>我是龙叔</title>
 
   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font-family: Helvetica, Microsoft YaHei, WenQuanYi Micro Hei, Arial, sans-serif;
+  }
 
+  .cell {
+    margin: 50px auto 0;
+    padding: 30px;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow :0 0 16px 1px #ccc;
+    background-color: #eee;
+    text-align: center;
+  }
+  </style>
 </head>
 <body>
-  <div style="max-width:400px;border:1px solid #ccc;border-radius:4px;box-shadow:0 0 16px 1px #ccc;background-color:#eee;margin:50px auto 0;padding:30px;text-align:center;">
+  <div class="cell">
     <p style="margin-bottom:40px;">
       <img src="{{site.baseurl}}/kuso/images/xiaoyu.jpg" style="width:340px;">
     </p>
@@ -53,11 +68,11 @@
         <div class="modal-body">
           <div class="form-group">
             <label for="title">起一个能装 13 的标题呗！</label>
-            <input type="text" class="form-control" id="title" name="title" placeholder="一个响亮的标题">
+            <input type="text" class="form-control" id="title" name="title" placeholder="一个响亮的标题——网警12450">
           </div>
           <div class="form-group">
             <label for="summary">标题下面的文本是什么？别忘了装点 13！</label>
-            <input type="text" class="form-control" id="summary" name="summary" placeholder="一段深入人心的话语">
+            <input type="text" class="form-control" id="summary" name="summary" placeholder="一段深入人心的话语——网警12450正在巡查本群，请各位网友配合检查，谢谢！">
           </div>
           <div class="form-group">
             <label for="url">URL：</label>
@@ -69,7 +84,7 @@
           </div>
           <div class="form-group">
             <label for="site">小尾巴～</label>
-            <input type="text" class="form-control" id="site" name="site" placeholder="小尾巴～">
+            <input type="text" class="form-control" id="site" name="site" placeholder="小尾巴～不填就穿帮了">
           </div>
           <div class="form-group">
             <label for="desc">你的评论：</label>
