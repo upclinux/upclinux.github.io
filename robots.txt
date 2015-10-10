@@ -9,4 +9,6 @@ Disallow: /
 User-agent: googlebot-image
 Disallow: /
 User-agent: *
-Disallow: 
+Disallow: /kuso/
+User-agent: *
+Disallow:
