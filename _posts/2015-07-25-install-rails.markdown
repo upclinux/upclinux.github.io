@@ -147,6 +147,14 @@ Finally, I gave up on trying and decided to use the system version instead.
 
 It's really Pyrrhic victory.
 
+# NEW: Install nokogiri under Cygwin
+
+Install ruby, gcc, binutils and make first.
+
+Then install libxml2, libxml2-devel, libxslt, libxslt-devel, and type:
+
+    gem install nokogiri -- --use-system-libraries --with-xml2-include=/usr/include/libxml2 --with-xml2-lib=/usr/lib --with-xslt-dir=/usr/include/libxslt
+
 # Hello world
 
 Type `rails new hello` to create a project.
