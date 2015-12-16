@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Writing blogs in Ubuntu"
+title: "Setup Jekyll in Ubuntu/Windows"
 date: 2015-05-22 18:37:06
 author: vjudge1
 categories: GitHub Linux
@@ -25,7 +25,7 @@ However, it's a bit tricky to do so in Linux, for example, Ubuntu. My Ubuntu is 
 
 
 
-## Configure Git
+# Configure Git
 
 1. Install Git:
 
@@ -59,7 +59,7 @@ However, it's a bit tricky to do so in Linux, for example, Ubuntu. My Ubuntu is 
 
 5. Now you can use `git clone`, `git pull`, `git push` or so on to code.
 
-## Jekyll
+# Setup Jekyll in Ubuntu
 
 1. Install necessary libraries or Jekyll will fail to work:
 
@@ -77,7 +77,31 @@ However, it's a bit tricky to do so in Linux, for example, Ubuntu. My Ubuntu is 
 
 	Browse `http://localhost:4000` to see the new blog.
 
-## Visual Studio Code
+# Setup Jekyll in Windows (Not recommended)
+
+Because nokogiri 1.6.7 is released, there is no problems about nokogiri.
+
+1. Install Ruby and DevKit.
+2. Install Jekyll & kramdown (Markdown support):
+
+		gem install jekyll kramdown
+
+3. Jekyll will work. Use the following commands to test:
+
+		chcp 65001
+		jekyll new test
+		cd test
+		jekyll serve
+
+NOTES:
+
+1. Don't forget `chcp 65001` (change the encoding of console to UTF-8) before running jekyll. You can add it in the front of `jekyll.cmd`.
+2. File Encoding: UTF-8 without BOM. So Do NOT use Notepad.
+3. Line Endings: either CRLF or LF is ok.
+
+# Visual Studio Code
+
+**(UPDATE: Atom Editor is much better because of its Jekyll plugin.)**
 
 I recognize that I'm a little lazy and will feel bored after typing too many commands.
 
@@ -110,15 +134,15 @@ Icon=/opt/Code/resources/app/vso.png
 
 OK. Enjoy coding! And all things can be done via Visual Studio Code.
 
-## Notes
+# Notes
 
-### Clone URL
+## Clone URL
 
 GitHub provides 3 kinds of URLs for cloning. It's recommended to use `SSH clone URL` because we configured SSH just now.
 
 I tried to clone with HTTPS URL and find a trouble when pushing. So I clone again with SSH URL and succeed.
 
-### 中文输入的问题
+## 中文输入的问题
 
 默认情况下，Visual Studio Code 不能正常显示汉字——中国字是方块字，结果中国字真变成“方块字”了。
 
@@ -130,7 +154,7 @@ I tried to clone with HTTPS URL and find a trouble when pushing. So I clone agai
 
 此外还有一个问题，输入中文标点的时候可能需要按一下`空格`才能出现。至少用“搜狗拼音输入法”的时候是这样的。
 
-### Gist 被*敏感词*
+## Gist 被*敏感词*
 
 GitHub 曾被天朝*敏感词*给*敏感词*了。多亏了[李开复](http://weibo.com/kaifulee?stat_date=201301&page=4)大哥，自从他抗议之后，GitHub 再也没有被*敏感词*。
 
