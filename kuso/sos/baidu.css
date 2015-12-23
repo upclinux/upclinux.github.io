@@ -1,0 +1,88 @@
+.bd-logo {
+    text-align: center;
+}
+
+.bd-logo-img {
+    width: 270px;
+    height: 129px;
+}
+
+.bd-wrapper {
+    padding-top: 20px;
+}
+
+.bd-form {
+    padding-top: 20px;
+    text-align: center;
+    width: 307px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.bd-form-input {
+    float: left;
+    width: 205px;
+}
+
+.bd-form-input input[type="text"] { 
+    width: 190px;
+    height: 20px;
+    padding: 9px 7px;
+    font: 16px;
+    border: 1px solid #b8b8b8;
+    border-bottom: 1px solid #ccc;
+    border-right: 0;
+    vertical-align: top;
+    outline: none;
+    box-shadow: none;
+}
+
+.bd-form-submit {
+    float: left;
+    width: 102px;
+}
+
+.bd-form-submit input[type="submit"] {
+    background-color: #38f;
+    color: white;
+    font-size: 16px;
+    border: 0;
+    cursor: pointer;
+    width: 102px;
+    height: 38px;
+    line-height: 38px;
+    padding: 0;
+    outline: 0;
+}
+
+.bd-form-submit input[type="submit"]:hover {
+    background-color: #317ef3;
+    box-shadow: 1px 1px 1px #ccc;
+}
+
+.cursor {
+    position: fixed;
+    left: 200px;
+    bottom: 200px;
+}
+
+/* 电脑屏幕 */
+@media screen and (min-width: 768px) {
+    .bd-wrapper {
+        padding-top: 100px;
+    }
+    
+    .bd-form {
+        width: 622px;
+    }
+
+    .bd-form-input {
+        float: left;
+        width: 520px;
+    }
+    
+    .bd-form-input input[type="text"] {
+        width: 505px;
+    }
+}
+
