@@ -204,6 +204,12 @@
     }
 }
 
+@media screen and (min-width: $on-palm) {
+    #markdown-toc {
+      display: none;
+    }
+}
+
 #content ul {
 	padding-left: 0px;
 
