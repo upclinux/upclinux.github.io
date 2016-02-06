@@ -3,6 +3,7 @@ layout: post
 title:  "Chrome插件推荐"
 author: vjudge1
 categories: Others
+tags: ["插件"]
 ---
 * contents
 {:toc}

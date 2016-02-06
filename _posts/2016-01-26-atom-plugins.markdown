@@ -3,6 +3,7 @@ layout: post
 title:  "Atom编辑器插件推荐"
 author: vjudge1
 categories: Programming
+tags: ["插件"]
 ---
 * contents
 {:toc}
