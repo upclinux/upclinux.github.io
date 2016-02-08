@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /kuso/
+User-agent: *
+Disallow:
