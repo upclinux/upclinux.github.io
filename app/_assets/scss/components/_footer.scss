@@ -1,0 +1,53 @@
+/**
+ * Site footer
+ */
+.site-footer {
+    border-top: 1px solid $gray-lighter;
+    padding: $spacing-unit*0.6 0;
+    margin-top: 20px;
+    font-size: $font-size-base;
+    color: $gray-light;
+    background-color: #333;
+
+    a {
+        color: $gray-light;
+        &:hover {
+            color: $gray-lighter;
+        }
+    }
+}
+
+.contact-list {
+    list-style: none;
+    margin-left: 0;
+
+    i {
+        color: $gray;
+    }
+}
+
+.social-media-list {
+    list-style: none;
+
+    i {
+        color: $gray;
+    }
+}
+
+.footer-list {
+    list-style: none;
+    margin-bottom: 0;
+    float: right;
+
+    > li {
+      display: inline-block;
+
+      + li:before {
+        // [converter] Workaround for https://github.com/sass/libsass/issues/1115
+        $nbsp: "\00a0";
+        content: "#{$breadcrumb-separator}#{$nbsp}"; // Unicode space added since inline-block means non-collapsing white-space
+        padding: 0 5px;
+        color: $breadcrumb-color;
+      }
+    }
+}

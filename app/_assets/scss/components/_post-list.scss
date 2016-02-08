@@ -1,0 +1,32 @@
+/**
+ * Index page
+ */
+.post-list {
+    margin-left: 0;
+    padding: .5em 0em;
+    list-style: none;
+
+    li {
+        margin-bottom: $spacing-unit;
+        h3 {
+            padding: .3em 0;
+        }
+    }
+}
+
+.post-meta {
+    font-size: $font-size-small;
+    color: $gray;
+}
+
+.post-preview {
+    padding-bottom: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-bottom: 1px solid $gray-lighter;
+
+    > h2 {
+        letter-spacing: -1px;
+        line-height: 1;
+    }
+}

@@ -1,0 +1,54 @@
+/**
+ * Callout
+ */
+.callout {
+   padding: 20px;
+   margin: 20px 0;
+   border: 1px solid #eee;
+   border-left-width: 5px;
+   border-radius: 3px;
+
+   h4 {
+       margin-top: 0;
+       margin-bottom: 5px;
+   }
+
+   ol, ul, dl, pre, .highlight, p {
+       margin-bottom: 0px;
+   }
+}
+
+.callout-primary {
+   border-left-color: $brand-primary;
+   h4 {
+       color: $brand-primary;
+   }
+}
+
+.callout-success {
+   border-left-color: $brand-success;
+   h4 {
+       color: $brand-success;
+   }
+}
+
+.callout-info {
+   border-left-color: $brand-info;
+   h4 {
+       color: $brand-info;
+   }
+}
+
+.callout-warning {
+   border-left-color: $brand-warning;
+   h4 {
+       color: $brand-warning;
+   }
+}
+
+.callout-danger {
+   border-left-color: $brand-danger;
+   h4 {
+       color: $brand-danger;
+   }
+}

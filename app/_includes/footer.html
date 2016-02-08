@@ -1,0 +1,24 @@
+<footer class="site-footer">
+    <div class="container">
+        <ol class="footer-list">
+            <li>{{ site.footnote }}</li>
+            <li><a href="{{ site.baseurl }}/about/">About</a></li>
+            <li><a href="mailto:{{ site.email }}">Email</a></li>
+            {% if site.github_username %}
+                <li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>
+            {% endif %}
+            {% if site.twitter_username %}
+                <li><a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a></li>
+            {% endif %}
+            {% if site.facebook_username %}
+                <li><a href="https://www.facebook.com/{{ site.facebook_username }}">Facebook</a></li>
+            {% endif %}
+            {% if site.weibo_userid %}
+                <li><a href="http://weibo.com/{{ site.weibo_userid }}">Weibo</a></li>
+            {% endif %}
+            {% if site.qqqun_name %}
+                <li><a href="http://shang.qq.com/wpa/qunwpa?idkey={{ site.qqqun_idkey }}" target="_blank">QQ Group</a></li>
+            {% endif %}
+        </ol>
+    </div>
+</footer>

@@ -1,0 +1,30 @@
+
+.categories-list {
+    margin-left: 0;
+
+    .item {
+        padding: .2em .5em;
+        display: block;
+        color: $gray;
+        font-size: $font-size-small;
+
+        > .badge {
+            float: right;
+            margin-top: -1px;
+        }
+
+        &:hover {
+            background-color: $highlight-color;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+
+            > .badge {
+                background-color: #fff;
+                color: $highlight-color;
+            }
+
+            @include transition(all, .3s, ease, 0s);
+        }
+    }
+}

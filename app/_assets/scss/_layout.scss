@@ -1,0 +1,29 @@
+/**
+ * Icons
+ */
+.icon {
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+
+        path {
+            fill: $gray;
+        }
+    }
+}
+
+.blackout {
+    background-color: $text-color;
+}
+
+.external-link {
+    color: $gray;
+    padding: 0 .3em;
+    font-size: $font-size-small * 0.75;
+}
+
+.link-list {
+    font-size: $font-size-small;
+}

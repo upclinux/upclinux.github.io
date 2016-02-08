@@ -1,0 +1,40 @@
+/**
+ * Labels
+ */
+.tags-list {
+    display: block;
+    list-style-type: disc;
+    list-style: none;
+    overflow: hidden;
+    margin-left: 0px;
+
+    li {
+        float: left;
+        position: relative;
+        line-height: 33px;
+    }
+
+    .count {
+        color: $gray;
+        vertical-align: super;
+        font-size: 12px;
+    }
+
+    a {
+        padding: .35em .5em .25em .5em;
+        margin: 0 0.5em;
+        color: $gray-dark;
+        border: 1px solid $gray-lighter;
+        border-radius: 4px;
+        background-color: lighten($gray, 47%);
+        font-size: 15px;
+        &:hover {
+            text-decoration: none;
+            background-color: lighten($gray, 45%);
+        }
+    }
+}
+
+.tags-cloud {
+    
+}

@@ -1,0 +1,26 @@
+/**
+ * Share
+ */
+ .sharelist {
+    display: block;
+    list-style: none;
+    overflow: hidden;
+    margin-left: 0px;
+
+    li {
+        float: right;
+        position: relative;
+        line-height: 33px;
+        padding-right: .5em;
+    }
+
+    a {
+        color: $gray-light;
+        font-size: 27px;
+
+        &:hover {
+            color: $highlight-color;
+            @include transition(color, .3s, ease, 0s);
+       }
+    }
+ }

@@ -1,7 +1,9 @@
-About
-===
-
-[Click here](https://vjudge1.github.io) to visit the blog.
+---
+title: About
+icon: file-o
+layout: page
+permalink: /about/
+---
 
 This is my personal blog. It's created by [Jekyll](http://jekyllrb.com) and hosted on [GitHub Pages](https://pages.github.com).
 
@@ -13,4 +15,6 @@ Thanks for these authors for some codes:
 * [Liberize](https://github.com/liberize/liberize.github.com)
 * [Oleh](http://o.zasadnyy.com/blog/optimized-jekyll-site-with-grunt/)
 
-The site is deployed via [Grunt](http://gruntjs.com/) now, switch to `dev` branch to checkout the source code.
+The site is deployed via [Grunt](http://gruntjs.com/) now.
+
+Orz

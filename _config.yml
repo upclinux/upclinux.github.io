@@ -1,18 +1,28 @@
+# Grunt handles images and assets.
+exclude: ['img', 'css', 'js', 'fonts',
+          '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
+
+# _config.build.yml sets future and show_drafts to false on `grunt build`
+future: true
+show_drafts: true
+
 # Site settings
-title: vjudge1
+title: Unorz
 email: vjudge404@gmail.com
-description: Bot
+description: Doubleplusorz...
 footnote: > # this means to ignore newlines until "baseurl:"
-  &copy; 2015 vjudge1<br>Powered by GitHub Pages & Jekyll
+  &copy; 2015 vjudge1
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://vjudge1.github.io" # the base hostname & protocol for your site
-permalink: /:year/:month/:day/:title
+permalink: /:year/:month/:day/:title.html
 paginate: 5
 excerpt_separator: "\n\n\n\n"
 timezone: Asia/Shanghai
 twitter_username: vjudge404
 facebook_username: vjudge404
 github_username: vjudge1
+brand: >
+  <i class="fa fa-github-alt"></i> Unorz
 #qqqun_name: "QQ 群"
 #qqqun_idkey:
 #weibo_username:
@@ -27,6 +37,9 @@ force_https: vjudge1.github.io
 # Gems
 gems:
 - jemoji
+- jekyll-sitemap
+- jekyll-feed
+- jekyll-paginate
 
 # Build settings
 markdown: kramdown
