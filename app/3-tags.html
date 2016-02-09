@@ -18,27 +18,27 @@ permalink: /tags/
         <ul class="tags-list">
     	  {% for tag in site.tags %}
           <li>
-    	  	<a href="#tag-{{ tag[0] }}">
-            {{ tag[0] }}
-            <span class="count">{{ tag | last | size }}</span>
-          </a>
+    	  	<a href="#tag-{{ tag[0] }}" class="btn btn-default">
+              {{ tag[0] }}
+              <span class="count">{{ tag | last | size }}</span>
+            </a>
           </li>
     	  {% endfor %}
         </ul>
       </div>
 
       {% for tag in site.tags %}
-      <div class="page-header">
-        <h2 id="tag-{{ tag[0] }}">{{ tag[0] }}</h2>
+      <div class="post-list-header">
+        <h3 id="tag-{{ tag[0] }}">{{ tag[0] }}</h3>
       </div>
-      <ul class="post-list" data-list-cate="All">
+      <table class="post-list table table-hover">
         {% for post in tag[1] %}
-        <li>
-          <span class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</span>
-          <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-        </li>
+        <tr>
+          <td class="date"><span class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</span></td>
+          <td><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
+        </tr>
         {% endfor %}
-      </ul>
+      </table>
       {% endfor %}
     </div>
 

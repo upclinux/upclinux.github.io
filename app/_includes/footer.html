@@ -1,24 +1,31 @@
-<footer class="site-footer">
+<footer class="site-footer" id="footer">
     <div class="container">
         <ol class="footer-list">
-            <li>{{ site.footnote }}</li>
-            <li><a href="{{ site.baseurl }}/about/">About</a></li>
-            <li><a href="mailto:{{ site.email }}">Email</a></li>
+            {% for link in site.footer_links %}
+              <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+            {% endfor %}
+        </ol>
+        <ol class="social-media-list">
+            <li><a href="mailto:{{ site.email }}" data-toggle="tooltip" data-placement="top" title="Email"><i class="fa fa-envelope"></i></a></li>
             {% if site.github_username %}
-                <li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>
+                <li><a href="https://github.com/{{ site.github_username }}" data-toggle="tooltip" data-placement="top" title="GitHub"><i class="fa fa-github"></i></a></li>
             {% endif %}
             {% if site.twitter_username %}
-                <li><a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a></li>
+                <li><a href="https://twitter.com/{{ site.twitter_username }}" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
             {% endif %}
             {% if site.facebook_username %}
-                <li><a href="https://www.facebook.com/{{ site.facebook_username }}">Facebook</a></li>
+                <li><a href="https://www.facebook.com/{{ site.facebook_username }}" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
             {% endif %}
             {% if site.weibo_userid %}
-                <li><a href="http://weibo.com/{{ site.weibo_userid }}">Weibo</a></li>
+                <li><a href="http://weibo.com/{{ site.weibo_userid }}" data-toggle="tooltip" data-placement="top" title="Weibo"><i class="fa fa-weibo"></i></a></li>
             {% endif %}
             {% if site.qqqun_name %}
-                <li><a href="http://shang.qq.com/wpa/qunwpa?idkey={{ site.qqqun_idkey }}" target="_blank">QQ Group</a></li>
+                <li><a href="http://shang.qq.com/wpa/qunwpa?idkey={{ site.qqqun_idkey }}" target="_blank" data-toggle="tooltip" data-placement="top" title="QQ Group"><i class="fa fa-qq"></i></a></li>
             {% endif %}
         </ol>
+        <br class="clear" />
+        <div class="footnote">
+            {{ site.footnote }}
+        </div>
     </div>
 </footer>

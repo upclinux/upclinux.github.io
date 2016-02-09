@@ -6,7 +6,7 @@
     list-style-type: disc;
     list-style: none;
     overflow: hidden;
-    margin-left: 0px;
+    padding-left: 0px;
 
     li {
         float: left;
@@ -21,20 +21,17 @@
     }
 
     a {
-        padding: .35em .5em .25em .5em;
-        margin: 0 0.5em;
-        color: $gray-dark;
-        border: 1px solid $gray-lighter;
-        border-radius: 4px;
-        background-color: lighten($gray, 47%);
-        font-size: 15px;
-        &:hover {
-            text-decoration: none;
-            background-color: lighten($gray, 45%);
-        }
+        //padding: .35em .5em .25em .5em;
+        margin: 0.3em 0.5em;
+        padding: 1px 4px;
+        //color: $gray-dark;
+        //border: 1px solid $gray-lighter;
+        //border-radius: 4px;
+        //background-color: lighten($gray, 47%);
+        //font-size: 15px;
+        //&:hover {
+        //    text-decoration: none;
+        //    background-color: lighten($gray, 45%);
+        //}
     }
-}
-
-.tags-cloud {
-    
 }

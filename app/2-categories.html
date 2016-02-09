@@ -16,30 +16,28 @@ hidden: true
   <div class="row">
     <div class="col-sm-9" role="main">
 
-      <ul class="post-list" data-list-cate="All" style="display: none;">
+      <table class="post-list table table-hover" data-list-cate="All" style="display: none;">
         {% for post in site.posts %}
-        <li>
-          <span class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</span>
-          <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-        </li>
+        <tr>
+          <td class="date"><span class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</span></td>
+          <td><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
+        </tr>
         {% endfor %}
-      </ul>
+      </table>
 
       {% for category in site.categories %}
-      <ul class="post-list" data-list-cate="{{category | first}}" style="display: none;">
+      <table class="post-list table table-hover" data-list-cate="{{category | first}}" style="display: none;">
         {% for posts in category  %}
           {% for post in posts %}
             {% if post.url %}
-              <li>
-                <span class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</span>
-                <h3>
-                  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                </h3>
-              </li>
+              <tr>
+                <td class="date"><span class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</span></td>
+                <td><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
+              </tr>
             {% endif %}
           {% endfor %}
         {% endfor %}
-      </ul>
+      </table>
       {% endfor %}
 
 

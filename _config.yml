@@ -61,3 +61,12 @@ external_links:
 -
   name: Jerry Yuan
   url: http://jerry.weighingproduct.com
+
+# Footer List
+footer_links:
+-
+  name: About
+  url: /about/
+-
+  name: 让我帮你百度一下
+  url: https://vjudge1.github.io/kuso/sos/
