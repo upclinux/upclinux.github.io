@@ -4,7 +4,9 @@ module.exports = function(grunt) {
     // Show elapsed time after tasks run
     require('time-grunt')(grunt);
     // Load all Grunt tasks
-    require('jit-grunt')(grunt);
+    require('jit-grunt')(grunt,{
+        buildcontrol: 'grunt-build-control'
+    });
 
     grunt.initConfig({
         app: {
@@ -268,7 +270,7 @@ module.exports = function(grunt) {
                     expand: true,
                     dot: true,
                     cwd: '<%= app.source %>',
-                    src: ['img/**/*'],
+                    src: ['img/**/*', 'fonts/**/*'],
                     dest: '.tmp/<%= app.baseurl %>'
                 }]
             }
@@ -315,11 +317,11 @@ module.exports = function(grunt) {
         'imagemin',
         'svgmin',
         'sass:dist',
-        'uncss',
+        //'uncss',
         'autoprefixer',
         'cssmin',
         'uglify:dist',
-        'critical',
+        //'critical',
         'htmlmin'
     ]);
 
