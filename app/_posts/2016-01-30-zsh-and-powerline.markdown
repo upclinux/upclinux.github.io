@@ -56,8 +56,8 @@ Powerline的安装其实不难，不过因为我使用MacPorts，文档里有些
     cd powerline/powerline
     python build.py
     # 请把以下路径换成你自己的Python库
-    sudo mkdir /usr/lib/python2.7/site-packages/scripts
-    sudo cp ./build/* /usr/lib/python2.7/site-packages/scripts
+    sudo mkdir /usr/lib/python2.7/site-packages/scripts
+    sudo cp ./build/* /usr/lib/python2.7/site-packages/scripts
 
 打开`~/.zshrc`，加入
 
@@ -85,7 +85,7 @@ tmux是一个强大的终端分屏软件，本文就是利用它给终端加个�
     mkdir ~/.config
     cd ~/.config
     git clone https://github.com/erikw/tmux-powerline
-    cp /usr/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf ~/.tmux.conf
+    cp /usr/lib/python2.7/site-packages/powerline/bindings/tmux/powerline.conf ~/.tmux.conf
 
 在`~/.tmux.conf`中，把powerline.sh的位置改成刚下载的路径（~/.config/tmux-powerline）中，输入tmux即可看到效果。记得把终端窗口拉长一点。
 

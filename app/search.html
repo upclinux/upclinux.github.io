@@ -14,8 +14,12 @@ hidden: true
 <div id="main" class="container main">
   <div class="row">
     <div class="col-sm-9" role="main">
-      <ul class="post-list" id="searchlist" style="display: none;">
-      </ul>
+        <table class="post-list table table-hover" id="searchlist" style="display: none;">
+          <tr class="dummy">
+            <td class="date"><span class="text-muted" data-field="date"></span></td>
+            <td data-field="title"></td>
+          </tr>
+        </table>
     </div>
 
     <div class="col-sm-3 hidden-xs" id="sidebar">
@@ -25,3 +29,4 @@ hidden: true
 </div>
 
 <script src="{{ "/static/js/search.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript">doSearch($.request.queryString['s']);</script>
