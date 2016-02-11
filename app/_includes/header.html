@@ -2,16 +2,18 @@
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle navbar-toggle-left collapsed" data-toggle="modal" data-target="#nav-sidebar">
+        <button type="button" class="navbar-toggle navbar-toggle-left collapsed">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+        <!--
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
           <span class="sr-only">Toggle navigation</span>
           <span class="fa fa-angle-double-right icon"></span>
         </button>
+        -->
         <a class="navbar-brand" href="{{ site.baseurl }}/">{% if site.brand %}{{ site.brand }}{% else %}{{ site.title }}{% endif %}</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
@@ -38,40 +40,17 @@
             </ul>
           </li>
 
-          {% for p in site.pages %}
-            {% if p.externalurl %}
-            <li><a href="{{ p.externalurl }}" data-toggle="tooltip" data-placement="bottom" title="{{ p.externalurl }}">{% if p.icon %}<i class="fa fa-{{ p.icon }}"></i> {% endif %}</a></li>
-            {% else %}
-            {% if p.title and p.hidden != true %}
-              <li {% if p.url == page.url %} class="active" {% endif %}>
-                <a href="{{ p.url | prepend: site.baseurl }}" data-toggle="tooltip" data-placement="bottom" title="{{ p.title }}">{% if p.icon %}<i class="fa fa-{{ p.icon }}"></i> {% endif %}</a>
-              </li>
-            {% endif %}
-            {% endif %}
+          <li {% if page.url == "/tags/" %} class="active" {% endif %}>
+            <a href="{{ site.baseurl }}/tags/" data-toggle="tooltip" data-placement="bottom" title="Tags"><i class="fa fa-tags"></i></a>
+          </li>
+
+          {% for p in site.header_icons %}
+            <li {% if p.url == page.url %} class="active" {% endif %}>
+              <a href="{{ p.url }}" data-toggle="tooltip" data-placement="bottom" title="{{ p.name }}">{% if p.icon %}<i class="fa fa-{{ p.icon }}"></i> {% endif %}</a>
+            </li>
           {% endfor %}
-
-          <li><a href="https://github.com/{{ site.github_username }}/{{ site.github_username }}.github.io" data-toggle="tooltip" data-placement="bottom" title="Source Code"><i class="fa fa-code icon"></i></a></li>
-          <li><a href="/feed.xml" data-toggle="tooltip" data-placement="bottom" title="RSS"><i class="fa fa-rss icon"></i></a></li>
         </ul>
-
-        <form class="navbar-form navbar-right hidden-sm hidden-md hidden-lg" method="get" action="{{ "/search/" | prepend: site.baseurl }}">
-          <div class="form-group">
-            <input type="text" placeholder="Regexp" class="form-control" name="s" id="keyword">
-          </div>
-        </form>
       </div>
     </div>
   </nav>
 </header>
-
-
-<div class="modal" id="nav-sidebar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog nav-sidebar">
-    <div class="title">
-      <a class="navbar-brand" href="/">{{ site.title }}</a>
-    </div>
-    <div class="content" id="nav-sidebar-content">
-      {% include sidebar.html %}
-    </div>
-  </div>
-</div>

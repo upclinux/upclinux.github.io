@@ -9,6 +9,10 @@
     color: $gray-light;
     background-color: #333;
 
+    @include media-query($screen-sm) {
+        padding-top: $spacing-unit;
+    }
+
     a {
         color: $gray-light;
         &:hover {
@@ -30,6 +34,12 @@
     list-style: none;
     float: right;
     margin-top: -10px;
+    padding-left: 0;
+
+    @include media-query($screen-sm) {
+        float: none;
+        margin-top: 10px;
+    }
 
     li {
         float: left;
@@ -43,6 +53,11 @@
         border-radius: 20px;
         width: 35px;
         text-align: center;
+
+        @include media-query($screen-sm) {
+            margin-left: 0;
+            margin-right: 10px;
+        }
     }
 }
 
@@ -50,6 +65,10 @@
     list-style: none;
     float: left;
     padding-left: 0;
+
+    @include media-query($screen-sm) {
+        float: none;
+    }
 
     a {
         color: $breadcrumb-color;
@@ -59,7 +78,6 @@
       display: inline-block;
 
       + li:before {
-        // [converter] Workaround for https://github.com/sass/libsass/issues/1115
         $nbsp: "\00a0";
         content: "#{$breadcrumb-separator}#{$nbsp}"; // Unicode space added since inline-block means non-collapsing white-space
         padding: 0 5px;
