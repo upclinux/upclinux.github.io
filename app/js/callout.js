@@ -13,7 +13,7 @@
   }
 
   reg = /<p>\s*?\[%\s*?callout\s+?style\s*?=\s*?["]{0,1}(.*?)["]{0,1}\s*?%\]\s*?<\/p>/;
-  var reg2 = /<p>\s*?\[%\s*?callout\s+?style\s*?=\s*?["]{0,1}(.*?)["]{0,1}\s*?%\]\s*?(.*?)<\/p>/;
+  reg2 = /<p>\s*?\[%\s*?callout\s+?style\s*?=\s*?["]{0,1}(.*?)["]{0,1}\s*?%\]\s*?(.*?)<\/p>/;
   while (style=reg.exec(text)) {
     text=text.replace(reg, '<div class="callout callout-'+style[1]+'">');
   }

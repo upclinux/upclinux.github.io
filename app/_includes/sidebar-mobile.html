@@ -1,0 +1,59 @@
+<div id="sidebar-mobile" class="sidebar">
+    <div class="sb-mask"></div>
+    <div class="sb-body">
+        <div class="sb-title">
+            <form method="get" action="{{ "/search/" | prepend: site.baseurl }}" id="sb_searchform">
+                <input type="search" placeholder="Search" class="sb-searchbox" name="s">
+                <a href="javascript:document.forms.sb_searchform.submit();" class="sb-searchbutton"><i class="fa fa-search"></i></a>
+            </form>
+        </div>
+        <div class="sb-container">
+            <div class="sb-content" id="sb-content">
+                <div id="contents-sidebar" class="contents" style="display:none;">
+                    <h4 class="page-header">
+                      <i class="fa fa-list-ol"></i> Contents
+                    </h4>
+
+                    <ul class="contents-list" id="contents-sidebar-ul">
+                    </ul>
+                </div>
+
+                <h4 class="page-header">
+                  <i class="fa fa-th-list"></i> Categories
+                </h4>
+
+                <div class="categories-list">
+                  <a class="item" href="{{ "/categories/?c=All" | prepend: site.baseurl }}" data-cate="All">
+                    All
+                    <span class="badge">{{ site.posts | size }}</span>
+                  </a>
+                  {% for category in site.categories %}
+                    {% assign cate = category | first %}
+                    <a class="item" href="{{ "/categories/?c=" | prepend: site.baseurl | append: cate }}" data-cate="{{ category | first }}">
+                      {{ category | first }}
+                      <span class="badge">{{ category | last | size }}</span>
+                    </a>
+                  {% endfor %}
+                </div>
+
+                <h4 class="page-header">
+                  <i class="fa fa-tags"></i> Tags
+                </h4>
+
+                <div class="tags">
+                  <ul class="tags-list">
+              	  {% for tag in site.tags %}
+                    <li>
+              	  	<a href="{{ site.baseurl }}/tags/#tag-{{ tag[0] }}" class="btn btn-dark" data-toggle="sidebar" data-target="#sidebar-mobile">
+                        {{ tag[0] }}
+                        <sup>{{ tag | last | size }}</sup>
+                      </a>
+                    </li>
+              	  {% endfor %}
+                  </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="{{ site.baseurl }}/js/sidebar.js"></script>

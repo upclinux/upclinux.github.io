@@ -21,6 +21,8 @@ timezone: Asia/Shanghai
 paginate: 5
 excerpt_separator: "\n\n\n\n"
 
+disqus_shortname: vjudge1
+
 twitter_username: vjudge404
 facebook_username: vjudge404
 github_username: vjudge1

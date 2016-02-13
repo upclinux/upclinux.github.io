@@ -1,0 +1,121 @@
+.sb-offset {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    overflow: hidden;
+
+    @include on-screen() {
+        position: inherit;
+    }
+}
+.sidebar {
+    display: none;
+
+    @include on-screen() {
+        display: none !important;
+    }
+    .sb-mask {
+        position: absolute;
+        z-index: 5001;
+        top: 0;
+        bottom: 0;
+
+        background-color: rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0 10px $gray-dark;
+    }
+    .sb-body {
+        position: absolute;
+        z-index: 5000;
+        top: 0;
+        bottom: 0;
+
+        color: #fff;
+        background-color: $sidebar-bg-color;
+    }
+    .sb-title {
+        position: relative;
+
+        height: $navbar-height;
+
+        border-bottom: 1px solid $gray-lighter;
+        .sb-searchbox {
+            width: calc(100% - 40px);
+            height: $navbar-height - 1px;
+            padding-left: 10px;
+
+            border: none;
+            outline: none;
+            background-color: transparent;
+            &:focus {
+                outline: none;
+            }
+        }
+        .sb-searchbutton {
+            float: right;
+
+            margin-top: -1px;
+            margin-right: 8px;
+
+            color: $gray-light;
+
+            font-size: 24px;
+        }
+    }
+    .sb-container {
+        position: absolute;
+        top: $navbar-height;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        overflow: scroll;
+    }
+    .sb-content {
+        .page-header {
+            margin: 0;
+            padding: 7px;
+
+            border-bottom: none;
+            background-color: lighten($sidebar-bg-color, 15%);
+
+            font-size: 15px;
+        }
+        .contents-list {
+            padding-top: 5px;
+            padding-left: 25px;
+            a {
+                color: $gray-lighter;
+            }
+            ul {
+                padding-left: 25px;
+            }
+        }
+        .categories-list {
+            .item {
+                color: $gray-light;
+                border-bottom: 1px solid $gray-dark;
+                border-radius: 0;
+                > .badge {
+                    margin-top: 0;
+                }
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+        .tags {
+            padding: 5px;
+        }
+        .tags-list {
+            a {
+                margin: 0.2em;
+
+                font-size: 13px;
+            }
+        }
+    }
+}
+.btn-dark {
+    @include button-variant($gray-lighter, $gray-dark, $gray-light);
+}

@@ -4,7 +4,7 @@
 
 var doSearch = function(keyword) {
 	if (!keyword) {
-		keyword = $.request.queryString['s'];
+		keyword = $.request.queryString.s;
 	}
 
 	$('#keyword').val(keyword);
@@ -54,7 +54,7 @@ var doSearch = function(keyword) {
 			$searchlist.append($row);
 		}
 		$searchlist.slideDown();
-	}
+	};
 
 	$.ajax({
 		url: '/feed.xml?r=' + (Math.random() * 99999999999),

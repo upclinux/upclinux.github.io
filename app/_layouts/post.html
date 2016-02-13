@@ -38,7 +38,7 @@ layout: default
           <li><a href="#" class="share" data-target="twitter" data-toggle="tooltip" title="Share on Twitter"><i class="fa fa-twitter-square"></i></a></li>
           <li><span class="text-muted">Share this post:</span></li>
         </ul>
-        <script src="{{ "/static/js/share.js" | prepend:site.baseurl }}"></script>
+        <script src="{{ "/js/share.js" | prepend:site.baseurl }}"></script>
       </div>
 
       <br class="clear">
@@ -47,7 +47,7 @@ layout: default
           <div id="disqus_thread"></div>
           <script type="text/javascript">
               /* * * CONFIGURATION VARIABLES * * */
-              var disqus_shortname = 'vjudge1';
+              var disqus_shortname = '{{ site.disqus_shortname }}';
 
               /* * * DON'T EDIT BELOW THIS LINE * * */
               (function() {
@@ -61,13 +61,12 @@ layout: default
 
       <br class="clear">
     </div>
-    <div id="content" class="col-sm-4 hidden-xs hidden-sm"></div>
+    <div id="content" class="col-sm-4 hidden-xs hidden-sm">
+        <ul class="nav" id="content-ul"></ul>
+    </div>
   </div>
-</div>
-<div id="sidebar" style="display: none;">
-  {% include sidebar.html %}
 </div>
 
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js"></script>
 <script type="text/javascript">anchors.options.placement="left";anchors.add('article h1,h2,h3,h4');</script>
-<script type="text/javascript" src="{{ site.baseurl }}/static/js/callout.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/js/callout.js"></script>

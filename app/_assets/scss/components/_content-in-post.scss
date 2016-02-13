@@ -2,10 +2,9 @@
  * 文章目录相关
  */
 #content {
-	max-width: 392px;
-
+    max-width: 392px;
     .content-text {
-    	padding: 10px 0;
+        padding: 10px 0;
     }
     .affix {
         position: fixed;
@@ -15,38 +14,34 @@
         position: absolute;
     }
 }
-
-@media screen and (min-width: $screen-sm) {
+@include on-screen() {
     #markdown-toc {
-      display: none;
+        display: none;
     }
 }
-
 #content ul {
-	padding-left: 0px;
-
+    padding-left: 0;
     > li {
-        font-size: 15px;
         margin-top: 1px;
         margin-bottom: 1px;
-    }
 
+        font-size: 15px;
+    }
     li a {
         color: $gray-dark;
         &:hover {
-            background-color: transparent;
-            border-left: 1px solid $highlight-color;
             color: $highlight-color;
+            border-left: 1px solid $highlight-color;
+            background-color: transparent;
         }
     }
-
     li.active {
         > a {
-            border-left: 2px solid $highlight-color;
             color: $highlight-color;
+            border-left: 2px solid $highlight-color;
+
             font-weight: 700;
         }
-
         > ul {
             display: block;
             li {
@@ -57,51 +52,50 @@
             }
         }
     }
-
     li > a {
-        padding: .2em 20px;
+        padding: 0.2em 20px;
         &:hover {
-            padding: .2em 19px;
+            padding: 0.2em 19px;
         }
     }
-
     > li.active > a {
-        padding: .2em 18px;
+        padding: 0.2em 18px;
     }
-
     li ul {
         display: none;
-        margin-left: 0;
-        list-style: none;
 
+        margin-left: 0;
+
+        list-style: none;
         > li a {
-            padding: .2em 40px;
+            padding: 0.2em 40px;
             &:hover {
-                padding: .2em 39px;
+                padding: 0.2em 39px;
+
                 text-decoration: none;
             }
         }
-
         > li.active a {
-            padding: .2em 38px;
+            padding: 0.2em 38px;
         }
     }
 }
+@include on-mobile() {
+    .post {
+        padding: 10px;
 
-@include media-query($screen-sm) {
-	.post{
-		padding: 10px 10px;
-		font-size: 14px;
-		line-height: 1.3;
-	}
-	blockquote {
-        padding-left: 0px;
-    	font-size: 14px;
-	}
-	pre code{
-		font-size: 12px;
-	}
-	.post article ul{
-		padding-left: 0px;
-	}
+        font-size: 14px;
+        line-height: 1.3;
+    }
+    blockquote {
+        padding-left: 0;
+
+        font-size: 14px;
+    }
+    pre code {
+        font-size: 12px;
+    }
+    .post article ul {
+        padding-left: 0;
+    }
 }

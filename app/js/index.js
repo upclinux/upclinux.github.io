@@ -15,7 +15,9 @@ if (!$.request) {
                 d = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); },
                 q = queryStr.substring(queryStr.indexOf('?') + 1),
                 r = /([^&=]+)=?([^&]*)/g;
-                while (e = r.exec(q))     urlParams[d(e[1])] = d(e[2]);
+                while ((e = r.exec(q))) {
+                    urlParams[d(e[1])] = d(e[2]);
+                }
                 return urlParams;
             })();
             api.getUrl = function () {
@@ -23,7 +25,7 @@ if (!$.request) {
                 for (var p in api.queryString) { url += p + '=' + api.queryString[p] + "&";        }
                 if (url.lastIndexOf('&') == url.length - 1) { return url.substring(0, url.lastIndexOf('&')); }
                 return url;
-            }
+            };
             apiMap[queryStr] = api;
             return api;
         }
@@ -60,7 +62,7 @@ function categoryDisplay() {
         $('#categorization').text(cate);
     });
 
-    var s=$.request.queryString['c'];
+    var s=$.request.queryString.c;
     if (s) {
         $('.item[data-cate='+s+']').click();
     }
@@ -95,13 +97,15 @@ function backToTop() {
  * 侧边目录
  */
 function generateContent() {
-    $('#markdown-toc').addClass('hidden-md').addClass('hidden-lg');
-    if (typeof $('#markdown-toc').html() === 'undefined') {
+    //$('#markdown-toc').addClass('hidden-md').addClass('hidden-lg');
+    var $toc = $('#markdown-toc');
+    if (typeof $toc.html() === 'undefined') {
         $('#content').hide();
     } else {
-        $('#content').html('<ul class="nav" id="myaffix">' + $('#markdown-toc').html() + '</ul>');
-        $('body').scrollspy({ target: '#content' })
-        $('#myaffix').affix({
+        var html = $toc.html();
+        $('#content-ul').html(html);
+        $('body').scrollspy({ target: '#content' });
+        $('#content-ul').affix({
             offset: {
                 top: 250,
                 bottom: function () {
@@ -109,7 +113,25 @@ function generateContent() {
                 }
             }
         });
+
+        $('#contents-sidebar').show();
+        $('#contents-sidebar-ul').html(html);
     }
+
+    $('a', '#sb-content').each(function() {
+        var $element = $(this);
+        var href = $element.attr('href');
+        $element
+            .attr('data-target', href)
+            .attr('href', 'javascript:;')
+            .click(function() {
+                $('#sidebar-mobile')
+                    .sidebar('hide')
+                    .one('hidden.sb.sidebar', function () {
+                        location.href = href;
+                    });
+            });
+    });
 }
 
 /**

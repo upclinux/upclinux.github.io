@@ -2,17 +2,18 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $gray-lighter;
-    padding: $spacing-unit*1.3 0 $spacing-unit*0.6 0;
     margin-top: 20px;
-    font-size: $font-size-base;
+    padding: $spacing-unit*1.3 0 $spacing-unit*0.6;
+
     color: $gray-light;
+    border-top: 1px solid $gray-lighter;
     background-color: #333;
 
-    @include media-query($screen-sm) {
+    font-size: $font-size-base;
+
+    @include on-mobile() {
         padding-top: $spacing-unit;
     }
-
     a {
         color: $gray-light;
         &:hover {
@@ -20,73 +21,76 @@
         }
     }
 }
-
 .contact-list {
-    list-style: none;
     margin-left: 0;
 
+    list-style: none;
     i {
         color: $gray;
     }
 }
-
 .social-media-list {
-    list-style: none;
     float: right;
+
     margin-top: -10px;
     padding-left: 0;
 
-    @include media-query($screen-sm) {
+    list-style: none;
+
+    @include on-mobile() {
         float: none;
+
         margin-top: 10px;
     }
-
     li {
         float: left;
     }
-
     i {
-        color: $gray-light;
-        background-color: #fff;
-        padding: 10px;
-        margin-left: 10px;
-        border-radius: 20px;
         width: 35px;
+        margin-left: 10px;
+        padding: 10px;
+
         text-align: center;
 
-        @include media-query($screen-sm) {
-            margin-left: 0;
+        color: $gray;
+        border-radius: 20px;
+        background-color: $btn-default-bg;
+
+        @include on-mobile() {
             margin-right: 10px;
+            margin-left: 0;
         }
     }
+    a:hover i {
+        background-color: darken($btn-default-bg, 10%);
+    }
 }
-
 .footer-list {
-    list-style: none;
     float: left;
+
     padding-left: 0;
 
-    @include media-query($screen-sm) {
+    list-style: none;
+
+    @include on-mobile() {
         float: none;
     }
-
     a {
         color: $breadcrumb-color;
     }
-
     > li {
-      display: inline-block;
+        display: inline-block;
+        + li:before {
+            padding: 0 5px;
 
-      + li:before {
-        $nbsp: "\00a0";
-        content: "#{$breadcrumb-separator}#{$nbsp}"; // Unicode space added since inline-block means non-collapsing white-space
-        padding: 0 5px;
-        color: $breadcrumb-color;
-      }
+            content: "#{$breadcrumb-separator}#{$nbsp}"; // Unicode space added since inline-block means non-collapsing white-space
+
+            color: $breadcrumb-color;
+        }
     }
 }
-
 .footnote {
     padding-top: 15px;
+
     text-align: right;
 }

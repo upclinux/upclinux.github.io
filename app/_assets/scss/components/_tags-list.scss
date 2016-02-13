@@ -3,35 +3,28 @@
  */
 .tags-list {
     display: block;
-    list-style-type: disc;
-    list-style: none;
     overflow: hidden;
-    padding-left: 0px;
 
+    padding-left: 0;
+
+    list-style: none;
+    list-style-type: none;
     li {
-        float: left;
         position: relative;
+
+        float: left;
+
         line-height: 33px;
     }
-
     .count {
-        color: $gray;
         vertical-align: super;
+
+        color: $gray;
+
         font-size: 12px;
     }
-
     a {
-        //padding: .35em .5em .25em .5em;
         margin: 0.3em 0.5em;
         padding: 1px 4px;
-        //color: $gray-dark;
-        //border: 1px solid $gray-lighter;
-        //border-radius: 4px;
-        //background-color: lighten($gray, 47%);
-        //font-size: 15px;
-        //&:hover {
-        //    text-decoration: none;
-        //    background-color: lighten($gray, 45%);
-        //}
     }
 }

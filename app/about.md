@@ -1,6 +1,5 @@
 ---
 title: About
-icon: file-o
 layout: page
 permalink: /about/
 ---

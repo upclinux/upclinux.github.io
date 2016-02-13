@@ -3,48 +3,46 @@
  */
 .post-list {
     margin-left: 0;
-    padding: 0.5em 0em;
-    list-style: none;
+    padding: 0.5em 0;
 
+    list-style: none;
     li {
         margin-bottom: $spacing-unit;
         h3 {
             padding: 0.3em 0;
         }
     }
-
     td {
         padding: 0.4em;
-        border-top: none !important;
 
+        border-top: none !important;
         &.date {
             width: 130px;
         }
     }
-
     .dummy {
         display: none;
     }
 }
-
 .post-list-header {
     margin: 24px 0 12px;
+
     border-bottom: 1px solid $gray-lighter;
 }
-
 .post-meta {
-    font-size: $font-size-small;
     color: $gray;
-}
 
+    font-size: $font-size-small;
+}
 .post-preview {
-    padding-bottom: 1em;
     margin-top: 2em;
     margin-bottom: 2em;
-    border-bottom: 1px solid $gray-lighter;
+    padding-bottom: 1em;
 
+    border-bottom: 1px solid $gray-lighter;
     > h2 {
         letter-spacing: -1px;
+
         line-height: 1;
     }
 }

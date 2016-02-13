@@ -2,32 +2,35 @@
  * Back to top
  */
 #top {
-	position: fixed;
-	right: 25px;
-	top: 25px;
-	width: 60px;
-	height: 60px;
-	background-color: #f0f0f0;
-	border-radius:7px;
-	opacity: 0.8;
-	display: none;
-	z-index: 888;
-}
+    position: fixed;
+    z-index: 888;
+    top: 25px;
+    right: 25px;
 
+    display: none;
+
+    width: 60px;
+    height: 60px;
+
+    opacity: 0.8;
+    border-radius: 7px;
+    background-color: #f0f0f0;
+}
 #top .arrow {
-	margin:0 auto;
-	padding-top:11px;
-	width: 0;
-	height: 0;
-	border-right: 15px solid transparent;
-	border-left: 15px solid transparent;
-	border-bottom: 15px solid #c1c1c1;
-}
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    padding-top: 11px;
 
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #c1c1c1;
+    border-left: 15px solid transparent;
+}
 #top .stick {
-	margin: 0 auto;
-	padding-bottom: 21px;
-	width: 13px;
-	border-bottom: 13px solid #f0f0f0;
-	background-color: #c1c1c1;
+    width: 13px;
+    margin: 0 auto;
+    padding-bottom: 21px;
+
+    border-bottom: 13px solid #f0f0f0;
+    background-color: #c1c1c1;
 }

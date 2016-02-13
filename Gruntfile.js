@@ -28,7 +28,8 @@ module.exports = function(grunt) {
                 tasks: ['jekyll:server']
             },
             images: {
-                files: ['<%= app.source %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'],
+                files: ['<%= app.source %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
+                        '<%= app.source %>/js/**/*.{js}'],
                 tasks: ['copy:server']
             },
             livereload: {

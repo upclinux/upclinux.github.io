@@ -1,47 +1,42 @@
-
 /**
  * Posts
  */
 .post-header {
     margin-bottom: $spacing-unit;
 }
-
 .post-title {
-    //font-size: 42px;
-    //letter-spacing: -1px;
-    //line-height: 1;
     a {
         color: #fff;
         &:hover {
             text-decoration: none;
         }
     }
-
-    //@include media-query($screen-md) {
-    //    font-size: 36px;
-    //}
 }
-
 .article {
     margin-bottom: $spacing-unit;
-
     h1 {
-        font-size: 30px;
-        border-bottom: 1px solid $input-border;
         padding-bottom: 5px;
-    }
 
-    h2 {
-        font-size: 22px;
         border-bottom: 1px solid $input-border;
-        padding-bottom: 3px;
-    }
 
+        font-size: 30px;
+    }
+    h2 {
+        padding-bottom: 3px;
+
+        border-bottom: 1px solid $input-border;
+
+        font-size: 22px;
+    }
     h3 {
         font-size: 18px;
     }
-
-    h4, h5, h6 {
+    h4,
+    h5,
+    h6 {
         font-size: $font-size-base;
     }
+}
+#markdown-toc {
+    display: none;
 }
