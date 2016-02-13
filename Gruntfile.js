@@ -271,8 +271,17 @@ module.exports = function(grunt) {
                     expand: true,
                     dot: true,
                     cwd: '<%= app.source %>',
-                    src: ['img/**/*', 'fonts/**/*'],
+                    src: ['img/**/*', 'css/**/*', 'js/**/*', 'fonts/**/*'],
                     dest: '.tmp/<%= app.baseurl %>'
+                }]
+            },
+            dist: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= app.source %>',
+                    src: ['js/**/*', 'css/**/*', 'fonts/**/*'],
+                    dest: '<%= app.dist %>/<%= app.baseurl %>'
                 }]
             }
         },
@@ -315,6 +324,7 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
         'clean:dist',
         'jekyll:dist',
+        'copy:dist',
         'imagemin',
         'svgmin',
         'sass:dist',
