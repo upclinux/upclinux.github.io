@@ -15,7 +15,7 @@ To be continued...
 
 # Codes
 
-My own [request codes](/2015/06/07/simple-request-for-cgi/) are required.
+My own [request codes](/2015/06/07/simple-request-for-cgi.html) are required.
 
 ## session.h
 

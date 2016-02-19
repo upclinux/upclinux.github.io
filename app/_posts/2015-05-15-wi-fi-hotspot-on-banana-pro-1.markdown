@@ -97,11 +97,6 @@ Edit `/etc/network/interfaces` and add the following lines:
 ## Enable DHCP server
 There are many kinds of DHCP servers. I chose `udhcpd`.
 
-<div class="callout callout-primary">
-<h4>IPv6</h4>
-udhcpd doesn't support IPv6. Use isc-dhcp-server instead if you need IPv6.  <a href="{{ site.baseurl }}/2015/06/23/wi-fi-hotspot-on-banana-pro-3/">Click here</a> for more information.
-</div>
-
 Install the DHCP server:
 
     apt-get install udhcpd
