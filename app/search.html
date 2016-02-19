@@ -1,17 +1,11 @@
 ---
 title: Search
-layout: default
+layout: page_full
 comments: false
 permalink: /search/
+subtitle: "Search for \"<span id=\"keywordlabel\"></span>\""
 ---
-<div class="jumbotron">
-  <div class="container">
-    <h1>Search</h1>
-    <p>Search for "<span id="keywordlabel"></span>"</p>
-  </div>
-</div>
-<div id="main" class="container main">
-  <div class="row">
+<div class="row">
     <div class="col-sm-9" role="main">
         <table class="post-list table table-hover" id="searchlist" style="display: none;">
           <tr class="dummy">
@@ -20,11 +14,9 @@ permalink: /search/
           </tr>
         </table>
     </div>
-
     <div class="col-sm-3 hidden-xs">
       {% include sidebar.html %}
     </div>
-  </div>
 </div>
 
 <script src="{{ "/js/search.js" | prepend: site.baseurl }}"></script>

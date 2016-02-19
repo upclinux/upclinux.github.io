@@ -1,4 +1,5 @@
 _site
+app/_drafts/*
 .sass-cache
 .jekyll-metadata
 .jekyll

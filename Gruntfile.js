@@ -280,7 +280,7 @@ module.exports = function(grunt) {
                     expand: true,
                     dot: true,
                     cwd: '<%= app.source %>',
-                    src: ['js/**/*', 'css/**/*', 'fonts/**/*'],
+                    src: ['js/**/*', 'css/**/*', 'fonts/**/*', 'CNAME', '.nojekyll'],
                     dest: '<%= app.dist %>/<%= app.baseurl %>'
                 }]
             }
