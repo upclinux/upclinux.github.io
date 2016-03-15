@@ -1,4 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.1">Jekyll</generator><link href="https://vjudge1.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vjudge1.github.io/" rel="alternate" type="text/html" /><updated>2016-02-19T11:07:36+08:00</updated><id>https://vjudge1.github.io/</id><title>Unorz</title><subtitle>Doubleplusorz...</subtitle><entry><title>终端装13利器——zsh、powerline和tmux</title><link href="https://vjudge1.github.io/2016/01/30/zsh-and-powerline.html" rel="alternate" type="text/html" title="终端装13利器——zsh、powerline和tmux" /><published>2016-01-30T00:00:00+08:00</published><updated>2016-01-30T00:00:00+08:00</updated><id>https://vjudge1.github.io/2016/01/30/zsh-and-powerline</id><content type="html" xml:base="https://vjudge1.github.io/2016/01/30/zsh-and-powerline.html">&lt;ul id=&quot;markdown-toc&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.1">Jekyll</generator><link href="https://vjudge1.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vjudge1.github.io/" rel="alternate" type="text/html" /><updated>2016-03-15T18:05:45+08:00</updated><id>https://vjudge1.github.io/</id><title>Unorz</title><subtitle>Doubleplusorz...</subtitle><entry><title>易班</title><link href="https://vjudge1.github.io/2016/03/15/yiban.html" rel="alternate" type="text/html" title="易班" /><published>2016-03-15T00:00:00+08:00</published><updated>2016-03-15T00:00:00+08:00</updated><id>https://vjudge1.github.io/2016/03/15/yiban</id><content type="html" xml:base="https://vjudge1.github.io/2016/03/15/yiban.html">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;有罪推定&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;百度&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;谷歌&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;寻找事实&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;易班是一个整合微博、微信、BBS、@#￥%……的全能社交应用，跟校内网（现在是人人网）比较像，不过只能由在校学生注册。不过有些大学同学就抱怨“为什么强制注册易班”（有的学校甚至拿它和考核挂钩），“是不是有背景”……事实是什么样的呢？&lt;/p&gt;
+
+&lt;p&gt;作为不归学校管的局外人，写点“&lt;s&gt;伪&lt;/s&gt;客观&lt;s&gt;伪&lt;/s&gt;公正”的东西吧。&lt;/p&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;有罪推定&lt;/h1&gt;
+
+&lt;p&gt;“有罪推定”是很不恰当的。不过，站在同学的角度上想想，被强制要求注册一个实名制社交网站，还跟各种考核挂钩，心里肯定很不爽，怎么能不抱着“有罪推定”的心态去了解这个东西呢？&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;百度&lt;/h2&gt;
+
+&lt;p&gt;遇到问题，习惯性地百度了一下……&lt;/p&gt;
+
+&lt;p&gt;首先是&lt;a href=&quot;http://baike.baidu.com/view/4320108.htm&quot;&gt;百度百科词条&lt;/a&gt;——“全国教育系统的知名文化品牌”。我相信被要求注册的看到这些文字肯定不爽——全是正面的——既然它是个好东西，怎么还要强制注册？肯定有问题。&lt;/p&gt;
+
+&lt;p&gt;接着百度。天啊，貌似都是正面的东西，而且发现一个天大的事实——原来不光我们学校有，别的学校也有！看来“易班的背景不小”。&lt;/p&gt;
+
+&lt;p&gt;心里肯定还是不爽，直到看到&lt;a href=&quot;https://www.zhihu.com/topic/19828760/newest&quot;&gt;知乎上的讨论&lt;/a&gt;，心里踏实多了——都是心里话啊！道出了人民的心声！&lt;/p&gt;
+
+&lt;p&gt;[% callout style=warning %]
+先别急&lt;/p&gt;
+
+&lt;p&gt;不好意思，我告诉你，知乎上的很多讨论是没有根据的，换句话说，他们道出了“易班”在自己学校的“强大”力量，但是抱着有罪推定的心态来看待它的“背景”。结果怎么能客观公正呢？
+[% endcallout %]&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;谷歌&lt;/h2&gt;
+
+&lt;p&gt;跟别人学会了科学上网，听说谷歌搜索的质量比较高，那么谷歌里会不会有“我想要的”内容呢？&lt;/p&gt;
+
+&lt;p&gt;一查，发现了维基百科——&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E6%98%93%E7%8F%AD&quot;&gt;果然有&lt;/a&gt;！果然不是宣传，果然把不爽的东西都写上了——果然——&lt;/p&gt;
+
+&lt;h1 id=&quot;section-3&quot;&gt;寻找事实&lt;/h1&gt;
+
+&lt;p&gt;虽然百毒百科经常被当作垃圾厂一样对待，但是谁敢保证维基百科不是垃圾桶呢？&lt;/p&gt;
+
+&lt;p&gt;我们想要知道客观事实，就不能抱着“易班是坏东西”的想法先入为主。&lt;/p&gt;
+
+&lt;p&gt;不管维基百科里的文字是真实的还是胡写的，我们发现了一个神奇的事实——原来推广易班是教育部发的&lt;a href=&quot;http://www.moe.edu.cn/publicfiles/business/htmlfiles/moe/moe_1779/201502/183854.html&quot;&gt;文件&lt;/a&gt;！&lt;/p&gt;
+
+&lt;p&gt;官方文件最能说明问题。虽然官方文件往往是由一些倒背如流的词语组成的，不过为了深刻理解易班的“背景”，阅读官方文件还是很有必要的。&lt;/p&gt;
+
+&lt;p&gt;一定要仔细阅读文件！从文件内容来看，易班是一个前途光明的软件。教育部下那么大的力度发展易班，能达到什么效果呢？&lt;/p&gt;
+
+&lt;p&gt;不管你有没有&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E7%8A%AF%E7%BD%AA%E6%80%9D%E6%83%B3&quot;&gt;犯罪思想&lt;/a&gt;（thoughtcrime），估计看完之后都会有自己的想法。&lt;/p&gt;
+
+&lt;p&gt;啊，原来如此！&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;text-center&quot;&gt;
+&lt;img src=&quot;/img/telescreen.jpg&quot; style=&quot;width:300px;&quot; /&gt;&lt;br /&gt;
+BIG BROTHER IS WATCHING YOU
+&lt;/div&gt;</content><author><name>vjudge1</name></author><summary>易班是一个整合微博、微信、BBS、@#￥%……的全能社交应用，跟校内网（现在是人人网）比较像，不过只能由在校学生注册。不过有些大学同学就抱怨“为什么强制注册易班”（有的学校甚至拿它和考核挂钩），“是不是有背景”……事实是什么样的呢？
+
+作为不归学校管的局外人，写点“伪客观伪公正”的东西吧。</summary></entry><entry><title>终端装13利器——zsh、powerline和tmux</title><link href="https://vjudge1.github.io/2016/01/30/zsh-and-powerline.html" rel="alternate" type="text/html" title="终端装13利器——zsh、powerline和tmux" /><published>2016-01-30T00:00:00+08:00</published><updated>2016-01-30T00:00:00+08:00</updated><id>https://vjudge1.github.io/2016/01/30/zsh-and-powerline</id><content type="html" xml:base="https://vjudge1.github.io/2016/01/30/zsh-and-powerline.html">&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#zsh&quot; id=&quot;markdown-toc-zsh&quot;&gt;zsh&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#wd&quot; id=&quot;markdown-toc-wd&quot;&gt;wd&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
@@ -1991,252 +2053,4 @@ Windows 是这样的&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Windows 中有 Paragon Partition Manager。&lt;/li&gt;
   &lt;li&gt;Linux 中有 GParted，但是只能缩小容量，不能扩大容量。&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>vjudge1</name></author><category term="Hackintosh" /><summary>鉴于周围有很多人想体验体验苹果系统，作为一个成功用上黑苹果的人，我觉得应该写点什么了。</summary></entry><entry><title>Funny Linux commands</title><link href="https://vjudge1.github.io/2015/09/08/fun-commands.html" rel="alternate" type="text/html" title="Funny Linux commands" /><published>2015-09-08T18:11:00+08:00</published><updated>2015-09-08T18:11:00+08:00</updated><id>https://vjudge1.github.io/2015/09/08/fun-commands</id><content type="html" xml:base="https://vjudge1.github.io/2015/09/08/fun-commands.html">&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#kuso&quot; id=&quot;markdown-toc-kuso&quot;&gt;Kuso&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#sl&quot; id=&quot;markdown-toc-sl&quot;&gt;sl&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#tac&quot; id=&quot;markdown-toc-tac&quot;&gt;tac&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#dd&quot; id=&quot;markdown-toc-dd&quot;&gt;dd&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#fork-bomb&quot; id=&quot;markdown-toc-fork-bomb&quot;&gt;Fork Bomb&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#yes&quot; id=&quot;markdown-toc-yes&quot;&gt;yes&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#xeyes&quot; id=&quot;markdown-toc-xeyes&quot;&gt;xeyes&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#xkill&quot; id=&quot;markdown-toc-xkill&quot;&gt;xkill&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#fuck&quot; id=&quot;markdown-toc-fuck&quot;&gt;fuck&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#easter-eggs&quot; id=&quot;markdown-toc-easter-eggs&quot;&gt;Easter Eggs&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#moo&quot; id=&quot;markdown-toc-moo&quot;&gt;moo&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#no-easter-eggs&quot; id=&quot;markdown-toc-no-easter-eggs&quot;&gt;No easter eggs&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#cal&quot; id=&quot;markdown-toc-cal&quot;&gt;cal&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#ascii-arts&quot; id=&quot;markdown-toc-ascii-arts&quot;&gt;ASCII arts&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#big-characters&quot; id=&quot;markdown-toc-big-characters&quot;&gt;BIG CHARACTERS&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#figlet&quot; id=&quot;markdown-toc-figlet&quot;&gt;figlet&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#toilet&quot; id=&quot;markdown-toc-toilet&quot;&gt;toilet&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#banner&quot; id=&quot;markdown-toc-banner&quot;&gt;banner&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#cowsay&quot; id=&quot;markdown-toc-cowsay&quot;&gt;cowsay&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#bb&quot; id=&quot;markdown-toc-bb&quot;&gt;bb&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#the-matrix&quot; id=&quot;markdown-toc-the-matrix&quot;&gt;The Matrix&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#telnet&quot; id=&quot;markdown-toc-telnet&quot;&gt;telnet&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#asciiquarium&quot; id=&quot;markdown-toc-asciiquarium&quot;&gt;asciiquarium&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#lolcat&quot; id=&quot;markdown-toc-lolcat&quot;&gt;lolcat&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#others&quot; id=&quot;markdown-toc-others&quot;&gt;Others&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#factor&quot; id=&quot;markdown-toc-factor&quot;&gt;factor&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#oneko&quot; id=&quot;markdown-toc-oneko&quot;&gt;oneko&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#python&quot; id=&quot;markdown-toc-python&quot;&gt;Python&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Just for fun.&lt;/p&gt;
-
-&lt;p&gt;If you get “command not found” after typing these commands, please install them manually.&lt;/p&gt;
-
-&lt;h1 id=&quot;kuso&quot;&gt;Kuso&lt;/h1&gt;
-
-&lt;h2 id=&quot;sl&quot;&gt;sl&lt;/h2&gt;
-
-&lt;p&gt;ls is an everyday command. If you type in reverse, …&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2015-09-08-fun-commands/sl.png&quot; alt=&quot;sl&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;A steam locomotive.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sl -l&lt;/code&gt; will display a smaller train, and &lt;code class=&quot;highlighter-rouge&quot;&gt;sl -F&lt;/code&gt; will let the train fly.&lt;/p&gt;
-
-&lt;p&gt;So, you can type &lt;code class=&quot;highlighter-rouge&quot;&gt;alias ls=sl&lt;/code&gt; on other’s computer secretly.&lt;/p&gt;
-
-&lt;h2 id=&quot;tac&quot;&gt;tac&lt;/h2&gt;
-
-&lt;p&gt;cat is used to print files, so tac is used for printing files, too. Of course, in reverse.&lt;/p&gt;
-
-&lt;h2 id=&quot;dd&quot;&gt;dd&lt;/h2&gt;
-
-&lt;p&gt;Not all &lt;code class=&quot;highlighter-rouge&quot;&gt;dd&lt;/code&gt;s are dangerous. For example, enter text mode (Ctrl-Alt-F1) and type:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo dd if=/dev/urandom of=/dev/fb0
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Because /dev/urandom is a random generator, so results are different.&lt;/p&gt;
-
-&lt;h2 id=&quot;fork-bomb&quot;&gt;Fork Bomb&lt;/h2&gt;
-
-&lt;p&gt;Just enter an Apple Store, open Terminal (Press Control-Space and type “Terminal”), then type:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;:() { :|: &amp;amp; };:
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Remember, you should exit the store quickly or …&lt;/p&gt;
-
-&lt;h2 id=&quot;yes&quot;&gt;yes&lt;/h2&gt;
-
-&lt;p&gt;Type &lt;code class=&quot;highlighter-rouge&quot;&gt;yes&lt;/code&gt; and you will get yyyyyyyyyyyyy…s. (In fact, it can be used for pipes to affirm repetitively.)&lt;/p&gt;
-
-&lt;p&gt;It’s easy to simulate it:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;y&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%s&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;xeyes&quot;&gt;xeyes&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2015-09-08-fun-commands/xeyes.png&quot; alt=&quot;xeyes&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Eyes are just watching your pointer – Why does X11 contain such a boring thing?&lt;/p&gt;
-
-&lt;p&gt;And a more boring one – xlogo. Just a ugly “X”, and … nothing else.&lt;/p&gt;
-
-&lt;h2 id=&quot;xkill&quot;&gt;xkill&lt;/h2&gt;
-
-&lt;p&gt;Do you want to be a demon?&lt;/p&gt;
-
-&lt;p&gt;Type &lt;code class=&quot;highlighter-rouge&quot;&gt;xkill&lt;/code&gt; and click on any window – That program (process) will be terminated immediately.&lt;/p&gt;
-
-&lt;p&gt;xkill, quick and accurate.&lt;/p&gt;
-
-&lt;h2 id=&quot;fuck&quot;&gt;fuck&lt;/h2&gt;
-
-&lt;p&gt;-“F**k!”&lt;/p&gt;
-
-&lt;p&gt;-“Please watch your tongue!”&lt;/p&gt;
-
-&lt;p&gt;Now, it’s not rude to curse your computer, and, you computer will fix your error after being cursed –&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/nvbn/thefuck&quot;&gt;https://github.com/nvbn/thefuck&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;When you type a wrong command and get an error message, just say “fuck”, and the program will help you correct it.&lt;/p&gt;
-
-&lt;h1 id=&quot;easter-eggs&quot;&gt;Easter Eggs&lt;/h1&gt;
-
-&lt;h2 id=&quot;moo&quot;&gt;moo&lt;/h2&gt;
-
-&lt;p&gt;Type: &lt;code class=&quot;highlighter-rouge&quot;&gt;apt-get moo&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;And: &lt;code class=&quot;highlighter-rouge&quot;&gt;apt-build moo&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;no-easter-eggs&quot;&gt;No easter eggs&lt;/h2&gt;
-
-&lt;p&gt;You need &lt;code class=&quot;highlighter-rouge&quot;&gt;aptitude&lt;/code&gt;. So only deb-based system users can see it:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aptitude moo
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;aptitude says there are no easter eggs. Don’t be cheats. Just go on:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aptitude -v moo
-aptitude -vv moo
-aptitude -vvv moo
-aptitude -vvvv moo
-aptitude -vvvvv moo
-aptitude -vvvvvv moo
-aptitude -vvvvvvv moo
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;aptitude surrenders at last.&lt;/p&gt;
-
-&lt;h2 id=&quot;cal&quot;&gt;cal&lt;/h2&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cal 9 1752&lt;/code&gt;: Where is Sep. 3, 1752?&lt;/p&gt;
-
-&lt;h1 id=&quot;ascii-arts&quot;&gt;ASCII arts&lt;/h1&gt;
-
-&lt;h2 id=&quot;big-characters&quot;&gt;BIG CHARACTERS&lt;/h2&gt;
-
-&lt;h3 id=&quot;figlet&quot;&gt;figlet&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2015-09-08-fun-commands/figlet.png&quot; alt=&quot;figlet&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;toilet&quot;&gt;toilet&lt;/h3&gt;
-
-&lt;p&gt;“toilet” is not a toilet. It’s …&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2015-09-08-fun-commands/toilet.png&quot; alt=&quot;toilet&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;banner&quot;&gt;banner&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2015-09-08-fun-commands/banner.png&quot; alt=&quot;banner&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;These are real &lt;a href=&quot;https://en.wikipedia.org/wiki/Big-character_poster&quot;&gt;Big-character posters&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;cowsay&quot;&gt;cowsay&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2015-09-08-fun-commands/cowsay.png&quot; alt=&quot;cowsay&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cowsay &quot;Hello world&quot;&lt;/code&gt;: A saying cow&lt;/li&gt;
-  &lt;li&gt;Replace cowsay to cowthink: A thinking cow&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cowsay -l&lt;/code&gt; Seeing supported kind of animals – &lt;code class=&quot;highlighter-rouge&quot;&gt;cowsay -f tux &quot;Hello world&quot;&lt;/code&gt;: No cows, just Tux。&lt;/li&gt;
-  &lt;li&gt;Install fortune, and type &lt;code class=&quot;highlighter-rouge&quot;&gt;fortune | cowsay&lt;/code&gt;: A philosophical cow.&lt;/li&gt;
-  &lt;li&gt;Install fortune-zh and execute &lt;code class=&quot;highlighter-rouge&quot;&gt;fortune | cowsay&lt;/code&gt;: A cow that knows Chinese poem.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;bb&quot;&gt;bb&lt;/h2&gt;
-
-&lt;p&gt;A simple ASCII image is not amazing.&lt;/p&gt;
-
-&lt;p&gt;So let’s watch bb! It’s a 3D ASCII animation with music!&lt;/p&gt;
-
-&lt;h2 id=&quot;the-matrix&quot;&gt;The Matrix&lt;/h2&gt;
-
-&lt;p&gt;cmatrix:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2015-09-08-fun-commands/cmatrix.png&quot; alt=&quot;cmatrix&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;telnet&quot;&gt;telnet&lt;/h2&gt;
-
-&lt;p&gt;Just type:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;telnet towel.blinkenlights.nl
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;An ASCII movie.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2015-09-08-fun-commands/blinkenlights.png&quot; alt=&quot;blinkenlights&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If use IPv6, more scenes will show, and the movie will become colorful.&lt;/p&gt;
-
-&lt;h2 id=&quot;asciiquarium&quot;&gt;asciiquarium&lt;/h2&gt;
-
-&lt;p&gt;ASCII quarium…&lt;/p&gt;
-
-&lt;h2 id=&quot;lolcat&quot;&gt;lolcat&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2015-09-08-fun-commands/lolcat.png&quot; alt=&quot;lolcat&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;lolcat is a Ruby program so you should use &lt;code class=&quot;highlighter-rouge&quot;&gt;gem&lt;/code&gt; command to install.&lt;/p&gt;
-
-&lt;h1 id=&quot;others&quot;&gt;Others&lt;/h1&gt;
-
-&lt;h2 id=&quot;factor&quot;&gt;factor&lt;/h2&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;factor 60&lt;/code&gt;：60 = 2&lt;em&gt;2&lt;/em&gt;3*5&lt;/p&gt;
-
-&lt;h2 id=&quot;oneko&quot;&gt;oneko&lt;/h2&gt;
-
-&lt;p&gt;A cat is always chasing you mouse pointer.&lt;/p&gt;
-
-&lt;h2 id=&quot;python&quot;&gt;Python&lt;/h2&gt;
-
-&lt;p&gt;You don’t need to learn programming. You just need to type:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python -m SimpleHTTPSerever
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The easiest way to share files with each other.&lt;/p&gt;</content><author><name>vjudge1</name></author><summary>Just for fun.
-
-If you get “command not found” after typing these commands, please install them manually.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>vjudge1</name></author><category term="Hackintosh" /><summary>鉴于周围有很多人想体验体验苹果系统，作为一个成功用上黑苹果的人，我觉得应该写点什么了。</summary></entry></feed>

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://vjudge1.github.io/2016/03/15/yiban.html</loc>
+<lastmod>2016-03-15T00:00:00+08:00</lastmod>
+</url>
+<url>
 <loc>https://vjudge1.github.io/2016/01/30/zsh-and-powerline.html</loc>
 <lastmod>2016-01-30T00:00:00+08:00</lastmod>
 </url>
@@ -153,6 +157,10 @@
 <lastmod>2014-02-10T00:00:00+08:00</lastmod>
 </url>
 <url>
+<loc>https://vjudge1.github.io/2013/01/01/sentences.html</loc>
+<lastmod>2013-01-01T00:00:00+08:00</lastmod>
+</url>
+<url>
 <loc>https://vjudge1.github.io/2012/08/29/phrase.html</loc>
 <lastmod>2012-08-29T00:00:00+08:00</lastmod>
 </url>
@@ -170,5 +178,9 @@
 </url>
 <url>
 <loc>https://vjudge1.github.io/tags/</loc>
+</url>
+<url>
+<loc>https://vjudge1.github.io/img/kuaidi.html</loc>
+<lastmod>2016-03-15T17:49:20+08:00</lastmod>
 </url>
 </urlset>
