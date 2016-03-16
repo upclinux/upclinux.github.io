@@ -1,0 +1,67 @@
+---
+title: Archive
+layout: page_full
+comments: false
+permalink: /archive/
+---
+
+<div class="archive-list">
+    <div class="sep">
+        <div class="group">
+            {% for post in site.posts  %}
+                {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+                {% capture this_month %}{{ post.date | date: "%m" }}{% endcapture %}
+                {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+                {% capture next_month %}{{ post.previous.date | date: "%m" }}{% endcapture %}
+
+                {% if forloop.first %}
+                    <div class="year" id="year_{{ this_year }}">
+                        <span class="dot"></span>
+                        <span class="number">{{ this_year }}</span>
+                    </div>
+                    <div class="month" id="month_{{ this_year }}_{{ this_month }}">
+                        <div class="number"><div>{{ this_month }}</div></div>
+                {% endif %}
+
+                <div class="post">
+                    <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+                    <span class="title"><a href="{{ post.url }}">{{ post.title }}</a></span>
+                    {% if post.categories[0] %}
+                        {% for c in post.categories %}
+                            <span class="label">{{ c }}</span>
+                        {% endfor %}
+                    {% endif %}
+                    <div class="arrow">
+                        <div class="i"></div>
+                        <div class="bg"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+
+                {% if forloop.last %}
+                    </div>
+                {% else %}
+                    {% if this_year != next_year %}
+                        </div>
+                        <div class="year" id="year_{{ next_year }}">
+                            <span class="dot"></span>
+                            <span class="number">{{ next_year }}</span>
+                        </div>
+                        <div class="month" id="month_{{ next_year }}_{{ next_month }}">
+                            <div class="number"><div>{{ next_month }}</div></div>
+                    {% else %}
+                        {% if this_month != next_month %}
+                            </div>
+                            <div class="month" id="month_{{ this_year }}_{{ next_month }}">
+                                <div class="number"><div>{{ next_month }}</div></div>
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
+            <div class="end">
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -37,6 +37,9 @@
           <li {% if page.url == "/tags/" %} class="active" {% endif %}>
             <a href="{{ site.baseurl }}/tags/" data-toggle="tooltip" data-placement="bottom" title="Tags"><i class="fa fa-tags"></i></a>
           </li>
+          <li {% if page.url == "/archive/" %} class="active" {% endif %}>
+            <a href="{{ site.baseurl }}/archive/" data-toggle="tooltip" data-placement="bottom" title="Archive"><i class="fa fa-archive"></i></a>
+          </li>
 
           {% for p in site.header_icons %}
             <li {% if p.url == page.url %} class="active" {% endif %}>

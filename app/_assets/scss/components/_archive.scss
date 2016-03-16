@@ -1,0 +1,162 @@
+.archive-list {
+    padding-left: 80px;
+    padding-right: 50px;
+    margin-bottom: 40px;
+
+    .sep {
+        border-left: 3px solid $btn-default-border;
+    }
+
+    .group {
+        margin-left: 15px;
+    }
+
+    .year {
+        margin-top: 15px;
+
+        .dot {
+            width: 18px;
+            height: 18px;
+            background-color: $btn-info-bg;
+            border: 4px solid $btn-info-border;
+            position: relative;
+            display: inline-block;
+            border-radius: 28px;
+
+            left: -26px;
+        }
+
+        .number {
+            position: relative;
+            left: -97px;
+            top: -7px;
+
+            font-weight: bold;
+            color: $gray-light;
+            text-shadow: 1px 1px 1px $gray-lighter;
+        }
+    }
+
+    .month {
+        margin: 0;
+        list-style-type: none;
+        padding-left: 20px;
+
+        .number {
+            position: absolute;
+            font-size: 12px;
+
+            div {
+                left: -72px;
+                top: 12px;
+
+                position: relative;
+
+                color: $gray-light;
+                text-shadow: 1px 1px 1px $gray-lighter;
+            }
+        }
+
+        .post {
+            position: relative;
+            padding: 10px;
+            border: 1px solid $btn-default-border;
+            border-radius: 4px;
+            margin-top: 15px;
+
+            box-shadow: 1px 1px 1px $btn-default-border;
+
+            background-color: $btn-default-bg;
+            transition: all 0.5s;
+
+            color: $btn-default-color;
+
+            .date {
+                color: $gray-light;
+                display: inline-block;
+                width: 6em;
+            }
+
+            .label {
+                background-color: $btn-primary-bg;
+                color: $btn-primary-color;
+                display: inline-block;
+                padding: 2px 6px;
+                font-size: 12px;
+                border-radius: 5px;
+                margin-left: 10px;
+            }
+
+            &:hover {
+                background-color: darken($btn-default-bg, 10%);
+                border-color: darken($btn-default-border, 12%);
+                transition: all 0.5s;
+
+                .arrow {
+                    .bg {
+                        border-color: transparent darken($btn-default-bg, 10%) transparent transparent;
+                        transition: border-color 0.5s;
+                    }
+
+                    .i {
+                        border-color: transparent darken($btn-default-border, 12%) transparent transparent;
+                        transition: border-color 0.5s;
+                    }
+                }
+            }
+
+            .arrow {
+                position: absolute;
+
+                width: 10px;
+                height: 20px;
+                top: 50%;
+                left: -10px;
+                margin-top: -10px;
+
+                .dot {
+                    position: relative;
+                    width: 6px;
+                    height: 6px;
+                    background-color: $btn-primary-bg;
+                    border: 2px solid $btn-primary-border;
+                    border-radius: 5px;
+                    top: 5px;
+                    left: -31px;
+                }
+
+                .i {
+                    border-color: transparent $btn-default-border transparent transparent;
+                    border-width: 10px 10px 10px 0;
+                    border-style: dashed solid dashed dashed;
+
+                    position: absolute;
+                }
+
+                .bg {
+                    border-right-color: $btn-default-bg;
+                    left: 1px;
+
+                    border-color: transparent $btn-default-bg transparent transparent;
+                    border-width: 10px 10px 10px 0;
+                    border-style: dashed solid dashed dashed;
+                    position: absolute;
+
+                    transition: border-color 0.5s;
+                }
+            }
+        }
+    }
+
+    .end > .dot {
+        width: 12px;
+        height: 12px;
+        background-color: $btn-success-bg;
+        border: 2px solid $btn-success-border;
+        position: relative;
+        display: inline-block;
+
+        left: -23px;
+        top: 15px;
+    }
+}
