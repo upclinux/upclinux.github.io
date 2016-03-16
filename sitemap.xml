@@ -168,6 +168,9 @@
 <loc>https://vjudge1.github.io/about/</loc>
 </url>
 <url>
+<loc>https://vjudge1.github.io/archive/</loc>
+</url>
+<url>
 <loc>https://vjudge1.github.io/categories/</loc>
 </url>
 <url>
@@ -178,9 +181,5 @@
 </url>
 <url>
 <loc>https://vjudge1.github.io/tags/</loc>
-</url>
-<url>
-<loc>https://vjudge1.github.io/img/kuaidi.html</loc>
-<lastmod>2016-03-15T17:49:20+08:00</lastmod>
 </url>
 </urlset>
