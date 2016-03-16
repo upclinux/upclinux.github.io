@@ -7,3 +7,5 @@ app/_drafts/*
 bower_components
 dist
 node_modules
+
+.sublime-grunt.cache

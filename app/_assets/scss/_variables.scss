@@ -487,11 +487,11 @@ $pager-disabled-color:                 $pagination-disabled-color !default;
 //##
 
 $jumbotron-padding:              30px !default;
-$jumbotron-color:                inherit !default;
-$jumbotron-bg:                   lighten($brand-primary, 10%);
-$jumbotron-heading-color:        inherit !default;
-$jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
-$jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;
+$jumbotron-color:                #ccc;
+$jumbotron-bg:                   $brand-primary;
+$jumbotron-heading-color:        #fff;
+$jumbotron-font-size:            13px;
+$jumbotron-heading-font-size:    36px;
 
 
 //== Form states and alerts

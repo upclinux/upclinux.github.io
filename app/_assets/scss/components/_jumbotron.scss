@@ -3,26 +3,27 @@
     margin-bottom: 50px;
     padding-top: 12px !important;
     padding-bottom: 19px;
+    background-color: $jumbotron-bg;
 
     @include on-mobile() {
         margin-bottom: 20px !important;
         padding-top: 25px !important;
     }
     h1 {
-        color: #fff;
+        color: $jumbotron-heading-color;
 
-        font-size: 36px;
+        font-size: $jumbotron-heading-font-size;
     }
     p {
-        color: lighten($highlight-color, 43%);
+        color: $jumbotron-color;
 
-        font-size: 13px;
+        font-size: $jumbotron-font-size;
     }
     a {
-        color: lighten($highlight-color, 43%);
+        color: $jumbotron-color;
     }
     small {
-        color: lighten($gray, 20%);
+        color: $jumbotron-color;
 
         font-size: 12px;
     }
