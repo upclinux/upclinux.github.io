@@ -11,7 +11,7 @@ title: Unorz
 email: vjudge404@gmail.com
 description: Doubleplusorz...
 footnote: > # this means to ignore newlines until "baseurl:"
-  &copy; 2015 vjudge1
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> by vjudge1
 brand: >
   <i class="fa fa-github-alt"></i> Unorz
 baseurl: "" # the subpath of your site, e.g. /blog/
