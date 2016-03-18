@@ -6,35 +6,45 @@ permalink: /tags/
 ---
 <div class="row">
     <div class="col-sm-9" role="main">
-      <div>
-        <ul class="tags-list">
-    	  {% for tag in site.tags %}
-          <li>
-    	  	<a href="#tag-{{ tag[0] }}" class="btn btn-default">
-              {{ tag[0] }}
-              <span class="count">{{ tag | last | size }}</span>
-            </a>
-          </li>
-    	  {% endfor %}
-        </ul>
-      </div>
-
-      {% for tag in site.tags %}
-      <div class="post-list-header">
-        <h3 id="tag-{{ tag[0] }}">{{ tag[0] }}</h3>
-      </div>
-      <table class="post-list table table-hover">
-        {% for post in tag[1] %}
-        <tr>
-          <td class="date"><span class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</span></td>
-          <td><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
-        </tr>
+        <div>
+            <ul class="tags-list">
+                {% for tag in site.tags %}
+                <li>
+                    <a href="#tag-{{ tag[0] }}" class="btn btn-default">
+                        {{ tag[0] }}
+                        <span class="count">
+                            {{ tag | last | size }}
+                        </span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% for tag in site.tags %}
+        <div class="post-list-header">
+            <h3 id="tag-{{ tag[0] }}">
+                {{ tag[0] }}
+            </h3>
+        </div>
+        <table class="post-list table table-hover">
+            {% for post in tag[1] %}
+            <tr>
+                <td class="date">
+                    <span class="text-muted">
+                        {{ post.date | date: "%b %-d, %Y" }}
+                    </span>
+                </td>
+                <td>
+                    <a href="{{ post.url | prepend: site.baseurl }}">
+                        {{ post.title }}
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
         {% endfor %}
-      </table>
-      {% endfor %}
     </div>
-
     <div class="col-sm-3 hidden-xs">
-      {% include sidebar.html %}
+        {% include sidebar.html %}
     </div>
 </div>

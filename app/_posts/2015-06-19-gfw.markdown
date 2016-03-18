@@ -57,10 +57,11 @@ NOTE:
 2. As for Youtube, it's better to use another method for accessing.
 3. It's useless to change hosts if IPs are GFWed.
 
-<div class="callout callout-primary">
-<h4>HTTPS required</h4>
+{% callout %}
+#### HTTPS required
+
 Common websites use HTTPS now. With HTTPS, the GFW will not be able to reset the connection by filtering keywords. However, you need to type "https://" manually sometimes or Mr. Fang will still laugh at you.
-</div>
+{% endcallout %}
 
 ### Anti-pollution DNS Servers
 

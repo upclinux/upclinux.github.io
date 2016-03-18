@@ -26,11 +26,11 @@ Chrome和火狐是最好的浏览器。因为Chromium是开源产品，所以那
 
 使用云端服务有一个小小问题：墙。如果像我一样已经意识不到自己在翻墙，可以无视这个问题。
 
-[% callout %]
-社交网站
+{% callout %}
+#### 社交网站
 
 国外很多网站都支持RSS，包括维基百科（监视列表）和社交网站Facebook。不过国内网站就不行了，例如微博不提供RSS功能，而且不小心被女神<span class="blackout">曾经是男神</span>拉黑了（目测是被当作广告账号了），所以怎样才能科学地关注女神呢？答案——[微博档案](http://sinacn.weibodangan.com/)，从这个网站上面订阅微博。
-[% endcallout %]
+{% endcallout %}
 
 # gooreplacer
 

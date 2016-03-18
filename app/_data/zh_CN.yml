@@ -23,6 +23,9 @@ archive: 归档
 all: 所有文章
 external_links: 外部链接
 
+article: 篇文章
+articles: 篇文章
+
 contents: 目录
 lists: 列表
 

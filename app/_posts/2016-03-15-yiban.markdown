@@ -28,11 +28,11 @@ categories: Others
 
 心里肯定还是不爽，直到看到[知乎上的讨论](https://www.zhihu.com/topic/19828760/newest)，心里踏实多了——都是心里话啊！道出了人民的心声！
 
-[% callout style=warning %]
-先别急
+{% callout warning %}
+#### 先别急
 
 不好意思，我告诉你，知乎上的很多讨论是没有根据的，换句话说，他们道出了“易班”在自己学校的“强大”力量，但是抱着有罪推定的心态来看待它的“背景”。结果怎么能客观公正呢？
-[% endcallout %]
+{% endcallout %}
 
 ## 谷歌
 

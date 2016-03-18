@@ -1,95 +1,65 @@
 <div id="sidebar">
-
     <h4 class="page-header text-muted">
-      <i class="fa fa-search"></i> {{ site.data.i18n.search }}
+        <i class="fa fa-search"></i>
+        {{ site.data.i18n.search }}
     </h4>
-
     <form method="get" action="{{ "/search/" | prepend: site.baseurl }}">
-      <div class="form-group">
-        <input type="search" placeholder="{{ site.data.i18n.regexp }}" class="form-control" name="s" id="keyword">
-      </div>
+        <div class="form-group">
+            <input type="search" placeholder="{{ site.data.i18n.regexp }}" class="form-control" name="s" id="keyword"/>
+        </div>
     </form>
 
     <h4 class="page-header text-muted">
-      <i class="fa fa-th-list"></i> {{ site.data.i18n.categories }}
+        <i class="fa fa-th-list"></i>
+        {{ site.data.i18n.categories }}
     </h4>
-
     <div class="categories-list">
-      {% if page.url != "/categories/" %}
-        {% assign u = "/categories/?c=All" | prepend: site.baseurl %}
-      {% else %}
-        {% assign u = "javascript:;" %}
-      {% endif %}
-      <a class="item" href="{{ u }}" data-cate="All">
-        {{ site.data.i18n.all }}
-        <span class="badge">{{ site.posts | size }}</span>
-      </a>
-      {% for category in site.categories %}
         {% if page.url != "/categories/" %}
-          {% assign cate = category | first %}
-          {% assign u = "/categories/?c=" | prepend: site.baseurl | append: cate %}
+        {% assign u = "/categories/?c=All" | prepend: site.baseurl %}
         {% else %}
-          {% assign u = "javascript:;" %}
+        {% assign u = "javascript:;" %}
+        {% endif %}
+        <a class="item" href="{{ u }}" data-cate="All">
+            {{ site.data.i18n.all }}
+            <span class="badge">
+                {{ site.posts | size }}
+            </span>
+        </a>
+        {% for category in site.categories %}
+        {% if page.url != "/categories/" %}
+        {% assign cate = category | first %}
+        {% assign u = "/categories/?c=" | prepend: site.baseurl | append: cate %}
+        {% else %}
+        {% assign u = "javascript:;" %}
         {% endif %}
         <a class="item" href="{{ u }}" data-cate="{{ category | first }}">
-          {{ category | first }}
-          <span class="badge">{{ category | last | size }}</span>
+            {{ category | first }}
+            <span class="badge">
+                {{ category | last | size }}
+            </span>
         </a>
-      {% endfor %}
+        {% endfor %}
     </div>
 
     <h4 class="page-header text-muted">
-      <i class="fa fa-tags"></i> {{ site.data.i18n.tags }}
+        <i class="fa fa-tags">
+        </i>
+        {{ site.data.i18n.tags }}
     </h4>
-
-    {% assign first = site.tags.first %}
-    {% assign max = first[1].size %}
-    {% assign min = max %}
-    {% for tag in site.tags offset:1 %}
-      {% if tag[1].size > max %}
-        {% assign max = tag[1].size %}
-      {% elsif tag[1].size < min %}
-        {% assign min = tag[1].size %}
-      {% endif %}
-    {% endfor %}
-    {% assign diff = max | minus: min %}
-    {% if diff == 0 %}
-      {% assign diff = 1 %}
-    {% endif %}
-
-    {% for tag in site.tags %}
-      {% assign temp = tag[1].size | minus: min | times: 36 | divided_by: diff %}
-      {% assign base = temp | divided_by: 4 %}
-      {% assign remain = temp | modulo: 4 %}
-      {% if remain == 0 %}
-        {% assign size = base | plus: 9 %}
-      {% elsif remain == 1 or remain == 2 %}
-        {% assign size = base | plus: 9 | append: '.5' %}
-      {% else %}
-        {% assign size = base | plus: 10 %}
-      {% endif %}
-      {% if remain == 0 or remain == 1 %}
-        {% assign color = 9 | minus: base %}
-      {% else %}
-        {% assign color = 8 | minus: base %}
-      {% endif %}
-
-      {% if page.url != "/tags/" %}
-        {% assign u = "/tags/#tag-" | prepend: site.baseurl | append: tag[0] %}
-      {% else %}
-        {% assign u = "#tag-" | append: tag[0] %}
-      {% endif %}
-      <a href="{{ u }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};"
-        data-toggle="tooltip" data-placement="top" title="{{ tag[1].size }} article{% if tag[1].size > 1 %}s{% endif %}">{{ tag[0] }}</a>&nbsp;
-    {% endfor %}
+    {% tag_cloud %}
 
     <h4 class="page-header text-muted">
-      <i class="fa fa-external-link"></i> {{ site.data.i18n.external_links }}
+        <i class="fa fa-external-link"></i>
+        {{ site.data.i18n.external_links }}
     </h4>
     <ul class="link-list fa-ul">
-    {% for link in site.external_links %}
-      <li><i class="fa-li fa fa-link"></i><a href="{{ link.url }}" data-toggle="tooltip" data-placement="bottom" title="{{ link.url }}">{{ link.name }}</a></li>
-    {% endfor %}
+        {% for link in site.external_links %}
+        <li>
+            <i class="fa-li fa fa-link"></i>
+            <a href="{{ link.url }}" data-toggle="tooltip" data-placement="bottom" title="{{ link.url }}">
+                {{ link.name }}
+            </a>
+        </li>
+        {% endfor %}
     </ul>
-
 </div>

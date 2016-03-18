@@ -34,11 +34,11 @@ categories: Web
 
 当我们要去一个地方的时候，例如北京邮电大学<small>（相当于“域名”）</small>，我们当然需要知道地址，或者知道“怎么走”<small>（也就是“路由”）</small>才能过去。
 
-[% callout %]
-北京邮电大学
+{% callout %}
+#### 北京邮电大学
 
 北京邮电大学那么小，小到不比你的高中校园大多少的程度，为什么还要拿它举例子呢？因为它是革命圣地——出口检测设备的诞生地！
-[% endcallout %]
+{% endcallout %}
 
 当我们第一次去北京的时候，我们当然需要问路<small>（“DNS 查询”）</small>。问路的目标有很多——你可以问:cop:叔叔，也可以问路边开小卖店的，当然也可以直接给北京邮电大学打电话。这些不同的人，就相当于不同的 DNS 服务器。<small>（因此有的时候能登上 QQ 但是打不开网页，就是因为你想找叔叔问路但是周围没有叔叔，所以你当然要换个人来问——换 DNS 服务器。）</small>
 
@@ -59,8 +59,8 @@ categories: Web
 
 因此有些网站需要自己找到正确的地址才能访问。
 
-[% callout %]
-判断方法
+{% callout %}
+#### 判断方法
 
 可以使用 nslookup 命令查询和判断是否有人误导你，给你指出了错误的路，例如
 
@@ -71,15 +71,15 @@ categories: Web
     nslookup www.baidu.com 114.114.114.114
 
 将得到的 IP 结果到百度上查一查，看看到底是否靠谱。一般情况下，只要那个网站上不去，基本上 IP 都是不靠谱的。
-[% endcallout %]
+{% endcallout %}
 
-[% callout %]
-怎样才能找到呢？
+{% callout %}
+#### 怎样才能找到呢？
 
 在线 nslookup 网站（online nslookup）那么多，为什么不找一个靠谱的查一查呢？
 
 查完记得 Ping 一下，因为……
-[% endcallout %]
+{% endcallout %}
 
 ## 第二种故障 (IP block)
 
@@ -90,15 +90,15 @@ categories: Web
 ![ip]({{site.baseurl}}/img/2015-09-26-gfw2/ipblock.jpg)
 <br><small>百度就在路的那面，有本事过去啊</small>
 
-[% callout %]
-判断方法
+{% callout %}
+#### 判断方法
 
 很简单，ping 一下就知道有没有路了。
 
     ping 192.168.1.1
 
 如果想知道详情，可使用 traceroute（tracert）命令。
-[% endcallout %]
+{% endcallout %}
 
 有的时候，路并没有完全拆毁，只是不太好走而已。
 
@@ -108,15 +108,15 @@ categories: Web
 
 普通的网页传输采用 HTTP 协议。这就好比上街的时候不拿兜子或背包，直接拿着东西走——你拿了什么，路人<span class="blackout">和朝阳群众</span>一目了然。
 
-[% callout %]
-明文传输
+{% callout %}
+#### 明文传输
 
 在网页里输入密码，密码看不见，对吧？提交表单，提交内容看不见，对吧？在此必须要提醒你，其实挡上了也是明文——防君子不防小人而已。
 
 当然，HTTP 也没危险到任何人都能截获，要不然人们就不会用这个协议了。但是，如果一个别有用心的人在你的网络访问的路上设了关卡，例如钓鱼热点，那么你的安全将不复存在，因为明文传输意味着他可以看得清清楚楚。就像下图一样：
 
 ![http]({{site.baseurl}}/img/2015-09-26-gfw2/http.png)
-[% endcallout %]
+{% endcallout %}
 
 2002 年诞生了一项新技术<span class="blackout">北京朝阳群众技术</span>：
 
@@ -132,11 +132,11 @@ categories: Web
 
 好在目前 HTTPS 协议不受此影响<small>（上街的时候把东西放背包里，谁知道你拿了什么？）</small>因此对于采用 HTTPS 的网站，出口检测设备需要采取其他手段。
 
-[% callout %]
-安全建议
+{% callout %}
+#### 安全建议
 
 尽量不要连接公共 Wifi。如果必须要用，建议用 VPN（仅仅是为了加密连接，不要想太多）。因为即使你可以保证只用 HTTPS，但是你要访问的网站和你所用的软件不能。
-[% endcallout %]
+{% endcallout %}
 
 ## 其他影响
 
@@ -174,17 +174,17 @@ HTTPS 就相当于上街时背个包，把东西放包里面（加密）。怎�
 
 你仍然需要知道网站的正确地址才能访问。这样的话，如果 IPv4 地址是可以使用的，IPv4 和 IPv6 就没有太大区别了。不过 IPv6 速度更快而且不受干扰。
 
-[% callout style=warning %]
-IPv6 隧道
+{% callout warning %}
+#### IPv6 隧道
 
 IPv6 没问题对吧？但是隧道可不是——隧道是不加密的，该断当然就断了。所以不要拿隧道当梯子使！
-[% endcallout %]
+{% endcallout %}
 
-[% callout %]
-4+6=2
+{% callout %}
+#### 4+6=2
 
 知道那个可以用来屏蔽广告<span class="blackout">其实是用来出国</span>的 Hosts 吧？其实，你可以同时给一个域名指定多个 IP——既有 IPv4 又有 IPv6！
-[% endcallout %]
+{% endcallout %}
 
 ## 鸡毛信
 
@@ -227,11 +227,11 @@ VPN、G<span class="blackout">oAgen</span>t、S<span class="blackout">hadowsSoc<
 
 因此，在访问网站时，如果浏览器提示“证书无效”，那么你一定要停下来，不要再继续，因为假证可以用来监听和干预！
 
-[% callout %]
-12306 除外
+{% callout %}
+#### 12306 除外
 
 12306 的证书是自己给自己颁发的，所以当然是假证了。自己制作证书，省钱啊:wink:！
-[% endcallout %]
+{% endcallout %}
 
 ![a]({{site.baseurl}}/img/2015-09-26-gfw2/fakecert1.png)
 <br><small>千万不要继续，更不要信任假证书！</small>
@@ -242,11 +242,11 @@ VPN、G<span class="blackout">oAgen</span>t、S<span class="blackout">hadowsSoc<
 ![a]({{site.baseurl}}/img/2015-09-26-gfw2/fakecert3.png)
 <br><small>甚至对你恶搞一下</small>
 
-[% callout %]
-关于 CNNIC
+{% callout %}
+#### 关于 CNNIC
 
 因为 CNNIC 黑历史比较多<span class="blackout">，没准 CNNIC 和某些设备是一伙儿的</span>，所以大家都不太相信他们。2015 年 3 月，CNNIC 的一个在埃及的中间证书颁发机构伪造了 G<span class="blackout">mail</span> 的证书，结果很快 Chrome、Firefox、Apple 等就不再信任 CNNIC CA 了。
-[% endcallout %]
+{% endcallout %}
 
 # 不为人知的事情
 
@@ -254,19 +254,19 @@ VPN、G<span class="blackout">oAgen</span>t、S<span class="blackout">hadowsSoc<
 
 因为中国除了人多就是人多，所以，只要随便找个大流量网站（比如 <s>12306</s>百度统计），稍微加点攻击的代码，那么——绝对是难以招架的 DDoS:scream:！
 
-[% callout %]
-所以说……
+{% callout %}
+#### 所以说……
 
 以后想摧毁哪个反<span class="blackout">共</span>华组织的网站，只要在春节之前往 12306 网站里加入攻击代码……春节快乐！
-[% endcallout %]
+{% endcallout %}
 
 由于潜力巨大，2015 年 3 月末，设备首次对 GitHub 小试牛刀。这次试验取得了<span class="blackout">白白激怒了全世界软件开发人员，没有任何</span>实际效果。
 
-[% callout %]
-补充说明
+{% callout %}
+#### 补充说明
 
 由于对百度代码的修改作用发生在出口检测设备上面，因此国内访问百度并不会产生类似的攻击效果。在 GitHub 遭攻击之后不久，百度所有产品差不多都采用了 HTTPS<span class="blackout">，这样百度就不会再次被当作武器来使用了</span>。
-[% endcallout %]
+{% endcallout %}
 
 # 其他
 

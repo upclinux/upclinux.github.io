@@ -7,33 +7,46 @@ subtitle: "Current: <span id='categorization'>All</span>"
 ---
 <div class="row">
     <div class="col-sm-9" role="main">
-
-      <table class="post-list table table-hover" data-list-cate="All" style="display: none;">
-        {% for post in site.posts %}
-        <tr>
-          <td class="date"><span class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</span></td>
-          <td><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
-        </tr>
-        {% endfor %}
-      </table>
-
-      {% for category in site.categories %}
-      <table class="post-list table table-hover" data-list-cate="{{category | first}}" style="display: none;">
-        {% for posts in category  %}
-          {% for post in posts %}
+        <table class="post-list table table-hover" data-list-cate="All" style="display: none;">
+            {% for post in site.posts %}
+            <tr>
+                <td class="date">
+                    <span class="text-muted">
+                        {{ post.date | date: "%b %-d, %Y" }}
+                    </span>
+                </td>
+                <td>
+                    <a href="{{ post.url | prepend: site.baseurl }}">
+                        {{ post.title }}
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% for category in site.categories %}
+        <table class="post-list table table-hover" data-list-cate="{{category | first}}" style="display: none;">
+            {% for posts in category  %}
+            {% for post in posts %}
             {% if post.url %}
-              <tr>
-                <td class="date"><span class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</span></td>
-                <td><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
-              </tr>
+            <tr>
+                <td class="date">
+                    <span class="text-muted">
+                        {{ post.date | date: "%b %-d, %Y" }}
+                    </span>
+                </td>
+                <td>
+                    <a href="{{ post.url | prepend: site.baseurl }}">
+                        {{ post.title }}
+                    </a>
+                </td>
+            </tr>
             {% endif %}
-          {% endfor %}
+            {% endfor %}
+            {% endfor %}
+        </table>
         {% endfor %}
-      </table>
-      {% endfor %}
     </div>
-
     <div class="col-sm-3 hidden-xs">
-      {% include sidebar.html %}
+        {% include sidebar.html %}
     </div>
 </div>

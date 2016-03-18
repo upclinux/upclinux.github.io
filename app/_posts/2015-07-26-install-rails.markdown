@@ -13,8 +13,8 @@ Macbook is better than computers with Windows or Linux inside because of few dev
 
 
 
-[% callout %]
-中国的朋友们
+{% callout %}
+#### 中国的朋友们
 
 如果在安装过程中遇到了“Connection reset”或“Timeout”的错误，那一定是防火的长城干的<span class="blackout">敢在这里污蔑当，一定是勾结了境外反华组织</span>。因此，解决方法有三种：
 
@@ -27,15 +27,15 @@ Macbook is better than computers with Windows or Linux inside because of few dev
       54.186.104.15 production.s3.rubygems.org
 
 这三种方法都可以——怎么方便怎么来就行。
-[% endcallout %]
+{% endcallout %}
 
 # Install Rails on my Mac
 
-[% callout style=danger %]
-A better solution for Ubuntu/Mac
+{% callout danger %}
+#### A better solution for Ubuntu/Mac
 
-Because it's hard to install Rails, there are some special websites that introduce how to setup it. For example, [GoRails](https://gorails.com) and [guides](https://gorails.com/setup/osx/10.10-yosemite) in it.  
-[% endcallout %]
+Because it's hard to install Rails, there are some special websites that introduce how to setup it. For example, [GoRails](https://gorails.com) and [guides](https://gorails.com/setup/osx/10.10-yosemite) in it.
+{% endcallout %}
 
 What is installed on my Mac:
 
@@ -165,11 +165,11 @@ It's really Pyrrhic victory.
 
 # Install nokogiri in Windows
 
-[% callout style=warning %]
-WARNING
+{% callout warning %}
+#### WARNING
 
 Do not use Rails in Windows unless you like the feel of SLOOOOOOOW.
-[% endcallout %]
+{% endcallout %}
 
 Because it's hard to compile in Windows. Nokogiri team has already worked for it. Just use
 
@@ -190,11 +190,11 @@ If you intend to do everything from scratch:
 
 # Install nokogiri under Cygwin
 
-[% callout style=warning %]
-WARNING
+{% callout warning %}
+#### WARNING
 
 Do not use Rails in Cygwin unless you like the feel of SLOOOOOOOOOOOOOOOOOOOW.
-[% endcallout %]
+{% endcallout %}
 
 Install `ruby`, `gcc`, `binutils` and `make`.
 

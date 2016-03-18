@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
-  {% include head.html %}
-  <body>
-    {% include header.html %}
-    {{ content }}
-    <div id="top" data-toggle="tooltip" data-placement="left" title="{{ site.data.i18n.back_to_top }}">
-      <a href="javascript:;">
-        <div class="arrow"></div>
-        <div class="stick"></div>
-      </a>
-    </div>
-    {% include footer.html %}
-    {% include sidebar-mobile.html %}
-    <div style="display:none;"><script src="{{ site.statistics }}" language="JavaScript"></script></div>
-  </body>
+    {% include head.html %}
+    <body>
+        {% include header.html %}
+        {{ content }}
+        <div id="top" data-toggle="tooltip" data-placement="left" title="{{ site.data.i18n.back_to_top }}">
+            <a href="javascript:;">
+                <div class="arrow">
+                </div>
+                <div class="stick">
+                </div>
+            </a>
+        </div>
+        {% include footer.html %}
+        {% include sidebar-mobile.html %}
+        <div style="display:none;">
+            <script src="{{ site.statistics }}" language="JavaScript">
+            </script>
+        </div>
+    </body>
 </html>

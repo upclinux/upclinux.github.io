@@ -1,53 +1,79 @@
 <header>
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle navbar-toggle-left collapsed" id="toggle-sidebar" data-toggle="sidebar" data-target="#sidebar-mobile">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="{{ site.baseurl }}/">{% if site.brand %}{{ site.brand }}{% else %}{{ site.title }}{% endif %}</a>
-      </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li {% if page.url == "/" %} class="active" {% endif %}>
-            <a href="{{ site.baseurl }}/" data-toggle="tooltip" data-placement="bottom" title="{{ site.data.i18n.home }}"><i class="fa fa-home"></i></a>
-          </li>
-
-          {% if page.url == "/categories/" %}
-            <li class="active dropdown">
-          {% else %}
-            <li class="dropdown">
-          {% endif %}
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" data-toggle="tooltip" data-placement="bottom" title="{{ site.data.i18n.categories }}"><i class="fa fa-th-list"></i><span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="{{ "/categories/?c=All" | prepend: site.baseurl }}"><span class="badge" style="float:right;">{{ site.posts | size }}</span>{{ site.data.i18n.all }}</a></li>
-              <li class="divider"></li>
-              <li class="dropdown-header">{{ site.data.i18n.lists }}</li>
-              {% for category in site.categories %}
-                {% assign cate = category | first %}
-                {% assign u = "/categories/?c=" | prepend: site.baseurl | append: cate %}
-                <li><a href="{{ u }}"><span class="badge" style="float:right;">{{ category | last | size }}</span>{{ category | first }}</a></li>
-              {% endfor %}
-            </ul>
-          </li>
-
-          <li {% if page.url == "/tags/" %} class="active" {% endif %}>
-            <a href="{{ site.baseurl }}/tags/" data-toggle="tooltip" data-placement="bottom" title="{{ site.data.i18n.tags }}"><i class="fa fa-tags"></i></a>
-          </li>
-          <li {% if page.url == "/archive/" %} class="active" {% endif %}>
-            <a href="{{ site.baseurl }}/archive/" data-toggle="tooltip" data-placement="bottom" title="{{ site.data.i18n.archive }}"><i class="fa fa-archive"></i></a>
-          </li>
-
-          {% for p in site.header_icons %}
-            <li {% if p.url == page.url %} class="active" {% endif %}>
-              <a href="{{ p.url }}" data-toggle="tooltip" data-placement="bottom" title="{{ p.name }}">{% if p.icon %}<i class="fa fa-{{ p.icon }}"></i> {% endif %}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle navbar-toggle-left collapsed" id="toggle-sidebar" data-toggle="sidebar" data-target="#sidebar-mobile">
+                    <span class="sr-only">
+                        Toggle navigation
+                    </span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ site.baseurl }}/">
+                    {% if site.brand %}{{ site.brand }}{% else %}{{ site.title }}{% endif %}
+                </a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li {% if page.url == "/" %} class="active" {% endif %}>
+                        <a href="{{ site.baseurl }}/" data-toggle="tooltip" data-placement="bottom" title="{{ site.data.i18n.home }}">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown {% if page.url == "/categories/" %} active {% endif %}">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" data-toggle="tooltip" data-placement="bottom" title="{{ site.data.i18n.categories }}">
+                            <i class="fa fa-th-list"></i>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="{{ "/categories/?c=All" | prepend: site.baseurl }}">
+                                    <span class="badge" style="float:right;">
+                                        {{ site.posts | size }}
+                                    </span>
+                                    {{ site.data.i18n.all }}
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">
+                                {{ site.data.i18n.lists }}
+                            </li>
+                            {% for category in site.categories %}
+                            {% assign cate = category | first %}
+                            {% assign url = "/categories/?c=" | prepend: site.baseurl | append: cate %}
+                            <li>
+                                <a href="{{ url }}">
+                                    <span class="badge" style="float:right;">
+                                        {{ category | last | size }}
+                                    </span>
+                                    {{ category | first }}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li {% if page.url == "/tags/" %} class="active" {% endif %}>
+                        <a href="{{ site.baseurl }}/tags/" data-toggle="tooltip" data-placement="bottom" title="{{ site.data.i18n.tags }}">
+                            <i class="fa fa-tags"></i>
+                        </a>
+                    </li>
+                    <li {% if page.url == "/archive/" %} class="active" {% endif %}>
+                        <a href="{{ site.baseurl }}/archive/" data-toggle="tooltip" data-placement="bottom" title="{{ site.data.i18n.archive }}">
+                            <i class="fa fa-archive"></i>
+                        </a>
+                    </li>
+                    {% for p in site.header_icons %}
+                    <li {% if p.url == page.url %} class="active" {% endif %}>
+                        <a href="{{ p.url }}" data-toggle="tooltip" data-placement="bottom" title="{{ p.name }}">
+                            {% if p.icon %}
+                            <i class="fa fa-{{ p.icon }}"></i>
+                            {% endif %}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>

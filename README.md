@@ -11,11 +11,13 @@ The site is deployed via [Grunt](http://gruntjs.com/) now, switch to `dev` branc
 
 ## Installation
 
-1. Install Node.js and Ruby
-2. Run `gem install`
-3. Run `npm install`
-4. Run `bower install`
-5. Do NOT steal my posts...
+Install Node.js and Ruby, then execute
+
+    bundle install
+    npm install
+    bower install
+
+Then modify `_config.yml` and do NOT steal my posts...
 
 ## Debug and deploy
 
@@ -23,7 +25,7 @@ Debug:
 
     grunt serve
 
-Deploy: Open Gruntfile.js, change the name, and
+Deploy: Open Gruntfile.js, change to your GitHub account, and
 
     grunt deploy
 

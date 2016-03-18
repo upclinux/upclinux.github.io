@@ -15,11 +15,11 @@ tags: Hackintosh
 
 
 
-[% callout %]
-什么是黑苹果
+{% callout %}
+#### 什么是黑苹果
 
 黑苹果就是在自己（非苹果品牌）电脑上面安装的苹果系统。因为苹果官方不允许这样做，所以对于初学者来说，黑苹果的安装绝对比其他系统困难很多。
-[% endcallout %]
+{% endcallout %}
 
 # 准备
 
@@ -71,8 +71,8 @@ tags: Hackintosh
 
 # 安装
 
-[% callout style=success %]
-提醒
+{% callout success %}
+#### 提醒
 
 在正式按照论坛教程安装系统之前，先看这里——
 
@@ -86,7 +86,7 @@ tags: Hackintosh
 6. 安装驱动
 7. 安装软件，开始使用新系统
 
-[% endcallout %]
+{% endcallout %}
 
 由于 Windows 或比较流行的 Linux 发行版都希望用户能够轻松地把系统装到自己电脑上，所以，即使有些概念不太好理解，最终还是可以不太费力地把系统装好。
 
@@ -104,21 +104,21 @@ tags: Hackintosh
 2. 准备一个 PE 启动盘。一旦后悔，可以随时把电脑恢复原状。
 3. 虽然事实上只用 Linux 系统也能把黑苹果装好，但是我建议初学者在 Windows 里操作。因为在 Linux 中一旦出问题，只有那高高在上的[没有人](http://cn.uncyclopedia.wikia.com/没有人)才会来救你。
 
-[% callout %]
-Linux
+{% callout %}
+#### Linux
 
 不建议你用 Linux，是因为很难找到一个在 Linux 中刻录 dmg/cdr 格式的软件。如果你已经刻了一个安装盘，或者找到刻录软件了，您请便。只有刻启动盘、安装启动器和处理故障的时候才需要电脑上原有的系统。
 
 Linux，装上 HFS+ 文件系统支持之后就可以读写 HFS+ 分区了，而且是免费的。
-[% endcallout %]
+{% endcallout %}
 
 ## 1. 下载安装盘
 
-[% callout %]
-Windows 是这样的
+{% callout %}
+#### Windows 是这样的
 
 Windows 的安装盘是 ISO 格式的（我从来不考虑 GHO），所以可以很轻松地刻录成安装盘。即使不想刻录，基于 U 盘的解决方案也有很多。
-[% endcallout %]
+{% endcallout %}
 
 而苹果是这样的——苹果安装盘的映像是 dmg 或 cdr 格式的。不管是哪种，能够读取的软件都很少。而且普通电脑是无法直接拿来引导！
 
@@ -133,14 +133,14 @@ Windows 的安装盘是 ISO 格式的（我从来不考虑 GHO），所以可以
 1. UEFI+GPT 优先选择原版。这是最接近原生苹果的搭配。
 2. Legacy+MBR 当然只能选择懒人版。
 
-[% callout %]
-个人建议
+{% callout %}
+#### 个人建议
 
 我的建议是，如果电脑支持而且你会操作，那么就先把电脑转换成 UEFI+GPT，因为在 MBR 条件下把系统装好，**进行系统升级会带来很大麻烦**，而 UEFI+GPT 可以大大方方地升级而不用担心出错。不过也可以在装完之后再转。[这里]({{ site.baseurl }}/2014/12/18/legacy-mbr-to-uefi-gpt-hackintosh/)是一个装完之后才转换的教程。
-[% endcallout %]
+{% endcallout %}
 
-[% callout style=warning %]
-看不懂？
+{% callout warning %}
+#### 看不懂？
 
 即使看不懂，也要清楚自己电脑到底是 UEFI+GPT，还是 Legacy+MBR，或者是什么方案，否则后面实在无法继续。
 
@@ -151,15 +151,15 @@ Windows 的安装盘是 ISO 格式的（我从来不考虑 GHO），所以可以
 3. Windows 8 或更高：打开“计算机管理”，找到“磁盘管理”。如果里面有几个零碎的、没有盘符的分区，那么就是 UEFI+GPT，否则是 Legacy+MBR。
 4. Linux：能够装 Linux，那么这个问题不用教了吧？（提示：看 /dev/sda1 后面是 sda2 还是 sda5）
 
-[% endcallout %]
+{% endcallout %}
 
 ## 2. 将下载好的安装盘制作成启动盘
 
-[% callout %]
-Windows 是这样的
+{% callout %}
+#### Windows 是这样的
 
 ISO 格式安装盘可以直接刻录到光盘里。因为现在很少有人使用光盘，所以一般都采用一些软件（例如 UltraISO）将安装盘刻录到 U 盘中。即使不直接刻录，通过 PE 启动盘也可以进行安装。总之解决方案非常多。
-[% endcallout %]
+{% endcallout %}
 
 由于苹果采用了特殊的文件系统（HFS+），所以在 Windows 中不太容易看到其中的文件。并且，由于没有引导信息，所以即使刻录好也无法直接引导启动（后面再讲如何启动）。
 
@@ -171,11 +171,11 @@ ISO 格式安装盘可以直接刻录到光盘里。因为现在很少有人使�
 
 ## 3. 通过启动盘启动安装盘
 
-[% callout %]
-Windows 是这样的
+{% callout %}
+#### Windows 是这样的
 
 开机按 F12
-[% endcallout %]
+{% endcallout %}
 
 黑苹果就麻烦多了……
 
@@ -190,11 +190,11 @@ Windows 是这样的
 
 变色龙有 Windows 版安装程序，而四叶草没有，因此四叶草的文件需要想办法弄到手。
 
-[% callout %]
-EFI 引导
+{% callout %}
+#### EFI 引导
 
 通过 EFI 引导并不需要去“刻录”。以 U 盘为例，只要在 U 盘根目录里有个 EFI 文件夹，EFI 里面有个 BOOT，BOOT 里面有个 bootx64.efi，而且文件正确，电脑就能以 UEFI 模式引导 U 盘了。
-[% endcallout %]
+{% endcallout %}
 
 以后会经常遇到“-f”、“-x”、“-v”等字样，这些是 Chameleon 的；而“Verbose mode”、“Without caches”等字样是 Clover 的。
 
@@ -210,19 +210,19 @@ EFI 引导
 
 ## 4. 运行安装程序
 
-[% callout %]
-Windows 是这样的
+{% callout %}
+#### Windows 是这样的
 
 这一步 Windows 和黑苹果都一样，屏幕上都会出现能让人认识的中国字（虽然连成单词之后不一定知道是什么意思）。只不过，运气不好的话，黑苹果安装程序可以让系统崩溃……
-[% endcallout %]
+{% endcallout %}
 
-[% callout %]
-学会自救
+{% callout %}
+#### 学会自救
 
 在激动人心时刻到来之前，我们必须学会如何自救。
 
 一般情况下，教程都会告诉你应该用什么参数启动，并让你开启详细模式。但是，毕竟不是官方电脑，所以系统崩溃是正常现象。一旦崩溃，你需要知道如何通过错误信息进行自救。[这里](http://bbs.pcbeta.com/viewthread-863656-1-1.html)是一个常见错误总结。
-[% endcallout %]
+{% endcallout %}
 
 进行到这一步时，我们终于要和真正的苹果程序打交道了。
 
@@ -242,31 +242,31 @@ Windows 是这样的
 
 如果能够进入系统，那么接下来按照屏幕提示完成系统安装即可。都是中国话，应该没有人看不懂。
 
-[% callout style=warning %]
-讲解到此为止
+{% callout warning %}
+#### 讲解到此为止
 
 可以逛论坛去了，因为在你真正操作到这一步的时候，麻烦才刚刚开始……
-[% endcallout %]
+{% endcallout %}
 
 ## 6. 安装驱动
 
-[% callout style=warning %]
-先把系统装好
+{% callout warning %}
+#### 先把系统装好
 
 先把系统装好，然后再讨论装驱动的问题。
-[% endcallout %]
+{% endcallout %}
 
-[% callout %]
-Windows 是这样的
+{% callout %}
+#### Windows 是这样的
 
 下载并按照“驱动精灵”，如果没有网卡驱动就下载集成网卡驱动的版本。全部装完之后把驱动精灵卸载就可以了。
-[% endcallout %]
+{% endcallout %}
 
-[% callout %]
-白苹果是这样的
+{% callout %}
+#### 白苹果是这样的
 
 苹果是硬件公司——所有硬件都免驱，系统装好就可以使用了。
-[% endcallout %]
+{% endcallout %}
 
 安装系统，运气好的（初学者），几个小时就能弄好。运气差的也不会花太多时间。
 
@@ -287,14 +287,14 @@ Windows 是这样的
 2. Intel 牌：直接预备 30 块钱换无线网卡吧。
 3. USB 无线网卡：弄清楚网卡芯片，然后到论坛上面寻找解决方案（驱动）。**USB 无线网卡不稳定，容易导致系统崩溃。**
 
-[% callout %]
-无线网卡
+{% callout %}
+#### 无线网卡
 
 到淘宝网即可很方便地买到支持黑苹果的无线网卡，而且价格并不算贵。不过最好先确认一下接口，并且确认应该使用半高还是全高（把电脑拆开就知道是什么意思了）。
-[% endcallout %]
+{% endcallout %}
 
-[% callout %]
-联想和惠普笔记本
+{% callout %}
+#### 联想和惠普笔记本
 
 联想和惠普的笔记本采用了“白名单”机制，也就是说，你更换无线网卡，电脑会拒绝开机，并要求你将“非法的”无线网卡拆下来。
 
@@ -303,7 +303,7 @@ Windows 是这样的
 **注意，刷机有风险，刷坏会变砖！**<span class="blackout">变砖也不怕，只要找到自己电脑型号的盲刷包，对电脑进行盲刷，即可救砖。我的电脑砖过一次，然后就是靠盲刷省了几千块钱……</span>
 
 [这里是刷白名单的教程](http://bbs.bios.net.cn/thread-4521994-1-1.html)
-[% endcallout %]
+{% endcallout %}
 
 ### 显卡
 
@@ -347,11 +347,11 @@ DSDT，简而言之就是用于识别硬件的<span class="blackout">、看多�
 
 ### 原生电源管理
 
-[% callout %]
-这里是有意留空的
+{% callout %}
+#### 这里是有意留空的
 
 如果遇到了相关问题，去论坛上面找答案吧。
-[% endcallout %]
+{% endcallout %}
 
 ## 7. 安装软件，开始享受新系统
 

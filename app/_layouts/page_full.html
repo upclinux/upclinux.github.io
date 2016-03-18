@@ -2,11 +2,21 @@
 layout: default
 ---
 <div class="jumbotron">
-  <div class="container">
-    <h1 class="post-title" id="post-title">{{ page.title }}</h1>
-    <p>{% if page.subtitle %}{{ page.subtitle }}{% else %}<a href="{{ site.baseurl }}/">{{ site.data.i18n.back_home }}</a>{% endif %}</p>
-  </div>
+    <div class="container">
+        <h1 class="post-title" id="post-title">
+            {{ page.title }}
+        </h1>
+        <p>
+            {% if page.subtitle %}
+            {{ page.subtitle }}
+            {% else %}
+            <a href="{{ site.baseurl }}/">
+                {{ site.data.i18n.back_home }}
+            </a>
+            {% endif %}
+        </p>
+    </div>
 </div>
-<div id="main" class="container main">
+<div id="main" class="container">
     {{ content }}
 </div>

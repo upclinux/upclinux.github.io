@@ -24,6 +24,9 @@ all: All
 external_links: Links
 lists: Lists
 
+article: ' article'
+articles: ' articles'
+
 contents: Contents
 
 regexp: RegExp

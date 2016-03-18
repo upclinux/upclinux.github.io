@@ -12,11 +12,11 @@ categories: Others
 
 
 
-[% callout style=warning %]
-本文包含虚假信息
+{% callout warning %}
+#### 本文包含虚假信息
 
 所以当然不要相信了……
-[% endcallout %]
+{% endcallout %}
 
 # 子虚乌有
 

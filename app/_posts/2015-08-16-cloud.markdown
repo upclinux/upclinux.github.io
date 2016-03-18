@@ -13,11 +13,12 @@ categories: Web
 
 
 
-<div class="callout callout-danger">
-<h4>版权</h4>
-本文原是<a href="http://wangchenyu.net.cn">课戴表王晨宇</a>写的，稍微整理了一下格式。转载请标明原作者！<br>
+{% callout danger %}
+#### 版权
+本文原是[课戴表王晨宇](http://wangchenyu.net.cn)写的，稍微整理了一下格式。转载请标明原作者！
+
 语气更为中立的版本可见[这里](https://upclinux.github.io/intro/08/cloud/)。
-</div>
+{% endcallout %}
 
 # 云主机
 

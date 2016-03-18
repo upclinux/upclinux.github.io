@@ -31,11 +31,11 @@ tags: Hackintosh
 * AppleIntelCPUPowerManagement.kext
 * AppleIntelCPUPowerManagementClient.kext
 
-[% callout %]
-注意
+{% callout %}
+#### 注意
 
 这两个驱动也可以通过 NullCPUPowerManagement 来屏蔽。
-[% endcallout %]
+{% endcallout %}
 
 下面驱动在没有问题的情况下不用删：
 
@@ -62,11 +62,11 @@ tags: Hackintosh
 * ATIRadeon 开头的 4 个文件
 * IOBluetooth 开头的所有文件（注意这个是蓝牙驱动，要是不删可以进入系统并且想使用蓝牙的留着吧）
 
-[% callout %]
-事实
+{% callout %}
+#### 事实
 
 一开始对苹果的底细一点都不清楚，心里感到害怕，就照着教程删了。后来偶然将系统升级，发现以上各驱动其实完全没必要删。
-[% endcallout %]
+{% endcallout %}
 
 # 驱动
 

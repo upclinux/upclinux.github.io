@@ -15,11 +15,11 @@ Linux 是中文输入问题最多的系统了，幸运的是，问题是可以�
 
 
 
-[% callout %]
-本文已更新 (2015 年 11 月)
+{% callout %}
+#### 本文已更新 (2015 年 11 月)
 
 本文最开始是 2014 年 4 月写的，当时搜狗官方并没正式发布 Linux 版输入法。后来有了 Ubuntu 版，所以文章有些地方已经改了。
-[% endcallout %]
+{% endcallout %}
 
 # 输入法平台
 
@@ -51,11 +51,11 @@ Rime 既支持 iBus 又支持 fcitx，所以非常省事儿。不过输入法默
 
 按照过去的方法，需要卸载 iBus，手动装 fcitx 而且要把该装的手动装好。现在——
 
-[% callout style=danger %]
-别手贱
+{% callout danger %}
+#### 别手贱
 
 由于某些系统组件用到了 iBus，所以不要鲁莽地 apt-get remove ibus。如果你在敲命令的时候看到满屏幕要删除的包，那么赶快停止，否则……
-[% endcallout %]
+{% endcallout %}
 
 1. 去[搜狗官方](http://pinyin.sogou.com/linux/)下载安装包。点击“下载”之后官方会给出一个详细的安装步骤。由于软件包的依赖性，该装的东西会自动装好，无需人工干预。
 2. 如果原来默认输入法是 iBus，那么还需要切换一下。输入命令`im-switch`（其他系统可能叫`im-config`或`imsettings-switch`什么的），手动设置，把默认输入法改成 fcitx。
