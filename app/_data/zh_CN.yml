@@ -22,6 +22,8 @@ categories: 分类
 archive: 归档
 all: 全部文章
 external_links: 外部链接
+lists: 列表
+contents: 目录
 
 article: 篇文章
 articles: 篇文章
@@ -29,8 +31,8 @@ articles: 篇文章
 current_category: "当前分类：<span id='categorization'>全部文章</span>"
 current_search: "搜索关键词“<span id=\"keywordlabel\"></span>”"
 
-contents: 目录
-lists: 列表
+warning: 警告
+warn_ie: 你的浏览器版本过旧，博客将无法正确显示。请升级系统或浏览器。
 
 regexp: 正则搜索
 

@@ -22,15 +22,17 @@ categories: 歸類
 archive: 歸檔
 all: 全部文章
 external_links: 外部連結
-
-contents: 目錄
 lists: 列表
+contents: 目錄
 
 article: 篇文章
 articles: 篇文章
 
 current_category: "當前分類：<span id='categorization'>全部文章</span>"
 current_search: "搜尋「<span id=\"keywordlabel\"></span>」"
+
+warning: 警告
+warn_ie: 你的瀏覽器版本過舊，網誌將無法正確顯示。請升級作業系統或瀏覽器。
 
 regexp: 正則搜尋
 

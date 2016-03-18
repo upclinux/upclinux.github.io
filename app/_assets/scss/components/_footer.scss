@@ -44,10 +44,15 @@
     }
     li {
         float: left;
+        margin-left: 10px;
+
+        @include on-mobile() {
+            margin-right: 10px;
+            margin-left: 0;
+        }
     }
     i {
         width: 35px;
-        margin-left: 10px;
         padding: 10px;
 
         text-align: center;
@@ -55,11 +60,6 @@
         color: $gray;
         border-radius: 20px;
         background-color: $btn-default-bg;
-
-        @include on-mobile() {
-            margin-right: 10px;
-            margin-left: 0;
-        }
     }
     a:hover i {
         background-color: darken($btn-default-bg, 10%);

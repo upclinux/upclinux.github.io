@@ -40,8 +40,7 @@ module Jekyll
         end
 
         output << %Q{<a href="#{url}" style="font-size: #{size}pt; color: ##{color}#{color}#{color};"
-        data-toggle="tooltip" data-placement="top" title="#{posts.count}#{articles(posts.count)}">
-        #{tag}</a>&nbsp;&nbsp;}
+        data-toggle="tooltip" data-placement="top" title="#{posts.count}#{articles(posts.count)}">#{tag}</a>&nbsp;}
       end
 
       output

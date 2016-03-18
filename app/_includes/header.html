@@ -68,6 +68,8 @@
                         <a href="{{ p.url }}" data-toggle="tooltip" data-placement="bottom" title="{{ p.name }}">
                             {% if p.icon %}
                             <i class="fa fa-{{ p.icon }}"></i>
+                            {% else %}
+                            {{ p.name }}
                             {% endif %}
                         </a>
                     </li>

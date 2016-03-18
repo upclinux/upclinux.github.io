@@ -11,6 +11,21 @@
         </div>
         <div class="sb-container">
             <div class="sb-content" id="sb-content">
+                <div class="icons-list">
+                    <a href="{{ site.baseurl }}/archive/" data-toggle="tooltip" data-placement="bottom" title="{{ site.data.i18n.archive }}">
+                        <i class="fa fa-archive"></i>
+                    </a>
+                    {% for p in site.header_icons %}
+                    <a href="{{ p.url }}" data-toggle="tooltip" data-placement="bottom" title="{{ p.name }}">
+                        {% if p.icon %}
+                        <i class="fa fa-{{ p.icon }}"></i>
+                        {% else %}
+                        {{ p.name }}
+                        {% endif %}
+                    </a>
+                    {% endfor %}
+                </div>
+
                 <div id="contents-sidebar" class="contents" style="display:none;">
                     <h4 class="page-header">
                         <i class="fa fa-list-ol"></i>

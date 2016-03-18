@@ -81,6 +81,16 @@
 
             font-size: 15px;
         }
+        .icons-list {
+            padding: 2px 10px;
+            font-size: 20px;
+
+            a {
+                color: $gray-lighter;
+                margin-right: 8px;
+                text-decoration: none;
+            }
+        }
         .contents-list {
             padding-top: 5px;
             padding-left: 25px;

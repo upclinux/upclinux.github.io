@@ -68,6 +68,11 @@ layout: default
 </div>
 <div id="main" class="container">
     <div class="row">
+        <!--[if lte IE 9]>
+        <div class="alert alert-warning" role="alert">
+            <strong>{{ site.data.i18n.warning }}: </strong>{{ site.data.i18n.warn_ie }}
+        </div>
+        <![endif]-->
         <div class="col-sm-9" role="main">
             <div>
                 {% for post in paginator.posts %}

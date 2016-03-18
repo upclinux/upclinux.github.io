@@ -23,6 +23,7 @@ archive: Archive
 all: All
 external_links: Links
 lists: Lists
+contents: Contents
 
 article: ' article'
 articles: ' articles'
@@ -30,7 +31,8 @@ articles: ' articles'
 current_category: "Current: <span id='categorization'>All</span>"
 current_search: "Search for \"<span id=\"keywordlabel\"></span>\""
 
-contents: Contents
+warning: Warning
+warn_ie: Your browser is deprecated and the blog will not be rendered correctly. Please upgrade your system or browser.
 
 regexp: RegExp
 
