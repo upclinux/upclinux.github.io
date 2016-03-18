@@ -27,6 +27,9 @@ lists: Lists
 article: ' article'
 articles: ' articles'
 
+current_category: "Current: <span id='categorization'>All</span>"
+current_search: "Search for \"<span id=\"keywordlabel\"></span>\""
+
 contents: Contents
 
 regexp: RegExp

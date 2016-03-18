@@ -1,30 +1,14 @@
 ---
-layout: default
+layout: page_full
 ---
-<div class="jumbotron">
-    <div class="container">
-        <h1 class="post-title" id="post-title">
-            {{ page.title }}
-        </h1>
-        <p>
-            {% if page.subtitle %}{{ page.subtitle }}{% else %}
-            <a href="{{ site.baseurl }}/">
-                {{ site.data.i18n.back_home }}
-            </a>
-            {% endif %}
-        </p>
-    </div>
-</div>
-<div id="main" class="container">
-    <div class="row">
-        <div class="col-md-9">
-            <article class="article">
-                {{ content }}
-            </article>
-            <br class="clear"/>
-            {% if page.comments %}
-            {% include disqus.html %}
-            {% endif %}
-        </div>
+<div class="row">
+    <div class="col-md-9">
+        <article class="article">
+            {{ content }}
+        </article>
+        <br class="clear"/>
+        {% if page.comments %}
+        {% include disqus.html %}
+        {% endif %}
     </div>
 </div>

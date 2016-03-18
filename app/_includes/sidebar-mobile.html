@@ -25,7 +25,7 @@
                     {{ site.data.i18n.categories }}
                 </h4>
                 <div class="categories-list">
-                    <a class="item" href="{{ "/categories/?c=All" | prepend: site.baseurl }}" data-cate="All">
+                    <a class="item" href="{{ "/categories/?c=" | prepend: site.baseurl | append: site.data.i18n.all }}" data-cate="{{ site.data.i18n.all }}">
                         {{ site.data.i18n.all }}
                         <span class="badge">
                             {{ site.posts | size }}

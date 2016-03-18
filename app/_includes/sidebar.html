@@ -15,11 +15,11 @@
     </h4>
     <div class="categories-list">
         {% if page.url != "/categories/" %}
-        {% assign u = "/categories/?c=All" | prepend: site.baseurl %}
+        {% assign u = "/categories/?c=" | prepend: site.baseurl | append: site.data.i18n.all %}
         {% else %}
         {% assign u = "javascript:;" %}
         {% endif %}
-        <a class="item" href="{{ u }}" data-cate="All">
+        <a class="item" href="{{ u }}" data-cate="{{ site.data.i18n.all }}">
             {{ site.data.i18n.all }}
             <span class="badge">
                 {{ site.posts | size }}

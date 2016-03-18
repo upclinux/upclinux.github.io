@@ -1,13 +1,13 @@
 ---
-title: Categories
+title_i18n: categories
 layout: page_full
 comments: false
 permalink: /categories/
-subtitle: "Current: <span id='categorization'>All</span>"
+subtitle_i18n: current_category
 ---
 <div class="row">
     <div class="col-sm-9" role="main">
-        <table class="post-list table table-hover" data-list-cate="All" style="display: none;">
+        <table class="post-list table table-hover" data-list-cate="{{ site.data.i18n.all }}" style="display: none;">
             {% for post in site.posts %}
             <tr>
                 <td class="date">

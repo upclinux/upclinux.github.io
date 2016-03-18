@@ -20,11 +20,14 @@ search: 搜索
 tags: 标签
 categories: 分类
 archive: 归档
-all: 所有文章
+all: 全部文章
 external_links: 外部链接
 
 article: 篇文章
 articles: 篇文章
+
+current_category: "当前分类：<span id='categorization'>全部文章</span>"
+current_search: "搜索关键词“<span id=\"keywordlabel\"></span>”"
 
 contents: 目录
 lists: 列表

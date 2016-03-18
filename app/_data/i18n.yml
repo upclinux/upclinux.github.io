@@ -1,40 +1,43 @@
-date_format: '%b %-d, %Y'
+date_format: '%Y-%m-%d'
 
 email: Email
 github: GitHub
 twitter: Twitter
 facebook: Facebook
-weibo: Weibo
-source_code: 'Source Code'
+weibo: 新浪微博
+source_code: 源代码
 rss: RSS
-qqgroup: 'QQ Group'
+qqgroup: QQ群
 
-see_more: 'See more...'
-prev_page_mobile: 'Newer posts'
-next_page_mobile: 'Older posts'
-prev_page_pc: 'Previous'
-next_page_pc: 'Next'
+see_more: 查看全文...
+prev_page_mobile: 较新的文章
+next_page_mobile: 以往的文章
+prev_page_pc: 上一页
+next_page_pc: 下一页
 
-home: Home
-search: Search
-tags: Tags
-categories: Categories
-archive: Archive
-all: All
-external_links: Links
-lists: Lists
+home: 首页
+search: 搜索
+tags: 标签
+categories: 分类
+archive: 归档
+all: 全部文章
+external_links: 外部链接
 
-article: ' article'
-articles: ' articles'
+article: 篇文章
+articles: 篇文章
 
-contents: Contents
+current_category: "当前分类：<span id='categorization'>全部文章</span>"
+current_search: "搜索关键词“<span id=\"keywordlabel\"></span>”"
 
-regexp: RegExp
+contents: 目录
+lists: 列表
 
-back_home: 'Back to home page'
-back_to_top: 'Back to top'
-share_this_post: 'Share this post:'
-share_on_weibo: 'Share on Weibo'
-share_on_linkedin: 'Share on LinkedIn'
-share_on_facebook: 'Share on Facebook'
-share_on_twitter: 'Share on Twitter'
+regexp: 正则搜索
+
+back_home: 回到首页
+back_to_top: 回到顶部
+share_this_post: 分享本文：
+share_on_weibo: 分享到新浪微博
+share_on_linkedin: 分享到LinkedIn
+share_on_facebook: 分享到Facebook
+share_on_twitter: 分享到Twitter

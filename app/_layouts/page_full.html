@@ -4,15 +4,22 @@ layout: default
 <div class="jumbotron">
     <div class="container">
         <h1 class="post-title" id="post-title">
+            {% if page.title_i18n %}
+            {{ site.data.i18n[page.title_i18n] }}
+            <script type="text/javascript">document.title="{{ site.data.i18n[page.title_i18n] }}";</script>
+            {% else %}
             {{ page.title }}
+            {% endif %}
         </h1>
         <p>
-            {% if page.subtitle %}
-            {{ page.subtitle }}
+            {% if page.subtitle_i18n %}
+            {{ site.data.i18n[page.subtitle_i18n] }}
             {% else %}
+            {% if page.subtitle %}{{ page.subtitle }}{% else %}
             <a href="{{ site.baseurl }}/">
                 {{ site.data.i18n.back_home }}
             </a>
+            {% endif %}
             {% endif %}
         </p>
     </div>

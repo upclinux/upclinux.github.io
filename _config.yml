@@ -52,11 +52,11 @@ markdown: kramdown
 # Header icons (Font Awesome)
 header_icons:
 -
-  name: About
+  name: 关于
   url: /about/
   icon: graduation-cap
 -
-  name: Source Code
+  name: 源代码
   url: https://github.com/vjudge1/vjudge1.github.io
   icon: code
 -
@@ -85,7 +85,7 @@ external_links:
 # Footer List
 footer_links:
 -
-  name: About
+  name: 关于
   url: /about/
 -
   name: 让我帮你百度一下

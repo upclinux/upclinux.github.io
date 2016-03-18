@@ -29,6 +29,9 @@ lists: 列表
 article: 篇文章
 articles: 篇文章
 
+current_category: "當前分類：<span id='categorization'>全部文章</span>"
+current_search: "搜尋「<span id=\"keywordlabel\"></span>」"
+
 regexp: 正則搜尋
 
 back_home: 回到首頁
