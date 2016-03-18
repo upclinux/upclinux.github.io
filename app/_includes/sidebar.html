@@ -1,17 +1,17 @@
 <div id="sidebar">
 
     <h4 class="page-header text-muted">
-      <i class="fa fa-search"></i> Search
+      <i class="fa fa-search"></i> {{ site.data.i18n.search }}
     </h4>
 
     <form method="get" action="{{ "/search/" | prepend: site.baseurl }}">
       <div class="form-group">
-        <input type="search" placeholder="Regexp" class="form-control" name="s" id="keyword">
+        <input type="search" placeholder="{{ site.data.i18n.regexp }}" class="form-control" name="s" id="keyword">
       </div>
     </form>
 
     <h4 class="page-header text-muted">
-      <i class="fa fa-th-list"></i> Categories
+      <i class="fa fa-th-list"></i> {{ site.data.i18n.categories }}
     </h4>
 
     <div class="categories-list">
@@ -21,7 +21,7 @@
         {% assign u = "javascript:;" %}
       {% endif %}
       <a class="item" href="{{ u }}" data-cate="All">
-        All
+        {{ site.data.i18n.all }}
         <span class="badge">{{ site.posts | size }}</span>
       </a>
       {% for category in site.categories %}
@@ -39,7 +39,7 @@
     </div>
 
     <h4 class="page-header text-muted">
-      <i class="fa fa-tags"></i> Tags
+      <i class="fa fa-tags"></i> {{ site.data.i18n.tags }}
     </h4>
 
     {% assign first = site.tags.first %}
@@ -84,7 +84,7 @@
     {% endfor %}
 
     <h4 class="page-header text-muted">
-      <i class="fa fa-external-link"></i> Links
+      <i class="fa fa-external-link"></i> {{ site.data.i18n.external_links }}
     </h4>
     <ul class="link-list fa-ul">
     {% for link in site.external_links %}

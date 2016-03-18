@@ -1,6 +1,8 @@
 'use strict';
 
 module.exports = function(grunt) {
+    var git_user = 'vjudge1';
+
     // Show elapsed time after tasks run
     require('time-grunt')(grunt);
     // Load all Grunt tasks
@@ -289,7 +291,7 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     dir: '<%= app.dist %>/<%= app.baseurl %>',
-                    remote: 'git@github.com:vjudge1/vjudge1.github.io.git',
+                    remote: 'git@github.com:'+git_user+'/'+git_user+'.github.io.git',
                     branch: 'master',
                     commit: true,
                     push: true,

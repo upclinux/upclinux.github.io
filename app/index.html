@@ -15,14 +15,14 @@ layout: default
 <div class="jumbotron-sub">
   <div class="container">
     <div class="title">
-      {% if site.github_username %}<a href="https://github.com/{{ site.github_username }}" data-toggle="tooltip" data-placement="bottom" title="GitHub"><i class="fa fa-github icon"></i></a>{% endif %}
-      {% if site.twitter_username %}<a href="https://twitter.com/{{ site.twitter_username }}" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter icon"></i></a>{% endif %}
-      {% if site.facebook_username %}<a href="https://www.facebook.com/{{ site.facebook_username }}" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook icon"></i></a>{% endif %}
-      {% if site.weibo_username %}<a href="http://weibo.com/{{ site.weibo_username }}" data-toggle="tooltip" data-placement="bottom" title="Weibo"><i class="fa fa-weibo icon"></i></a>{% endif %}
+      {% if site.github_username %}<a href="https://github.com/{{ site.github_username }}" data-toggle="tooltip" data-placement="bottom" title="{{ site.data.i18n.github }}"><i class="fa fa-github icon"></i></a>{% endif %}
+      {% if site.twitter_username %}<a href="https://twitter.com/{{ site.twitter_username }}" data-toggle="tooltip" data-placement="bottom" title="{{ site.data.i18n.twitter }}"><i class="fa fa-twitter icon"></i></a>{% endif %}
+      {% if site.facebook_username %}<a href="https://www.facebook.com/{{ site.facebook_username }}" data-toggle="tooltip" data-placement="bottom" title="{{ site.data.i18n.facebook }}"><i class="fa fa-facebook icon"></i></a>{% endif %}
+      {% if site.weibo_username %}<a href="http://weibo.com/{{ site.weibo_username }}" data-toggle="tooltip" data-placement="bottom" title="{{ site.data.i18n.weibo }}"><i class="fa fa-weibo icon"></i></a>{% endif %}
       {% if site.qqqun_name %}<a href="http://shang.qq.com/wpa/qunwpa?idkey={{ site.qqqun_idkey }}" data-toggle="tooltip" data-placement="bottom" title="{{ site.qqqun_name }}"><i class="fa fa-qq icon"></i></a>{% endif %}
       {% if site.email %}<a href="mailto:{{ site.email }}" data-toggle="tooltip" data-placement="bottom" title="{{ site.email }}"><i class="fa fa-envelope-o icon"></i></a>{% endif %}
-      <a href="https://github.com/{{ site.github_username }}/{{ site.github_username }}.github.io" data-toggle="tooltip" data-placement="bottom" title="Source Code"><i class="fa fa-code icon"></i></a>
-      <a href="/feed.xml" data-toggle="tooltip" data-placement="bottom" title="RSS"><i class="fa fa-rss icon"></i></a>
+      <a href="https://github.com/{{ site.github_username }}/{{ site.github_username }}.github.io" data-toggle="tooltip" data-placement="bottom" title="{{ site.data.i18n.source_code }}"><i class="fa fa-code icon"></i></a>
+      <a href="/feed.xml" data-toggle="tooltip" data-placement="bottom" title="{{ site.data.i18n.rss }}"><i class="fa fa-rss icon"></i></a>
     </div>
   </div>
 </div>
@@ -35,7 +35,7 @@ layout: default
           <div class="post-header">
             <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
             <p class="post-meta">
-              <span class="glyphicon glyphicon-calendar"></span> {{ post.date | date: "%b %-d, %Y" }}
+              <span class="glyphicon glyphicon-calendar"></span> {{ post.date | date: site.data.i18n.date_format }}
               {% if post.author != site.github_username %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span> {{ post.author }}{% endif %}
               {% if post.meta %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-bookmark"></span> {{ post.meta }}{% endif %}
               {% if post.categories[0] %}
@@ -53,7 +53,7 @@ layout: default
             </p>
           </div>
           <div>{{ post.excerpt }}</div>
-          <div class="text-right"><a href="{{ post.url }}" role="button" target="_blank"><i class="fa fa-newspaper-o"></i> See more...</a></div>
+          <div class="text-right"><a href="{{ post.url }}" role="button" target="_blank"><i class="fa fa-newspaper-o"></i> {{ site.data.i18n.see_more }}</a></div>
         </div>
         {% endfor %}
       </div>
@@ -65,7 +65,7 @@ layout: default
             <li class="previous">
               <a href="{{ paginator.previous_page_path }}" title="previous page">
                 <span aria-hidden="true">&larr;</span>
-                <small>Newer Posts</small>
+                <small>{{ site.data.i18n.prev_page_mobile }}</small>
               </a>
             </li>
             {% endif %}
@@ -73,7 +73,7 @@ layout: default
             {% if paginator.next_page %}
             <li class="next">
               <a href="{{ paginator.next_page_path }}">
-                <small>Older Posts</small>
+                <small>{{ site.data.i18n.next_page_mobile }}</small>
                 <span aria-hidden="true">&rarr;</span>
               </a>
             </li>
@@ -93,14 +93,14 @@ layout: default
             <li>
               <a href="{{ paginator.previous_page_path }}" aria-label="Previous">
                 <span aria-hidden="true">&laquo;</span>
-                <small>Previous</small>
+                <small>{{ site.data.i18n.prev_page_pc }}</small>
               </a>
             </li>
             {% else %}
             <li class="disabled">
               <a href="javascript:;">
                 <span aria-hidden="true">&laquo;</span>
-                <small>Previous</small>
+                <small>{{ site.data.i18n.prev_page_pc }}</small>
               </a>
             </li>
             {% endif %}
@@ -132,22 +132,22 @@ layout: default
             {% endif %}
 
             {% if paginator.page == paginator.total_pages %}
-            <li class="active"><a href="javascript:;">{{ paginator.total_pages }}</a></li>
+              <li class="active"><a href="javascript:;">{{ paginator.total_pages }}</a></li>
             {% else %}
-            <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages }}</a></li>
+              <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages }}</a></li>
             {% endif %}
 
             {% if paginator.next_page %}
             <li>
               <a href="{{ paginator.next_page_path }}" aria-label="Next">
-                <small>Next</small>
+                <small>{{ site.data.i18n.next_page_pc }}</small>
                 <span aria-hidden="true">&raquo;</span>
               </a>
             </li>
             {% else %}
             <li class="disabled">
               <a href="javascript:;" aria-label="Next">
-                <small>Next</small>
+                <small>{{ site.data.i18n.next_page_pc }}</small>
                 <span aria-hidden="true">&raquo;</span>
               </a>
             </li>

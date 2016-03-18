@@ -5,7 +5,7 @@ layout: default
   <div class="container">
     <h1 class="post-title" id="post-title"><a href="{{ site.baseurl }}/">{{ page.title }}</a></h1>
     <p>
-      <span class="glyphicon glyphicon-calendar"></span> {{ page.date | date: "%b %-d, %Y" }}
+      <span class="glyphicon glyphicon-calendar"></span> {{ page.date | date: site.data.i18n.date_format }}
       {% if page.author %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span> {{ page.author }}{% endif %}
       {% if page.meta %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-bookmark"></span> {{ page.meta }}{% endif %}
       {% if page.categories %}
@@ -32,11 +32,11 @@ layout: default
 
       <div class="text-right">
         <ul class="sharelist">
-          <li><a href="#" class="share" data-target="weibo" data-toggle="tooltip" title="Share on Weibo"><i class="fa fa-weibo"></i></a></li>
-          <li><a href="#" class="share" data-target="linkedin" data-toggle="tooltip" title="Share on LinkedIn"><i class="fa fa-linkedin-square"></i></a></li>
-          <li><a href="#" class="share" data-target="facebook" data-toggle="tooltip" title="Share on Facebook"><i class="fa fa-facebook-square"></i></a></li>
-          <li><a href="#" class="share" data-target="twitter" data-toggle="tooltip" title="Share on Twitter"><i class="fa fa-twitter-square"></i></a></li>
-          <li><span class="text-muted">Share this post:</span></li>
+          <li><a href="#" class="share" data-target="weibo" data-toggle="tooltip" title="{{ site.data.i18n.share_on_weibo }}"><i class="fa fa-weibo"></i></a></li>
+          <li><a href="#" class="share" data-target="linkedin" data-toggle="tooltip" title="{{ site.data.i18n.share_on_linkedin }}"><i class="fa fa-linkedin-square"></i></a></li>
+          <li><a href="#" class="share" data-target="facebook" data-toggle="tooltip" title="{{ site.data.i18n.share_on_facebook }}"><i class="fa fa-facebook-square"></i></a></li>
+          <li><a href="#" class="share" data-target="twitter" data-toggle="tooltip" title="{{ site.data.i18n.share_on_twitter }}"><i class="fa fa-twitter-square"></i></a></li>
+          <li><span class="text-muted">{{ site.data.i18n.share_this_post }}</span></li>
         </ul>
         <script src="{{ "/js/share.js" | prepend:site.baseurl }}"></script>
       </div>

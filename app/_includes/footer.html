@@ -6,21 +6,21 @@
             {% endfor %}
         </ol>
         <ol class="social-media-list">
-            <li><a href="mailto:{{ site.email }}" data-toggle="tooltip" data-placement="top" title="Email"><i class="fa fa-envelope"></i></a></li>
+            <li><a href="mailto:{{ site.email }}" data-toggle="tooltip" data-placement="top" title="{{ site.data.i18n.email }}"><i class="fa fa-envelope"></i></a></li>
             {% if site.github_username %}
-                <li><a href="https://github.com/{{ site.github_username }}" data-toggle="tooltip" data-placement="top" title="GitHub"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://github.com/{{ site.github_username }}" data-toggle="tooltip" data-placement="top" title="{{ site.data.i18n.github }}"><i class="fa fa-github"></i></a></li>
             {% endif %}
             {% if site.twitter_username %}
-                <li><a href="https://twitter.com/{{ site.twitter_username }}" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://twitter.com/{{ site.twitter_username }}" data-toggle="tooltip" data-placement="top" title="{{ site.data.i18n.twitter }}"><i class="fa fa-twitter"></i></a></li>
             {% endif %}
             {% if site.facebook_username %}
-                <li><a href="https://www.facebook.com/{{ site.facebook_username }}" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.facebook.com/{{ site.facebook_username }}" data-toggle="tooltip" data-placement="top" title="{{ site.data.i18n.facebook }}"><i class="fa fa-facebook"></i></a></li>
             {% endif %}
             {% if site.weibo_userid %}
-                <li><a href="http://weibo.com/{{ site.weibo_userid }}" data-toggle="tooltip" data-placement="top" title="Weibo"><i class="fa fa-weibo"></i></a></li>
+                <li><a href="http://weibo.com/{{ site.weibo_userid }}" data-toggle="tooltip" data-placement="top" title="{{ site.data.i18n.weibo }}"><i class="fa fa-weibo"></i></a></li>
             {% endif %}
             {% if site.qqqun_name %}
-                <li><a href="http://shang.qq.com/wpa/qunwpa?idkey={{ site.qqqun_idkey }}" target="_blank" data-toggle="tooltip" data-placement="top" title="QQ Group"><i class="fa fa-qq"></i></a></li>
+                <li><a href="http://shang.qq.com/wpa/qunwpa?idkey={{ site.qqqun_idkey }}" target="_blank" data-toggle="tooltip" data-placement="top" title="{{ site.data.i18n.qqgroup }}"><i class="fa fa-qq"></i></a></li>
             {% endif %}
         </ol>
         <br class="clear" />

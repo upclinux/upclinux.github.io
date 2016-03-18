@@ -1,0 +1,37 @@
+date_format: '%b %-d, %Y'
+
+email: Email
+github: GitHub
+twitter: Twitter
+facebook: Facebook
+weibo: Weibo
+source_code: 'Source Code'
+rss: RSS
+qqgroup: 'QQ Group'
+
+see_more: 'See more...'
+prev_page_mobile: 'Newer posts'
+next_page_mobile: 'Older posts'
+prev_page_pc: 'Previous'
+next_page_pc: 'Next'
+
+home: Home
+search: Search
+tags: Tags
+categories: Categories
+archive: Archive
+all: All
+external_links: Links
+lists: Lists
+
+contents: Contents
+
+regexp: RegExp
+
+back_home: 'Back to home page'
+back_to_top: 'Back to top'
+share_this_post: 'Share this post:'
+share_on_weibo: 'Share on Weibo'
+share_on_linkedin: 'Share on LinkedIn'
+share_on_facebook: 'Share on Facebook'
+share_on_twitter: 'Share on Twitter'
