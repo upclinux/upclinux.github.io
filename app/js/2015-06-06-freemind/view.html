@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head><meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /><title>某会长的经历</title>
+<script type="text/javascript" src="flashobject.js"></script>
+<style type="text/css"> 
+html {
+    height: 100%;
+    overflow: hidden;
+}
+#flashcontent {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #9999ff;
+}
+</style>
+</head>
+<body>
+<div id="flashcontent">需要 Flash 和 JavaScript</div>
+<script type="text/javascript">
+var fo = new FlashObject("visorFreemind.swf", "visorFreeMind", "100%", "100%", 8, "#9999ff");
+fo.addParam("quality", "high");
+fo.addParam("bgcolor", "#ffffff");
+fo.addParam("allowScriptAccess", "true");
+fo.addVariable("openUrl", "_blank");
+fo.addVariable("initLoadFile", "map.mm");
+fo.addVariable("startCollapsedToLevel","5");
+fo.write("flashcontent");
+</script>
+</body>
+</html>

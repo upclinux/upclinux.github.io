@@ -1,0 +1,42 @@
+---
+layout: post
+title: "某会长是如何接触 Linux 的"
+author: vjudge1
+date:  2015-06-06 10:42:00
+categories: 杂谈
+tags: Freemind
+---
+“会长好像什么都见过，什么都听说过！”
+
+那到底是怎样见过，怎样听说过的呢？本文来揭个底——
+
+
+
+
+
+先向大家介绍个软件——Freemind。这个软件可以画思维导图，而且支持 Windows/Linux/Mac 三大平台。本文的导图就是用这个软件来绘制的。
+
+由于见得太多了，所以这张图没能把见到的全列出来:ghost:。
+
+如果看着不方便，可以<a href="/js/2015-06-06-freemind/view.html" target="_blank">点这里</a>。
+
+<script src="/js/2015-06-06-freemind/flashobject.js"></script>
+<div id="flashcontent" style="height: 500px;">
+[需要 Flash 和 JavaScript]
+</div>
+<script>
+var fo = new FlashObject("/js/2015-06-06-freemind/visorFreemind.swf", "visorFreeMind", "100%", "100%", 8, "#9999ff");
+fo.addParam("quality", "high");
+fo.addParam("bgcolor", "#ffffff");
+fo.addParam("allowScriptAccess", "true");
+fo.addVariable("openUrl", "_blank");
+fo.addVariable("initLoadFile", "/js/2015-06-06-freemind/map.mm");
+fo.addVariable("startCollapsedToLevel","5");
+fo.write("flashcontent");
+</script>
+
+做个总结——什么情况下能够很涨姿势呢？
+
+1. 多看看维基百科，拒绝某度百科。
+2. 现实需求——我要配置 (ア)、配置 (イ)，出了 (ウ) 的问题，怎么办？找搜索引擎吧！
+3. 尽量少用 Windows，要不然你不会太折腾的。
