@@ -3,7 +3,7 @@ layout: post
 title: "Things about surfing the Internet scientifically"
 date: 2015-06-19 14:34:00
 author: vjudge1
-categories: Web
+categories: 网络 赵氏春秋
 ---
 * content
 {:toc}

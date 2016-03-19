@@ -3,7 +3,7 @@ layout: post
 title: "Request & Response for CGI"
 date: 2015-06-07 15:02:00
 author: vjudge1
-categories: Web
+categories: 网络
 tags: Request C CGI
 ---
 

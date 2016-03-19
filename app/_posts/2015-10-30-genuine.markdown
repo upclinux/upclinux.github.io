@@ -2,7 +2,7 @@
 layout: post
 title: "盗版软件的替代品"
 author: vjudge1
-categories: Others
+categories: 其他
 ---
 * contents
 {:toc}

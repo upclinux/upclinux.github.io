@@ -2,7 +2,7 @@
 layout: post
 title: "计算机维护杂谈"
 author: vjudge1
-categories: Maintainance
+categories: 电脑维护
 ---
 * contents
 {:toc}

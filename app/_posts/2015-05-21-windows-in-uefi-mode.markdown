@@ -3,7 +3,7 @@ layout: post
 title: "Windows in UEFI Mode"
 date: 2015-05-21 20:43:40
 author: vjudge1
-categories: Maintainance
+categories: 电脑维护
 tags: Windows UEFI
 ---
 
@@ -21,7 +21,7 @@ Experiences about installing an operating system (e.g., Windows or Linux) are re
 
 It was easy to install a Windows system in the past until the popularity of Windows 8. Laptops with Windows 8 pre-installed adopt the newest firmware named UEFI.
 
-Differences between UEFI and traditional mode are great. While, both of them also exist at the same time. Therefore it's important to understand these two modes in order to manage to install operating systems in different computers.  
+Differences between UEFI and traditional mode are great. While, both of them also exist at the same time. Therefore it's important to understand these two modes in order to manage to install operating systems in different computers.
 
 # UEFI vs. Legacy
 
@@ -156,7 +156,7 @@ In addition, you can use partitioning tool like `diskpart` to rebuild partition 
 
 Switching GPT/MBR will wipe all datas in the drive. However, this process can be done loselessly with the help of some professional softwares.
 
-WARNING: It may still cause data loss. So avoid trying this in an important device!  
+WARNING: It may still cause data loss. So avoid trying this in an important device!
 
 Before this, you need a startup disk with DiskGenius (It's Chinese interface). There are plenty of tools in China such as [Dabaicai](http://www.dabaicai.com) and [LaoMaoTao](http://www.laomaotao.net)...
 

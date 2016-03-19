@@ -2,7 +2,7 @@
 layout: post
 title: "那些不正确的“名言”们"
 author: vjudge1
-categories: Others
+categories: 语文
 ---
 * content
 {:toc}

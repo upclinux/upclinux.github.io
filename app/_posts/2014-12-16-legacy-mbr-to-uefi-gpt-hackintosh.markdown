@@ -3,7 +3,7 @@ layout: post
 title:  "Migration from Legacy+MBR to UEFI+GPT"
 date:   2014-12-17 17:21:46
 author: vjudge1
-categories: Maintainance
+categories: 电脑维护
 tags: Hackintosh UEFI
 ---
 * content

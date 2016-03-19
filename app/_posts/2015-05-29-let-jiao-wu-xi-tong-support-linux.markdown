@@ -3,7 +3,7 @@ layout: post
 title: "让“强智”教务系统支持 Linux/OS X"
 date: 2015-05-29 14:00:08
 author: vjudge1
-categories: Web
+categories: 网络
 tags: Linux 教务系统
 ---
 * content

@@ -3,7 +3,7 @@ layout: post
 title: "The 2048 Game on Arduino"
 date: 2015-05-11 13:01:20
 author: vjudge1
-categories: Arduino fun
+categories: 无聊
 tags: Arduino
 ---
 
@@ -70,7 +70,7 @@ uchar board[4][4] = {0};
 boolean gameOver = false;
 
 char number[][5] = {"", "2", "4", "8", "16", "32", "64", "128",
-    "256", "512", "1024", "2048", "4096", "8192", "####"    
+    "256", "512", "1024", "2048", "4096", "8192", "####"
 };
 
 void paintBoard()

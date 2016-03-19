@@ -2,7 +2,7 @@
 layout: post
 title: "容易出错的成语"
 author: vjudge1
-categories: Others
+categories: 语文
 ---
 看看你用错了多少……
 

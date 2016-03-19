@@ -2,7 +2,7 @@
 layout: post
 title:  "编写图形界面程序"
 author: vjudge1
-categories: Others
+categories: 其他
 ---
 * content
 {:toc}

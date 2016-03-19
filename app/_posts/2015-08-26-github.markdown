@@ -3,7 +3,7 @@ layout: post
 title:  "［恶搞］GitHub 简介"
 date:   2015-08-26 14:00:00
 author: vjudge1
-categories: Fun GitHub
+categories: 无聊 GitHub
 tags: GitHub
 ---
 * contents

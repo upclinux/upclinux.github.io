@@ -2,7 +2,7 @@
 layout: post
 title:  "［科普］网络故障"
 author: vjudge1
-categories: Web
+categories: 网络 赵氏春秋
 ---
 * content
 {:toc}

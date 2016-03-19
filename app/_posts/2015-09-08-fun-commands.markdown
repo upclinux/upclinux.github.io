@@ -3,7 +3,7 @@ layout: post
 title: "Funny Linux commands"
 date: 2015-09-08 10:11:00
 author: vjudge1
-categories: Linux fun
+categories: Linux 无聊
 ---
 * content
 {:toc}

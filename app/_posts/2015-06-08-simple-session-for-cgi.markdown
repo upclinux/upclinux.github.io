@@ -3,7 +3,7 @@ layout: post
 title: "Session for CGI"
 date: 2015-06-08 15:02:00
 author: vjudge1
-categories: Web
+categories: 网络
 tags: Session C CGI
 ---
 * content

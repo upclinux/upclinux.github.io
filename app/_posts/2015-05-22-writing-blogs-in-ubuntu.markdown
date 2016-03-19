@@ -4,7 +4,7 @@ title: "Setup Jekyll in Ubuntu/Windows"
 date: 2015-05-22 18:37:06
 author: vjudge1
 categories: GitHub Linux
-tags: GitHub Jekyll Ubuntu
+tags: Jekyll Ubuntu
 ---
 
 * content

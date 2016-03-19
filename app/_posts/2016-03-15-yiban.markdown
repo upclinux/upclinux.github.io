@@ -2,7 +2,7 @@
 layout: post
 title:  "易班"
 author: vjudge1
-categories: Others
+categories: 其他 赵氏春秋
 ---
 * contents
 {:toc}

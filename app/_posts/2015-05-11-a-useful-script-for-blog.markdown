@@ -3,7 +3,7 @@ layout: post
 title: "A useful script for blog"
 date: 2015-05-11 01:06:01
 author: vjudge1
-categories: GitHub
+categories: 测试
 tags: Scripting
 ---
 

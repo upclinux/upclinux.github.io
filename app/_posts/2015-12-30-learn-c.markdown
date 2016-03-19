@@ -2,7 +2,7 @@
 layout: post
 title:  "如何学习C语言（非计算机专业）"
 author: vjudge1
-categories: Programming
+categories: 无聊
 ---
 * content
 {:toc}

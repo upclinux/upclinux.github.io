@@ -3,7 +3,7 @@ layout: post
 title: "Programming references on hand"
 date: 2015-08-17 20:00:00
 author: vjudge1
-categories: Programming
+categories: 其他
 tags: Dash API
 ---
 

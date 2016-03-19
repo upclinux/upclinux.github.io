@@ -3,7 +3,7 @@ layout: post
 title: "sudo for Windows"
 date: 2015-06-01 22:30:33
 author: vjudge1
-categories: Others
+categories: 其他
 tags: Scripting
 ---
 Windows enables UAC (User Account Control) by default. It's like `sudo` in Linux/Mac, but it's NOT sudo when in Command Prompt.

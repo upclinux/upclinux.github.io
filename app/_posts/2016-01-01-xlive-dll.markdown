@@ -2,7 +2,7 @@
 layout: post
 title:  "解决Win8/10因为xlive.dll玩不了游戏的问题"
 author: vjudge1
-categories: Others
+categories: 其他
 ---
 * content
 {:toc}
