@@ -7,27 +7,27 @@ future: true
 show_drafts: true
 
 # Site settings
-title: Unorz
-email: vjudge404@gmail.com
-description: Doubleplusorz...
+title: UPC Linux
+email: upclinux@163.com
+description: 中国石油大学 (华东) Linux 协会网站，记录协会动态，分享Linux的姿势和一点人生的经验。
 footnote: > # this means to ignore newlines until "baseurl:"
-  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> by vjudge1
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> by <a href="https://github.com/vjudge1">李思洋</a>
 brand: >
-  <i class="fa fa-github-alt"></i> Unorz
+  UPC Linux
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://vjudge1.github.io" # the base hostname & protocol for your site
-permalink: /:year/:month/:day/:title.html
+url: "https://upclinux.github.io" # the base hostname & protocol for your site
+permalink: /:year/:month/:day/:title/
 timezone: Asia/Shanghai
 paginate: 5
 excerpt_separator: "\n\n\n\n"
 
-disqus_shortname: vjudge1
+disqus_shortname: upclinux
 
-twitter_username: vjudge404
-facebook_username: vjudge404
-github_username: vjudge1
-#qqqun_name: "QQ 群"
-#qqqun_idkey:
+#twitter_username:
+#facebook_username:
+github_username: upclinux
+qqqun_name: "QQ 群 (279310694)"
+qqqun_idkey: e47c6b546d3373c09f7eaa8d4173728a513975ed2d0ec20106e83cfb11a3bf08
 #weibo_username:
 #qq:
 #weibo_userid:
@@ -35,9 +35,9 @@ github_username: vjudge1
 host: 0.0.0.0
 
 # force https
-force_https: vjudge1.github.io
+force_https: upclinux.github.io
 
-statistics: '//s95.cnzz.com/z_stat.php?id=1256463916&web_id=1256463916'
+statistics: '//s11.cnzz.com/z_stat.php?id=1256410622&web_id=1256410622'
 
 # Gems
 gems:
@@ -57,7 +57,7 @@ header_icons:
   icon: graduation-cap
 -
   name: 源代码
-  url: https://github.com/vjudge1/vjudge1.github.io
+  url: https://github.com/upclinux/upclinux.github.io
   icon: code
 -
   name: RSS
@@ -67,20 +67,17 @@ header_icons:
 # External links
 external_links:
 -
-  name: UPC Linux
-  url: https://upclinux.github.io
--
-  name: UPC Linux / Intro
+  name: 入门指引
   url: https://upclinux.github.io/intro/
 -
-  name: 环宇的博客
-  url: http://www.lihuanyu.com
+  name: 某会长的博客
+  url: https://vjudge1.github.io
 -
-  name: 微尘风景BBS
+  name: 课戴表王晨宇
   url: http://wangchenyu.net.cn
 -
-  name: Jerry Yuan
-  url: http://jerry.weighingproduct.com
+  name: 石油大学科幻协会
+  url: http://sfa.since2014.cn
 
 # Footer List
 footer_links:
@@ -88,9 +85,5 @@ footer_links:
   name: 关于
   url: /about/
 -
-  name: 让我帮你百度一下
-  url: https://vjudge1.github.io/kuso/sos/
--
-  name: wikitrans
-  url: https://wikitrans-1245.appspot.com/
-
+  name: 入门指引
+  url: https://upclinux.github.io/intro/

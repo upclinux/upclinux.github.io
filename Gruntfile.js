@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(grunt) {
-    var git_user = 'vjudge1';
+    var git_user = 'upclinux';
 
     // Show elapsed time after tasks run
     require('time-grunt')(grunt);
