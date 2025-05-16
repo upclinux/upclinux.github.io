@@ -3,7 +3,7 @@ layout: post
 title: "开源软件推荐01-dify"  
 author: Sylvanas  
 date:  2025-05-14 16:42:00  
-categories: 开源软件推荐  
+categories: 做网站  
 tags: AI 
 ---
 
