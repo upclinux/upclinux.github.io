@@ -1,1250 +1,1083 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.2">Jekyll</generator><link href="https://upclinux.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://upclinux.github.io/" rel="alternate" type="text/html" /><updated>2016-03-19T05:13:27+00:00</updated><id>https://upclinux.github.io/</id><title>UPC Linux</title><subtitle>中国石油大学 (华东) Linux 协会网站，记录协会动态，分享Linux的姿势和一点人生的经验。</subtitle><entry><title>万圣夜快乐</title><link href="https://upclinux.github.io/2015/10/31/halloween/" rel="alternate" type="text/html" title="万圣夜快乐" /><published>2015-10-31T00:00:00+00:00</published><updated>2015-10-31T00:00:00+00:00</updated><id>https://upclinux.github.io/2015/10/31/halloween</id><content type="html" xml:base="https://upclinux.github.io/2015/10/31/halloween/">&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#trick-or-treat&quot; id=&quot;markdown-toc-trick-or-treat&quot;&gt;Trick-or-treat!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;发生了什么&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;微信墙&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#xss&quot; id=&quot;markdown-toc-xss&quot;&gt;XSS&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#trick-or-theat&quot; id=&quot;markdown-toc-trick-or-theat&quot;&gt;另一个 Trick-or-theat&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;结论&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://upclinux.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://upclinux.github.io/" rel="alternate" type="text/html" /><updated>2025-05-18T00:10:29+08:00</updated><id>https://upclinux.github.io/feed.xml</id><title type="html">UPC Linux</title><subtitle>中国石油大学 (华东) Linux 协会网站，记录协会动态，分享Linux的姿势和一点人生的经验。</subtitle><entry><title type="html">开源软件推荐01-dify</title><link href="https://upclinux.github.io/2025/05/15/dify/" rel="alternate" type="text/html" title="开源软件推荐01-dify" /><published>2025-05-15T00:42:00+08:00</published><updated>2025-05-15T00:42:00+08:00</updated><id>https://upclinux.github.io/2025/05/15/dify</id><content type="html" xml:base="https://upclinux.github.io/2025/05/15/dify/"><![CDATA[<p>　　Hello，大家好呀，我是Sylvanas。今天由我来为大家分享一些新奇好玩的开源工具。希望各位多多支持我们社团的工作，为我们社团的发展添砖加瓦~</p>
 
-&lt;p&gt;今天是&lt;a href=&quot;https://zh.wikipedia.org/wiki/万圣夜&quot;&gt;万圣夜&lt;/a&gt;（Halloween），正好也是社团文化节晚会。&lt;/p&gt;
+<h1 id="前言">前言</h1>
 
-&lt;p&gt;大家肯定都知道，其实我们是不太关心节目的，而且协会缺少妹子，演不出什么好节目，所以我们临时决定，在晚会上搞了一个“不给糖就捣蛋:jack_o_lantern:”（Trick-or-theat）的活动。&lt;/p&gt;
+<p>　　你是不是也想过自己开发一个智能应用，但被复杂的代码和技术门槛劝退？别担心！Dify就是一个专门为小白用户设计的开源大语言模型开发平台，让你不用写代码也能轻松玩转AI应用开发！</p>
 
-&lt;div class=&quot;callout callout-warning&quot;&gt;
-&lt;h4 id=&quot;section&quot;&gt;今天不是万圣节&lt;/h4&gt;
+<p>　　在这里，你可以：<br />
+✅ 像搭积木一样快速构建AI应用<br />
+✅ 直接使用200+现成的大模型<br />
+✅ 开发旅游助手、文章分析等实用工具<br />
+✅ 完全掌控自己的数据和安全</p>
 
-&lt;p&gt;稍微纠正一下，10月31日并不是万圣节（All Saints’ Day），而是万圣夜（Halloween）。就像12月24日不是圣诞节（Christmas Day）而是圣诞夜（Christmas Eve）……&lt;span class=&quot;blackout&quot;&gt;其实都是淘宝搞促销的借口而已&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
+<p>　　更棒的是，Dify还提供了超详细的教程，手把手教你从安装到开发的全过程！无论你是想创业、提升工作效率，还是单纯想探索AI的乐趣，Dify都能满足你~
+　　接下来就让我们一起看看，如何用Dify打造属于自己的AI应用吧！✨
+　　（P.S. 完全不用担心技术门槛哦，跟着教程一步步来，小白也能变大神！🤓）</p>
 
-&lt;p&gt;&lt;img src=&quot;/img/2015-10-31-halloween/1.jpg&quot; alt=&quot;晚会现场&quot; /&gt;&lt;/p&gt;
+<h1 id="dify的安装部署">Dify的安装部署</h1>
 
-&lt;p&gt;&lt;small&gt;这就是晚会现场，虽然我们没有人上台演出。&lt;/small&gt;&lt;/p&gt;
+<h2 id="硬件要求">硬件要求</h2>
 
-&lt;h1 id=&quot;trick-or-treat&quot;&gt;Trick-or-treat!&lt;/h1&gt;
+<ul>
+  <li>至少 2 核 CPU</li>
+  <li>至少 4GB 内存</li>
+</ul>
 
-&lt;p&gt;我们协会并没有上台演出（因为需要提前排练），而是在舞台两边的微信墙演出——就是拿微信关注“社团石大”公众号，然后在活动期间给公众号发文字，你的文字就能显示到微信墙上，从而参与互动。就是下图——&lt;/p&gt;
+<h2 id="软件要求">软件要求</h2>
 
-&lt;p&gt;&lt;img src=&quot;/img/2015-10-31-halloween/2.jpg&quot; alt=&quot;微信墙&quot; /&gt;&lt;/p&gt;
+<ul>
+  <li><strong>macOS 用户</strong>：需要安装 Docker Desktop，并分配至少 2 个虚拟 CPU 和 8GB 内存</li>
+  <li><strong>Linux 用户</strong>：需要 Docker 19.03 或更高版本，Docker Compose 1.28 或更高版本</li>
+  <li><strong>Windows 用户</strong>：需要启用 WSL 2 并安装 Docker Desktop</li>
+</ul>
 
-&lt;p&gt;&lt;small&gt;那个大法风格文字不是我们的节目。&lt;/small&gt;&lt;/p&gt;
+<h2 id="安装步骤">安装步骤</h2>
 
-&lt;p&gt;节目开始——我们的演员，向微信墙，发了一条信息：&lt;/p&gt;
+<ol>
+  <li>
+    <p><strong>下载 Dify</strong></p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;萌萌哒&lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+    <ul>
+      <li>
+        <p>打开终端，运行命令：</p>
 
-&lt;p&gt;节目很短，一下子就演完了:ghost:。&lt;/p&gt;
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/langgenius/dify.git --branch 1.3.1
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>进入安装目录</strong></p>
 
-&lt;p&gt;由于我们的准备不太充分，所以节目真的不精彩。下回我们会好好准备……&lt;/p&gt;
+    <ul>
+      <li>
+        <p>运行：</p>
 
-&lt;div class=&quot;callout callout-primary&quot;&gt;
-&lt;h4 id=&quot;section&quot;&gt;严肃点&lt;/h4&gt;
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd dify/docker
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>准备配置文件</strong></p>
 
-&lt;p&gt;这也叫节目？&lt;/p&gt;
+    <ul>
+      <li>
+        <p>复制示例配置文件：</p>
 
-&lt;p&gt;难道你没仔细看一下演员到底发了什么吗？&lt;span class=&quot;blackout&quot;&gt;我们的演员反映说，大屏幕黑了3分钟，投影仪（其实应该是操作投影仪的人）一直在重启，最后重新打开网页才上去……&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cp .env.example .env
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>启动 Dify</strong></p>
 
-&lt;h1 id=&quot;section&quot;&gt;发生了什么&lt;/h1&gt;
+    <ul>
+      <li>
+        <p>根据你的 Docker 版本选择命令：</p>
 
-&lt;h2 id=&quot;section-1&quot;&gt;微信墙&lt;/h2&gt;
+        <ul>
+          <li>
+            <p>新版本：</p>
 
-&lt;p&gt;我们的节目虽然很短，但是有一个响亮的名字——&lt;a href=&quot;https://zh.wikipedia.org/wiki/跨網站指令碼&quot;&gt;XSS（跨站脚本攻击）&lt;/a&gt;。&lt;/p&gt;
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose up -d
+</code></pre></div>            </div>
+          </li>
+          <li>
+            <p>旧版本：</p>
 
-&lt;p&gt;首先谈谈微信墙。&lt;/p&gt;
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose up -d
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>检查运行状态</strong></p>
 
-&lt;p&gt;微信实在是火得不得了，各种营销互动拉票&lt;span class=&quot;blackout&quot;&gt;集赞骗人&lt;/span&gt;活动都用微信，简直是腾讯的新帝国！因为微信提供了众多开发者接口（虽然不一定都给&lt;span class=&quot;blackout&quot;&gt;屌丝&lt;/span&gt;开放），但是在大家都不愿意安装新 APP 的情况下，使用微信作为一个轻 APP 实在是太划算了。&lt;/p&gt;
+    <ul>
+      <li>
+        <p>运行：</p>
 
-&lt;p&gt;微信墙的原理就很简单了——一个经过设计狮精心制作的网页，后台 PHP+MySQL，隔几秒钟就把服务器里的留言显示出来（用 AJAX 技术避免浏览器的“刷新”）。至于微信墙做得怎么样，基本上取决于设计狮的水平。&lt;span class=&quot;blackout&quot;&gt;后端PHP+前端AJAX都普及到泛滥了，所以随便找个人都能把后台写出来。&lt;/span&gt;服务器的数据哪儿来呢？因为微信有接口，所以按照疼讯的接口文档编程就行了。&lt;/p&gt;
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker compose ps
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>应该看到 9 个服务正常运行</p>
+      </li>
+    </ul>
+  </li>
+</ol>
 
-&lt;p&gt;因为微信太火了，所以事实上根本都用不着编程——百度上一搜一大把。稍微懂点技术就行，如果拿 Windows 当服务器，甚至都不用敲命令:smirk:。&lt;/p&gt;
+<h2 id="访问-dify">访问 Dify</h2>
 
-&lt;h2 id=&quot;xss&quot;&gt;XSS&lt;/h2&gt;
+<ol>
+  <li>
+    <p><strong>首次设置</strong></p>
 
-&lt;p&gt;接着谈谈我们的“节目”。&lt;/p&gt;
+    <ul>
+      <li>
+        <p>在浏览器打开：</p>
 
-&lt;p&gt;XSS 有很多种形式。精心构造的 XSS 可以达到破坏或窃取数据的目的。当然，作为一个晚会的“节目”，我们就只写了一个最简单的 while(1)。（其实演员还不知道这个东西是啥呢！）&lt;/p&gt;
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost/install
+</code></pre></div>        </div>
 
-&lt;p&gt;因为微信墙后台太简单了，而且没有哪个正常人会像孙悟空那样大闹&lt;s&gt;天宫&lt;/s&gt;晚会（特意安排的不算），所以编程的人肯定没想到有人会在万圣节前夜捣蛋——&lt;/p&gt;
+        <p>或</p>
 
-&lt;p&gt;微信是疼讯搞的，我们认为它没有漏洞（至少跟微信墙相比）。它会把我们发的内容原封不动地交给微信墙服务器。作为一个网站，微信墙可能会用以下方式显示观众留言：&lt;/p&gt;
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://你的服务器IP/install
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>日常使用</strong></p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// 从服务器（数据库）获取留言
-&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;$row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysql_query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sql&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;$user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;$message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;
+    <ul>
+      <li>
+        <p>访问：</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost
+</code></pre></div>        </div>
+
+        <p>或</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://你的服务器IP
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="更新-dify">更新 Dify</h2>
+
+<ol>
+  <li>
+    <p>进入安装目录：</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cd dify/docker
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>停止服务：</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> docker compose down
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>获取最新代码：</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git pull origin main
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>更新并重启：</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> docker compose pull
+ docker compose up -d
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="小贴士">小贴士</h2>
+
+<ul>
+  <li>官方的文档非常详细，建议在使用前先阅读，官方文档地址在这里：<a href="https://docs.dify.ai/zh-hans/introduction">点我</a></li>
+  <li>每次更新后，记得检查 <code class="language-plaintext highlighter-rouge">.env</code>​ 文件是否需要更新</li>
+  <li>如果遇到问题，可以查看官方常见问题解答</li>
+</ul>
+
+<p>　　现在你已经成功安装了 Dify，可以开始创建你的第一个 AI 应用了！</p>
+
+<h2 id="总结">总结</h2>
+
+<p>　　Dify是一个超友好的开源AI开发平台，让你不用写代码也能打造智能应用！就像搭积木一样简单~如果各位感兴趣，在接下来的文章中，我将为大家展示如何通过dify搭建属于自己的应用。
+　　✨完全不用担心技术难度，官方提供了超详细的图文教程，手把手教你从安装到开发！遇到问题还有社区可以求助哦~快来试试吧，下一个AI应用开发者可能就是你！✨
+　　（P.S. 我已经帮你测试过了，真的比想象中简单太多啦~😁）</p>
+
+<p>　　‍</p>]]></content><author><name>Sylvanas</name></author><category term="做网站" /><category term="AI" /><summary type="html"><![CDATA[　　Hello，大家好呀，我是Sylvanas。今天由我来为大家分享一些新奇好玩的开源工具。希望各位多多支持我们社团的工作，为我们社团的发展添砖加瓦~]]></summary></entry><entry><title type="html">万圣夜快乐</title><link href="https://upclinux.github.io/2015/10/31/halloween/" rel="alternate" type="text/html" title="万圣夜快乐" /><published>2015-10-31T00:00:00+08:00</published><updated>2015-10-31T00:00:00+08:00</updated><id>https://upclinux.github.io/2015/10/31/halloween</id><content type="html" xml:base="https://upclinux.github.io/2015/10/31/halloween/"><![CDATA[<ul id="markdown-toc">
+  <li><a href="#trick-or-treat" id="markdown-toc-trick-or-treat">Trick-or-treat!</a></li>
+  <li><a href="#发生了什么" id="markdown-toc-发生了什么">发生了什么</a>    <ul>
+      <li><a href="#微信墙" id="markdown-toc-微信墙">微信墙</a></li>
+      <li><a href="#xss" id="markdown-toc-xss">XSS</a></li>
+    </ul>
+  </li>
+  <li><a href="#另一个-trick-or-theat" id="markdown-toc-另一个-trick-or-theat">另一个 Trick-or-theat</a></li>
+  <li><a href="#结论" id="markdown-toc-结论">结论</a></li>
+</ul>
+
+<p>今天是<a href="https://zh.wikipedia.org/wiki/万圣夜">万圣夜</a>（Halloween），正好也是社团文化节晚会。</p>
+
+<p>大家肯定都知道，其实我们是不太关心节目的，而且协会缺少妹子，演不出什么好节目，所以我们临时决定，在晚会上搞了一个“不给糖就捣蛋:jack_o_lantern:”（Trick-or-theat）的活动。</p>
+
+<div class="callout callout-warning">
+<h4 id="今天不是万圣节">今天不是万圣节</h4>
+
+<p>稍微纠正一下，10月31日并不是万圣节（All Saints’ Day），而是万圣夜（Halloween）。就像12月24日不是圣诞节（Christmas Day）而是圣诞夜（Christmas Eve）……<span class="blackout">其实都是淘宝搞促销的借口而已</span></p>
+</div>
+
+<p><img src="/img/2015-10-31-halloween/1.jpg" alt="晚会现场" /></p>
+
+<p><small>这就是晚会现场，虽然我们没有人上台演出。</small></p>
+
+<h1 id="trick-or-treat">Trick-or-treat!</h1>
+
+<p>我们协会并没有上台演出（因为需要提前排练），而是在舞台两边的微信墙演出——就是拿微信关注“社团石大”公众号，然后在活动期间给公众号发文字，你的文字就能显示到微信墙上，从而参与互动。就是下图——</p>
+
+<p><img src="/img/2015-10-31-halloween/2.jpg" alt="微信墙" /></p>
+
+<p><small>那个大法风格文字不是我们的节目。</small></p>
+
+<p>节目开始——我们的演员，向微信墙，发了一条信息：</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">萌萌哒<span class="nt">&lt;script&gt;</span><span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="nt">&lt;/script&gt;</span></code></pre></figure>
+
+<p>节目很短，一下子就演完了:ghost:。</p>
+
+<p>由于我们的准备不太充分，所以节目真的不精彩。下回我们会好好准备……</p>
+
+<div class="callout callout-primary">
+<h4 id="严肃点">严肃点</h4>
+
+<p>这也叫节目？</p>
+
+<p>难道你没仔细看一下演员到底发了什么吗？<span class="blackout">我们的演员反映说，大屏幕黑了3分钟，投影仪（其实应该是操作投影仪的人）一直在重启，最后重新打开网页才上去……</span></p>
+</div>
+
+<h1 id="发生了什么">发生了什么</h1>
+
+<h2 id="微信墙">微信墙</h2>
+
+<p>我们的节目虽然很短，但是有一个响亮的名字——<a href="https://zh.wikipedia.org/wiki/跨網站指令碼">XSS（跨站脚本攻击）</a>。</p>
+
+<p>首先谈谈微信墙。</p>
+
+<p>微信实在是火得不得了，各种营销互动拉票<span class="blackout">集赞骗人</span>活动都用微信，简直是腾讯的新帝国！因为微信提供了众多开发者接口（虽然不一定都给<span class="blackout">屌丝</span>开放），但是在大家都不愿意安装新 APP 的情况下，使用微信作为一个轻 APP 实在是太划算了。</p>
+
+<p>微信墙的原理就很简单了——一个经过设计狮精心制作的网页，后台 PHP+MySQL，隔几秒钟就把服务器里的留言显示出来（用 AJAX 技术避免浏览器的“刷新”）。至于微信墙做得怎么样，基本上取决于设计狮的水平。<span class="blackout">后端PHP+前端AJAX都普及到泛滥了，所以随便找个人都能把后台写出来。</span>服务器的数据哪儿来呢？因为微信有接口，所以按照疼讯的接口文档编程就行了。</p>
+
+<p>因为微信太火了，所以事实上根本都用不着编程——百度上一搜一大把。稍微懂点技术就行，如果拿 Windows 当服务器，甚至都不用敲命令:smirk:。</p>
+
+<h2 id="xss">XSS</h2>
+
+<p>接着谈谈我们的“节目”。</p>
+
+<p>XSS 有很多种形式。精心构造的 XSS 可以达到破坏或窃取数据的目的。当然，作为一个晚会的“节目”，我们就只写了一个最简单的 while(1)。（其实演员还不知道这个东西是啥呢！）</p>
+
+<p>因为微信墙后台太简单了，而且没有哪个正常人会像孙悟空那样大闹<s>天宫</s>晚会（特意安排的不算），所以编程的人肯定没想到有人会在万圣节前夜捣蛋——</p>
+
+<p>微信是疼讯搞的，我们认为它没有漏洞（至少跟微信墙相比）。它会把我们发的内容原封不动地交给微信墙服务器。作为一个网站，微信墙可能会用以下方式显示观众留言：</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+    <span class="c1">// 从服务器（数据库）获取留言</span>
+    <span class="mf">...</span>
+    <span class="nv">$row</span> <span class="o">=</span> <span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+    <span class="nv">$user</span> <span class="o">=</span> <span class="nv">$row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="nv">$message</span> <span class="o">=</span> <span class="nv">$row</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+    <span class="mf">...</span>
+<span class="cp">?&gt;</span>
 ...
-&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 显示用户留言（头像昵称什么的，略） --&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<span class="c">&lt;!-- 显示用户留言（头像昵称什么的，略） --&gt;</span>
+<span class="nt">&lt;li&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$message</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="nt">&lt;/li&gt;</span></code></pre></figure>
 
-&lt;p&gt;他们很可能直接用 echo 语句把观众留言输出。&lt;/p&gt;
+<p>他们很可能直接用 echo 语句把观众留言输出。</p>
 
-&lt;p&gt;PHP 的 echo 并不进行任何过滤，所以你发&lt;code class=&quot;highlighter-rouge&quot;&gt;萌萌哒&lt;/code&gt;的时候会显示&lt;code class=&quot;highlighter-rouge&quot;&gt;萌萌哒&lt;/code&gt;三个字；发&lt;code class=&quot;highlighter-rouge&quot;&gt;萌萌哒&amp;lt;script&amp;gt;while(1);&amp;lt;/script&amp;gt;&lt;/code&gt;的时候也会把这堆乱七八糟的东西同时输出，只不过，后面&lt;code class=&quot;highlighter-rouge&quot;&gt;script&lt;/code&gt;包围的东西是一个合法的 HTML 标签，所以&lt;strong&gt;浏览器会执行这段代码&lt;/strong&gt;。于是……浏览器卡死了。&lt;/p&gt;
+<p>PHP 的 echo 并不进行任何过滤，所以你发<code class="language-plaintext highlighter-rouge">萌萌哒</code>的时候会显示<code class="language-plaintext highlighter-rouge">萌萌哒</code>三个字；发<code class="language-plaintext highlighter-rouge">萌萌哒&lt;script&gt;while(1);&lt;/script&gt;</code>的时候也会把这堆乱七八糟的东西同时输出，只不过，后面<code class="language-plaintext highlighter-rouge">script</code>包围的东西是一个合法的 HTML 标签，所以<strong>浏览器会执行这段代码</strong>。于是……浏览器卡死了。</p>
 
-&lt;p&gt;XSS 就是这样。一个攻击者试图找到网站的漏洞，通过发送精心构造的数据，使浏览器可以执行一段代码。结果就是，其他人在浏览这些页面的时候，浏览器执行了这段代码，……&lt;span class=&quot;blackout&quot;&gt;实施破坏，或者窃取隐私，或者植入病毒&lt;/span&gt;&lt;/p&gt;
+<p>XSS 就是这样。一个攻击者试图找到网站的漏洞，通过发送精心构造的数据，使浏览器可以执行一段代码。结果就是，其他人在浏览这些页面的时候，浏览器执行了这段代码，……<span class="blackout">实施破坏，或者窃取隐私，或者植入病毒</span></p>
 
-&lt;p&gt;XSS 的防范也是个技术活。原则很简单，&lt;strong&gt;不要信任任何来自用户的数据&lt;/strong&gt;，因此在输出之前对特殊字符进行过滤是最有效的方法。&lt;/p&gt;
+<p>XSS 的防范也是个技术活。原则很简单，<strong>不要信任任何来自用户的数据</strong>，因此在输出之前对特殊字符进行过滤是最有效的方法。</p>
 
-&lt;div class=&quot;callout callout-primary&quot;&gt;
-&lt;h4 id=&quot;section&quot;&gt;高级主题&lt;/h4&gt;
+<div class="callout callout-primary">
+<h4 id="高级主题">高级主题</h4>
 
-&lt;p&gt;如果出于功能需要，不能过滤所有 HTML 标签，可以看一下百度Web前端开发部的&lt;a href=&quot;http://fex.baidu.com/blog/2014/06/xss-frontend-firewall-1/&quot;&gt;相关文章&lt;/a&gt;。他们试图站在前端的角度，在不过滤 HTML 标签的情况下阻止恶意元素的产生。&lt;/p&gt;
-&lt;/div&gt;
+<p>如果出于功能需要，不能过滤所有 HTML 标签，可以看一下百度Web前端开发部的<a href="http://fex.baidu.com/blog/2014/06/xss-frontend-firewall-1/">相关文章</a>。他们试图站在前端的角度，在不过滤 HTML 标签的情况下阻止恶意元素的产生。</p>
+</div>
 
-&lt;h1 id=&quot;trick-or-theat&quot;&gt;另一个 Trick-or-theat&lt;/h1&gt;
+<h1 id="另一个-trick-or-theat">另一个 Trick-or-theat</h1>
 
-&lt;p&gt;既然一个简单的脚本就把微信墙搞垮了，那么他们微信墙后台的密码肯定是&lt;code class=&quot;highlighter-rouge&quot;&gt;&#39; or &#39;a&#39;=&#39;a&lt;/code&gt;。不信可以试试。&lt;/p&gt;
+<p>既然一个简单的脚本就把微信墙搞垮了，那么他们微信墙后台的密码肯定是<code class="language-plaintext highlighter-rouge">' or 'a'='a</code>。不信可以试试。</p>
 
-&lt;p&gt;这是我们要演的另一个节目，节目的名字是 &lt;a href=&quot;https://zh.wikipedia.org/wiki/SQL資料隱碼攻擊&quot;&gt;SQL 注入&lt;/a&gt;，只不过今天太匆忙没做彩排。等以后再有晚会的时候，我们可能就会派人演出，到时候欢迎大家捧场:smirk:。&lt;/p&gt;
+<p>这是我们要演的另一个节目，节目的名字是 <a href="https://zh.wikipedia.org/wiki/SQL資料隱碼攻擊">SQL 注入</a>，只不过今天太匆忙没做彩排。等以后再有晚会的时候，我们可能就会派人演出，到时候欢迎大家捧场:smirk:。</p>
+
+<h1 id="结论">结论</h1>
+
+<p>现在处处都在强调“安全生产”，甚至<a href="http://news.sina.com.cn/s/p/2014-08-05/115130633427.shtml">有一个工地</a>里面都写着<code class="language-plaintext highlighter-rouge">亲爱的工友们：在外打工，注意安全，一旦发生事故：别人睡你媳妇，打你孩子，花你的抚恤金！打工安全，为你自己。</code></p>
+
+<p>所以，作为给人打工的IT农民工——码农，开发应用的时候怎能不注意安全呢？<span class="blackout">虽然很多码农没有媳妇孩子和抚恤金</span></p>]]></content><author><name>vjudge1</name></author><category term="活动" /><category term="XSS" /><summary type="html"><![CDATA[今天是万圣夜（Halloween），正好也是社团文化节晚会。 大家肯定都知道，其实我们是不太关心节目的，而且协会缺少妹子，演不出什么好节目，所以我们临时决定，在晚会上搞了一个“不给糖就捣蛋:jack_o_lantern:”（Trick-or-theat）的活动。]]></summary></entry><entry><title type="html">HTML5+CSS3那点事</title><link href="https://upclinux.github.io/2015/10/26/what-is-html/" rel="alternate" type="text/html" title="HTML5+CSS3那点事" /><published>2015-10-26T00:00:00+08:00</published><updated>2015-10-26T00:00:00+08:00</updated><id>https://upclinux.github.io/2015/10/26/what-is-html</id><content type="html" xml:base="https://upclinux.github.io/2015/10/26/what-is-html/"><![CDATA[<ul id="markdown-toc">
+  <li><a href="#一html5是什么鬼" id="markdown-toc-一html5是什么鬼">一、HTML5是什么鬼</a>    <ul>
+      <li><a href="#来写一个自我介绍吧" id="markdown-toc-来写一个自我介绍吧">来写一个自我介绍吧</a></li>
+    </ul>
+  </li>
+  <li><a href="#二css的作用" id="markdown-toc-二css的作用">二、CSS的作用</a></li>
+</ul>
+
+<p>十年前做网站是一个非常奢侈的活，那时候没有什么工具，也没有什么一键搭建环境，而且服务器很贵，上网的人不多，所以需求也不大。</p>
+
+<p>但是现在不一样了，各种编网页的工具还有自动化的东西也都有了。而且鼓励创新创业，所以基本上人人都可以免费拥有一个网站。</p>
+
+<p>这些真的很简单，主要就是</p>
+
+<ol>
+  <li>HTML5标准的一个网页应该是什么样的</li>
+  <li>怎么用CSS</li>
+  <li>怎么查<a href="w3school.com">工具书网站</a></li>
+  <li>丢掉IE 6 7 8吧</li>
+</ol>
+
+<h1 id="一html5是什么鬼">一、HTML5是什么鬼</h1>
+
+<p>HTML是一种解析性的语言。我们用它不是因为它好看，而是因为它能让我们控制浏览器。如果你不使用HTML语言，那浏览器是不知道该拿你写的这些东西怎么办的。我在讲的时候就示范了一下，你在记事本写好几段文字，但是传上去就是一大坨文字。浏览器不知道哪儿该换行，所以他就把所有的东西都直接输出到正文部分了。</p>
 
-&lt;h1 id=&quot;section-2&quot;&gt;结论&lt;/h1&gt;
+<p>当然啦，和C语言相比他有着本质的不同——它简单得很。你也别指望用HTML去算哪怕是1+1这种东西。</p>
 
-&lt;p&gt;现在处处都在强调“安全生产”，甚至&lt;a href=&quot;http://news.sina.com.cn/s/p/2014-08-05/115130633427.shtml&quot;&gt;有一个工地&lt;/a&gt;里面都写着&lt;code class=&quot;highlighter-rouge&quot;&gt;亲爱的工友们：在外打工，注意安全，一旦发生事故：别人睡你媳妇，打你孩子，花你的抚恤金！打工安全，为你自己。&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;所以，作为给人打工的IT农民工——码农，开发应用的时候怎能不注意安全呢？&lt;span class=&quot;blackout&quot;&gt;虽然很多码农没有媳妇孩子和抚恤金&lt;/span&gt;&lt;/p&gt;</content><author><name>vjudge1</name></author><category term="XSS" /><summary>今天是万圣夜（Halloween），正好也是社团文化节晚会。
-
-大家肯定都知道，其实我们是不太关心节目的，而且协会缺少妹子，演不出什么好节目，所以我们临时决定，在晚会上搞了一个“不给糖就捣蛋:jack_o_lantern:”（Trick-or-theat）的活动。</summary></entry><entry><title>HTML5+CSS3那点事</title><link href="https://upclinux.github.io/2015/10/26/what-is-html/" rel="alternate" type="text/html" title="HTML5+CSS3那点事" /><published>2015-10-26T00:00:00+00:00</published><updated>2015-10-26T00:00:00+00:00</updated><id>https://upclinux.github.io/2015/10/26/what-is-html</id><content type="html" xml:base="https://upclinux.github.io/2015/10/26/what-is-html/">&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#html5&quot; id=&quot;markdown-toc-html5&quot;&gt;一、HTML5是什么鬼&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;来写一个自我介绍吧&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#css&quot; id=&quot;markdown-toc-css&quot;&gt;二、CSS的作用&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;十年前做网站是一个非常奢侈的活，那时候没有什么工具，也没有什么一键搭建环境，而且服务器很贵，上网的人不多，所以需求也不大。&lt;/p&gt;
-
-&lt;p&gt;但是现在不一样了，各种编网页的工具还有自动化的东西也都有了。而且鼓励创新创业，所以基本上人人都可以免费拥有一个网站。&lt;/p&gt;
-
-&lt;p&gt;这些真的很简单，主要就是&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;HTML5标准的一个网页应该是什么样的&lt;/li&gt;
-  &lt;li&gt;怎么用CSS&lt;/li&gt;
-  &lt;li&gt;怎么查&lt;a href=&quot;w3school.com&quot;&gt;工具书网站&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;丢掉IE 6 7 8吧&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;html5&quot;&gt;一、HTML5是什么鬼&lt;/h1&gt;
+<p>你唯一能控制的，其实就是一堆零散的标签。HTML也就全是这些标签。</p>
 
-&lt;p&gt;HTML是一种解析性的语言。我们用它不是因为它好看，而是因为它能让我们控制浏览器。如果你不使用HTML语言，那浏览器是不知道该拿你写的这些东西怎么办的。我在讲的时候就示范了一下，你在记事本写好几段文字，但是传上去就是一大坨文字。浏览器不知道哪儿该换行，所以他就把所有的东西都直接输出到正文部分了。&lt;/p&gt;
+<h2 id="来写一个自我介绍吧">来写一个自我介绍吧</h2>
+
+<p>下面是一个简单地自我介绍的示范：</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;&lt;/meta&gt;</span>
+        <span class="nt">&lt;title&gt;</span>Cheney的自我介绍<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+    	<span class="nt">&lt;h1&gt;</span>这是Cheney的自我介绍<span class="nt">&lt;/h1&gt;</span>
+    	<span class="nt">&lt;p&gt;</span>大家好，我是Cheney。这是一个自我介绍。<span class="nt">&lt;/p&gt;</span>
+    	<span class="nt">&lt;p&gt;</span>
+    		下面是我的联系方式<span class="nt">&lt;/br&gt;</span>
+    		<span class="nt">&lt;address&gt;</span>QQ:1152668787<span class="nt">&lt;/address&gt;</span>
+    		<span class="nt">&lt;address&gt;</span>电话：加Q以后自己来问<span class="nt">&lt;/address&gt;</span>
+    	<span class="nt">&lt;/p&gt;</span>
+    	<span class="nt">&lt;footer&gt;</span>
+    		<span class="nt">&lt;ul&gt;</span>
+    			<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://wangchenyu.net.cn"</span><span class="nt">&gt;</span>微晨风景<span class="nt">&lt;/a&gt;&lt;li&gt;</span>
+    			<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://www.itmanbu.com"</span><span class="nt">&gt;</span>IT漫步<span class="nt">&lt;/a&gt;&lt;li&gt;</span>
+    			<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://zuidi.me"</span><span class="nt">&gt;</span>最低么<span class="nt">&lt;/a&gt;&lt;li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/footer&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
 
-&lt;p&gt;当然啦，和C语言相比他有着本质的不同——它简单得很。你也别指望用HTML去算哪怕是1+1这种东西。&lt;/p&gt;
+<p>下面解释一下这个网页：</p>
 
-&lt;p&gt;你唯一能控制的，其实就是一堆零散的标签。HTML也就全是这些标签。&lt;/p&gt;
+<ol>
+  <li>首先是<code class="language-plaintext highlighter-rouge">&lt;!doctype html&gt;</code>声明和<code class="language-plaintext highlighter-rouge">&lt;html&gt;</code>标签，表明这是一个html文件(网页)。</li>
+  <li>然后是<code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>标签，<code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>标签的内容是不在浏览器主窗口显示的。</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>里面的<code class="language-plaintext highlighter-rouge">&lt;meta&gt;</code>标签的<code class="language-plaintext highlighter-rouge">charset属性</code>指定了这个网页的字符集是<code class="language-plaintext highlighter-rouge">UTF-8</code>，防止在一些愚蠢的的浏览器中显示乱码。</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;title&gt;</code>标签指定了浏览器的标题栏里面写些什么。比如“百度一下，你就知道”。</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;h1&gt;~&lt;h6&gt;</code>标签指定了多级标题。</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;p&gt;</code>标签里面放的是一个一个段落。</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;address&gt;</code>标签是为了指定这是一个联系方式。</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;footer&gt;</code>标签指定了页脚。</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;ul&gt;、&lt;li&gt;、&lt;a&gt;</code>标签是为了插入一组超链接。</li>
+</ol>
+
+<p>当然了，这些标签你都可以丢掉，只留下你想要的内容在网页上。不过要是在生产环境中你这么干，很可能你就被炒鱿鱼了。我们之所以要用这些标签，是为了让我们的网页显得专业，不要让人家一眼就看出来“这是一个外行写的”。</p>
 
-&lt;h2 id=&quot;section&quot;&gt;来写一个自我介绍吧&lt;/h2&gt;
+<h1 id="二css的作用">二、CSS的作用</h1>
+
+<p>因为只用html写出来的网页很丑，所以我们需要给那些标签加一些<code class="language-plaintext highlighter-rouge">样式</code>才行。这就是CSS要干的事。</p>
+
+<p>在<code class="language-plaintext highlighter-rouge">&lt;head&gt;标签</code>里面加上<code class="language-plaintext highlighter-rouge">&lt;style&gt;标签</code>然后写一些样式，我们还是先用例子说事：</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;&lt;/meta&gt;</span>
+        <span class="nt">&lt;title&gt;</span>Cheney的自我介绍<span class="nt">&lt;/title&gt;</span>
+        <span class="nt">&lt;style&gt;</span>
+        <span class="nc">.class1</span> <span class="p">{</span>
+                 <span class="nl">background-color</span><span class="p">:</span><span class="nx">black</span><span class="p">;</span> 
+               <span class="p">}</span> 
+        <span class="nt">&lt;/style&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+    	<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"class1"</span><span class="nt">&gt;</span>这是Cheney的自我介绍<span class="nt">&lt;/h1&gt;</span>
+    	<span class="nt">&lt;p&gt;</span>大家好，我是Cheney。这是一个自我介绍。<span class="nt">&lt;/p&gt;</span>
+    	<span class="nt">&lt;p&gt;</span>
+    		下面是我的联系方式<span class="nt">&lt;/br&gt;</span>
+    		<span class="nt">&lt;address&gt;</span>QQ:1152668787<span class="nt">&lt;/address&gt;</span>
+    		<span class="nt">&lt;address&gt;</span>电话：加Q以后自己来问<span class="nt">&lt;/address&gt;</span>
+    	<span class="nt">&lt;/p&gt;</span>
+    	<span class="nt">&lt;footer&gt;</span>
+    		<span class="nt">&lt;ul&gt;</span>
+    			<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://wangchenyu.net.cn"</span><span class="nt">&gt;</span>微晨风景<span class="nt">&lt;/a&gt;&lt;li&gt;</span>
+    			<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://www.itmanbu.com"</span><span class="nt">&gt;</span>IT漫步<span class="nt">&lt;/a&gt;&lt;li&gt;</span>
+    			<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://zuidi.me"</span><span class="nt">&gt;</span>最低么<span class="nt">&lt;/a&gt;&lt;li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/footer&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
 
-&lt;p&gt;下面是一个简单地自我介绍的示范：&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/meta&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Cheney的自我介绍&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-    	&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;这是Cheney的自我介绍&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-    	&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;大家好，我是Cheney。这是一个自我介绍。&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-    	&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;
-    		下面是我的联系方式&lt;span class=&quot;nt&quot;&gt;&amp;lt;/br&amp;gt;&lt;/span&gt;
-    		&lt;span class=&quot;nt&quot;&gt;&amp;lt;address&amp;gt;&lt;/span&gt;QQ:1152668787&lt;span class=&quot;nt&quot;&gt;&amp;lt;/address&amp;gt;&lt;/span&gt;
-    		&lt;span class=&quot;nt&quot;&gt;&amp;lt;address&amp;gt;&lt;/span&gt;电话：加Q以后自己来问&lt;span class=&quot;nt&quot;&gt;&amp;lt;/address&amp;gt;&lt;/span&gt;
-    	&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-    	&lt;span class=&quot;nt&quot;&gt;&amp;lt;footer&amp;gt;&lt;/span&gt;
-    		&lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
-    			&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://wangchenyu.net.cn&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;微晨风景&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;li&amp;gt;&lt;/span&gt;
-    			&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.itmanbu.com&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;IT漫步&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;li&amp;gt;&lt;/span&gt;
-    			&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://zuidi.me&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;最低么&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;li&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/footer&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<p>还是上面的自我介绍，只是我加了一个背景为黑的样式。我们可以在任意标签内指定class然后在style里面用.class { background-color:black; } 这种方式来引用。</p>
 
-&lt;p&gt;下面解释一下这个网页：&lt;/p&gt;
+<p>#三、W3school.com.cn</p>
 
-&lt;ol&gt;
-  &lt;li&gt;首先是&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;!doctype html&amp;gt;&lt;/code&gt;声明和&lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;&lt;/code&gt;标签，表明这是一个html文件(网页)。&lt;/li&gt;
-  &lt;li&gt;然后是&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt;标签，&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt;标签的内容是不在浏览器主窗口显示的。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt;里面的&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;meta&amp;gt;&lt;/code&gt;标签的&lt;code class=&quot;highlighter-rouge&quot;&gt;charset属性&lt;/code&gt;指定了这个网页的字符集是&lt;code class=&quot;highlighter-rouge&quot;&gt;UTF-8&lt;/code&gt;，防止在一些愚蠢的的浏览器中显示乱码。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;title&amp;gt;&lt;/code&gt;标签指定了浏览器的标题栏里面写些什么。比如“百度一下，你就知道”。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;h1&amp;gt;~&amp;lt;h6&amp;gt;&lt;/code&gt;标签指定了多级标题。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;p&amp;gt;&lt;/code&gt;标签里面放的是一个一个段落。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;address&amp;gt;&lt;/code&gt;标签是为了指定这是一个联系方式。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;footer&amp;gt;&lt;/code&gt;标签指定了页脚。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;ul&amp;gt;、&amp;lt;li&amp;gt;、&amp;lt;a&amp;gt;&lt;/code&gt;标签是为了插入一组超链接。&lt;/li&gt;
-&lt;/ol&gt;
+<p>打开<a href="http://www.w3school.com.cn">w3school</a>，然后点上面的<code class="language-plaintext highlighter-rouge">HTML/CSS</code>，再点左侧的<code class="language-plaintext highlighter-rouge">工具书</code>，然后你就可以看到所有的HTML标签，还有所有的CSS选择器、样式和属性。
+需要什么的时候，尽管拿就行了。</p>
 
-&lt;p&gt;当然了，这些标签你都可以丢掉，只留下你想要的内容在网页上。不过要是在生产环境中你这么干，很可能你就被炒鱿鱼了。我们之所以要用这些标签，是为了让我们的网页显得专业，不要让人家一眼就看出来“这是一个外行写的”。&lt;/p&gt;
-
-&lt;h1 id=&quot;css&quot;&gt;二、CSS的作用&lt;/h1&gt;
-
-&lt;p&gt;因为只用html写出来的网页很丑，所以我们需要给那些标签加一些&lt;code class=&quot;highlighter-rouge&quot;&gt;样式&lt;/code&gt;才行。这就是CSS要干的事。&lt;/p&gt;
-
-&lt;p&gt;在&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;标签&lt;/code&gt;里面加上&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;style&amp;gt;标签&lt;/code&gt;然后写一些样式，我们还是先用例子说事：&lt;/p&gt;
+<p>#四、关于浏览器</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/meta&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Cheney的自我介绍&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nc&quot;&gt;.class1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                 &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
-               &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-    	&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;class1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;这是Cheney的自我介绍&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
-    	&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;大家好，我是Cheney。这是一个自我介绍。&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-    	&lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;
-    		下面是我的联系方式&lt;span class=&quot;nt&quot;&gt;&amp;lt;/br&amp;gt;&lt;/span&gt;
-    		&lt;span class=&quot;nt&quot;&gt;&amp;lt;address&amp;gt;&lt;/span&gt;QQ:1152668787&lt;span class=&quot;nt&quot;&gt;&amp;lt;/address&amp;gt;&lt;/span&gt;
-    		&lt;span class=&quot;nt&quot;&gt;&amp;lt;address&amp;gt;&lt;/span&gt;电话：加Q以后自己来问&lt;span class=&quot;nt&quot;&gt;&amp;lt;/address&amp;gt;&lt;/span&gt;
-    	&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-    	&lt;span class=&quot;nt&quot;&gt;&amp;lt;footer&amp;gt;&lt;/span&gt;
-    		&lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
-    			&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://wangchenyu.net.cn&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;微晨风景&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;li&amp;gt;&lt;/span&gt;
-    			&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.itmanbu.com&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;IT漫步&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;li&amp;gt;&lt;/span&gt;
-    			&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://zuidi.me&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;最低么&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;li&amp;gt;&lt;/span&gt;
-            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/footer&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<p>如果在这种科技飞速进步的时代你还在固守着IE，这是一件非常悲哀的事——毕竟微软自己都放弃了。</p>
 
-&lt;p&gt;还是上面的自我介绍，只是我加了一个背景为黑的样式。我们可以在任意标签内指定class然后在style里面用.class { background-color:black; } 这种方式来引用。&lt;/p&gt;
+<p>从IE9开始才支持HTML5，而现在win10中微软不仅把新一代浏览器命名为Edge而且把IE藏到了一个难以找到的角落里。微软的大部分东西都挺好用的，比如Windows，Visual Studio，Office什么的，但是IE浏览器和执行PHP的IIS确实是一个败笔。当然了，我们也要感谢IE。毕竟，没有他我们用什么下载别的浏览器呢？也要感谢IIS，没有它nginx和apache的优势怎么显露呢？</p>
 
-&lt;p&gt;#三、W3school.com.cn&lt;/p&gt;
+<p>如果你要从事web开发那么你就得在自己电脑上装很多浏览器才行，但是不要乱装。国产浏览器基本上都没有自己的内核，基本上都只是用一个谷歌的内核加一个IE内核套一个自己做的皮罢了。</p>
 
-&lt;p&gt;打开&lt;a href=&quot;http://www.w3school.com.cn&quot;&gt;w3school&lt;/a&gt;，然后点上面的&lt;code class=&quot;highlighter-rouge&quot;&gt;HTML/CSS&lt;/code&gt;，再点左侧的&lt;code class=&quot;highlighter-rouge&quot;&gt;工具书&lt;/code&gt;，然后你就可以看到所有的HTML标签，还有所有的CSS选择器、样式和属性。
-需要什么的时候，尽管拿就行了。&lt;/p&gt;
+<p>目前这些浏览器是自己独特的内核：</p>
 
-&lt;p&gt;#四、关于浏览器&lt;/p&gt;
+<ol>
+  <li>IE浏览器</li>
+  <li>Chrome浏览器(谷歌浏览器)</li>
+  <li>Safari浏览器(苹果浏览器)</li>
+  <li>Firefox浏览器(火狐浏览器)</li>
+  <li>Opera浏览器(欧朋浏览器)</li>
+</ol>
 
-&lt;p&gt;如果在这种科技飞速进步的时代你还在固守着IE，这是一件非常悲哀的事——毕竟微软自己都放弃了。&lt;/p&gt;
+<p>目前这些浏览器<code class="language-plaintext highlighter-rouge">没有</code>自己的内核：</p>
 
-&lt;p&gt;从IE9开始才支持HTML5，而现在win10中微软不仅把新一代浏览器命名为Edge而且把IE藏到了一个难以找到的角落里。微软的大部分东西都挺好用的，比如Windows，Visual Studio，Office什么的，但是IE浏览器和执行PHP的IIS确实是一个败笔。当然了，我们也要感谢IE。毕竟，没有他我们用什么下载别的浏览器呢？也要感谢IIS，没有它nginx和apache的优势怎么显露呢？&lt;/p&gt;
+<ol>
+  <li>360安全/极速浏览器</li>
+  <li>猎豹浏览器</li>
+  <li>百度浏览器</li>
+  <li>QQ浏览器</li>
+  <li>遨游浏览器</li>
+  <li>uc浏览器</li>
+  <li>2345安全/极速浏览器</li>
+  <li>搜狗浏览器</li>
+  <li>桔子浏览器</li>
+  <li>其他国产浏览器</li>
+</ol>
 
-&lt;p&gt;如果你要从事web开发那么你就得在自己电脑上装很多浏览器才行，但是不要乱装。国产浏览器基本上都没有自己的内核，基本上都只是用一个谷歌的内核加一个IE内核套一个自己做的皮罢了。&lt;/p&gt;
+<p>他们的“极速模式”就是用的Chrome内核，“兼容模式”就是用的IE内核。所以不用浪费时间用国产浏览器测试网页兼容性了。</p>]]></content><author><name>cheney</name></author><category term="做网站" /><category term="UPC" /><summary type="html"><![CDATA[十年前做网站是一个非常奢侈的活，那时候没有什么工具，也没有什么一键搭建环境，而且服务器很贵，上网的人不多，所以需求也不大。 但是现在不一样了，各种编网页的工具还有自动化的东西也都有了。而且鼓励创新创业，所以基本上人人都可以免费拥有一个网站。]]></summary></entry><entry><title type="html">见面会</title><link href="https://upclinux.github.io/2015/10/11/first/" rel="alternate" type="text/html" title="见面会" /><published>2015-10-11T00:00:00+08:00</published><updated>2015-10-11T00:00:00+08:00</updated><id>https://upclinux.github.io/2015/10/11/first</id><content type="html" xml:base="https://upclinux.github.io/2015/10/11/first/"><![CDATA[<p>今天我们举办了一场“别开生面”的见面会。</p>
 
-&lt;p&gt;目前这些浏览器是自己独特的内核：&lt;/p&gt;
+<p><img src="/img/20151011.jpg" alt="见面会" /></p>
 
-&lt;ol&gt;
-  &lt;li&gt;IE浏览器&lt;/li&gt;
-  &lt;li&gt;Chrome浏览器(谷歌浏览器)&lt;/li&gt;
-  &lt;li&gt;Safari浏览器(苹果浏览器)&lt;/li&gt;
-  &lt;li&gt;Firefox浏览器(火狐浏览器)&lt;/li&gt;
-  &lt;li&gt;Opera浏览器(欧朋浏览器)&lt;/li&gt;
-&lt;/ol&gt;
+<p>就是这样“别开生面”。</p>
 
-&lt;p&gt;目前这些浏览器&lt;code class=&quot;highlighter-rouge&quot;&gt;没有&lt;/code&gt;自己的内核：&lt;/p&gt;
+<p>见面会应该是各社团的“例行公事”，相比之下，我们的见面会就更加特别。</p>
 
-&lt;ol&gt;
-  &lt;li&gt;360安全/极速浏览器&lt;/li&gt;
-  &lt;li&gt;猎豹浏览器&lt;/li&gt;
-  &lt;li&gt;百度浏览器&lt;/li&gt;
-  &lt;li&gt;QQ浏览器&lt;/li&gt;
-  &lt;li&gt;遨游浏览器&lt;/li&gt;
-  &lt;li&gt;uc浏览器&lt;/li&gt;
-  &lt;li&gt;2345安全/极速浏览器&lt;/li&gt;
-  &lt;li&gt;搜狗浏览器&lt;/li&gt;
-  &lt;li&gt;桔子浏览器&lt;/li&gt;
-  &lt;li&gt;其他国产浏览器&lt;/li&gt;
-&lt;/ol&gt;
+<p>首先是会长讲话。会长简单介绍了社团的特点，讲述了保持活跃即“冒泡”的重要性（人们总是更容易记住有突出特点的人和事儿），并且发放了“福利”。至于是什么福利，你懂得。</p>
 
-&lt;p&gt;他们的“极速模式”就是用的Chrome内核，“兼容模式”就是用的IE内核。所以不用浪费时间用国产浏览器测试网页兼容性了。&lt;/p&gt;</content><author><name>cheney</name></author><category term="UPC" /><summary>十年前做网站是一个非常奢侈的活，那时候没有什么工具，也没有什么一键搭建环境，而且服务器很贵，上网的人不多，所以需求也不大。
+<p>然后社团“老人”王思鼎、钟文分别介绍了在社团与自己折腾 Linux 系统的经历。此外，还有同时是本社团和其他社团活跃分子的——“电子狂魔”——机器人协会副会长姜子涵（并且见到了同时加入 Linux 协会和机器人协会的新同学）、“金牌课戴表”王晨宇<span class="blackout">当然顺便推销了戴尔品牌</span>等。</p>
 
-但是现在不一样了，各种编网页的工具还有自动化的东西也都有了。而且鼓励创新创业，所以基本上人人都可以免费拥有一个网站。</summary></entry><entry><title>见面会</title><link href="https://upclinux.github.io/2015/10/11/first/" rel="alternate" type="text/html" title="见面会" /><published>2015-10-11T00:00:00+00:00</published><updated>2015-10-11T00:00:00+00:00</updated><id>https://upclinux.github.io/2015/10/11/first</id><content type="html" xml:base="https://upclinux.github.io/2015/10/11/first/">&lt;p&gt;今天我们举办了一场“别开生面”的见面会。&lt;/p&gt;
+<p>接下来每位同学都进行了自我介绍。虽然大家可能仍然是互相不认识，但是只要坚持多活动，多“冒泡”，大家自然就能认识并且成为“高手”。</p>
 
-&lt;p&gt;&lt;img src=&quot;/img/20151011.jpg&quot; alt=&quot;见面会&quot; /&gt;&lt;/p&gt;
+<p>稍微遗憾的是，没有人承认自己是近期 QQ 群里的活跃分子“赵日天”和“叶良辰”（群名片）。不过后来才知道，他们其实是把自己的群名片忘了……</p>]]></content><author><name>vjudge1</name></author><category term="社团工作" /><category term="纳新" /><summary type="html"><![CDATA[今天我们举办了一场“别开生面”的见面会。]]></summary></entry><entry><title type="html">大一不让带电脑的话……</title><link href="https://upclinux.github.io/2015/10/01/do-against-power/" rel="alternate" type="text/html" title="大一不让带电脑的话……" /><published>2015-10-01T00:00:00+08:00</published><updated>2015-10-01T00:00:00+08:00</updated><id>https://upclinux.github.io/2015/10/01/do-against-power</id><content type="html" xml:base="https://upclinux.github.io/2015/10/01/do-against-power/"><![CDATA[<ul id="markdown-toc">
+  <li><a href="#方法一不合作" id="markdown-toc-方法一不合作">方法一：不合作</a></li>
+  <li><a href="#方法二机房" id="markdown-toc-方法二机房">方法二：机房</a></li>
+  <li><a href="#方法三加入一个nb的组织" id="markdown-toc-方法三加入一个nb的组织">方法三：加入一个NB的组织</a></li>
+  <li><a href="#方法四手机平板安卓" id="markdown-toc-方法四手机平板安卓">方法四：手机/平板（安卓）</a></li>
+  <li><a href="#方法五win810-平板" id="markdown-toc-方法五win810-平板">方法五：Win8/10 平板</a></li>
+  <li><a href="#方法六树莓派" id="markdown-toc-方法六树莓派">方法六：树莓派</a></li>
+  <li><a href="#从根本上解决问题" id="markdown-toc-从根本上解决问题">从根本上解决问题</a></li>
+</ul>
 
-&lt;p&gt;就是这样“别开生面”。&lt;/p&gt;
+<p>很多学院都有不成文的规定——“大一不允许带电脑”。不幸的是，需要电脑的课程都在不允许拥有电脑的大一开设，所以总要想一点对策才行。</p>
 
-&lt;p&gt;见面会应该是各社团的“例行公事”，相比之下，我们的见面会就更加特别。&lt;/p&gt;
+<p><span class="blackout">五毛党注意：请自觉不看黑条子里的文字，以免引发误会。</span></p>
 
-&lt;p&gt;首先是会长讲话。会长简单介绍了社团的特点，讲述了保持活跃即“冒泡”的重要性（人们总是更容易记住有突出特点的人和事儿），并且发放了“福利”。至于是什么福利，你懂得。&lt;/p&gt;
+<p>今天我们不讨论这条规定是否合法合规，只讨论一些技术性的对策<span class="blackout">，否则会引出一篇足以查水表的长文。简而言之，无论导员采取了怎样极端和不人道的措施，只要“不出事儿”，导员是不会“下台”的……但是换成你就不一样了</span>。</p>
 
-&lt;p&gt;然后社团“老人”王思鼎、钟文分别介绍了在社团与自己折腾 Linux 系统的经历。此外，还有同时是本社团和其他社团活跃分子的——“电子狂魔”——机器人协会副会长姜子涵（并且见到了同时加入 Linux 协会和机器人协会的新同学）、“金牌课戴表”王晨宇&lt;span class=&quot;blackout&quot;&gt;当然顺便推销了戴尔品牌&lt;/span&gt;等。&lt;/p&gt;
+<h1 id="方法一不合作">方法一：不合作</h1>
 
-&lt;p&gt;接下来每位同学都进行了自我介绍。虽然大家可能仍然是互相不认识，但是只要坚持多活动，多“冒泡”，大家自然就能认识并且成为“高手”。&lt;/p&gt;
+<p>既然导员不让带电脑是为了多出去学习，那么我们带电脑，但是<strong>绝对不在宿舍用</strong>，只在外面使用（而且是学习），难道导员还会追到自习室去没收你的电脑吗？<span class="blackout">如果导员翻你柜子，那么你可以主动退学然后重新高考，免得以后后悔。</span></p>
 
-&lt;p&gt;稍微遗憾的是，没有人承认自己是近期 QQ 群里的活跃分子“赵日天”和“叶良辰”（群名片）。不过后来才知道，他们其实是把自己的群名片忘了……&lt;/p&gt;</content><author><name>vjudge1</name></author><category term="纳新" /><summary>今天我们举办了一场“别开生面”的见面会。</summary></entry><entry><title>大一不让带电脑的话……</title><link href="https://upclinux.github.io/2015/10/01/do-against-power/" rel="alternate" type="text/html" title="大一不让带电脑的话……" /><published>2015-10-01T00:00:00+00:00</published><updated>2015-10-01T00:00:00+00:00</updated><id>https://upclinux.github.io/2015/10/01/do-against-power</id><content type="html" xml:base="https://upclinux.github.io/2015/10/01/do-against-power/">&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;方法一：不合作&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;方法二：机房&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#nb&quot; id=&quot;markdown-toc-nb&quot;&gt;方法三：加入一个NB的组织&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;方法四：手机/平板（安卓）&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#win810-&quot; id=&quot;markdown-toc-win810-&quot;&gt;方法五：Win8/10 平板&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;方法六：树莓派&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;从根本上解决问题&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<h1 id="方法二机房">方法二：机房</h1>
 
-&lt;p&gt;很多学院都有不成文的规定——“大一不允许带电脑”。不幸的是，需要电脑的课程都在不允许拥有电脑的大一开设，所以总要想一点对策才行。&lt;/p&gt;
+<p>机房几乎是无电脑新生的<s>除了网吧</s>唯一选择，而且不要钱，所以只要不做违法事情就可以随便用。然而电脑里的东西一重启就没了——要注意保存劳动成果。</p>
 
-&lt;p&gt;&lt;span class=&quot;blackout&quot;&gt;五毛党注意：请自觉不看黑条子里的文字，以免引发误会。&lt;/span&gt;&lt;/p&gt;
+<p>图书馆机房是XP，中午不到12点关门。如果想用充分利用中午时间，可以去多媒体机房（图书馆东侧，基础实验楼D），它们中午不关门。</p>
 
-&lt;p&gt;今天我们不讨论这条规定是否合法合规，只讨论一些技术性的对策&lt;span class=&quot;blackout&quot;&gt;，否则会引出一篇足以查水表的长文。简而言之，无论导员采取了怎样极端和不人道的措施，只要“不出事儿”，导员是不会“下台”的……但是换成你就不一样了&lt;/span&gt;。&lt;/p&gt;
+<p>因为大一都不让带电脑，所以一定要考虑到“万众一心”的情况。毕竟学校面积不大，干啥都容易扎堆。</p>
 
-&lt;h1 id=&quot;section&quot;&gt;方法一：不合作&lt;/h1&gt;
+<p>如果你在用自己的一套工具，例如Sublime Text（知名编辑器），那么最好预备一个U盘，学点批处理知识，自动配置，或者干脆用自己的电脑，毕竟每次启动电脑配置开发环境是一件很蛋疼的事儿。</p>
 
-&lt;p&gt;既然导员不让带电脑是为了多出去学习，那么我们带电脑，但是&lt;strong&gt;绝对不在宿舍用&lt;/strong&gt;，只在外面使用（而且是学习），难道导员还会追到自习室去没收你的电脑吗？&lt;span class=&quot;blackout&quot;&gt;如果导员翻你柜子，那么你可以主动退学然后重新高考，免得以后后悔。&lt;/span&gt;&lt;/p&gt;
+<p>如果需要Linux，机房当然没有，不过某些机房未从USB启动（这个需要自己去试），启动之后手动设置IP和DNS即可上网。</p>
 
-&lt;h1 id=&quot;section-1&quot;&gt;方法二：机房&lt;/h1&gt;
+<p>有些机房有VMware，只不过因为机房电脑配置不高，并且还原卡严重影响电脑性能（硬盘读取速度33MB/s），所以不推荐使用。实在要用，可以考虑Xubuntu等适合低配置电脑的系统。下载ISO映像很费时间，所以U盘当然是必备品。</p>
 
-&lt;p&gt;机房几乎是无电脑新生的&lt;s&gt;除了网吧&lt;/s&gt;唯一选择，而且不要钱，所以只要不做违法事情就可以随便用。然而电脑里的东西一重启就没了——要注意保存劳动成果。&lt;/p&gt;
+<h1 id="方法三加入一个nb的组织">方法三：加入一个NB的组织</h1>
 
-&lt;p&gt;图书馆机房是XP，中午不到12点关门。如果想用充分利用中午时间，可以去多媒体机房（图书馆东侧，基础实验楼D），它们中午不关门。&lt;/p&gt;
+<p>加入新闻网、新媒体工作室、ACM俱乐部、飞思卡尔实验室等组织，你就有免费电脑用了，只不过你要为了这些事业而奋斗。</p>
 
-&lt;p&gt;因为大一都不让带电脑，所以一定要考虑到“万众一心”的情况。毕竟学校面积不大，干啥都容易扎堆。&lt;/p&gt;
+<h1 id="方法四手机平板安卓">方法四：手机/平板（安卓）</h1>
 
-&lt;p&gt;如果你在用自己的一套工具，例如Sublime Text（知名编辑器），那么最好预备一个U盘，学点批处理知识，自动配置，或者干脆用自己的电脑，毕竟每次启动电脑配置开发环境是一件很蛋疼的事儿。&lt;/p&gt;
+<p>手机和平板当然不能当作电脑来用，但是如果仅仅是为了应付C语言作业，倒是可以利用一下。</p>
 
-&lt;p&gt;如果需要Linux，机房当然没有，不过某些机房未从USB启动（这个需要自己去试），启动之后手动设置IP和DNS即可上网。&lt;/p&gt;
+<p>如果是安卓手机和平板，请安装两个软件：C4droid和GCC for C4droid，就可以在手机上写C语言程序了。虽然老师们很不喜欢甚至讨厌学生这样做——手机码字那么辛苦，谁还乐意认真调试呢，但是其实我们<s>也不想这样麻烦</s>就是想装个酷<span class="blackout">其实都是权力滥用造成的</span>。至于输入法，搜狗应该就很难用了，所以要换个方便打符号的输入法。</p>
 
-&lt;p&gt;有些机房有VMware，只不过因为机房电脑配置不高，并且还原卡严重影响电脑性能（硬盘读取速度33MB/s），所以不推荐使用。实在要用，可以考虑Xubuntu等适合低配置电脑的系统。下载ISO映像很费时间，所以U盘当然是必备品。&lt;/p&gt;
+<p>鉴于本网站放在了美帝的服务器上，美帝有个叫<a href="https://zh.wikipedia.org/wiki/數字千年版權法">DMCA</a>的法律，所以我们就不贴盗版的下载地址了。大家可以去找百度“c4droid吧”。</p>
 
-&lt;h1 id=&quot;nb&quot;&gt;方法三：加入一个NB的组织&lt;/h1&gt;
+<p>至于其他系统，我相信没有人愿意付钱买正版软件，所以就不讨论了。</p>
 
-&lt;p&gt;加入新闻网、新媒体工作室、ACM俱乐部、飞思卡尔实验室等组织，你就有免费电脑用了，只不过你要为了这些事业而奋斗。&lt;/p&gt;
+<h1 id="方法五win810-平板">方法五：Win8/10 平板</h1>
 
-&lt;h1 id=&quot;section-2&quot;&gt;方法四：手机/平板（安卓）&lt;/h1&gt;
+<p>高质量的 Win8/10 确实不便宜，但是国产货几百就能搞定。如果有钱的话，为什么不试试呢？</p>
 
-&lt;p&gt;手机和平板当然不能当作电脑来用，但是如果仅仅是为了应付C语言作业，倒是可以利用一下。&lt;/p&gt;
+<p>不管你是不是土豪，在<s>败家</s>花钱之前记得一定要问问社团里懂行的同学，否则容易被坑……</p>
 
-&lt;p&gt;如果是安卓手机和平板，请安装两个软件：C4droid和GCC for C4droid，就可以在手机上写C语言程序了。虽然老师们很不喜欢甚至讨厌学生这样做——手机码字那么辛苦，谁还乐意认真调试呢，但是其实我们&lt;s&gt;也不想这样麻烦&lt;/s&gt;就是想装个酷&lt;span class=&quot;blackout&quot;&gt;其实都是权力滥用造成的&lt;/span&gt;。至于输入法，搜狗应该就很难用了，所以要换个方便打符号的输入法。&lt;/p&gt;
+<h1 id="方法六树莓派">方法六：树莓派</h1>
 
-&lt;p&gt;鉴于本网站放在了美帝的服务器上，美帝有个叫&lt;a href=&quot;https://zh.wikipedia.org/wiki/數字千年版權法&quot;&gt;DMCA&lt;/a&gt;的法律，所以我们就不贴盗版的下载地址了。大家可以去找百度“c4droid吧”。&lt;/p&gt;
+<p>前方土豪预警——</p>
 
-&lt;p&gt;至于其他系统，我相信没有人愿意付钱买正版软件，所以就不讨论了。&lt;/p&gt;
+<p>树莓派是一个能跑 Linux 系统的卡片电脑。树莓派可以引出一个专门的话题，但是本文纯粹是为了当作一台电脑来用。</p>
 
-&lt;h1 id=&quot;win810-&quot;&gt;方法五：Win8/10 平板&lt;/h1&gt;
+<p>那么本文就从一个电脑替代品的角度来讨论树莓派的优劣。</p>
 
-&lt;p&gt;高质量的 Win8/10 确实不便宜，但是国产货几百就能搞定。如果有钱的话，为什么不试试呢？&lt;/p&gt;
+<p>优点：</p>
 
-&lt;p&gt;不管你是不是土豪，在&lt;s&gt;败家&lt;/s&gt;花钱之前记得一定要问问社团里懂行的同学，否则容易被坑……&lt;/p&gt;
+<ol>
+  <li>一个跑着 Linux 系统的电脑。所以可以像电脑那样接个键盘鼠标，使用 Linux 系统完成日常工作。</li>
+  <li>易于携带，易于隐蔽。</li>
+  <li>等你有了电脑之后，可以拿树莓派做更多好玩的事儿，特别是混进了与电子有关的社团之后……<span class="blackout">假如有朝一日你玩够了，还可以把它改造成一个你懂得的路由器，投入到实际应用中。</span></li>
+</ol>
 
-&lt;h1 id=&quot;section-3&quot;&gt;方法六：树莓派&lt;/h1&gt;
+<p>缺点：</p>
 
-&lt;p&gt;前方土豪预警——&lt;/p&gt;
+<ol>
+  <li>只能跑 Linux 系统。不支持 Windows，也就等于不支持那个<span class="blackout">可以看阿姨没穿衣服的</span>IE浏览器。注意，树莓派2倒是支持Windows 10，只不过那是专门为物联网设计的版本，不是桌面版。</li>
+  <li>派不带屏幕。买屏幕的话就太贵了（所以建议搞个二手的），而且分辨率明显不如电脑。</li>
+  <li>配置跟电脑是没法比的，不适合经常跑桌面，也不适合跑大软件。</li>
+</ol>
 
-&lt;p&gt;树莓派是一个能跑 Linux 系统的卡片电脑。树莓派可以引出一个专门的话题，但是本文纯粹是为了当作一台电脑来用。&lt;/p&gt;
+<p>因为新手对电子行业不了解，容易买到不需要和不合适的东西，所以，无论你是不是土豪，请先多打听打听消息。</p>
 
-&lt;p&gt;那么本文就从一个电脑替代品的角度来讨论树莓派的优劣。&lt;/p&gt;
+<h1 id="从根本上解决问题">从根本上解决问题</h1>
 
-&lt;p&gt;优点：&lt;/p&gt;
+<p><span class="blackout">引用“反华势力”爱打的一句嘴炮——“这一定是体制问题”。</span></p>
 
-&lt;ol&gt;
-  &lt;li&gt;一个跑着 Linux 系统的电脑。所以可以像电脑那样接个键盘鼠标，使用 Linux 系统完成日常工作。&lt;/li&gt;
-  &lt;li&gt;易于携带，易于隐蔽。&lt;/li&gt;
-  &lt;li&gt;等你有了电脑之后，可以拿树莓派做更多好玩的事儿，特别是混进了与电子有关的社团之后……&lt;span class=&quot;blackout&quot;&gt;假如有朝一日你玩够了，还可以把它改造成一个你懂得的路由器，投入到实际应用中。&lt;/span&gt;&lt;/li&gt;
-&lt;/ol&gt;
+<p>如果不能取消“大一不让带电脑”<span class="blackout">（阻止滥用权力）</span>，或者不把需要电脑的课程都调到大二去上<span class="blackout">（抑制需求）</span>，这个矛盾是解决不了的。所以，受不了的话，<span class="blackout">赶快出国念书去吧</span>！</p>]]></content><author><name>vjudge1</name></author><category term="杂谈" /><category term="UPC" /><summary type="html"><![CDATA[很多学院都有不成文的规定——“大一不允许带电脑”。不幸的是，需要电脑的课程都在不允许拥有电脑的大一开设，所以总要想一点对策才行。]]></summary></entry><entry><title type="html">2015纳新</title><link href="https://upclinux.github.io/2015/09/23/new/" rel="alternate" type="text/html" title="2015纳新" /><published>2015-09-23T00:00:00+08:00</published><updated>2015-09-23T00:00:00+08:00</updated><id>https://upclinux.github.io/2015/09/23/new</id><content type="html" xml:base="https://upclinux.github.io/2015/09/23/new/"><![CDATA[<p>经过三天的“百团大战”，协会2015年纳新工作顺利结束。</p>
 
-&lt;p&gt;缺点：&lt;/p&gt;
+<p>作为一个由“高手”（我们一点都没吹牛——“高手”上面有“专家”，“专家”上面有“大师”……）组成的社团，今年的纳新仍然保持“低调”。不过我们仍然吸引了众多新生加入。</p>
 
-&lt;ol&gt;
-  &lt;li&gt;只能跑 Linux 系统。不支持 Windows，也就等于不支持那个&lt;span class=&quot;blackout&quot;&gt;可以看阿姨没穿衣服的&lt;/span&gt;IE浏览器。注意，树莓派2倒是支持Windows 10，只不过那是专门为物联网设计的版本，不是桌面版。&lt;/li&gt;
-  &lt;li&gt;派不带屏幕。买屏幕的话就太贵了（所以建议搞个二手的），而且分辨率明显不如电脑。&lt;/li&gt;
-  &lt;li&gt;配置跟电脑是没法比的，不适合经常跑桌面，也不适合跑大软件。&lt;/li&gt;
-&lt;/ol&gt;
+<p><img src="/img/2015-09-23-new/IMG20150920103352.jpg" alt="纳新1" />
+<small>一群饶有兴趣的新生</small></p>
 
-&lt;p&gt;因为新手对电子行业不了解，容易买到不需要和不合适的东西，所以，无论你是不是土豪，请先多打听打听消息。&lt;/p&gt;
+<p><img src="/img/2015-09-23-new/IMG20150920121959.jpg" alt="纳新2" />
+<small>协会的岳同学在向新生展示 Linux 桌面</small></p>
 
-&lt;h1 id=&quot;section-4&quot;&gt;从根本上解决问题&lt;/h1&gt;
+<p>本次纳新还有几件小事：</p>
 
-&lt;p&gt;&lt;span class=&quot;blackout&quot;&gt;引用“反华势力”爱打的一句嘴炮——“这一定是体制问题”。&lt;/span&gt;&lt;/p&gt;
+<ul>
+  <li>本次纳新遇到了一个同学，他用过名为 veket 的 Linux 的发行版。说明高手就在民间。</li>
+  <li>本次纳新纳到了美女，只不过在拍照留念的时候，恰好有一位:guardsman:路过，恰好挡住了妹子:weary:……（可以买彩票去了）</li>
+  <li>你以为只有一个美女吗？不要悲观，其实我们还纳到好几个呢！</li>
+  <li>有一个外国朋友看到了“Linux”字样，表示自己也曾在自己电脑上玩过 VMware……协会立马升格为国际化协会！:smiley:</li>
+  <li>好多人在路过时因为不认识 Linux，直接念“自由软件协会”，再一次证明我们是高手（高到一般人看不懂:smiling_imp:）。</li>
+</ul>
 
-&lt;p&gt;如果不能取消“大一不让带电脑”&lt;span class=&quot;blackout&quot;&gt;（阻止滥用权力）&lt;/span&gt;，或者不把需要电脑的课程都调到大二去上&lt;span class=&quot;blackout&quot;&gt;（抑制需求）&lt;/span&gt;，这个矛盾是解决不了的。所以，受不了的话，&lt;span class=&quot;blackout&quot;&gt;赶快出国念书去吧&lt;/span&gt;！&lt;/p&gt;</content><author><name>vjudge1</name></author><category term="UPC" /><summary>很多学院都有不成文的规定——“大一不允许带电脑”。不幸的是，需要电脑的课程都在不允许拥有电脑的大一开设，所以总要想一点对策才行。</summary></entry><entry><title>2015纳新</title><link href="https://upclinux.github.io/2015/09/23/new/" rel="alternate" type="text/html" title="2015纳新" /><published>2015-09-23T00:00:00+00:00</published><updated>2015-09-23T00:00:00+00:00</updated><id>https://upclinux.github.io/2015/09/23/new</id><content type="html" xml:base="https://upclinux.github.io/2015/09/23/new/">&lt;p&gt;经过三天的“百团大战”，协会2015年纳新工作顺利结束。&lt;/p&gt;
+<p><img src="/img/2015-09-23-new/poster.jpg" alt="纳新海报" />
+<br /><small>纳新海报</small></p>
 
-&lt;p&gt;作为一个由“高手”（我们一点都没吹牛——“高手”上面有“专家”，“专家”上面有“大师”……）组成的社团，今年的纳新仍然保持“低调”。不过我们仍然吸引了众多新生加入。&lt;/p&gt;
+<p>协会从成立初到现在，已经接近两年。我们度过了最困难的时刻，并且建立了属于自己的线上基础设施。相信在<s>老大哥</s>会长和各位新老同学的共同努力之下，协会能够提高自身<s>姿势</s>知识水平，继续发展壮大，成为一个既能装13，又有技术的社团。</p>]]></content><author><name>vjudge1</name></author><category term="社团工作" /><category term="纳新" /><summary type="html"><![CDATA[经过三天的“百团大战”，协会2015年纳新工作顺利结束。]]></summary></entry><entry><title type="html">石大与 Linux</title><link href="https://upclinux.github.io/2015/09/20/upc/" rel="alternate" type="text/html" title="石大与 Linux" /><published>2015-09-20T03:42:00+08:00</published><updated>2015-09-20T03:42:00+08:00</updated><id>https://upclinux.github.io/2015/09/20/upc</id><content type="html" xml:base="https://upclinux.github.io/2015/09/20/upc/"><![CDATA[<ul id="markdown-toc">
+  <li><a href="#qq" id="markdown-toc-qq">QQ</a></li>
+  <li><a href="#校园网" id="markdown-toc-校园网">校园网</a>    <ul>
+      <li><a href="#ipv6" id="markdown-toc-ipv6">IPv6</a></li>
+      <li><a href="#servers" id="markdown-toc-servers">Servers</a></li>
+    </ul>
+  </li>
+  <li><a href="#机房" id="markdown-toc-机房">机房</a></li>
+  <li><a href="#校内网站" id="markdown-toc-校内网站">校内网站</a></li>
+  <li><a href="#教学" id="markdown-toc-教学">教学</a></li>
+  <li><a href="#社团活动" id="markdown-toc-社团活动">社团活动</a></li>
+</ul>
 
-&lt;p&gt;&lt;img src=&quot;/img/2015-09-23-new/IMG20150920103352.jpg&quot; alt=&quot;纳新1&quot; /&gt;
-&lt;small&gt;一群饶有兴趣的新生&lt;/small&gt;&lt;/p&gt;
+<p>明天就是石大一年一度的“百团大战”。在此，我为新生和老生总结一下在石油大学内 Linux 的支持情况。</p>
 
-&lt;p&gt;&lt;img src=&quot;/img/2015-09-23-new/IMG20150920121959.jpg&quot; alt=&quot;纳新2&quot; /&gt;
-&lt;small&gt;协会的岳同学在向新生展示 Linux 桌面&lt;/small&gt;&lt;/p&gt;
+<h1 id="qq">QQ</h1>
 
-&lt;p&gt;本次纳新还有几件小事：&lt;/p&gt;
+<p>我们在“入门指引”中已经提出了 QQ 的解决方案。<a href="https://upclinux.github.io/intro/03/qq/">这里</a>是详细介绍。</p>
 
-&lt;ul&gt;
-  &lt;li&gt;本次纳新遇到了一个同学，他用过名为 veket 的 Linux 的发行版。说明高手就在民间。&lt;/li&gt;
-  &lt;li&gt;本次纳新纳到了美女，只不过在拍照留念的时候，恰好有一位:guardsman:路过，恰好挡住了妹子:weary:……（可以买彩票去了）&lt;/li&gt;
-  &lt;li&gt;你以为只有一个美女吗？不要悲观，其实我们还纳到好几个呢！&lt;/li&gt;
-  &lt;li&gt;有一个外国朋友看到了“Linux”字样，表示自己也曾在自己电脑上玩过 VMware……协会立马升格为国际化协会！:smiley:&lt;/li&gt;
-  &lt;li&gt;好多人在路过时因为不认识 Linux，直接念“自由软件协会”，再一次证明我们是高手（高到一般人看不懂:smiling_imp:）。&lt;/li&gt;
-&lt;/ul&gt;
+<h1 id="校园网">校园网</h1>
 
-&lt;p&gt;&lt;img src=&quot;/img/2015-09-23-new/poster.jpg&quot; alt=&quot;纳新海报&quot; /&gt;
-&lt;br /&gt;&lt;small&gt;纳新海报&lt;/small&gt;&lt;/p&gt;
+<p>石油大学有四家运营商：校园网、联通网、移动网、电信网。这四家都采用网页认证，因此当然支持 Linux。</p>
 
-&lt;p&gt;协会从成立初到现在，已经接近两年。我们度过了最困难的时刻，并且建立了属于自己的线上基础设施。相信在&lt;s&gt;老大哥&lt;/s&gt;会长和各位新老同学的共同努力之下，协会能够提高自身&lt;s&gt;姿势&lt;/s&gt;知识水平，继续发展壮大，成为一个既能装13，又有技术的社团。&lt;/p&gt;</content><author><name>vjudge1</name></author><category term="纳新" /><summary>经过三天的“百团大战”，协会2015年纳新工作顺利结束。</summary></entry><entry><title>石大与 Linux</title><link href="https://upclinux.github.io/2015/09/19/upc/" rel="alternate" type="text/html" title="石大与 Linux" /><published>2015-09-19T19:42:00+00:00</published><updated>2015-09-19T19:42:00+00:00</updated><id>https://upclinux.github.io/2015/09/19/upc</id><content type="html" xml:base="https://upclinux.github.io/2015/09/19/upc/">&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#qq&quot; id=&quot;markdown-toc-qq&quot;&gt;QQ&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;校园网&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#ipv6&quot; id=&quot;markdown-toc-ipv6&quot;&gt;IPv6&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#servers&quot; id=&quot;markdown-toc-servers&quot;&gt;Servers&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;机房&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;校内网站&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;教学&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;社团活动&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<h2 id="ipv6">IPv6</h2>
 
-&lt;p&gt;明天就是石大一年一度的“百团大战”。在此，我为新生和老生总结一下在石油大学内 Linux 的支持情况。&lt;/p&gt;
+<p>Linux 很早就支持 IPv6 了，所以在系统层面上不会出现任何问题。</p>
 
-&lt;h1 id=&quot;qq&quot;&gt;QQ&lt;/h1&gt;
+<p>石大支持 IPv6，可以从多媒体机房和宿舍（宿舍网口）访问。宿舍 IPv6 无需认证，但是需要使用交换机连接到自己电脑（因为目前很少有支持 IPv6 的家用路由器）。</p>
 
-&lt;p&gt;我们在“入门指引”中已经提出了 QQ 的解决方案。&lt;a href=&quot;https://upclinux.github.io/intro/03/qq/&quot;&gt;这里&lt;/a&gt;是详细介绍。&lt;/p&gt;
+<p>联通网、移动网、电信网和 UPC 热点都不支持 IPv6。</p>
 
-&lt;h1 id=&quot;section&quot;&gt;校园网&lt;/h1&gt;
+<p>不幸的是，从 2014 年 8 月份开始，石大的 IPv6 经常抽风，而且最近已经几乎无法正常使用了。</p>
 
-&lt;p&gt;石油大学有四家运营商：校园网、联通网、移动网、电信网。这四家都采用网页认证，因此当然支持 Linux。&lt;/p&gt;
+<h2 id="servers">Servers</h2>
 
-&lt;h2 id=&quot;ipv6&quot;&gt;IPv6&lt;/h2&gt;
+<p>由于嫌 Linux “麻烦”，所以很多网站都是架在 Windows 服务器上面的。</p>
 
-&lt;p&gt;Linux 很早就支持 IPv6 了，所以在系统层面上不会出现任何问题。&lt;/p&gt;
+<p>尽管教务系统架在了 Linux 服务器上面，但是它是学校内故障率最高的网站，没有之一。</p>
 
-&lt;p&gt;石大支持 IPv6，可以从多媒体机房和宿舍（宿舍网口）访问。宿舍 IPv6 无需认证，但是需要使用交换机连接到自己电脑（因为目前很少有支持 IPv6 的家用路由器）。&lt;/p&gt;
+<h1 id="机房">机房</h1>
 
-&lt;p&gt;联通网、移动网、电信网和 UPC 热点都不支持 IPv6。&lt;/p&gt;
+<p>机房当然没有 Linux 系统，而且，因为电脑里面有还原卡，所以不知道虚拟机能不能跑起来。</p>
 
-&lt;p&gt;不幸的是，从 2014 年 8 月份开始，石大的 IPv6 经常抽风，而且最近已经几乎无法正常使用了。&lt;/p&gt;
+<p>如果你加入了 <a href="http://acm.upc.edu.cn">ACM 俱乐部</a>，那么你会有一台可以用于随便折腾的电脑——虽然唐大官希望你用那些电脑专心训练。</p>
 
-&lt;h2 id=&quot;servers&quot;&gt;Servers&lt;/h2&gt;
+<h1 id="校内网站">校内网站</h1>
 
-&lt;p&gt;由于嫌 Linux “麻烦”，所以很多网站都是架在 Windows 服务器上面的。&lt;/p&gt;
+<p>校内虽然很多网站还在用着落后的 ASP，但是大多数网站还是能在 Linux 中使用的（因为仅仅是个 CMS 而已）。</p>
 
-&lt;p&gt;尽管教务系统架在了 Linux 服务器上面，但是它是学校内故障率最高的网站，没有之一。&lt;/p&gt;
+<p>已知以下网站不支持 Linux：</p>
 
-&lt;h1 id=&quot;section-1&quot;&gt;机房&lt;/h1&gt;
+<ol>
+  <li><a href="http://jwxt.upc.edu.cn/jwxt">教务系统</a>：我们提出了一个解决方案，但是目前教务处并未采纳。不过问题仍然可以从浏览器层面上解决。详情见<a href="https://github.com/upclinux/fuckjwxt">这里</a>。</li>
+  <li><a href="http://tcpe.upc.edu.cn:8080/Login.asp">大学物理实验预约系统</a>：不知网站的设计者是怎样想的，里面有很多反人类的设计。<strong>注意，不要尝试用手机登录，而且一定要严格按照网站的要求“退出”，否则以后你再也登不进去了！</strong></li>
+  <li><a href="http://print.upc.edu.cn">联创自助打印</a>：Linux 和苹果都不支持打印——只能用 Windows。</li>
+  <li><a href="http://netkuu.upc.edu.cn">校园视频</a>：“云窗”是一款臭名昭著的软件，当然不支持 Linux。</li>
+  <li><a href="http://iptv.upc.edu.cn">IPTV</a>：貌似 Linux 下没有解码器。</li>
+</ol>
 
-&lt;p&gt;机房当然没有 Linux 系统，而且，因为电脑里面有还原卡，所以不知道虚拟机能不能跑起来。&lt;/p&gt;
+<h1 id="教学">教学</h1>
 
-&lt;p&gt;如果你加入了 &lt;a href=&quot;http://acm.upc.edu.cn&quot;&gt;ACM 俱乐部&lt;/a&gt;，那么你会有一台可以用于随便折腾的电脑——虽然唐大官希望你用那些电脑专心训练。&lt;/p&gt;
+<p>绝大多数老师当然在用 Windows，毕竟正版不要钱，而且还用得习惯。</p>
 
-&lt;h1 id=&quot;section-2&quot;&gt;校内网站&lt;/h1&gt;
+<p>我们学校有一位几乎只用 Linux（Fedora 和 CentOS）的老师，叫做亓鹏，是理学院的一位老师。我们已经在<a href="/2014/04/22/study-in-linux/">之前的博文</a>中进行了一些介绍。</p>
 
-&lt;p&gt;校内虽然很多网站还在用着落后的 ASP，但是大多数网站还是能在 Linux 中使用的（因为仅仅是个 CMS 而已）。&lt;/p&gt;
+<h1 id="社团活动">社团活动</h1>
 
-&lt;p&gt;已知以下网站不支持 Linux：&lt;/p&gt;
+<p>由于 Linux 缺少同重量级的软件，所以在以下方面坚持用 Linux 会很难和其他人谈笑风生。</p>
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;http://jwxt.upc.edu.cn/jwxt&quot;&gt;教务系统&lt;/a&gt;：我们提出了一个解决方案，但是目前教务处并未采纳。不过问题仍然可以从浏览器层面上解决。详情见&lt;a href=&quot;https://github.com/upclinux/fuckjwxt&quot;&gt;这里&lt;/a&gt;。&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://tcpe.upc.edu.cn:8080/Login.asp&quot;&gt;大学物理实验预约系统&lt;/a&gt;：不知网站的设计者是怎样想的，里面有很多反人类的设计。&lt;strong&gt;注意，不要尝试用手机登录，而且一定要严格按照网站的要求“退出”，否则以后你再也登不进去了！&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://print.upc.edu.cn&quot;&gt;联创自助打印&lt;/a&gt;：Linux 和苹果都不支持打印——只能用 Windows。&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://netkuu.upc.edu.cn&quot;&gt;校园视频&lt;/a&gt;：“云窗”是一款臭名昭著的软件，当然不支持 Linux。&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://iptv.upc.edu.cn&quot;&gt;IPTV&lt;/a&gt;：貌似 Linux 下没有解码器。&lt;/li&gt;
-&lt;/ol&gt;
+<ul>
+  <li>Adobe 系列：Photoshop（不解释）、Illustrator、Premiere、After Effects……</li>
+  <li>Keil*（单片机）</li>
+  <li>AutoCAD（不解释）</li>
+  <li>会声会影*</li>
+  <li>英雄联盟*</li>
+  <li>……</li>
+</ul>
 
-&lt;h1 id=&quot;section-3&quot;&gt;教学&lt;/h1&gt;
+<p>（标“*”表示苹果系统也没有相同软件。）</p>
 
-&lt;p&gt;绝大多数老师当然在用 Windows，毕竟正版不要钱，而且还用得习惯。&lt;/p&gt;
+<p>不过幸运的是，我们已经有很多人有能力装黑苹果（在普通电脑上运行的苹果系统），所以也可以换成在技术上和 Linux 有“亲戚”关系的 OS X。</p>]]></content><author><name>vjudge1</name></author><category term="社团工作" /><category term="UPC" /><summary type="html"><![CDATA[明天就是石大一年一度的“百团大战”。在此，我为新生和老生总结一下在石油大学内 Linux 的支持情况。]]></summary></entry><entry><title type="html">某会长是如何接触 Linux 的</title><link href="https://upclinux.github.io/2015/06/06/freemind/" rel="alternate" type="text/html" title="某会长是如何接触 Linux 的" /><published>2015-06-06T18:42:00+08:00</published><updated>2015-06-06T18:42:00+08:00</updated><id>https://upclinux.github.io/2015/06/06/freemind</id><content type="html" xml:base="https://upclinux.github.io/2015/06/06/freemind/"><![CDATA[<p>“会长好像什么都见过，什么都听说过！”</p>
 
-&lt;p&gt;我们学校有一位几乎只用 Linux（Fedora 和 CentOS）的老师，叫做亓鹏，是理学院的一位老师。我们已经在&lt;a href=&quot;/2014/04/22/study-in-linux/&quot;&gt;之前的博文&lt;/a&gt;中进行了一些介绍。&lt;/p&gt;
+<p>那到底是怎样见过，怎样听说过的呢？本文来揭个底——</p>
 
-&lt;h1 id=&quot;section-4&quot;&gt;社团活动&lt;/h1&gt;
+<p>先向大家介绍个软件——Freemind。这个软件可以画思维导图，而且支持 Windows/Linux/Mac 三大平台。本文的导图就是用这个软件来绘制的。</p>
 
-&lt;p&gt;由于 Linux 缺少同重量级的软件，所以在以下方面坚持用 Linux 会很难和其他人谈笑风生。&lt;/p&gt;
+<p>由于见得太多了，所以这张图没能把见到的全列出来:ghost:。</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Adobe 系列：Photoshop（不解释）、Illustrator、Premiere、After Effects……&lt;/li&gt;
-  &lt;li&gt;Keil*（单片机）&lt;/li&gt;
-  &lt;li&gt;AutoCAD（不解释）&lt;/li&gt;
-  &lt;li&gt;会声会影*&lt;/li&gt;
-  &lt;li&gt;英雄联盟*&lt;/li&gt;
-  &lt;li&gt;……&lt;/li&gt;
-&lt;/ul&gt;
+<p>如果看着不方便，可以<a href="/js/2015-06-06-freemind/view.html" target="_blank">点这里</a>。</p>
 
-&lt;p&gt;（标“*”表示苹果系统也没有相同软件。）&lt;/p&gt;
+<script src="/js/2015-06-06-freemind/flashobject.js"></script>
 
-&lt;p&gt;不过幸运的是，我们已经有很多人有能力装黑苹果（在普通电脑上运行的苹果系统），所以也可以换成在技术上和 Linux 有“亲戚”关系的 OS X。&lt;/p&gt;</content><author><name>vjudge1</name></author><category term="UPC" /><summary>明天就是石大一年一度的“百团大战”。在此，我为新生和老生总结一下在石油大学内 Linux 的支持情况。</summary></entry><entry><title>某会长是如何接触 Linux 的</title><link href="https://upclinux.github.io/2015/06/06/freemind/" rel="alternate" type="text/html" title="某会长是如何接触 Linux 的" /><published>2015-06-06T10:42:00+00:00</published><updated>2015-06-06T10:42:00+00:00</updated><id>https://upclinux.github.io/2015/06/06/freemind</id><content type="html" xml:base="https://upclinux.github.io/2015/06/06/freemind/">&lt;p&gt;“会长好像什么都见过，什么都听说过！”&lt;/p&gt;
-
-&lt;p&gt;那到底是怎样见过，怎样听说过的呢？本文来揭个底——&lt;/p&gt;
-
-&lt;p&gt;先向大家介绍个软件——Freemind。这个软件可以画思维导图，而且支持 Windows/Linux/Mac 三大平台。本文的导图就是用这个软件来绘制的。&lt;/p&gt;
-
-&lt;p&gt;由于见得太多了，所以这张图没能把见到的全列出来:ghost:。&lt;/p&gt;
-
-&lt;p&gt;如果看着不方便，可以&lt;a href=&quot;/js/2015-06-06-freemind/view.html&quot; target=&quot;_blank&quot;&gt;点这里&lt;/a&gt;。&lt;/p&gt;
-
-&lt;script src=&quot;/js/2015-06-06-freemind/flashobject.js&quot;&gt;&lt;/script&gt;
-
-&lt;div id=&quot;flashcontent&quot; style=&quot;height: 500px;&quot;&gt;
+<div id="flashcontent" style="height: 500px;">
 [需要 Flash 和 JavaScript]
-&lt;/div&gt;
-&lt;script&gt;
-var fo = new FlashObject(&quot;/js/2015-06-06-freemind/visorFreemind.swf&quot;, &quot;visorFreeMind&quot;, &quot;100%&quot;, &quot;100%&quot;, 8, &quot;#9999ff&quot;);
-fo.addParam(&quot;quality&quot;, &quot;high&quot;);
-fo.addParam(&quot;bgcolor&quot;, &quot;#ffffff&quot;);
-fo.addParam(&quot;allowScriptAccess&quot;, &quot;true&quot;);
-fo.addVariable(&quot;openUrl&quot;, &quot;_blank&quot;);
-fo.addVariable(&quot;initLoadFile&quot;, &quot;/js/2015-06-06-freemind/map.mm&quot;);
-fo.addVariable(&quot;startCollapsedToLevel&quot;,&quot;5&quot;);
-fo.write(&quot;flashcontent&quot;);
-&lt;/script&gt;
+</div>
+<script>
+var fo = new FlashObject("/js/2015-06-06-freemind/visorFreemind.swf", "visorFreeMind", "100%", "100%", 8, "#9999ff");
+fo.addParam("quality", "high");
+fo.addParam("bgcolor", "#ffffff");
+fo.addParam("allowScriptAccess", "true");
+fo.addVariable("openUrl", "_blank");
+fo.addVariable("initLoadFile", "/js/2015-06-06-freemind/map.mm");
+fo.addVariable("startCollapsedToLevel","5");
+fo.write("flashcontent");
+</script>
 
-&lt;p&gt;做个总结——什么情况下能够很涨姿势呢？&lt;/p&gt;
+<p>做个总结——什么情况下能够很涨姿势呢？</p>
 
-&lt;ol&gt;
-  &lt;li&gt;多看看维基百科，拒绝某度百科。&lt;/li&gt;
-  &lt;li&gt;现实需求——我要配置 (ア)、配置 (イ)，出了 (ウ) 的问题，怎么办？找搜索引擎吧！&lt;/li&gt;
-  &lt;li&gt;尽量少用 Windows，要不然你不会太折腾的。&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>vjudge1</name></author><category term="Freemind" /><summary>“会长好像什么都见过，什么都听说过！”
+<ol>
+  <li>多看看维基百科，拒绝某度百科。</li>
+  <li>现实需求——我要配置 (ア)、配置 (イ)，出了 (ウ) 的问题，怎么办？找搜索引擎吧！</li>
+  <li>尽量少用 Windows，要不然你不会太折腾的。</li>
+</ol>]]></content><author><name>vjudge1</name></author><category term="杂谈" /><category term="Freemind" /><summary type="html"><![CDATA[“会长好像什么都见过，什么都听说过！” 那到底是怎样见过，怎样听说过的呢？本文来揭个底——]]></summary></entry><entry><title type="html">GitHub 入门</title><link href="https://upclinux.github.io/2015/05/25/github-introduction/" rel="alternate" type="text/html" title="GitHub 入门" /><published>2015-05-25T03:02:00+08:00</published><updated>2015-05-25T03:02:00+08:00</updated><id>https://upclinux.github.io/2015/05/25/github-introduction</id><content type="html" xml:base="https://upclinux.github.io/2015/05/25/github-introduction/"><![CDATA[<ul id="markdown-toc">
+  <li><a href="#问题的由来" id="markdown-toc-问题的由来">问题的由来</a>    <ul>
+      <li><a href="#github-的社交属性" id="markdown-toc-github-的社交属性">GitHub 的社交属性</a></li>
+      <li><a href="#github-的一些特色" id="markdown-toc-github-的一些特色">GitHub 的一些特色</a></li>
+      <li><a href="#github-的地位" id="markdown-toc-github-的地位">GitHub 的地位</a></li>
+    </ul>
+  </li>
+  <li><a href="#github-的用法" id="markdown-toc-github-的用法">GitHub 的用法</a>    <ul>
+      <li><a href="#社交" id="markdown-toc-社交">社交</a></li>
+      <li><a href="#安装客户端" id="markdown-toc-安装客户端">安装客户端</a></li>
+      <li><a href="#编辑自己的代码" id="markdown-toc-编辑自己的代码">编辑自己的代码</a></li>
+      <li><a href="#为他人做贡献" id="markdown-toc-为他人做贡献">为他人做贡献</a></li>
+      <li><a href="#协同工作" id="markdown-toc-协同工作">协同工作</a></li>
+      <li><a href="#markdown" id="markdown-toc-markdown">Markdown</a></li>
+    </ul>
+  </li>
+  <li><a href="#在-ubuntu-中玩" id="markdown-toc-在-ubuntu-中玩">在 Ubuntu 中玩</a>    <ul>
+      <li><a href="#配置-git" id="markdown-toc-配置-git">配置 Git</a></li>
+      <li><a href="#visual-studio-code" id="markdown-toc-visual-studio-code">Visual Studio Code</a></li>
+    </ul>
+  </li>
+  <li><a href="#一些问题" id="markdown-toc-一些问题">一些问题</a></li>
+  <li><a href="#一些链接" id="markdown-toc-一些链接">一些链接</a></li>
+</ul>
 
-那到底是怎样见过，怎样听说过的呢？本文来揭个底——</summary></entry><entry><title>GitHub 入门</title><link href="https://upclinux.github.io/2015/05/24/github-introduction/" rel="alternate" type="text/html" title="GitHub 入门" /><published>2015-05-24T19:02:00+00:00</published><updated>2015-05-24T19:02:00+00:00</updated><id>https://upclinux.github.io/2015/05/24/github-introduction</id><content type="html" xml:base="https://upclinux.github.io/2015/05/24/github-introduction/">&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;问题的由来&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#github-&quot; id=&quot;markdown-toc-github-&quot;&gt;GitHub 的社交属性&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#github--1&quot; id=&quot;markdown-toc-github--1&quot;&gt;GitHub 的一些特色&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#github--2&quot; id=&quot;markdown-toc-github--2&quot;&gt;GitHub 的地位&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#github--3&quot; id=&quot;markdown-toc-github--3&quot;&gt;GitHub 的用法&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;社交&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;安装客户端&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;编辑自己的代码&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;为他人做贡献&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-5&quot; id=&quot;markdown-toc-section-5&quot;&gt;协同工作&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#markdown&quot; id=&quot;markdown-toc-markdown&quot;&gt;Markdown&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#ubuntu-&quot; id=&quot;markdown-toc-ubuntu-&quot;&gt;在 Ubuntu 中玩&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#git&quot; id=&quot;markdown-toc-git&quot;&gt;配置 Git&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#visual-studio-code&quot; id=&quot;markdown-toc-visual-studio-code&quot;&gt;Visual Studio Code&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-6&quot; id=&quot;markdown-toc-section-6&quot;&gt;一些问题&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-7&quot; id=&quot;markdown-toc-section-7&quot;&gt;一些链接&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<p>作为互联网时代的 Coder，如果还不知道 GitHub 是个什么东西，那就 OUT 了！</p>
 
-&lt;p&gt;作为互联网时代的 Coder，如果还不知道 GitHub 是个什么东西，那就 OUT 了！&lt;/p&gt;
+<p><img src="/img/2015-05-24-github-introduction/octocat.png" alt="octocat" /></p>
 
-&lt;p&gt;&lt;img src=&quot;/img/2015-05-24-github-introduction/octocat.png&quot; alt=&quot;octocat&quot; /&gt;&lt;/p&gt;
+<p>以下是讲座本身的内容 (意思一样，但是换了说法)，所以东西有些多。不过真正的干货还是会用<code class="language-plaintext highlighter-rouge">框框</code>来强调的。</p>
 
-&lt;p&gt;以下是讲座本身的内容 (意思一样，但是换了说法)，所以东西有些多。不过真正的干货还是会用&lt;code class=&quot;highlighter-rouge&quot;&gt;框框&lt;/code&gt;来强调的。&lt;/p&gt;
+<h2 id="问题的由来">问题的由来</h2>
 
-&lt;h2 id=&quot;section&quot;&gt;问题的由来&lt;/h2&gt;
+<p>GitHub 是全球最大的社交编程网站。</p>
 
-&lt;p&gt;GitHub 是全球最大的社交编程网站。&lt;/p&gt;
+<ul>
+  <li>说到社交，那么肯定要想到——分享、转发、刷动态、加好友、赞、评论、@、拉黑……GitHub 样样俱全！</li>
+  <li>
+    <p>说到编程，这可是网站的重头戏。我先不说 GitHub 能干什么。我们先通过实例来说明为什么需要 GitHub——</p>
 
-&lt;ul&gt;
-  &lt;li&gt;说到社交，那么肯定要想到——分享、转发、刷动态、加好友、赞、评论、@、拉黑……GitHub 样样俱全！&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;说到编程，这可是网站的重头戏。我先不说 GitHub 能干什么。我们先通过实例来说明为什么需要 GitHub——&lt;/p&gt;
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  先说说自己单干的情况。我拿 VS 开发了一个 XXX 管理系统 (不是那种 C 语言“大”作业)。第一天我写了一堆代码，第二天我做了一些修改，第三天我又做了一些修改……过了十天，我发现有一处修改不合适！但是我还哪里记得我这十天都做了哪些具体的改动？过了一个月，有些事我都已忘记……
+</code></pre></div>    </div>
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  先说说自己单干的情况。我拿 VS 开发了一个 XXX 管理系统 (不是那种 C 语言“大”作业)。第一天我写了一堆代码，第二天我做了一些修改，第三天我又做了一些修改……过了十天，我发现有一处修改不合适！但是我还哪里记得我这十天都做了哪些具体的改动？过了一个月，有些事我都已忘记……
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
+    <p>再举一个例子，</p>
 
-    &lt;p&gt;再举一个例子，&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  我和张三、李四一起参加了 XX 杯软件比赛 (不是 ACM 比赛)，准备开发一个 Android 应用。第一个星期，我写了 A.java，张三写了 B.java，李四写了 C.java。我们特地建了一个 QQ 群 (或者是百度网盘)，把各自的代码复制了一份儿。第二个星期，我们要调试了，我改了 A.java，张三改了 B.java，而李四改了 A.java 和 C.java……我们继续往 QQ 群里传。还好，有些问题可以从 QQ 群里讨论讨论。
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  我和张三、李四一起参加了 XX 杯软件比赛 (不是 ACM 比赛)，准备开发一个 Android 应用。第一个星期，我写了 A.java，张三写了 B.java，李四写了 C.java。我们特地建了一个 QQ 群 (或者是百度网盘)，把各自的代码复制了一份儿。第二个星期，我们要调试了，我改了 A.java，张三改了 B.java，而李四改了 A.java 和 C.java……我们继续往 QQ 群里传。还好，有些问题可以从 QQ 群里讨论讨论。
   过了一阵子，我们的程序代码有些多了，谁也不记得自己都动了哪些文件，于是每次都是直接把工程打包成 rar 传到群里。知道接下来会发生什么事儿了吧……这尼玛没法好好玩了！
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
+</code></pre></div>    </div>
 
-    &lt;p&gt;要是有个什么管理软件，何必这样麻烦？&lt;/p&gt;
+    <p>要是有个什么管理软件，何必这样麻烦？</p>
 
-    &lt;p&gt;如果你正在遭遇或者即将遭遇以上痛苦，那么，今天你知道了 GitHub，你就要解脱了！&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+    <p>如果你正在遭遇或者即将遭遇以上痛苦，那么，今天你知道了 GitHub，你就要解脱了！</p>
+  </li>
+</ul>
 
-&lt;h3 id=&quot;github-&quot;&gt;GitHub 的社交属性&lt;/h3&gt;
+<h3 id="github-的社交属性">GitHub 的社交属性</h3>
 
-&lt;p&gt;因为程序猿码农什么的一般都是男的嘛，所以知乎上面又有人黑程序猿了——既然是社交编程，那就是程序猿的社交。程序猿一般都是男的，所以&lt;/p&gt;
+<p>因为程序猿码农什么的一般都是男的嘛，所以知乎上面又有人黑程序猿了——既然是社交编程，那就是程序猿的社交。程序猿一般都是男的，所以</p>
 
-&lt;p&gt;&lt;img src=&quot;/img/2015-05-24-github-introduction/intro1.jpg&quot; alt=&quot;同性交友&quot; /&gt;&lt;/p&gt;
+<p><img src="/img/2015-05-24-github-introduction/intro1.jpg" alt="同性交友" /></p>
 
-&lt;p&gt;现在说正经的。我们从社交的角度来看看这个网站——&lt;/p&gt;
+<p>现在说正经的。我们从社交的角度来看看这个网站——</p>
 
-&lt;p&gt;&lt;img src=&quot;/img/2015-05-24-github-introduction/intro2.png&quot; alt=&quot;Linus&quot; /&gt;&lt;/p&gt;
+<p><img src="/img/2015-05-24-github-introduction/intro2.png" alt="Linus" /></p>
 
-&lt;p&gt;可以分享代码——其实是可以共同参与的，后面讲怎么操作。认识我的应该都知道我是个点赞狂魔，但是在 GitHub 里我不随便赞，因为有“我赞过的”这个东西而且它还不分页！&lt;/p&gt;
+<p>可以分享代码——其实是可以共同参与的，后面讲怎么操作。认识我的应该都知道我是个点赞狂魔，但是在 GitHub 里我不随便赞，因为有“我赞过的”这个东西而且它还不分页！</p>
 
-&lt;p&gt;&lt;img src=&quot;/img/2015-05-24-github-introduction/intro3.png&quot; alt=&quot;分享代码&quot; /&gt;&lt;/p&gt;
+<p><img src="/img/2015-05-24-github-introduction/intro3.png" alt="分享代码" /></p>
 
-&lt;p&gt;可以评论——当然可以发帖和跟帖，而且不怕查水表 (但是，不要发和程序无关的东西)。这张图看不出来，实际上你甚至可以对某一行代码进行评论！&lt;/p&gt;
+<p>可以评论——当然可以发帖和跟帖，而且不怕查水表 (但是，不要发和程序无关的东西)。这张图看不出来，实际上你甚至可以对某一行代码进行评论！</p>
 
-&lt;p&gt;&lt;img src=&quot;/img/2015-05-24-github-introduction/intro4.png&quot; alt=&quot;评论&quot; /&gt;&lt;/p&gt;
+<p><img src="/img/2015-05-24-github-introduction/intro4.png" alt="评论" /></p>
 
-&lt;p&gt;下图是我改了别人的代码，然后向作者发了合并请求，结果作者同意合并 (Merged) 了。&lt;/p&gt;
+<p>下图是我改了别人的代码，然后向作者发了合并请求，结果作者同意合并 (Merged) 了。</p>
 
-&lt;p&gt;&lt;img src=&quot;/img/2015-05-24-github-introduction/intro5.png&quot; alt=&quot;Pull Request&quot; /&gt;&lt;/p&gt;
+<p><img src="/img/2015-05-24-github-introduction/intro5.png" alt="Pull Request" /></p>
 
-&lt;h3 id=&quot;github--1&quot;&gt;GitHub 的一些特色&lt;/h3&gt;
+<h3 id="github-的一些特色">GitHub 的一些特色</h3>
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;发展迅速：过去流行 SourceForge (此网站偶尔会被墙) 和 Google Code (一直被墙)。不过 GitHub 分支代码什么的太方便了，而且，现在是 GitHub 火了。&lt;/p&gt;
+<ol>
+  <li>
+    <p>发展迅速：过去流行 SourceForge (此网站偶尔会被墙) 和 Google Code (一直被墙)。不过 GitHub 分支代码什么的太方便了，而且，现在是 GitHub 火了。</p>
 
-    &lt;p&gt;最近 SourceForge 开始耍流氓，所以肯定有一大帮用户要走了。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;社交化编程：这也是个社交网站，不解释。&lt;/li&gt;
-  &lt;li&gt;版本控制 &amp;amp; 易于协作&lt;/li&gt;
-  &lt;li&gt;易于分支和贡献&lt;/li&gt;
-&lt;/ol&gt;
+    <p>最近 SourceForge 开始耍流氓，所以肯定有一大帮用户要走了。</p>
+  </li>
+  <li>社交化编程：这也是个社交网站，不解释。</li>
+  <li>版本控制 &amp; 易于协作</li>
+  <li>易于分支和贡献</li>
+</ol>
 
-&lt;h3 id=&quot;github--2&quot;&gt;GitHub 的地位&lt;/h3&gt;
+<h3 id="github-的地位">GitHub 的地位</h3>
 
-&lt;p&gt;Git 是 Linus 大哥本人发明的版本管理工具。GitHub 则是一个提供 Git 服务的网站。&lt;/p&gt;
+<p>Git 是 Linus 大哥本人发明的版本管理工具。GitHub 则是一个提供 Git 服务的网站。</p>
 
-&lt;p&gt;很多码农靠 GitHub 吃饭。2013 年 1 月 20 日，某个网络设施的管理员千不该万不该把 GitHub 加到了名单里，结果李开复大哥抗议了，微博转发量十万。过了 3 天，GitHub 又能正常访问了。&lt;/p&gt;
+<p>很多码农靠 GitHub 吃饭。2013 年 1 月 20 日，某个网络设施的管理员千不该万不该把 GitHub 加到了名单里，结果李开复大哥抗议了，微博转发量十万。过了 3 天，GitHub 又能正常访问了。</p>
 
-&lt;p&gt;后来他们的名单越变越长，特别是 2015 年，但是他们再也不敢把 GitHub 添进去了。&lt;/p&gt;
+<p>后来他们的名单越变越长，特别是 2015 年，但是他们再也不敢把 GitHub 添进去了。</p>
 
-&lt;h2 id=&quot;github--3&quot;&gt;GitHub 的用法&lt;/h2&gt;
+<h2 id="github-的用法">GitHub 的用法</h2>
 
-&lt;p&gt;这是讲座的重点内容。一方面要学会如何编辑自己 (同伴) 的代码，另一方面要学会如何发扬雷锋精神，为开源事业做贡献。&lt;/p&gt;
+<p>这是讲座的重点内容。一方面要学会如何编辑自己 (同伴) 的代码，另一方面要学会如何发扬雷锋精神，为开源事业做贡献。</p>
 
-&lt;h3 id=&quot;section-1&quot;&gt;社交&lt;/h3&gt;
+<h3 id="社交">社交</h3>
 
-&lt;p&gt;关注动态 (Watch)、转发 (Fork)、刷动态 (Contributions)、加好友 (Follow)、赞 (Star)、评论 (Issues)……这些不用教了吧？&lt;/p&gt;
+<p>关注动态 (Watch)、转发 (Fork)、刷动态 (Contributions)、加好友 (Follow)、赞 (Star)、评论 (Issues)……这些不用教了吧？</p>
 
-&lt;p&gt;分享需要装客户端，稍稍麻烦一些。但是一旦学会，就一点都不麻烦了。&lt;/p&gt;
+<p>分享需要装客户端，稍稍麻烦一些。但是一旦学会，就一点都不麻烦了。</p>
 
-&lt;h3 id=&quot;section-2&quot;&gt;安装客户端&lt;/h3&gt;
+<h3 id="安装客户端">安装客户端</h3>
 
-&lt;p&gt;GitHub 官方有 &lt;a href=&quot;https://windows.github.com&quot;&gt;Windows&lt;/a&gt; 和 &lt;a href=&quot;https://mac.github.com&quot;&gt;Mac&lt;/a&gt; 客户端。现在应该没人用 Windows XP 或者 Mac OS X 10.8 了吧？那就不存在兼容性问题了。&lt;/p&gt;
+<p>GitHub 官方有 <a href="https://windows.github.com">Windows</a> 和 <a href="https://mac.github.com">Mac</a> 客户端。现在应该没人用 Windows XP 或者 Mac OS X 10.8 了吧？那就不存在兼容性问题了。</p>
 
-&lt;p&gt;GitHub 装完会在桌面上出现个快捷方式。然后就能用了。&lt;/p&gt;
+<p>GitHub 装完会在桌面上出现个快捷方式。然后就能用了。</p>
 
-&lt;p&gt;第一次打开时要登录自己的 GitHub 账号，然后在&lt;code class=&quot;highlighter-rouge&quot;&gt;Configure Git&lt;/code&gt;中把自己的名字和邮箱填好。&lt;/p&gt;
+<p>第一次打开时要登录自己的 GitHub 账号，然后在<code class="language-plaintext highlighter-rouge">Configure Git</code>中把自己的名字和邮箱填好。</p>
 
-&lt;h3 id=&quot;section-3&quot;&gt;编辑自己的代码&lt;/h3&gt;
+<h3 id="编辑自己的代码">编辑自己的代码</h3>
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;建立项目&lt;/p&gt;
+<ol>
+  <li>
+    <p>建立项目</p>
 
-    &lt;p&gt;首先你得在网页上建立个项目 (Repository, 仓库)。登录，点击右上角的加号，选择“New repository”。&lt;/p&gt;
+    <p>首先你得在网页上建立个项目 (Repository, 仓库)。登录，点击右上角的加号，选择“New repository”。</p>
 
-    &lt;p&gt;接下来会问你项目名和描述，还会问你是否要个 README。不管要不要，反正你都得自己改。&lt;/p&gt;
+    <p>接下来会问你项目名和描述，还会问你是否要个 README。不管要不要，反正你都得自己改。</p>
 
-    &lt;p&gt;下面有个“.gitignore”不是问你用什么语言，而是——因为某些语言在调试的过程中会产生一些临时文件和垃圾文件，例如编译出来的程序，如果把这些文件加到版本控制里会引发问题，所以它是用来忽略这些文件的。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Clone in Desktop&lt;/code&gt; (复制到本地)&lt;/p&gt;
+    <p>下面有个“.gitignore”不是问你用什么语言，而是——因为某些语言在调试的过程中会产生一些临时文件和垃圾文件，例如编译出来的程序，如果把这些文件加到版本控制里会引发问题，所以它是用来忽略这些文件的。</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Clone in Desktop</code> (复制到本地)</p>
 
-    &lt;p&gt;进入到项目主页，页面右侧会出现一个&lt;code class=&quot;highlighter-rouge&quot;&gt;Clone in Desktop&lt;/code&gt;。客户端会自动打开并问你要把代码下载到什么地方。&lt;/p&gt;
+    <p>进入到项目主页，页面右侧会出现一个<code class="language-plaintext highlighter-rouge">Clone in Desktop</code>。客户端会自动打开并问你要把代码下载到什么地方。</p>
 
-    &lt;p&gt;注意两个问题：&lt;/p&gt;
+    <p>注意两个问题：</p>
 
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;既然原来就是个空项目，可不可以直接在本地把程序写好然后提交？答案是否定的，因为你在本地直接建，里面没有版本信息。不过你还是可以先 Clone 你的项目，然后把你的那堆文件拽到那个目录里。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;同样道理，“Download ZIP”也没有版本信息。如果你是为了改完代码重新提交，那么不要用“Download ZIP”，否则无法提交。&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;编程。这个目录里有个名为“.git”的隐藏文件夹，不要把它删除。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Commit&lt;/code&gt; (确认更改)&lt;/p&gt;
+    <ol>
+      <li>
+        <p>既然原来就是个空项目，可不可以直接在本地把程序写好然后提交？答案是否定的，因为你在本地直接建，里面没有版本信息。不过你还是可以先 Clone 你的项目，然后把你的那堆文件拽到那个目录里。</p>
+      </li>
+      <li>
+        <p>同样道理，“Download ZIP”也没有版本信息。如果你是为了改完代码重新提交，那么不要用“Download ZIP”，否则无法提交。</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>编程。这个目录里有个名为“.git”的隐藏文件夹，不要把它删除。</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Commit</code> (确认更改)</p>
 
-    &lt;p&gt;当完成一个任务的时候，比如添加了一个功能，或者修复了一个 bug，我们应该阶段性地保存一下，并且&lt;code class=&quot;highlighter-rouge&quot;&gt;Commit&lt;/code&gt; (确认更改)。这样也方便追踪更改和撤销，也方便和他人协作。&lt;/p&gt;
+    <p>当完成一个任务的时候，比如添加了一个功能，或者修复了一个 bug，我们应该阶段性地保存一下，并且<code class="language-plaintext highlighter-rouge">Commit</code> (确认更改)。这样也方便追踪更改和撤销，也方便和他人协作。</p>
 
-    &lt;p&gt;在你修改代码之后，客户端会自动检测变化，然后出现&lt;code class=&quot;highlighter-rouge&quot;&gt;Uncommitted Changes&lt;/code&gt; (等待确认的更改)。右侧是个文件列表，反映了你在这一阶段的改动 (绿色表示添加，红色表示删除)。在&lt;code class=&quot;highlighter-rouge&quot;&gt;Summary&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;Description&lt;/code&gt;里填些易于理解的、反映你的修改的内容，然后单击&lt;code class=&quot;highlighter-rouge&quot;&gt;Commit to master&lt;/code&gt; (确认更改)。这一阶段的改动就被保存了。&lt;/p&gt;
+    <p>在你修改代码之后，客户端会自动检测变化，然后出现<code class="language-plaintext highlighter-rouge">Uncommitted Changes</code> (等待确认的更改)。右侧是个文件列表，反映了你在这一阶段的改动 (绿色表示添加，红色表示删除)。在<code class="language-plaintext highlighter-rouge">Summary</code>和<code class="language-plaintext highlighter-rouge">Description</code>里填些易于理解的、反映你的修改的内容，然后单击<code class="language-plaintext highlighter-rouge">Commit to master</code> (确认更改)。这一阶段的改动就被保存了。</p>
 
-    &lt;p&gt;&lt;img src=&quot;/img/2015-05-24-github-introduction/client.png&quot; alt=&quot;client&quot; /&gt;&lt;/p&gt;
+    <p><img src="/img/2015-05-24-github-introduction/client.png" alt="client" /></p>
 
-    &lt;p&gt;如果感觉改动不合适，可以&lt;code class=&quot;highlighter-rouge&quot;&gt;Undo&lt;/code&gt;撤销更改，重新编辑代码，然后重新&lt;code class=&quot;highlighter-rouge&quot;&gt;Commit&lt;/code&gt;。&lt;/p&gt;
+    <p>如果感觉改动不合适，可以<code class="language-plaintext highlighter-rouge">Undo</code>撤销更改，重新编辑代码，然后重新<code class="language-plaintext highlighter-rouge">Commit</code>。</p>
 
-    &lt;p&gt;在这一阶段，你可以到网站上面按 F5。很明显，你的这些改动还没有被传到网上。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Sync&lt;/code&gt; (同步)&lt;/p&gt;
+    <p>在这一阶段，你可以到网站上面按 F5。很明显，你的这些改动还没有被传到网上。</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Sync</code> (同步)</p>
 
-    &lt;p&gt;在你确认改动都 OK 之后，可以点击右上角的&lt;code class=&quot;highlighter-rouge&quot;&gt;Sync&lt;/code&gt;按钮，把改动提交到服务器上。&lt;/p&gt;
+    <p>在你确认改动都 OK 之后，可以点击右上角的<code class="language-plaintext highlighter-rouge">Sync</code>按钮，把改动提交到服务器上。</p>
 
-    &lt;p&gt;“Sync”是同步的意思，也就是说，你的改动会被传上去，然后程序也会去获取最新版本。这个提交是双向的。&lt;/p&gt;
+    <p>“Sync”是同步的意思，也就是说，你的改动会被传上去，然后程序也会去获取最新版本。这个提交是双向的。</p>
 
-    &lt;p&gt;再到网站上面按 F5，你可以看到你自己的改动已经被上传了。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+    <p>再到网站上面按 F5，你可以看到你自己的改动已经被上传了。</p>
+  </li>
+</ol>
 
-&lt;h3 id=&quot;section-4&quot;&gt;为他人做贡献&lt;/h3&gt;
+<h3 id="为他人做贡献">为他人做贡献</h3>
 
-&lt;p&gt;主要有两种方式：一种是 &lt;code class=&quot;highlighter-rouge&quot;&gt;Issues&lt;/code&gt; (评论)，另一种是改代码并提交给作者 (Send &lt;code class=&quot;highlighter-rouge&quot;&gt;Pull Request&lt;/code&gt;)。&lt;/p&gt;
+<p>主要有两种方式：一种是 <code class="language-plaintext highlighter-rouge">Issues</code> (评论)，另一种是改代码并提交给作者 (Send <code class="language-plaintext highlighter-rouge">Pull Request</code>)。</p>
 
-&lt;p&gt;Issues 不用解释了吧。你可以提交程序的 bug，也可以提意见和建议。当然，不要灌水或者发些与程序无关的东西。GitHub 也是可以拉黑和删评论的。&lt;/p&gt;
+<p>Issues 不用解释了吧。你可以提交程序的 bug，也可以提意见和建议。当然，不要灌水或者发些与程序无关的东西。GitHub 也是可以拉黑和删评论的。</p>
 
-&lt;p&gt;要是想改别人代码，那么不能直接 Clone 人家的，要不然你没法上传。(毕竟是人家的程序，你不能随便改。) 应该这样玩：&lt;/p&gt;
+<p>要是想改别人代码，那么不能直接 Clone 人家的，要不然你没法上传。(毕竟是人家的程序，你不能随便改。) 应该这样玩：</p>
 
-&lt;ol&gt;
-  &lt;li&gt;进到别人的项目的主页，点击右上角的&lt;code class=&quot;highlighter-rouge&quot;&gt;Fork&lt;/code&gt; (分支)。&lt;/li&gt;
-  &lt;li&gt;这个时候那个项目会被复制一份儿，并且变成你自己的。这个时候再点击&lt;code class=&quot;highlighter-rouge&quot;&gt;Clone in Desktop&lt;/code&gt;。&lt;/li&gt;
-  &lt;li&gt;该怎么编程就怎么编程。&lt;/li&gt;
-  &lt;li&gt;该怎么 Commit &amp;amp; Sync 就怎么弄。但是 Sync 之后发生变化的是你自己手里的副本，不是人家作者的代码。&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;希望提交给原作者了？进到你这个副本的主页，点击&lt;code class=&quot;highlighter-rouge&quot;&gt;Pull Request&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;Create Pull Request&lt;/code&gt;，并在评论中写清你做了什么事儿。&lt;/p&gt;
+<ol>
+  <li>进到别人的项目的主页，点击右上角的<code class="language-plaintext highlighter-rouge">Fork</code> (分支)。</li>
+  <li>这个时候那个项目会被复制一份儿，并且变成你自己的。这个时候再点击<code class="language-plaintext highlighter-rouge">Clone in Desktop</code>。</li>
+  <li>该怎么编程就怎么编程。</li>
+  <li>该怎么 Commit &amp; Sync 就怎么弄。但是 Sync 之后发生变化的是你自己手里的副本，不是人家作者的代码。</li>
+  <li>
+    <p>希望提交给原作者了？进到你这个副本的主页，点击<code class="language-plaintext highlighter-rouge">Pull Request</code>、<code class="language-plaintext highlighter-rouge">Create Pull Request</code>，并在评论中写清你做了什么事儿。</p>
 
-    &lt;p&gt;&lt;img src=&quot;/img/2015-05-24-github-introduction/pullrequest.png&quot; alt=&quot;PullRequest&quot; /&gt;&lt;/p&gt;
+    <p><img src="/img/2015-05-24-github-introduction/pullrequest.png" alt="PullRequest" /></p>
 
-    &lt;p&gt;GitHub 会判断能否直接合并。如果不能直接合并，那就需要交给作者本人来处理了。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;等作者的回信儿。&lt;/li&gt;
-&lt;/ol&gt;
+    <p>GitHub 会判断能否直接合并。如果不能直接合并，那就需要交给作者本人来处理了。</p>
+  </li>
+  <li>等作者的回信儿。</li>
+</ol>
 
-&lt;h3 id=&quot;section-5&quot;&gt;协同工作&lt;/h3&gt;
+<h3 id="协同工作">协同工作</h3>
 
-&lt;p&gt;如果几个人共同维护一个项目，总不能老在那里发 Pull Request 吧？所以——&lt;/p&gt;
+<p>如果几个人共同维护一个项目，总不能老在那里发 Pull Request 吧？所以——</p>
 
-&lt;p&gt;到项目右侧找&lt;code class=&quot;highlighter-rouge&quot;&gt;Settings&lt;/code&gt;，接下来点&lt;code class=&quot;highlighter-rouge&quot;&gt;Collaborators&lt;/code&gt;，输入密码。接下来，你想和谁合作，就把谁的用户名填进去。&lt;/p&gt;
+<p>到项目右侧找<code class="language-plaintext highlighter-rouge">Settings</code>，接下来点<code class="language-plaintext highlighter-rouge">Collaborators</code>，输入密码。接下来，你想和谁合作，就把谁的用户名填进去。</p>
 
-&lt;h3 id=&quot;markdown&quot;&gt;Markdown&lt;/h3&gt;
+<h3 id="markdown">Markdown</h3>
 
-&lt;p&gt;Markdown 是一种轻型标记语言，和 HTML 语言有点像但是比 HTML 还要轻型。在 GitHub 中几乎到处都可以用得到。&lt;/p&gt;
+<p>Markdown 是一种轻型标记语言，和 HTML 语言有点像但是比 HTML 还要轻型。在 GitHub 中几乎到处都可以用得到。</p>
 
-&lt;p&gt;那 Markdown 语言怎么学呢？你可以多看一些项目的 README (很多项目都有 README.md，就是用 Markdown 语言写的)。见得多了自然就会了。&lt;/p&gt;
+<p>那 Markdown 语言怎么学呢？你可以多看一些项目的 README (很多项目都有 README.md，就是用 Markdown 语言写的)。见得多了自然就会了。</p>
 
-&lt;p&gt;GitHub 官方也有&lt;a href=&quot;https://help.github.com/articles/markdown-basics/&quot;&gt;教程&lt;/a&gt;，只要你懂 e 文。&lt;/p&gt;
+<p>GitHub 官方也有<a href="https://help.github.com/articles/markdown-basics/">教程</a>，只要你懂 e 文。</p>
 
-&lt;p&gt;Windows 下可以用 MarkdownPad (需要花钱) 或 Miu 来编辑，也可以用 Visual Studio Code。&lt;/p&gt;
+<p>Windows 下可以用 MarkdownPad (需要花钱) 或 Miu 来编辑，也可以用 Visual Studio Code。</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;备注：Visual Studio 和 Visual Studio Code 不是同一个东西。后者才支持 Markdown 语言和实时预览。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>备注：Visual Studio 和 Visual Studio Code 不是同一个东西。后者才支持 Markdown 语言和实时预览。
+</code></pre></div></div>
 
-&lt;p&gt;GitHub 支持一些特殊的符号：&lt;/p&gt;
+<p>GitHub 支持一些特殊的符号：</p>
 
-&lt;ol&gt;
-  &lt;li&gt;emoji：输入 &lt;code class=&quot;highlighter-rouge&quot;&gt;:&lt;/code&gt;，会弹出一个 emoji 列表。如果你知道某个表情的英文名，那你就可以用了——&lt;code&gt;:ghost&lt;span&gt;&lt;/span&gt;:&lt;/code&gt;:ghost:。&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;:octocat&lt;span&gt;&lt;/span&gt;:&lt;/code&gt; 是 GitHub 喵喵:octocat:。&lt;/li&gt;
-  &lt;li&gt;在 GitHub 里你可以直接 &lt;code class=&quot;highlighter-rouge&quot;&gt;@&lt;/code&gt; 某人。当然，别滥用 @，免得被别人拉黑。&lt;/li&gt;
-  &lt;li&gt;在 Issues 里可以用 &lt;code class=&quot;highlighter-rouge&quot;&gt;#&lt;/code&gt; 引用已经发过的帖子，如 &lt;code class=&quot;highlighter-rouge&quot;&gt;#12&lt;/code&gt;。&lt;/li&gt;
-&lt;/ol&gt;
+<ol>
+  <li>emoji：输入 <code class="language-plaintext highlighter-rouge">:</code>，会弹出一个 emoji 列表。如果你知道某个表情的英文名，那你就可以用了——<code>:ghost<span></span>:</code>:ghost:。</li>
+  <li><code>:octocat<span></span>:</code> 是 GitHub 喵喵:octocat:。</li>
+  <li>在 GitHub 里你可以直接 <code class="language-plaintext highlighter-rouge">@</code> 某人。当然，别滥用 @，免得被别人拉黑。</li>
+  <li>在 Issues 里可以用 <code class="language-plaintext highlighter-rouge">#</code> 引用已经发过的帖子，如 <code class="language-plaintext highlighter-rouge">#12</code>。</li>
+</ol>
 
-&lt;h2 id=&quot;ubuntu-&quot;&gt;在 Ubuntu 中玩&lt;/h2&gt;
+<h2 id="在-ubuntu-中玩">在 Ubuntu 中玩</h2>
 
-&lt;p&gt;GitHub 没有专门为 Linux 出客户端。不过 GitHub 也是 Git，对吧？所以完全可以按照 Git 的玩法来玩 GitHub。&lt;/p&gt;
+<p>GitHub 没有专门为 Linux 出客户端。不过 GitHub 也是 Git，对吧？所以完全可以按照 Git 的玩法来玩 GitHub。</p>
 
-&lt;p&gt;怎么在命令行里用 Git？这里有个非常简单的&lt;a href=&quot;http://www.bootcss.com/p/git-guide/&quot;&gt;入门教程&lt;/a&gt;。&lt;/p&gt;
+<p>怎么在命令行里用 Git？这里有个非常简单的<a href="http://www.bootcss.com/p/git-guide/">入门教程</a>。</p>
 
-&lt;h3 id=&quot;git&quot;&gt;配置 Git&lt;/h3&gt;
+<h3 id="配置-git">配置 Git</h3>
 
-&lt;p&gt;下面是 Git 的配置过程：&lt;/p&gt;
+<p>下面是 Git 的配置过程：</p>
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;安装 Git&lt;/p&gt;
+<ol>
+  <li>
+    <p>安装 Git</p>
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo apt-get install git
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;把名字和邮箱写好：&lt;/p&gt;
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sudo apt-get install git
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>把名字和邮箱写好：</p>
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; git config --global --add user.name &quot;你的昵称&quot;
- git config --global --add user.email &quot;邮箱&quot;
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;照敲即可：&lt;/p&gt;
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git config --global --add user.name "你的昵称"
+ git config --global --add user.email "邮箱"
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>照敲即可：</p>
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; git config --global push.default simple
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;添加个 SSH Key：&lt;/p&gt;
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git config --global push.default simple
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>添加个 SSH Key：</p>
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ssh-keygen -t rsa -C &quot;GitHub&quot;
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ssh-keygen -t rsa -C "GitHub"
  cat ~/.ssh/id_rsa
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
+</code></pre></div>    </div>
 
-    &lt;p&gt;登录到 GitHub，点“Settings” -&amp;gt; “SSH keys” -&amp;gt; “Add key”，然后把屏幕上输出的公(luan)钥(ma)拷进去。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;测试&lt;/p&gt;
+    <p>登录到 GitHub，点“Settings” -&gt; “SSH keys” -&gt; “Add key”，然后把屏幕上输出的公(luan)钥(ma)拷进去。</p>
+  </li>
+  <li>
+    <p>测试</p>
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ssh -T git@github.com
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ssh -T git@github.com
+</code></pre></div>    </div>
 
-    &lt;p&gt;如果配置成功，应该提示“Hi xxxxx! You’ve successfully authenticated, but GitHub does not provide shell access.”&lt;/p&gt;
+    <p>如果配置成功，应该提示“Hi xxxxx! You’ve successfully authenticated, but GitHub does not provide shell access.”</p>
 
-    &lt;p&gt;不过，如果提示的是“Agent admitted failure to sign using the key”，那么再补一句：&lt;/p&gt;
+    <p>不过，如果提示的是“Agent admitted failure to sign using the key”，那么再补一句：</p>
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ssh-add ~/.ssh/id_rsa
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;可以用 git clone、git add、git commit、git push、git pull……什么的了。不过别用 git init。&lt;/p&gt;
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ssh-add ~/.ssh/id_rsa
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>可以用 git clone、git add、git commit、git push、git pull……什么的了。不过别用 git init。</p>
 
-    &lt;p&gt;项目右侧“Download ZIP”那个地方有个“clone URL”，建议用“SSH clone URL”。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+    <p>项目右侧“Download ZIP”那个地方有个“clone URL”，建议用“SSH clone URL”。</p>
+  </li>
+</ol>
 
-&lt;h3 id=&quot;visual-studio-code&quot;&gt;Visual Studio Code&lt;/h3&gt;
+<h3 id="visual-studio-code">Visual Studio Code</h3>
 
-&lt;p&gt;给大家推荐个编辑器，&lt;a href=&quot;https://code.visualstudio.com&quot;&gt;Visual Studio Code&lt;/a&gt;。虽然和 Windows 10 一样还是技术预览版，不过也比较好用——至少不用为了 Git 而敲命令了。&lt;/p&gt;
+<p>给大家推荐个编辑器，<a href="https://code.visualstudio.com">Visual Studio Code</a>。虽然和 Windows 10 一样还是技术预览版，不过也比较好用——至少不用为了 Git 而敲命令了。</p>
 
-&lt;p&gt;默认情况下，Visual Studio Code 不能正常显示汉字 (Windows 和 Mac 里都正常)——中国字是方块字，结果中国字真变成“方块字”了。&lt;/p&gt;
+<p>默认情况下，Visual Studio Code 不能正常显示汉字 (Windows 和 Mac 里都正常)——中国字是方块字，结果中国字真变成“方块字”了。</p>
 
-&lt;p&gt;可以这样解决问题：点击“File”、“Preferences”、“User Settings”，然后在右侧窗口加入一个属性：&lt;/p&gt;
+<p>可以这样解决问题：点击“File”、“Preferences”、“User Settings”，然后在右侧窗口加入一个属性：</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;editor.fontFamily: &quot;Droid Sans Mono, Droid Sans Fallback&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>editor.fontFamily: "Droid Sans Mono, Droid Sans Fallback"
+</code></pre></div></div>
 
-&lt;h2 id=&quot;section-6&quot;&gt;一些问题&lt;/h2&gt;
+<h2 id="一些问题">一些问题</h2>
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;刷不出动态 (我提交了 10 次代码，但是为什么我的动态还是没有?)&lt;/p&gt;
+<ol>
+  <li>
+    <p>刷不出动态 (我提交了 10 次代码，但是为什么我的动态还是没有?)</p>
 
-    &lt;p&gt;检查 GitHub 客户端的&lt;code class=&quot;highlighter-rouge&quot;&gt;电子邮箱&lt;/code&gt;是否正确配置。还有，“branch: master”才算数。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;避免滥用 GitHub&lt;/p&gt;
+    <p>检查 GitHub 客户端的<code class="language-plaintext highlighter-rouge">电子邮箱</code>是否正确配置。还有，“branch: master”才算数。</p>
+  </li>
+  <li>
+    <p>避免滥用 GitHub</p>
 
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;不要提一些与技术无关的话题，特别是政治话题。&lt;/p&gt;
+    <ul>
+      <li>
+        <p>不要提一些与技术无关的话题，特别是政治话题。</p>
 
-        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  2015 年 3 月末 GitHub 遭 DDoS，遭受攻击的目标是一个爱咧咧政治的家伙
-&lt;/code&gt;&lt;/pre&gt;
-        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;不要灌水！&lt;/p&gt;
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  2015 年 3 月末 GitHub 遭 DDoS，遭受攻击的目标是一个爱咧咧政治的家伙
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>不要灌水！</p>
 
-        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  如果大家像贴吧一样刷了 1,000 楼，那么作者的邮箱会刷出 1,000 封电子邮件……而且 GitHub 的评论是不分页的。
-&lt;/code&gt;&lt;/pre&gt;
-        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;不要把 GitHub 当作网盘……&lt;/p&gt;
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  如果大家像贴吧一样刷了 1,000 楼，那么作者的邮箱会刷出 1,000 封电子邮件……而且 GitHub 的评论是不分页的。
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>不要把 GitHub 当作网盘……</p>
 
-        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  才 1GB 空间，还是给代码用的。传电影请用百度云。
-&lt;/code&gt;&lt;/pre&gt;
-        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;不要把 GitHub 当作 CDN……&lt;/p&gt;
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  才 1GB 空间，还是给代码用的。传电影请用百度云。
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>不要把 GitHub 当作 CDN……</p>
 
-        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  2013 年 1 月 15 日，GitHub 遭到疑似 DDoS 攻击。为什么呢？因为中国人要买火车票了。中国人买火车票关 GitHub 啥事儿？因为抢票助手到这里来刷文件，把 GitHub 刷坏了……
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  2013 年 1 月 15 日，GitHub 遭到疑似 DDoS 攻击。为什么呢？因为中国人要买火车票了。中国人买火车票关 GitHub 啥事儿？因为抢票助手到这里来刷文件，把 GitHub 刷坏了……
   事情到此还没结束——过几天 GitHub 就被墙了。
-&lt;/code&gt;&lt;/pre&gt;
-        &lt;/div&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;访问速度慢 or 不稳定：这个问题要找北邮的&lt;code class=&quot;highlighter-rouge&quot;&gt;方校长&lt;/code&gt;来解决了。如果上外国网站出现了什么问题，找他一定好使。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;既想用 GitHub 的优点，又不希望公开代码？你可以花钱买 Private Repositories，或者换网站，或者自己架设 Git 服务器。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;如果你信不过老美或围墙管理员，同样可以换网站 (国内类似服务，&lt;a href=&quot;https://gitcafe.com&quot;&gt;GitCafe&lt;/a&gt;) 或者自己架 Git 服务器。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://gist.github.com&quot;&gt;GitHub Gist&lt;/a&gt; 是个专门贴 (代码) 段子的网站。最重要的是，这个也支持用 Git 进行版本控制！不过……&lt;/p&gt;
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>访问速度慢 or 不稳定：这个问题要找北邮的<code class="language-plaintext highlighter-rouge">方校长</code>来解决了。如果上外国网站出现了什么问题，找他一定好使。</p>
+  </li>
+  <li>
+    <p>既想用 GitHub 的优点，又不希望公开代码？你可以花钱买 Private Repositories，或者换网站，或者自己架设 Git 服务器。</p>
+  </li>
+  <li>
+    <p>如果你信不过老美或围墙管理员，同样可以换网站 (国内类似服务，<a href="https://gitcafe.com">GitCafe</a>) 或者自己架 Git 服务器。</p>
+  </li>
+  <li>
+    <p><a href="https://gist.github.com">GitHub Gist</a> 是个专门贴 (代码) 段子的网站。最重要的是，这个也支持用 Git 进行版本控制！不过……</p>
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; 192.30.252.143	gist.github.com
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 192.30.252.143	gist.github.com
  23.235.43.133	gist-assets.github.com
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-
-    &lt;p&gt;知道该怎么用了吧？&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+</code></pre></div>    </div>
 
-&lt;h2 id=&quot;section-7&quot;&gt;一些链接&lt;/h2&gt;
+    <p>知道该怎么用了吧？</p>
+  </li>
+</ol>
 
-&lt;ul&gt;
-  &lt;li&gt;喵喵大全：&lt;a href=&quot;https://octodex.github.com&quot;&gt;octodex.github.com&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;GitHub Shop：&lt;a href=&quot;https://shop.github.com&quot;&gt;shop.github.com&lt;/a&gt; 很想要那些纪念品可惜买不起。&lt;/li&gt;
-  &lt;li&gt;如何利用 GitHub Pages 架设静态网站：&lt;a href=&quot;https://pages.github.com&quot;&gt;pages.github.com&lt;/a&gt; (通过 Jekyll 或 Hexo，可以用 GitHub Pages &lt;code class=&quot;highlighter-rouge&quot;&gt;架设博客&lt;/code&gt;。不过 Jekyll 官方不支持 Windows。)&lt;/li&gt;
-  &lt;li&gt;本博客源代码：&lt;a href=&quot;https://github.com/upclinux/upclinux.github.io&quot;&gt;github.com/upclinux/upclinux.github.io&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Search：可以试试那个 Search。先看看有没有开源解决方案，然后再自己造车轮。&lt;/li&gt;
-&lt;/ul&gt;
+<h2 id="一些链接">一些链接</h2>
 
-&lt;p&gt;最后发个小图，&lt;/p&gt;
+<ul>
+  <li>喵喵大全：<a href="https://octodex.github.com">octodex.github.com</a></li>
+  <li>GitHub Shop：<a href="https://shop.github.com">shop.github.com</a> 很想要那些纪念品可惜买不起。</li>
+  <li>如何利用 GitHub Pages 架设静态网站：<a href="https://pages.github.com">pages.github.com</a> (通过 Jekyll 或 Hexo，可以用 GitHub Pages <code class="language-plaintext highlighter-rouge">架设博客</code>。不过 Jekyll 官方不支持 Windows。)</li>
+  <li>本博客源代码：<a href="https://github.com/upclinux/upclinux.github.io">github.com/upclinux/upclinux.github.io</a></li>
+  <li>Search：可以试试那个 Search。先看看有没有开源解决方案，然后再自己造车轮。</li>
+</ul>
 
-&lt;p&gt;&lt;img src=&quot;/img/2015-05-24-github-introduction/intro6.jpg&quot; alt=&quot;社交&quot; /&gt;&lt;/p&gt;</content><author><name>vjudge1</name></author><category term="GitHub" /><category term="讲座" /><summary>作为互联网时代的 Coder，如果还不知道 GitHub 是个什么东西，那就 OUT 了！</summary></entry><entry><title>欢迎使用 Jekyll! ——新博客建立</title><link href="https://upclinux.github.io/2015/05/18/welcome-to-jekyll/" rel="alternate" type="text/html" title="欢迎使用 Jekyll! ——新博客建立" /><published>2015-05-18T14:23:38+00:00</published><updated>2015-05-18T14:23:38+00:00</updated><id>https://upclinux.github.io/2015/05/18/welcome-to-jekyll</id><content type="html" xml:base="https://upclinux.github.io/2015/05/18/welcome-to-jekyll/">&lt;p&gt;终于找到了一个免费、靠谱又方便【码农】使用的博客。&lt;/p&gt;
+<p>最后发个小图，</p>
 
-&lt;p&gt;感谢 &lt;a href=&quot;https://pages.github.com&quot;&gt;GitHub Pages&lt;/a&gt;。这个东西就是用来建静态博客的。还要感谢 &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll&lt;/a&gt;，前者是免费空间，后者是免费建站。&lt;/p&gt;
+<p><img src="/img/2015-05-24-github-introduction/intro6.jpg" alt="社交" /></p>]]></content><author><name>vjudge1</name></author><category term="活动" /><category term="GitHub" /><category term="讲座" /><summary type="html"><![CDATA[作为互联网时代的 Coder，如果还不知道 GitHub 是个什么东西，那就 OUT 了！]]></summary></entry><entry><title type="html">欢迎使用 Jekyll! ——新博客建立</title><link href="https://upclinux.github.io/2015/05/18/welcome-to-jekyll/" rel="alternate" type="text/html" title="欢迎使用 Jekyll! ——新博客建立" /><published>2015-05-18T22:23:38+08:00</published><updated>2015-05-18T22:23:38+08:00</updated><id>https://upclinux.github.io/2015/05/18/welcome-to-jekyll</id><content type="html" xml:base="https://upclinux.github.io/2015/05/18/welcome-to-jekyll/"><![CDATA[<p>终于找到了一个免费、靠谱又方便【码农】使用的博客。</p>
 
-&lt;p&gt;为什么不用 WordPress 呢？需要服务器啊，而且，要知道，服务器费用是不可能给报销的。还有一个重要原因，文章本身是支持 Markdown 语法的纯文本文件，感觉写代码写脚本比用那些图形化编辑器舒服多了，毕竟是在 Linux 环境下折腾过的码农。&lt;/p&gt;
+<p>感谢 <a href="https://pages.github.com">GitHub Pages</a>。这个东西就是用来建静态博客的。还要感谢 <a href="https://github.com/jekyll/jekyll">Jekyll</a>，前者是免费空间，后者是免费建站。</p>
 
-&lt;p&gt;博客的&lt;a href=&quot;https://github.com/upclinux/upclinux.github.io&quot;&gt;代码&lt;/a&gt;是完全公开的。博客的主题是基于 Bootstrap 框架而自行设计的，当然任何人都可以按照自己意愿来进行修改。主题还需要不断完善，&lt;code class=&quot;highlighter-rouge&quot;&gt;欢迎到 GitHub 项目页面提交 Issue&lt;/code&gt;。&lt;/p&gt;
+<p>为什么不用 WordPress 呢？需要服务器啊，而且，要知道，服务器费用是不可能给报销的。还有一个重要原因，文章本身是支持 Markdown 语法的纯文本文件，感觉写代码写脚本比用那些图形化编辑器舒服多了，毕竟是在 Linux 环境下折腾过的码农。</p>
 
-&lt;p&gt;&lt;em&gt;Jekyll 官方不支持 Windows。由于文件名和文件内容的汉字编码的问题（Windows 默认使用 GB2312 编码，而 Linux/Mac 均使用 UTF-8 编码），请尽量避免在 Windows 下编辑和管理博客。&lt;/em&gt;&lt;/p&gt;
+<p>博客的<a href="https://github.com/upclinux/upclinux.github.io">代码</a>是完全公开的。博客的主题是基于 Bootstrap 框架而自行设计的，当然任何人都可以按照自己意愿来进行修改。主题还需要不断完善，<code class="language-plaintext highlighter-rouge">欢迎到 GitHub 项目页面提交 Issue</code>。</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-_-||
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+<p><em>Jekyll 官方不支持 Windows。由于文件名和文件内容的汉字编码的问题（Windows 默认使用 GB2312 编码，而 Linux/Mac 均使用 UTF-8 编码），请尽量避免在 Windows 下编辑和管理博客。</em></p>
 
-&lt;p&gt;&lt;em&gt;以下是经过改动的翻译。&lt;/em&gt;&lt;/p&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-_-||
+</code></pre></div></div>
 
-&lt;p&gt;你可以在项目的&lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt;目录里发现这篇文章。直接编辑然后重新“编译”来查看更改。你可以用很多种方法来“编译”，但是人们用得最多的还是输入 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;，因为这样正好可以启动一个小型 Web 服务器，然后你就可以直接从浏览器来查看了。&lt;/p&gt;
+<p><em>以下是经过改动的翻译。</em></p>
 
-&lt;p&gt;如果想添加文章，只需要在 &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; 目录里添加一个形如 &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-标题.markdown&lt;/code&gt; 的文件，然后在文件前面加一些必要的头部代码。如果不知道该加什么，可以仿照这篇文章来写。&lt;/p&gt;
+<p>你可以在项目的<code class="language-plaintext highlighter-rouge">_posts</code>目录里发现这篇文章。直接编辑然后重新“编译”来查看更改。你可以用很多种方法来“编译”，但是人们用得最多的还是输入 <code class="language-plaintext highlighter-rouge">jekyll serve</code>，因为这样正好可以启动一个小型 Web 服务器，然后你就可以直接从浏览器来查看了。</p>
 
-&lt;p&gt;Markdown 是一种轻型的排版语言。GitHub 有很多地方支持这种语言，并且，支持 Markdown 的编辑器也有很多。相比于其他语言，Markdown 并不难学。&lt;/p&gt;
+<p>如果想添加文章，只需要在 <code class="language-plaintext highlighter-rouge">_posts</code> 目录里添加一个形如 <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-标题.markdown</code> 的文件，然后在文件前面加一些必要的头部代码。如果不知道该加什么，可以仿照这篇文章来写。</p>
 
-&lt;p&gt;Jekyll 支持代码高亮：&lt;/p&gt;
+<p>Markdown 是一种轻型的排版语言。GitHub 有很多地方支持这种语言，并且，支持 Markdown 的编辑器也有很多。相比于其他语言，Markdown 并不难学。</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, world!&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<p>Jekyll 支持代码高亮：</p>
 
-&lt;p&gt;阅读 &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll 文档&lt;/a&gt; 来了解如何使用 Jekyll。如果发现 bug 或者想添加什么功能，请到 &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. 如果有什么疑问，请到 &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;</content><author><name>vjudge1</name></author><category term="GitHub" /><summary>终于找到了一个免费、靠谱又方便【码农】使用的博客。
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Hello, world!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
-感谢 GitHub Pages。这个东西就是用来建静态博客的。还要感谢 Jekyll，前者是免费空间，后者是免费建站。
-
-为什么不用 WordPress 呢？需要服务器啊，而且，要知道，服务器费用是不可能给报销的。还有一个重要原因，文章本身是支持 Markdown 语法的纯文本文件，感觉写代码写脚本比用那些图形化编辑器舒服多了，毕竟是在 Linux 环境下折腾过的码农。
-
-博客的代码是完全公开的。博客的主题是基于 Bootstrap 框架而自行设计的，当然任何人都可以按照自己意愿来进行修改。主题还需要不断完善，欢迎到 GitHub 项目页面提交 Issue。</summary></entry><entry><title>UEFI 环境下的 Windows</title><link href="https://upclinux.github.io/2015/04/28/windows-in-uefi/" rel="alternate" type="text/html" title="UEFI 环境下的 Windows" /><published>2015-04-28T20:23:38+00:00</published><updated>2015-04-28T20:23:38+00:00</updated><id>https://upclinux.github.io/2015/04/28/windows-in-uefi</id><content type="html" xml:base="https://upclinux.github.io/2015/04/28/windows-in-uefi/">&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;问题的由来&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#uefi--legacy&quot; id=&quot;markdown-toc-uefi--legacy&quot;&gt;UEFI 和 Legacy&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#legacy-&quot; id=&quot;markdown-toc-legacy-&quot;&gt;经典 (Legacy) 的启动过程&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#uefi-&quot; id=&quot;markdown-toc-uefi-&quot;&gt;UEFI 模式的启动过程&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#secure-boot&quot; id=&quot;markdown-toc-secure-boot&quot;&gt;Secure Boot&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#uefi--legacy-&quot; id=&quot;markdown-toc-uefi--legacy-&quot;&gt;UEFI 与 Legacy 的切换&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#windows-8--bios-&quot; id=&quot;markdown-toc-windows-8--bios-&quot;&gt;预装 Windows 8 的电脑进入 BIOS 设置&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#gpt--mbr&quot; id=&quot;markdown-toc-gpt--mbr&quot;&gt;GPT 和 MBR&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#gpt-&quot; id=&quot;markdown-toc-gpt-&quot;&gt;GPT 的优势&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#mbr-&quot; id=&quot;markdown-toc-mbr-&quot;&gt;MBR 磁盘的外观&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#gpt--1&quot; id=&quot;markdown-toc-gpt--1&quot;&gt;GPT 磁盘的外观&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#gpt--2&quot; id=&quot;markdown-toc-gpt--2&quot;&gt;品牌机的 GPT 磁盘&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#windows-&quot; id=&quot;markdown-toc-windows-&quot;&gt;Windows 对两种模式的支持&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#efigpt-&quot; id=&quot;markdown-toc-efigpt-&quot;&gt;旧系统 (2003及以下) 对 EFI/GPT 的支持&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#vista---efigpt-&quot; id=&quot;markdown-toc-vista---efigpt-&quot;&gt;新系统 (Vista 及以上) 对 EFI/GPT 的支持&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;无损切换&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#windows--1&quot; id=&quot;markdown-toc-windows--1&quot;&gt;安装 Windows 的注意事项&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#linux-&quot; id=&quot;markdown-toc-linux-&quot;&gt;Linux 对两种模式的支持&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#linux--1&quot; id=&quot;markdown-toc-linux--1&quot;&gt;Linux 对两种模式的支持&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#linux--windows-&quot; id=&quot;markdown-toc-linux--windows-&quot;&gt;Linux 与 Windows 共存&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#os-x-&quot; id=&quot;markdown-toc-os-x-&quot;&gt;OS X 对两种模式的支持&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;苹果电脑&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;“黑苹果”&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#linux--os-x-&quot; id=&quot;markdown-toc-linux--os-x-&quot;&gt;Linux 与 OS X 共存&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;以下内容很长……&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;既然是 Linux 协会，为什么还讨论 Windows 的问题呢？&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;毕竟多数人还是对 Windows 的需求更大一些，而且愿意学习如何重装 Windows。本文就是为了使这些人与时俱进，掌握更高水平的技能。在装系统的问题上面，有些原理是相通的。如果基础扎实，读完本文在两种环境下装 Linux 也不会有太大问题。&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;如果你能坚持到最后，你会发现，文章已经考虑到 Linux 的问题了。&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;本文主要讨论的是 UEFI 和 Legacy 两种环境。&lt;/p&gt;
-
-&lt;p&gt;本文要求你有装系统的经历，否则阅读起来可能会有一些困难。此外，本文是由实践总结出来的经验，某些地方并不一定完全准确。&lt;/p&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;问题的由来&lt;/h2&gt;
-
-&lt;p&gt;过去装系统是件很容易的事儿，直到某一天，有一个名叫 Windows 8 的操作系统普及开来，问题就来了。有了 Windows 8，很多笔记本已经采用了全新的 UEFI 启动模式。由于新启动模式和传统模式有很大的不同，而且目前两种模式还同时广泛存在，所以需要了解新旧模式和区别，才能顺利地在不同电脑上安装系统。&lt;/p&gt;
-
-&lt;h2 id=&quot;uefi--legacy&quot;&gt;UEFI 和 Legacy&lt;/h2&gt;
-
-&lt;p&gt;过去的电脑用的是 &lt;a href=&quot;https://zh.wikipedia.org/wiki/BIOS&quot;&gt;BIOS&lt;/a&gt;。BIOS 名为“基本输入输出系统”。过去的电脑在开机时会首先加载 BIOS 程序，进行开机自检，加载引导程序并引导操作系统。&lt;/p&gt;
-
-&lt;p&gt;由于 BIOS 年代久远，难以适应计算机硬件的发展 (例如寻址能力只有 16 位) 。而且基于 BIOS 的扩展程序也难以开发，因此诞生了新的规范——EFI。2002 年 EFI 由英特尔开发，2005 年交给 UEFI 论坛发展并更名为 &lt;a href=&quot;https://zh.wikipedia.org/wiki/%E7%B5%B1%E4%B8%80%E5%8F%AF%E5%BB%B6%E4%BC%B8%E9%9F%8C%E9%AB%94%E4%BB%8B%E9%9D%A2&quot;&gt;UEFI&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;UEFI 名为“统一可扩展固件接口”。它相当于一个小型操作系统。有些电脑内置 EFI Shell，这样可以在没有任何工具的前提下进行简单的系统维护和修复。&lt;/p&gt;
-
-&lt;h3 id=&quot;legacy-&quot;&gt;经典 (Legacy) 的启动过程&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;开机的时候，首先要读取 &lt;code class=&quot;highlighter-rouge&quot;&gt;0 扇区&lt;/code&gt;的信息。0 扇区只有 512 字节大小，其中有一段程序，使BIOS可以定位到活动分区。&lt;/li&gt;
-  &lt;li&gt;寻找&lt;code class=&quot;highlighter-rouge&quot;&gt;活动分区&lt;/code&gt;。读取分区信息。&lt;/li&gt;
-  &lt;li&gt;按照分区内的代码，引导合适的&lt;code class=&quot;highlighter-rouge&quot;&gt;启动器&lt;/code&gt;。&lt;/li&gt;
-  &lt;li&gt;由启动器引导操作系统。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;DOS 及基于 DOS 的 Windows 系统 (一直到 Windows Me) 不通过专门的启动管理程序。因此在装完 Windows NT 之后再装这些系统，会发现 NT 因引导被改写而无法启动。&lt;/p&gt;
-
-&lt;p&gt;Windows NT 系列 (从 NT 3.5 到 2003) 通过名为 &lt;code class=&quot;highlighter-rouge&quot;&gt;NTLDR&lt;/code&gt; 的引导器引导。配置文件为 Boot.ini。&lt;/p&gt;
-
-&lt;p&gt;新系统 (从 Vista 开始) 通过名为 &lt;code class=&quot;highlighter-rouge&quot;&gt;Windows Boot Manager&lt;/code&gt; 的引导器来引导。配置文件名为 BCD。相当于 Windows 注册表的格式，是个二进制文件，可用 bcdedit 命令编辑。此引导器可以直接引导 WIM 格式的映像。&lt;/p&gt;
-
-&lt;h3 id=&quot;uefi-&quot;&gt;UEFI 模式的启动过程&lt;/h3&gt;
-
-&lt;p&gt;目前笔记本的 UEFI 都是 64 位 UEFI。在某些平板电脑上是 32 位的。&lt;/p&gt;
-
-&lt;p&gt;开机的时候，UEFI 会在启动磁盘 (硬盘、光盘、U 盘等) 寻找 &lt;code class=&quot;highlighter-rouge&quot;&gt;EFI\Boot\bootx64.efi&lt;/code&gt;。如果找到该文件，会执行该文件。接下来该文件会寻找和引导启动器，从而引导操作系统。&lt;/p&gt;
-
-&lt;p&gt;由于这个原因。在 UEFI 模式下使用 U 盘安装系统，安装盘制作过程非常简单——只要找到安装盘，直接往 U 盘根目录解压就可以了。&lt;/p&gt;
-
-&lt;p&gt;需要注意的是，对于目前的大多数笔记本而言，并不能在 UEFI 模式下安装 32 位操作系统。但某些平板型电脑可以。&lt;/p&gt;
-
-&lt;h3 id=&quot;secure-boot&quot;&gt;Secure Boot&lt;/h3&gt;
-
-&lt;p&gt;Secure Boot 是 UEFI 支持的一个功能。如果该功能开启，在引导时，固件会验证启动程序的签名。只有启动器具有合法签名，固件才会继续引导，否则会拒绝引导。&lt;/p&gt;
-
-&lt;p&gt;此功能在 Windows 8 诞生之后被普及。诞生之后，该功能受到了极大的争议，因为一般电脑只有 Windows 8 的签名，这样的话，用户无法在保留 Windows 8 的前提下安装其他操作系统 (甚至包括 Windows 7。但实际上是可以关闭的，因此没有太大影响) 。&lt;/p&gt;
-
-&lt;p&gt;按照微软的规定，其他安装 Windows 的设备 (如 Windows RT 或手机) 禁止关闭此功能。因此这些设备基本上无法安装其他系统。&lt;/p&gt;
-
-&lt;p&gt;最近，微软规定“预装 Windows 10的电脑必须开启 Secure Boot。至于能否关闭，由 OEM 厂商决定”。因此，目前还无法准确判断未来能否顺利地更换系统。&lt;/p&gt;
-
-&lt;p&gt;目前笔记本电脑的 Secure Boot 可以关闭，而且关闭之后对 Windows 8/8.1没有影响。如果关闭之后进入系统，屏幕右下角出现“Secure Boot 未正确配置”，可安装最新的系统补丁。&lt;/p&gt;
-
-&lt;p&gt;部分笔记本电脑无法直接关闭 Secure Boot。这种情况下，可尝试给 BIOS 设置一个密码。&lt;/p&gt;
-
-&lt;h3 id=&quot;uefi--legacy-&quot;&gt;UEFI 与 Legacy 的切换&lt;/h3&gt;
-&lt;p&gt;目前，不太旧的笔记本电脑已经全部采用 EFI 模式。不过，有些笔记本并不能对模式进行更改 (没有切换的选项，但是确实是 EFI) 。&lt;/p&gt;
-
-&lt;p&gt;生产 BIOS 的厂家并不多，但是由于各电脑品牌会进行一定程度的定制，所以接下来的操作是思路相同、细节不同。&lt;/p&gt;
-
-&lt;p&gt;进入 BIOS 设置，找到 &lt;code class=&quot;highlighter-rouge&quot;&gt;Boot&lt;/code&gt; 页面。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;如果看到类似于 &lt;code class=&quot;highlighter-rouge&quot;&gt;Boot Mode&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;UEFI Boot Option&lt;/code&gt; 的选项，说明可以切换这两种启动模式。&lt;/li&gt;
-  &lt;li&gt;有些电脑带有类似于 &lt;code class=&quot;highlighter-rouge&quot;&gt;UEFI Priority Order&lt;/code&gt; 的选项，内容为 &lt;code class=&quot;highlighter-rouge&quot;&gt;UEFI First&lt;/code&gt; 或 &lt;code class=&quot;highlighter-rouge&quot;&gt;Legacy First&lt;/code&gt;。这也是改变启动模式的方法。它的作用是调整优先级。&lt;/li&gt;
-  &lt;li&gt;还有些电脑可能没有“Boot Mode”，但是有类似于 &lt;code class=&quot;highlighter-rouge&quot;&gt;CSM Support&lt;/code&gt; 的选项。开启此选项，相当于支持 Legacy 模式 (但仍然是 UEFI 优先) 。&lt;/li&gt;
-  &lt;li&gt;有些电脑没有类似选项，那么不外乎两种情况：
-    &lt;ol&gt;
-      &lt;li&gt;电脑根本不支持 EFI。&lt;/li&gt;
-      &lt;li&gt;电脑支持 EFI，并且优先从 EFI 启动。也就是说，不管启动盘本身有没有引导信息，只要有 EFI 的引导程序，电脑就会通过 EFI 引导系统。&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;证明方法也很简单，找一个干净的、没有引导信息的 U 盘，把 Windows 8 安装盘 (或者小一点的系统，如 64 位 Ubuntu 14.04) 直接解压进去。如果能够直接引导，说明支持 EFI。&lt;/p&gt;
-
-&lt;h3 id=&quot;windows-8--bios-&quot;&gt;预装 Windows 8 的电脑进入 BIOS 设置&lt;/h3&gt;
-&lt;p&gt;有些电脑开机时并不会显示类似“Press F2 to setup”的提示，甚至按下F2等按键也不会进入BIOS设置，而是直接进入Windows 8。可以按照以下步骤来进入BIOS设置：
-1. 进入Windows 8
-2. &lt;code class=&quot;highlighter-rouge&quot;&gt;按住 Shift 键&lt;/code&gt;，重新启动计算机
-3. 之后会进入诊断画面。选择&lt;code class=&quot;highlighter-rouge&quot;&gt;疑难解答&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;高级设置&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;UEFI固件设置&lt;/code&gt;
-4. 屏幕会提示重启，重启之后即进入 BIOS 设置。&lt;/p&gt;
-
-&lt;h2 id=&quot;gpt--mbr&quot;&gt;GPT 和 MBR&lt;/h2&gt;
-
-&lt;p&gt;本文只在“外观”上探讨二者的区别，不研究二者的具体结构。由于几乎没有谁会在自己笔记本电脑上搞 SCSI、RAID 或者动态分区，所以本文不讨论这些特殊情况。&lt;/p&gt;
-
-&lt;h3 id=&quot;gpt-&quot;&gt;GPT 的优势&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;GPT 支持容量大于 2TB 的分区。&lt;/li&gt;
-  &lt;li&gt;GPT 支持大于 4 个主分区。而 MBR 磁盘只支持最多 4 个主分区。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;mbr-&quot;&gt;MBR 磁盘的外观&lt;/h3&gt;
-
-&lt;p&gt;一般情况，人们习惯上把一个 MBR 磁盘划分为一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;主分区&lt;/code&gt; (C: 或者叫 /dev/sda1) 和一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;扩展分区&lt;/code&gt; (/dev/sda2) 。其他分区都是被包在扩展分区之内的 (从 /dev/sda5 开始) 。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/mbr.png&quot; alt=&quot;mbr&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;gpt--1&quot;&gt;GPT 磁盘的外观&lt;/h3&gt;
-
-&lt;p&gt;GPT 磁盘的分区全部是主分区。一般 GPT 磁盘前面有一个数百 MB 的采用 FAT32 文件系统的分区，即 ESP 分区。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/gpt1.png&quot; alt=&quot;gpt1&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;gpt--2&quot;&gt;品牌机的 GPT 磁盘&lt;/h3&gt;
-
-&lt;p&gt;一些品牌机有恢复功能，因此会多数一些分区来保存“恢复程序”和/或原始系统镜像。并且这些分区在一般情况下是不能被直接分配盘符的。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/gpt2.png&quot; alt=&quot;gpt2&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;windows-&quot;&gt;Windows 对两种模式的支持&lt;/h2&gt;
-
-&lt;h3 id=&quot;efigpt-&quot;&gt;旧系统 (2003及以下) 对 EFI/GPT 的支持&lt;/h3&gt;
-
-&lt;p&gt;Windows XP 及更低版本系统只支持 Legacy+MBR。无法读取 GPT 磁盘。
-Windows 2003 也不支持 UEFI+GPT，但是可以读取 GPT 磁盘。不过无法从 GPT 磁盘启动。&lt;/p&gt;
-
-&lt;p&gt;因此，很多 PE 工具箱是用 Windows 2003 而不是 XP 制作的。&lt;/p&gt;
-
-&lt;h3 id=&quot;vista---efigpt-&quot;&gt;新系统 (Vista 及以上) 对 EFI/GPT 的支持&lt;/h3&gt;
-
-&lt;p&gt;UEFI &amp;amp; Legacy、GPT &amp;amp; MBR 是可以自由组合的。&lt;/p&gt;
-
-&lt;p&gt;32 位的 Windows 不支持 64 位 UEFI 安装，也就是说，在我们的笔记本电脑上只能通过 Legacy+MBR 启动。 (实际上是 UEFI 也是可以启动的) 。&lt;/p&gt;
-
-&lt;p&gt;在某些平板电脑上，由于 UEFI 是 32 位的，这时 64 位系统反倒无法安装。&lt;/p&gt;
-
-&lt;p&gt;64 位的 Windows Vista 或更高版本只支持以下两种组合：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;UEFI + GPT&lt;/li&gt;
-  &lt;li&gt;Legacy + MBR&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;错误的组合会使 Windows 无法启动。&lt;/p&gt;
-
-&lt;p&gt;后面只讨论 64 位新版 Windows 的安装。&lt;/p&gt;
-
-&lt;p&gt;Windows 安装程序也有 EFI 和 Legacy 两种启动方式。在安装的时候应该根据硬盘的实际情况来选择合适的启动方式。否则，在选择分区的时候会发现，无论选择哪个分区 (甚至格式化) ，都无法安装，并且会看到类似于下面的错误提示：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Windows 无法安装到这个分区上。选中的分区具有 MBR 分区表。在 EFI 系统上，Windows 只能安装到 GPT 分区上。&lt;/li&gt;
-  &lt;li&gt;Windows 无法安装到这个分区上。选中的分区具有 GPT 分区表。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;遇到此情况，只需重启，并选择正确的启动方式即可解决。&lt;/p&gt;
-
-&lt;p&gt;对于全新的电脑，也可以考虑采用分区工具 (或系统自带的 diskpart) 重建分区表。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-1&quot;&gt;无损切换&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;注意，操作有风险！请不要在存有重要数据的计算机上试验。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;如果因为某些原因，需要对 GPT/MBR 进行转换，可以按照以下思路来进行。&lt;/p&gt;
-
-&lt;p&gt;在操作之前，需要制作一个 Windows PE 启动盘。可以采用网上流行的大白菜、老毛桃等制作工具。&lt;/p&gt;
-
-&lt;p&gt;(1) UEFI + GPT 转换成 Legacy + MBR&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;使用 DiskGenius 或傲梅分区助手可以对磁盘进行无损转换。注意！由于 MBR 分区表只支持最多四个主分区。因此在转换时可能会丢失分区。&lt;/li&gt;
-  &lt;li&gt;将 Windows 系统所在分区设置为活动分区。&lt;/li&gt;
-  &lt;li&gt;修复引导。可采用&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;bcdboot C:\Windows /l zh-CN&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;在 BIOS 选项中将启动模式改成 Legacy，或者改成支持 Legacy 的选项。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(2) Legacy + MBR 转换成 UEFI + GPT&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;使用 DiskGenius 或傲梅分区助手可以对磁盘进行无损转换。&lt;/li&gt;
-  &lt;li&gt;在分区开头建立一个 200MB 左右和一个 128MB 的分区。
-那个 200MB 左右的分区是将来的 ESP 分区，必须是 FAT32 文件系统。而且要分配个盘符 (假如是X:) ，后续操作要用。&lt;/li&gt;
-  &lt;li&gt;进入“命令提示符”，输入：&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;diskpart
-list disk
-sel disk 0 (0表示系统所在硬盘。应根据list的实际结果来选择)
-list part
-sel part 0 (0表示准备作为ESP的分区。需要根据实际情况来修改。)
-set id={C12A7328-F81F-11D2-BA4B-00A0C93EC93B}
-sel part 1 (1表示那个128MB分区。需要根据实际情况来修改。)
-set id={E3C9E316-0B5C-4DB8-817D-F92DF00215AE}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;修复引导。输入：&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;bcdboot C:\Windows /s X: /f uefi /l zh-cn&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;其中X:是ESP分区的盘符。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;在 BIOS 选项中将启动模式改成 UEFI。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;windows--1&quot;&gt;安装 Windows 的注意事项&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Windows 7 可以通过 EFI 启动和安装，但是不建议你这样做。使用花钱买来的正版可以无视此条。&lt;/li&gt;
-  &lt;li&gt;如果要组建双系统或多系统，而且其中有一个是 Windows 8 或更高的系统。这样的话最好关闭“快速启动”功能，否则其他系统无法正常访问硬盘。&lt;/li&gt;
-  &lt;li&gt;如果安装 Windows 时出现有关 GPT/MBR 的问题，需要 Legacy 启动，但笔记本电脑无法切换 EFI/Legacy 时，可以将启动盘的 &lt;code class=&quot;highlighter-rouge&quot;&gt;EFI&lt;/code&gt; 文件夹删除或更名。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;linux-&quot;&gt;Linux 对两种模式的支持&lt;/h2&gt;
-
-&lt;h3 id=&quot;linux--1&quot;&gt;Linux 对两种模式的支持&lt;/h3&gt;
-
-&lt;p&gt;Linux 系统支持 GPT 和 MBR 磁盘。而它对 UEFI 的支持程度基本上由启动器决定。在个人电脑上，Linux 系统的启动器是可以更换的 (嵌入式系统请无视本节) 。也就是说，只要有合适的启动器，并设置正确的内核启动参数，引导系统就不会有太大问题。&lt;/p&gt;
-
-&lt;p&gt;比较古老的系统采用 LILO 或 GRUB，这两种不支持 UEFI 启动。很多 PE 工具箱的启动菜单是基于 GRUB 制作的，同样不支持 UEFI 启动。&lt;/p&gt;
-
-&lt;p&gt;幸运地是，目前绝大多数发行版已经采用 GRUB2 (系统安装盘用 syslinux) 。这两种启动器都支持 UEFI 启动。但是，和 Windows 一样，也得是 64 位系统。少数发行版 (如 Ubuntu) 由于购买了 Secure Boot 的证书，因此甚至支持在 Secure Boot 开启的情况下引导。&lt;/p&gt;
-
-&lt;p&gt;因此现在 Linux 的启动器引导 Linux 并没有什么问题，甚至不需要更改引导参数。&lt;/p&gt;
-
-&lt;p&gt;但是，由于 GRUB2 引导其他操作系统 (例如 Windows) 是通过&lt;code class=&quot;highlighter-rouge&quot;&gt;链式引导&lt;/code&gt;来完成的。所以要根据具体情况 (UEFI/Legacy) 来调整引导参数。&lt;/p&gt;
-
-&lt;p&gt;如果需要更换模式，只需用对应的引导方式重新安装一遍 GRUB2。并不需要重装系统，也不需要更换内核参数。&lt;/p&gt;
-
-&lt;p&gt;在 UEFI 下模式安装某些 Linux 发行版 (如 Ubuntu) ，除了要挂载 &lt;code class=&quot;highlighter-rouge&quot;&gt;/boot&lt;/code&gt; (实际上可以和主分区合并) ，还要挂载 ESP 分区到要求的某一目录，如 &lt;code class=&quot;highlighter-rouge&quot;&gt;/boot/efi&lt;/code&gt;。&lt;/p&gt;
-
-&lt;h3 id=&quot;linux--windows-&quot;&gt;Linux 与 Windows 共存&lt;/h3&gt;
-
-&lt;p&gt;与 Windows 不同，UEFI/Legacy + GPT/MBR 的四种组合对于 Linux 来说都可以引导。所以，在不希望抛弃 Windows 的情况下，应该按照 Windows 的引导方式来安装 Linux。&lt;/p&gt;
-
-&lt;p&gt;(1) GRUB2 引导 Windows&lt;/p&gt;
-
-&lt;p&gt;GRUB2 可以通过链式引导来引导进入 Windows。但是 UEFI 和 Legacy 模式的引导命令并不相同：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;UEFI 模式下引导命令类似于&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;hd0,gpt1&#39;&lt;/span&gt;
-chainloader /EFI/Microsoft/Boot/bootmgfw.efi&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Legacy 模式下引导命令类似于&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;chainloader &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;hd0,1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;+1&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;(2) Windows (BCD) 引导 GRUB&lt;/p&gt;
-
-&lt;p&gt;可以使用 EasyBCD 软件把 Linux 系统加入 Windows 的“选择操作系统”菜单中。此时的引导是先引导进入 BCD，然后 BCD 将引导权交给 GRUB/GRUB2，从而启动 Linux 系统。&lt;/p&gt;
-
-&lt;p&gt;BCD 并不能直接引导 Linux 或 Linux 安装盘。&lt;/p&gt;
-
-&lt;h2 id=&quot;os-x-&quot;&gt;OS X 对两种模式的支持&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-2&quot;&gt;苹果电脑&lt;/h3&gt;
-
-&lt;p&gt;苹果电脑一律采用 Apple EFI。因此苹果电脑不支持 Legacy 模式。&lt;/p&gt;
-
-&lt;p&gt;苹果电脑采用 GPT 分区表，如果未安装其他操作系统，则苹果电脑有三个分区：ESP、苹果系统 (HFS+ 文件系统)、Recovery HD (HFS+ 文件系统)。&lt;/p&gt;
-
-&lt;p&gt;如果希望通过 U 盘引导，U 盘里面的系统必须支持 UEFI 引导。如果支持，需要在开机之前插入 U 盘，并按住 Option 键开机，这样就可以从启动选项中看到自己的 U 盘。&lt;/p&gt;
-
-&lt;p&gt;如果希望在苹果电脑中安装 Windows 操作系统，建议使用系统自带的“Boot Camp助理”。如果只是偶尔用用 Windows 或其他系统，可以考虑安装专门为苹果电脑设计的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Parallels Desktop&lt;/code&gt; 虚拟机软件，这样对电脑的影响更小。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;“黑苹果”&lt;/h3&gt;
-
-&lt;p&gt;“黑苹果”指在普通电脑上安装的 OS X (10.5 或更高版本)。苹果官方并不允许在普通电脑上安装 OS X。不过，OS X 从理论和实践上又可以装到普通电脑上，所以仍然有很多人去尝试安装。&lt;/p&gt;
-
-&lt;p&gt;黑苹果的安装非常复杂。这里只讨论启动和分区的问题。&lt;/p&gt;
-
-&lt;p&gt;黑苹果无法直接引导，因此必须要用启动器来启动。目前流行的启动器有 Clover (四叶草) 和 Chamaleon (变色龙)。前者既支持UEFI启动又支持Legacy，而后者只支持Legacy。&lt;/p&gt;
-
-&lt;p&gt;由于 OS X 只支持 GPT 分区，所以在 MBR 分区上安装系统时需要对系统内核进行破解。这意味着每次系统升级都需要重新破解内核。如果有条件，建议把自己的电脑换成 UEFI + GPT 模式。&lt;/p&gt;
-
-&lt;h3 id=&quot;linux--os-x-&quot;&gt;Linux 与 OS X 共存&lt;/h3&gt;
-
-&lt;p&gt;GRUB2 支持引导苹果系统。不过有一个条件：原生的苹果电脑。&lt;/p&gt;
-
-&lt;p&gt;如果用的是“黑苹果”，那么仍然可以通过 GRUB2 引导黑苹果的启动器，间接地引导进入苹果系统。&lt;/p&gt;</content><author><name>vjudge1</name></author><category term="Windows" /><category term="UEFI" /><summary>以下内容很长……
-
-既然是 Linux 协会，为什么还讨论 Windows 的问题呢？
-
-毕竟多数人还是对 Windows 的需求更大一些，而且愿意学习如何重装 Windows。本文就是为了使这些人与时俱进，掌握更高水平的技能。在装系统的问题上面，有些原理是相通的。如果基础扎实，读完本文在两种环境下装 Linux 也不会有太大问题。
-
-如果你能坚持到最后，你会发现，文章已经考虑到 Linux 的问题了。
-
-本文主要讨论的是 UEFI 和 Legacy 两种环境。
-
-本文要求你有装系统的经历，否则阅读起来可能会有一些困难。此外，本文是由实践总结出来的经验，某些地方并不一定完全准确。</summary></entry></feed>
+<p>阅读 <a href="http://jekyllrb.com">Jekyll 文档</a> 来了解如何使用 Jekyll。如果发现 bug 或者想添加什么功能，请到 <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. 如果有什么疑问，请到 <a href="https://github.com/jekyll/jekyll-help">Jekyll’s dedicated Help repository</a>.</p>]]></content><author><name>vjudge1</name></author><category term="社团工作" /><category term="GitHub" /><summary type="html"><![CDATA[终于找到了一个免费、靠谱又方便【码农】使用的博客。 感谢 GitHub Pages。这个东西就是用来建静态博客的。还要感谢 Jekyll，前者是免费空间，后者是免费建站。 为什么不用 WordPress 呢？需要服务器啊，而且，要知道，服务器费用是不可能给报销的。还有一个重要原因，文章本身是支持 Markdown 语法的纯文本文件，感觉写代码写脚本比用那些图形化编辑器舒服多了，毕竟是在 Linux 环境下折腾过的码农。 博客的代码是完全公开的。博客的主题是基于 Bootstrap 框架而自行设计的，当然任何人都可以按照自己意愿来进行修改。主题还需要不断完善，欢迎到 GitHub 项目页面提交 Issue。]]></summary></entry></feed>
