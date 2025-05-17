@@ -4,26 +4,29 @@
 	"description": "UPC Linux Club blog Reborn.",
 	"author": "vjudge1",
 	"devDependencies": {
-        "grunt": "*",
-        "grunt-autoprefixer": "*",
-        "grunt-build-control": "*",
-        "grunt-contrib-clean": "*",
-        "grunt-contrib-connect": "*",
-        "grunt-contrib-copy": "*",
-        "grunt-contrib-cssmin": "*",
-        "grunt-contrib-htmlmin": "*",
-        "grunt-contrib-imagemin": "*",
-        "grunt-contrib-uglify": "*",
-        "grunt-contrib-watch": "*",
-        "grunt-critical": "*",
-        "grunt-jekyll": "*",
-        "grunt-sass": "*",
-        "grunt-svgmin": "*",
-        "grunt-uncss": "*",
-    	"jit-grunt": "*",
-        "time-grunt": "*"
-    },
-    "engines": {
-        "node": "*"
-    }
+		"grunt": "*",
+		"grunt-autoprefixer": "*",
+		"grunt-build-control": "*",
+		"grunt-contrib-clean": "*",
+		"grunt-contrib-connect": "*",
+		"grunt-contrib-copy": "*",
+		"grunt-contrib-cssmin": "*",
+		"grunt-contrib-htmlmin": "*",
+		"grunt-contrib-imagemin": "*",
+		"grunt-contrib-uglify": "*",
+		"grunt-contrib-watch": "*",
+		"grunt-critical": "*",
+		"grunt-jekyll": "*",
+		"grunt-sass": "*",
+		"grunt-svgmin": "*",
+		"grunt-uncss": "*",
+		"jit-grunt": "*",
+		"time-grunt": "*"
+	},
+	"engines": {
+		"node": "*"
+	},
+	"dependencies": {
+		"sass": "^1.89.0"
+	}
 }
