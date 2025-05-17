@@ -39,8 +39,8 @@ force_https: upclinux.github.io
 
 statistics: '//s11.cnzz.com/z_stat.php?id=1256410622&web_id=1256410622'
 
-# Gems
-gems:
+# Plugins (Older version: gem:)
+plugins:
 - jemoji
 - jekyll-sitemap
 - jekyll-feed

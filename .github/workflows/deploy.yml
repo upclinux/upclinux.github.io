@@ -1,0 +1,58 @@
+name: NodeJS with Grunt
+
+on:
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "dev" ]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [22.x]
+
+    steps:
+    - name: 签出
+      uses: actions/checkout@v4
+
+    - name: 使用大版本为 ${{ matrix.node-version }} 的 Node.JS
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: 安装 Ruby
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ruby-full ruby-dev build-essential
+
+    - name: 主要是安装 Jekyll
+      run: |
+        sudo gem install bundler
+        sudo bundle install
+
+    - name: 主要是安装 Grunt
+      run: |
+        sudo npm install
+
+    - name: 主要是安装 Bootstrap
+      run: |
+        sudo npm install -g bower
+        sudo bower install
+
+    - name: 生成项目
+      run: |
+        grunt build
+
+    - name: 部署到 master 分支
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: dist
+        branch: master
+        git-config-name: github-actions[bot]
+        git-config-email: github-actions[bot]@users.noreply.github.com

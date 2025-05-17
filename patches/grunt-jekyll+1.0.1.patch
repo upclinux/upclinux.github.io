@@ -1,0 +1,13 @@
+diff --git a/node_modules/grunt-jekyll/tasks/jekyll.js b/node_modules/grunt-jekyll/tasks/jekyll.js
+index 505a773..ceeb89e 100644
+--- a/node_modules/grunt-jekyll/tasks/jekyll.js
++++ b/node_modules/grunt-jekyll/tasks/jekyll.js
+@@ -147,7 +147,7 @@ module.exports = function (grunt) {
+ 				grunt.log.write('Started Jekyll web server on http://localhost:' + (options.port || 4000) + '. Waiting...\n');
+ 			}
+ 
+-			var child = grunt.util.spawn({cmd: cmd, args: args}, function (err) {
++			var child = grunt.util.spawn({cmd: cmd, args: args, opts: {shell: true}}, function (err) {
+ 				if (err) {
+ 					grunt.fail.warn(err);
+ 					done(false);
