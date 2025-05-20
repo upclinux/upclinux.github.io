@@ -20,20 +20,29 @@ tags: Freemind
 
 如果看着不方便，可以<a href="/js/2015-06-06-freemind/view.html" target="_blank">点这里</a>。
 
-<script src="/js/2015-06-06-freemind/flashobject.js"></script>
-<div id="flashcontent" style="height: 500px;">
-[需要 Flash 和 JavaScript]
-</div>
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+<div id="flashcontent" style="height: 500px;">正在加载中……如果耗时过长，请检查网络环境和浏览器。</div>
 <script>
-var fo = new FlashObject("/js/2015-06-06-freemind/visorFreemind.swf", "visorFreeMind", "100%", "100%", 8, "#9999ff");
-fo.addParam("quality", "high");
-fo.addParam("bgcolor", "#ffffff");
-fo.addParam("allowScriptAccess", "true");
-fo.addVariable("openUrl", "_blank");
-fo.addVariable("initLoadFile", "/js/2015-06-06-freemind/map.mm");
-fo.addVariable("startCollapsedToLevel","5");
-fo.write("flashcontent");
+window.addEventListener('load', () => {
+    const flashContent = document.getElementById('flashcontent');
+    window.RufflePlayer.config = {
+        autoplay: "on"
+    }
+    const ruffle = window.RufflePlayer.newest();
+    const player = ruffle.createPlayer();
+
+    flashContent.innerHTML = "";
+
+    flashContent.appendChild(player);
+    player.ruffle().load("/js/2015-06-06-freemind/visorFreemind.swf?openUrl='_blank'&initLoadFile=/js/2015-06-06-freemind/map.mm&startCollapsedToLevel");
+});
 </script>
+
+{% callout %}
+大多数主流浏览器应该都已经停止支持 Flash Player 了，为了能够保证思维导图能够正常显示，本博客将暂时使用 Ruffle 作为过渡方案。
+{% endcallout %}
+
+修改说明
 
 做个总结——什么情况下能够很涨姿势呢？
 
